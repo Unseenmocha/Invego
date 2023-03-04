@@ -3,7 +3,8 @@
 ## Team Overview
 
 ## Innovative Idea
-Invego is a stock market investment game, only instead of investing in companies, you invest in other users. 
+
+Invego is a stock market game where instead of investing in companies, users invest in other users.
 
 ## Data
 
