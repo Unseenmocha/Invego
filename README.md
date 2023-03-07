@@ -1,6 +1,10 @@
 # Team 12 Project
 
 ## Team Overview
+Unseenmocha  - Andrew Lin
+b-saulnier - Brandon Saulnier
+njlupo - Noah Lupo
+qdang2025 - Quang Dang
 
 ## Innovative Idea
 
