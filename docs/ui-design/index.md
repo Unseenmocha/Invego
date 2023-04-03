@@ -2,56 +2,66 @@
 
 ## Wireframe
 
-Facilis quas ut iste nam et. Doloribus ut nostrum nobis ut ut eos quia vel soluta. Minus dolorem error neque voluptas ex.
+Our Figma mockup UIs include:
 
-![Wireframe 1](wireframe-1.png)
+![HTML & CSS Mockup 1](Invego Discovery Page Figma.png)
+The Invego Discovery page is where the user enters immediately after signing in and where 
 
-Consequuntur reiciendis illo non suscipit necessitatibus dolores doloribus sed atque. Quos rem excepturi ut eum et eaque facere et. Illo quos voluptatem ratione sint numquam dolor assumenda. Ea et et sapiente distinctio et aut aspernatur necessitatibus est.
- 
-Est velit debitis enim. Esse et et quos animi animi. Quibusdam et porro et praesentium maiores dolores facilis. Voluptas molestias sapiente aperiam culpa. Et doloribus maiores omnis quisquam dolores.
- 
-Esse est et ut rem et praesentium quibusdam eaque. Aut consectetur illum placeat repellendus nam. Exercitationem dolorem tempora.
+![HTML & CSS Mockup 1](Invego Profile Page Figma.png)
+The Invego Profile page is a central place to view stocks, edit the user's profile, and see their current Bittlecoin balance. The navigation bar at the top allows the user to navigate to other pages and see their bittle. The portfolio section on the right has a table of the user's stocks, their prices, and their change in price. The bio can include their bio text as well as link buttons to various social media platforms they may have. The circular profile icon is a visual cue consistent amongst all pages. Users can click these icons and will be brought to the buy sell page for that profile. 
 
-![Wireframe 2](wireframe-2.png)
+![HTML & CSS Mockup 1](Invego Login Figma.png)
+![HTML & CSS Mockup 1](Invego Sign Up Figma.png)
+The login/sign up pages are important for our users to login in to their account to view their profiles, stocks they own, and what messages they have. 
+A login process is necessary to make sure users' accounts are secure.
+You can see a text entry for the username, one for the password, a log in button and blue text for otherwise, if you are 'New to Invego?' which will take to the sign up screen. The sign up screen includes many of the same elements, including a username and password entry, a confirm password entry, and otherwise if the user already has an account a link to a 'Have an account?' page. 
 
-Qui commodi beatae. Quaerat saepe tempora nisi labore ducimus corporis adipisci repellat nihil. Dolores est sed ratione consequatur est magnam cupiditate. Repellendus molestias qui doloribus. Deserunt quidem temporibus. Sunt hic laudantium vitae natus est.
+![HTML & CSS Mockup 1](Invego Buy Sell Figma.png)
+Buying and selling is an important function of Invego. Buying and selling makes the Invego marketplace what it is, lively and bustling with opportunity. 
+When clicking on a user's profile one can see the buy button, a number input for the amount of shares they want to buy, and another input for the bid price. If they click the arrow within the buy button, into transforms into a button that says 'Sell'. 
 
 ## Stories
 
 ### Story 1
 
-Omnis sed consequatur beatae laudantium voluptatem tenetur. Exercitationem omnis quisquam omnis. Tenetur vitae excepturi rerum quia corporis soluta qui iste necessitatibus. Aut quam autem cum et. Harum consequatur perspiciatis eum et temporibus nisi qui pariatur.
+As an Invego player, I want to be able to view the stocks I own.
+
+I can do this by going to clicking the profile icon from the discovery page
+![HTML & CSS Mockup 1](Invego Discovery Page Figma.png)
+
+and then on the profile page you can see the stocks you own shares of on the righthand side. 
+![Invego Profile Page](Invego Profile Page Figma.png)
+
 
 ### Story 2
 
-Blanditiis et esse ipsa soluta. Temporibus sunt possimus ut veritatis sint ut in quia eum. Omnis ea vel quae eligendi. Illo optio est doloremque autem. Sit ea dolorum architecto.
- 
-Fuga ea culpa eaque molestiae illo quod odio culpa. Et aut repellendus aut temporibus quae quia et. Quia consectetur quod est. Repellat animi amet quia velit.
- 
-Voluptatum accusantium dolores cumque sit accusamus. Eaque quia qui commodi rerum eos doloribus. Sint aliquam quae ut ut tempora pariatur qui.
+As an Invego player, I should be able to easily determine what stocks to buy. I should be able to see popular stocks or search for specific stocks.
+
+From the Invego profile page I can see popular stocks in the lower left quadrant, and I can search for users in the top center on the blue navigation bar. 
+
+![HTML & CSS Mockup 1](Invego Discovery Page Figma.png)
 
 ### Story 3
 
-Esse itaque quia est nam. Ut voluptate voluptatem tempora officia. Minus et repellendus ut aut. Aut sint sint distinctio perferendis voluptas. Aut libero qui reprehenderit. Quia dolor ratione dolore porro.
- 
-Est quod dolor natus. Nihil provident omnis. Exercitationem voluptate earum. Earum doloremque voluptates quia eos qui suscipit dicta.
- 
-Optio ea sit minima cum consequatur at ut incidunt. Ea voluptatem iure modi officiis. Distinctio eum nemo soluta nulla.
+As an Invego player, I should be able to manage my account and change how I present myself to the world. I should be able to change my bio text and save my changes. 
+
+If I go to the profile page and double click on my bio text I can edit it. When I press the save button at the bottom of the block my changes will be saved.
 
 ## HTML & CSS Mockup
 
-Reiciendis velit dolorum voluptas earum. Rerum nobis accusantium laudantium minima incidunt. Magnam aut minus minus. Cumque unde voluptatibus soluta molestias perspiciatis aperiam accusantium laborum quo.
-
+Here is the Invego profile page mocked up with HTML and CSS. 
 ![HTML & CSS Mockup 1](mockup-1.png)
 
-Natus est molestias est et autem non in. Laudantium consequatur facilis perferendis. Saepe similique sapiente rem ut. Laudantium natus voluptas delectus molestiae ab omnis quidem. Maxime cumque porro ea deleniti incidunt nihil cupiditate sunt. Nihil eaque porro nemo veritatis.
-
+Here is the Invego login page mocked up with HTML and CSS. 
 ![HTML & CSS Mockup 2](mockup-2.png)
 
-Ipsam architecto nulla ut dolor dolor sit mollitia deleniti minus. Velit quia iste.
+Here is the Invego sign up page mocked up with HTML and CSS. 
+![HTML & CSS Mockup 2](mockup-2.png)
 
-## References
+Here is the Invego discovery page mocked up with HTML and CSS. 
+![HTML & CSS Mockup 2](mockup-2.png)
 
-- [Link 1](https://example.com)
-- [Link 2](https://example.com)
-- [Link 3](https://example.com)
+Here is the Invego buy/sell page mocked up with HTML and CSS. 
+![HTML & CSS Mockup 2](mockup-2.png)
+
+
