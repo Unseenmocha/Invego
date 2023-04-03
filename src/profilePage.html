@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Invego Profile Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <script type = "module" src="header.js"></script>
-  </head>
-  
-  <body>
-      <h1 id="header"></h1>
-      <script>
-        // Call the header function to set the header text
-        header();
-      </script>
-  </body>
+
+<head>
+  <title>Invego</title>
+  <link rel="stylesheet" href="discovery.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body scroll="no">
+  <div id="grid-background-image"></div>
+  <div id="header-bar">
+    <text id="title-text">Invego</text>
+    <div class="profile">
+      <text id="title-text">264.54 B$</text>
+    </div>
+  </div>
+    <div id="bottom-bar">
+      <div class="box-view" id="popular-profiles">
+        <h class="header">My Profile</h>
+        <hr />
+      </div>
+      <div class="box-view" id="messages">
+        <h class="header">Messages</h>
+        <hr />
+        <div id="message-view">
+          <div class="other-message">
+            <div class="profile">
+              <img id="profile-pic" src="../assets/istockphoto-1130884625-612x612.jpeg" />
+              <text class="text-1">William</text>
+            </div>
+            <div class="message-bubble-other">
+              <div></div>
+              <text class="text-1">Hello?</text>
+            </div>
+          </div>
+        </div>
+        <hr id="hr-full" />
+        <div id="enter-message">
+          <textarea id="message-entry" placeholder="Reply?"></textarea>
+          <button id="message-send">
+            <text class="text-2" id="send-text">Send</text>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
