@@ -30,7 +30,7 @@ hr {
 #header-bar {
     height: 100px;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     display: flex;
     background-color: #1C4FD1;
 }
@@ -60,6 +60,9 @@ hr {
     height: 28px;
     border-radius: 4px;
     width: 500px;
+    font-size: large;
+    border: none;
+    padding: 0px 0px 0px 10px;
 }
 
 .profile {
@@ -128,7 +131,7 @@ hr {
     display: flex;
     flex-grow: 1;
     margin-top: 40px;
-    margin-bottom:136px;
+    margin-bottom: 136px;
 }
 
 .box-view {
@@ -149,13 +152,93 @@ table {
     row-gap: 20px;
 }
 
-tr:hover {
-    opacity: 50%;
+.main-row {
+    margin-top: 100px;
 }
 
+.main-row:hover {
+    opacity: 50%;
+}
 
 #messages {
     margin-right: 32px;
     margin-left: 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+#hr-full {
+    width: 100%;
+    margin: 0;
+}
+
+#message-view {
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#enter-message {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#message-entry {
+    border-radius: 10px;
+    flex-grow:8;
+    margin: 10px;
+    padding: 10px;
+    border-color: white;
+    background-color: #dededee1;
+    resize: none;
+}
+
+#message-send {
+    margin: 20px;
+    height: 28px;
+    width: 60px;
+    background-color: #1C4FD1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+#send-text {
+    color: white;
+}
+
+.other-message {
+    margin: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.message-bubble-other {
+    padding: 10px;
+    border-radius: 10px;
+    width:fit-content;
+    height:fit-content;
+    background-color:#dededee1;
+}
+
+.message-bubble-other::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-left:15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #dededee1;
+    left: -24px;
+    top: 19px;
+}
