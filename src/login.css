@@ -1,8 +1,8 @@
 /* screen-container */
 .screen-container {
-    position: relative;
-    width: 1440px;
-    height: 1024px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     background: #FFFFFF;
@@ -30,20 +30,21 @@
 
 .stock-line {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
-    background: url(../assets/stockline.svg);
+    width: 100%;
+    height: 100%;
+    background: url(../assets/stock-line.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* title-text */
 .title-text {
     position: relative;
-    width: 527px;
-    height: 169px;
+    width: 400px;
+    height: 170px;
     left: 50%;
-    transform: translateX(-35%);
+    transform: translateX(-50%);
     margin-bottom: 30px;
 
     font-family: 'Lato', sans-serif;
@@ -95,10 +96,12 @@
     left: 50%;
     transform: translateX(-50%);
     margin-top: 30px;
-    background: #FFFFFF;
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 10px;
+    background: #FFFFFF;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .new {
