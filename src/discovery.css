@@ -1,0 +1,244 @@
+body {
+    margin: 0px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    width: 90%;
+    align-self: center;
+}
+
+#grid-background-image {
+    background-image: url(../assets/pngegg.png);
+    background-repeat: repeat;
+    opacity: 20%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    zoom: 50%;
+}
+
+#header-bar {
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: #1C4FD1;
+}
+
+#title-text {
+    color: white;
+    font-family: 'Lato';
+    font-style: sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    margin-left: 20px;
+}
+
+#title-text:hover {
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.5));
+}
+
+.header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+    margin-left: 16px;
+    margin-top: 30px;
+}
+
+#search-bar {
+    height: 28px;
+    border-radius: 4px;
+    width: 500px;
+    font-size: large;
+    border: none;
+    padding: 0px 0px 0px 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.profile:hover {
+    opacity: 50%;
+}
+
+#profile-pic {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.text-1 {
+    margin-top: 4px;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.text-2 {
+    margin-top: 4px;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+}
+
+#container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#friends-bar {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 20%;
+    background-color: white;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.5));
+    margin-top: 40px;
+}
+
+#friends-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+
+#bottom-bar {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 40px;
+    margin-bottom: 136px;
+}
+
+.box-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.5));
+}
+
+#popular-profiles {
+    margin-left: 32px;
+}
+
+table {
+    padding-left: 30px;
+    row-gap: 20px;
+}
+
+.main-row {
+    margin-top: 100px;
+}
+
+.main-row:hover {
+    opacity: 50%;
+}
+
+#messages {
+    margin-right: 32px;
+    margin-left: 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#hr-full {
+    width: 100%;
+    margin: 0;
+}
+
+#message-view {
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#enter-message {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#message-entry {
+    border-radius: 10px;
+    flex-grow:8;
+    margin: 10px;
+    padding: 10px;
+    border-color: white;
+    background-color: #dededee1;
+    resize: none;
+}
+
+#message-send {
+    margin: 20px;
+    height: 28px;
+    width: 60px;
+    background-color: #1C4FD1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+#send-text {
+    color: white;
+}
+
+.other-message {
+    margin: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.message-bubble-other {
+    padding: 10px;
+    border-radius: 10px;
+    width:fit-content;
+    height:fit-content;
+    background-color:#dededee1;
+}
+
+.message-bubble-other::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-left:15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #dededee1;
+    left: -24px;
+    top: 19px;
+}

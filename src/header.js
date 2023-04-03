@@ -1,3 +1,4 @@
+/*
 import { getBittels } from './getInfo.js';
 
 function header() {
@@ -9,3 +10,4 @@ function header() {
 }
 
 export default header();
+*/

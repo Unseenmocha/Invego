@@ -9,10 +9,8 @@
 }
 
 /* grid-background-image */
-
 .grid-background-image {
     box-sizing: border-box;
-
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -27,7 +25,6 @@
 }
 
 /* stock-line */
-
 .stock-line {
     position: absolute;
     width: 100%;
