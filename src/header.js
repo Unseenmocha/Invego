@@ -9,5 +9,9 @@ function header() {
     headerID.innerHTML = headerContent;
 }
 
+
+// 
+header();
+
 export default header();
 */
