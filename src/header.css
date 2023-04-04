@@ -8,6 +8,9 @@
     padding-left: 2%;
     font-size: calc(30px + 2vmin); 
     color: white;
+    width: 100%;
+    position: relative;
+    padding-top: 0%;
   }
   
   a {

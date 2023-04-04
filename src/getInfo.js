@@ -1,3 +1,4 @@
+
 export function getBittels() {
     return 264.28;
   }
@@ -21,4 +22,3 @@ export function getPercentBittel() {
   const percent = "-0.42 (0.40%)";
   return percent;
 }
-  
