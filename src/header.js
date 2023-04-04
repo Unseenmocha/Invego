@@ -1,4 +1,3 @@
-/*
 import { getBittels } from './getInfo.js';
 
 function header() {
@@ -9,10 +8,10 @@ function header() {
     headerID.innerHTML = headerContent;
 }
 
-// function getProfileName() {
-//     const profileName = "Noah Lupo";
-//     return profileName;
-// }
+function getProfileName() {
+    const profileName = "Noah Lupo";
+    return profileName;
+}
 
 export default header(); 
-// export default { header };
+
