@@ -9,9 +9,10 @@ function header() {
     headerID.innerHTML = headerContent;
 }
 
+// function getProfileName() {
+//     const profileName = "Noah Lupo";
+//     return profileName;
+// }
 
-// 
-header();
-
-export default header();
-*/
+export default header(); 
+// export default { header };
