@@ -8,4 +8,10 @@ function header() {
     headerID.innerHTML = headerContent;
 }
 
-export default header();
+// function getProfileName() {
+//     const profileName = "Noah Lupo";
+//     return profileName;
+// }
+
+export default header(); 
+// export default { header };
