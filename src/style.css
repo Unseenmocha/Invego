@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 .profile {
   display: flex;
   align-items: flex-start;
@@ -12,8 +17,6 @@
   margin-right: 50px;
 }
 
-
-
 .profile .info {
   display: flex;
   flex-direction: column;
@@ -24,7 +27,6 @@
   font-size: 100px;
   margin: 0;
   margin-bottom: 10px;
-  text-decoration: underline;
 }
 
 .profile .info h2 {
@@ -47,7 +49,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .profile .info p {
   color: black;
   font-size: 24px;
-  margin: 0;
+  margin-left: 20px;
   margin-bottom: 40px;
 }
 

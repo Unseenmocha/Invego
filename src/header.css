@@ -16,6 +16,11 @@
   a {
     color: white;
     text-decoration: none;
+    font-family: 'Lato';
+    font-style: sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    margin-left: 20px;
   }
   
   .App-header a:hover {
@@ -32,12 +37,12 @@
     font-size: 24px;
     display: flex;
     align-items: center;
+    padding-right: 20px;
   }
   
-  .bittels-value {
+  .bittels-text {
     font-weight: bold;
     margin-left: 10px;
+    font-family: 'Inter';
+    font-style: normal;
   }
-  
-
-
