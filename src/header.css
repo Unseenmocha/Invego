@@ -5,7 +5,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 2%;
     font-size: calc(30px + 2vmin); 
     color: white;
     width: 100%;
@@ -16,6 +15,11 @@
   a {
     color: white;
     text-decoration: none;
+    font-family: 'Lato';
+    font-style: sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    margin-left: 20px;
   }
   
   .App-header a:hover {
@@ -27,17 +31,16 @@
     align-items: center;
   }
   
-  .right-section {
-    margin-left: 10px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
+  .bittels-img {
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px 0px 30px;
   }
-  
-  .bittels-value {
+
+  .bittels-text {
     font-weight: bold;
     margin-left: 10px;
+    margin: 0px 10px;
+    font-family: 'Inter';
+    font-style: normal;
   }
-  
-
-
