@@ -19,6 +19,7 @@ const generatePortfolio = async () => {
             <td>${stock.name}</td>
             <td>${stock.bittle}</td>
             <td>${stock.bittleChange}B</td>
+            <td>Shares: ${stock.number}</td>
         </tr>`
       }
     }
@@ -27,7 +28,7 @@ const generatePortfolio = async () => {
 
 
 addButton.addEventListener('click', async (e) => {
-    // refactor displaying to be a 'populate' or 'render', and adding/removing only adds to the database
+    // in the future this would more likely call the matching algorithm, for 'buy' 
 
     id = 0; // will need to get this from somewhere
     await crud.addStockToPortfolio(id);
