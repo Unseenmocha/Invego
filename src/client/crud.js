@@ -192,7 +192,7 @@ export async function sellStockInPortfolio(id) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id: id }),
+      body: JSON.stringify({ username, password }),
     });
     const data = await response.json();
     return data;
@@ -281,4 +281,3 @@ export async function sellStockInPortfolio(id) {
   }
 
   */
-  
