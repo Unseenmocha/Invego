@@ -6,14 +6,15 @@ const pass_one = document.getElementById('create-password-1');
 const pass_two = document.getElementById('create-password-2');
 
 login.addEventListener('click', () => {
-    const username = document.getElementById('username').value;
+    /*const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const data = await crud.readSomething(username, password);
+    const data = crud.readSomething(username, password);
     if(data.password === password){
         alert("Login successful");
     } else {
         alert("Login failed, Please double check your username and password");
-    }
+    }*/
+    window.location.href = "../Discovery/discovery.html";
 });
 
 signup.addEventListener('click', () => {
