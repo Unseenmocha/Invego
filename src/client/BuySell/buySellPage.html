@@ -20,7 +20,7 @@
       <div class="info">
         <h1 id="profileName"> 
           <script type="module"> 
-            import { getProfileName } from './getInfo.js';
+            import { getProfileName } from '../getInfo.js';
             document.getElementById("profileName").textContent = getProfileName(); 
           </script>
         </h1>
@@ -28,7 +28,7 @@
           <h3 id="percentBittel"> -1.00 (0.99%)</h3>
         </h2>
         <script type="module"> 
-          import { getHowMuch, getPercentBittel } from './getInfo.js';
+          import { getHowMuch, getPercentBittel } from '../getInfo.js';
           const howMuch = getHowMuch();
           document.getElementById("Bittels").textContent = howMuch + " B";
           document.getElementById("percentBittel").textContent = getPercentBittel();
@@ -37,14 +37,14 @@
     </div>
     <p id="aboutMe"></p>
     <script type="module"> 
-      import { getAboutMe } from './getInfo.js';
+      import { getAboutMe } from '../getInfo.js';
       document.getElementById("aboutMe").textContent = getAboutMe(); 
     </script>
 
     <div class="button-container">
       <div class="buyNow">
         <label for="buyNow"></label>
-        <input type="button" id="buyNow" value="Buy <">
+        <input type="button" id="buyNow" value="Buy ">
       </div>
       <div class="input-container">
         <div class="shares">
