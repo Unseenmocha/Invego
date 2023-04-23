@@ -73,7 +73,7 @@ export async function createStock(id) {
 
 
 export async function addStockToPortfolio(id) {
-    const response = await fetch(`/create`, {
+    const response = await fetch(`/addToPortfolio`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export async function addStockToPortfolio(id) {
   
   export async function readStocksInPortfolio(id) {
     try {
-      const response = await fetch(`/read?id=${id}`, {
+      const response = await fetch(`/readInPortfolio`, {
         method: 'GET',
       });
       const data = await response.json();
@@ -99,7 +99,7 @@ export async function addStockToPortfolio(id) {
   /* // doesn't seem necessary?
   export async function updateStocksInPortfolio(id) {
     try {
-      const response = await fetch(`/update?id=${id}`, {
+      const response = await fetch(`/updateInPortfolio?id=${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export async function addStockToPortfolio(id) {
   
   export async function removeStockFromPortfolio(id) {
     try {
-      const response = await fetch(`/delete?id=${id}`, {
+      const response = await fetch(`/removeFromPortfolio?id=${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -135,11 +135,12 @@ export async function addStockToPortfolio(id) {
     return null;
   }
   
+  /*
   export async function readAllStocksInPortfolio() {
     const response = await fetch(`/dump`, {
       method: 'GET',
     });
     const data = await response.json();
     return data;
-  }
+  } */
   
