@@ -1,11 +1,11 @@
-import * as crud from './crud.js';
+import * as crud from '../crud.js';
 
-const portTable = document.getElementById('portTable');
-const addButton = document.getElementById('crudAddStock');
-const removeButton = document.getElementById('crudRemoveStock');
+//const portTable = document.getElementById('portTable');
+//const addButton = document.getElementById('crudAddStock');
+//const removeButton = document.getElementById('crudRemoveStock');
+const redirectButton = document.getElementById('invego');
 
-
-
+/*
 const generatePortfolio = async () => {
     const ownedStocks = await crud.readAllStocksInPortfolio();
   
@@ -39,11 +39,13 @@ removeButton.addEventListener('click', async (e) => {
     id = 0; // will need to get this from somewhere
     await crud.removeStockFromPortfolio(id);
     generatePortfolio()
+});*/
+
+redirectButton.addEventListener("click", async () => {
+  window.location.href = "../Discovery/discovery.html";
 });
 
-
-
-generatePortfolio();
+//generatePortfolio();
 
 
 

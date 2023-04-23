@@ -44,3 +44,4 @@ sellButton.addEventListener("click", async () => {
     // okay this is all done by middleware in the server and app.use under express
     await sell();
 });
+
