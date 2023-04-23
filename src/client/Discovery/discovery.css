@@ -17,7 +17,7 @@ hr {
 }
 
 #grid-background-image {
-    background-image: url(../assets/pngegg.png);
+    background-image: url(../../../assets/pngegg.png);
     background-repeat: repeat;
     opacity: 20%;
     position: absolute;
