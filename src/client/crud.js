@@ -1,8 +1,27 @@
-import e from "express";
-import PouchDb from "pouchdb";
-
+// import PouchDB from "../../node_modules/pouchdb/dist/pouchdb.min.js";
+// import * as PouchDB from '../../node_modules/pouchdb/dist/pouchdb.js';
 
 let db = new PouchDB("posts");
+
+export async function createUser(username, password) {
+  const user = {
+    _id: 0, //needs work
+    username: username,
+    password: password,
+    firstName: "",
+    lastName: "",
+  }
+  try {
+    await db.put(user);
+    console.log("user created");
+  } catch (err) {
+    console.log("failed to create user. "+err);
+  }
+}
+
+export async function login(username, password) {
+  
+}
 
 export async function createStock(id) {
 
@@ -21,17 +40,18 @@ export async function createStock(id) {
       }
       
 
-    /*
-    const response = await fetch(`/create`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ id: id }),
-    });
-    const data = await response.json();
-    return data;
-    */
+    // *************************
+    // For server implementation
+    // *************************  
+    // const response = await fetch(`/create`, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ id: id }),
+    // });
+    // const data = await response.json();
+    // return data;
   }
   
   export async function readStock(id) {
@@ -43,17 +63,19 @@ export async function createStock(id) {
         console.log('Error retrieving data:', err);
       }
 
-    /*
-    try {
-      const response = await fetch(`/read?id=${id}`, {
-        method: 'GET',
-      });
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-    */
+    // *************************
+    // For server implementation
+    // *************************  
+    // try {
+    //   const response = await fetch(`/read?id=${id}`, {
+    //     method: 'GET',
+    //   });
+    //   const data = await response.json();
+    //   return data;
+    // } catch (err) {
+    //   console.log(err);
+    // }
+
   }
   
   export async function updateStock(id, newValue) {
@@ -66,23 +88,24 @@ export async function createStock(id) {
         console.log('Error updating data:', err);
       }
 
-    /*
-    try {
-      const response = await fetch(`/update?id=${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ id: id }),
-      });
+    // *************************
+    // For server implementation
+    // *************************
+    // try {
+    //   const response = await fetch(`/update?id=${id}`, {
+    //     method: 'PUT',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ id: id }),
+    //   });
   
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-    return null;
-    */
+    //   const data = await response.json();
+    //   return data;
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    // return null;
   }
   
   export async function deleteStock(id) {
@@ -95,28 +118,27 @@ export async function createStock(id) {
         console.log('Error deleting data:', err);
       }
 
-    /*
-    try {
-      const response = await fetch(`/delete?id=${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ id: id }),
-      }
-      );
-      
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-    return null;
-    */
+    // *************************
+    // For server implementation
+    // *************************
+    // try {
+    //   const response = await fetch(`/delete?id=${id}`, {
+    //     method: 'DELETE',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ id: id }),
+    //   }
+    //   );      
+    //   const data = await response.json();
+    //   return data;
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    // return null;
   }
   
-  export async function readAllStocks() {
-
+  export async function getPortfolio(userId) {
     try {
         const docs = await db.allDocs();
         return docs;
@@ -124,13 +146,14 @@ export async function createStock(id) {
         console.log('Error retrieving data:', err);
       }
 
-    /*
-    const response = await fetch(`/dump`, {
-      method: 'GET',
-    });
-    const data = await response.json();
-    return data;
-    */
+    // *************************
+    // For server implementation
+    // ************************ 
+    // const response = await fetch(`/dump`, {
+    //   method: 'GET',
+    // });
+    // const data = await response.json();
+    // return data;
   }
   
 // within portfolio
@@ -152,18 +175,18 @@ export async function buyStockInPortfolio(userId, stockId) {
         console.log('Error updating data:', err);
       }
 
-
-    /*
-    const response = await fetch(`/addToPortfolio`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ id: id }),
-    });
-    const data = await response.json();
-    return data;
-    */
+    // *************************
+    // For server implementation
+    // *************************
+    // const response = await fetch(`/addToPortfolio`, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ id: id }),
+    // });
+    // const data = await response.json();
+    // return data;
   }
 
 export async function sellStockInPortfolio(id) {
@@ -186,17 +209,18 @@ export async function sellStockInPortfolio(id) {
         console.log('Error updating data:', err);
       }
 
-    /*
-    const response = await fetch(`/addToPortfolio`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    });
-    const data = await response.json();
-    return data;
-    */
+    // *************************
+    // For server implementation
+    // *************************
+    // const response = await fetch(`/addToPortfolio`, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ username, password }),
+    // });
+    // const data = await response.json();
+    // return data;
   }
   
   export async function readSingleStockInPortfolio(userId, stockId) {
@@ -214,17 +238,18 @@ export async function sellStockInPortfolio(id) {
         console.log('Error retrieving data:', err);
       }
 
-    /*
-    try {
-      const response = await fetch(`/readSingleStockInPortfolio`, {
-        method: 'GET',
-      });
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-    */
+    // *************************
+    // For server implementation
+    // *************************
+    // try {
+    //   const response = await fetch(`/readSingleStockInPortfolio`, {
+    //     method: 'GET',
+    //   });
+    //   const data = await response.json();
+    //   return data;
+    // } catch (err) {
+    //   console.log(err);
+    // }
   }
 
   export async function readStocksInPortfolio(id) {
@@ -244,40 +269,39 @@ export async function sellStockInPortfolio(id) {
         console.log("error", );
     }
 
-    /*
-    try {
-      const response = await fetch(`/readStocksInPortfolio`, {
-        method: 'GET',
-      });
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-    */
+    // *************************
+    // For server implementation
+    // *************************
+    // try {
+    //   const response = await fetch(`/readStocksInPortfolio`, {
+    //     method: 'GET',
+    //   });
+    //   const data = await response.json();
+    //   return data;
+    // } catch (err) {
+    //   console.log(err);
+    // }
   }
 
-  /*
   
   export async function removeStockFromPortfolio(id) {
-    
-    try {
-      const response = await fetch(`/removeFromPortfolio?id=${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ id: id }),
-      }
-      );
+    // *************************
+    // For server implementation
+    // *************************
+    // try {
+    //   const response = await fetch(`/removeFromPortfolio?id=${id}`, {
+    //     method: 'DELETE',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ id: id }),
+    //   }
+    //   );
       
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-    return null;
-    
+    //   const data = await response.json();
+    //   return data;
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    // return null;
   }
-
-  */

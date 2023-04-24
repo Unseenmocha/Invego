@@ -3,7 +3,8 @@
 	<link rel="stylesheet" href="login.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
-	<script type="module" src="client.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
+	<script type="module" src="login.js"></script>
 </head>
 
 <body scroll="no">
@@ -21,7 +22,7 @@
 		</div>
 		<div class="login-widget-container" id="signup-widget">
 			<div>
-				<input type="text" class="text-entry" placeholder="create username">
+				<input type="text" id="create-username" class="text-entry" placeholder="create username">
 				<input id='create-password-1' type="password" class="text-entry" placeholder="create password">
 				<input id='create-password-2' type="password" class="text-entry" placeholder="confirm password">
 				<button type="submit" class="button" id ="signup-button">Signup</button>

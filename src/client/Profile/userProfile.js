@@ -7,22 +7,22 @@ const redirectButton = document.getElementById('invego');
 
 
 const generatePortfolio = async () => {
-    const ownedStocks = await crud.readAllStocksInPortfolio();
+    // const ownedStocks = await crud.readAllStocksInPortfolio();
   
-    portTable.innerHTML = "";
+    // portTable.innerHTML = "";
   
-    if (posts.length > 0) {
-      for (const stock of ownedStocks) {
-        portTable.innerHTML +=  `
-        <tr>
-            <td><img class="profile-pic" src="${stock.profilePicLink}" /></td>
-            <td>${stock.name}</td>
-            <td>${stock.bittle}</td>
-            <td>${stock.bittleChange}B</td>
-            <td>Shares: ${stock.number}</td>
-        </tr>`
-      }
-    }
+    // if (posts.length > 0) {
+    //   for (const stock of ownedStocks) {
+    //     portTable.innerHTML +=  `
+    //     <tr>
+    //         <td><img class="profile-pic" src="${stock.profilePicLink}" /></td>
+    //         <td>${stock.name}</td>
+    //         <td>${stock.bittle}</td>
+    //         <td>${stock.bittleChange}B</td>
+    //         <td>Shares: ${stock.number}</td>
+    //     </tr>`
+    //   }
+    // }
   };
 
 
