@@ -17,7 +17,7 @@ hr {
 }
 
 #grid-background-image {
-    background-image: url(../assets/pngegg.png);
+    background-image: url(../../../assets/pngegg.png);
     background-repeat: repeat;
     opacity: 20%;
     position: absolute;
@@ -137,7 +137,6 @@ hr {
 .box-view {
     flex: 1;
     display: flex;
-    height: 80vh;
     flex-direction: column;
     border-radius: 10px;
     background-color: white;
@@ -192,7 +191,7 @@ table {
 
 #message-entry {
     border-radius: 10px;
-    flex-grow: 8;
+    flex-grow:8;
     margin: 10px;
     padding: 10px;
     border-color: white;
@@ -218,7 +217,7 @@ table {
 
 .other-message {
     margin: 10px;
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: start;
 }
@@ -226,9 +225,9 @@ table {
 .message-bubble-other {
     padding: 10px;
     border-radius: 10px;
-    width: fit-content;
-    height: fit-content;
-    background-color: #dededee1;
+    width:fit-content;
+    height:fit-content;
+    background-color:#dededee1;
 }
 
 .message-bubble-other::before {
@@ -236,7 +235,7 @@ table {
     width: 0px;
     height: 0px;
     position: relative;
-    border-left: 15px solid transparent;
+    border-left:15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 15px solid transparent;
     border-bottom: 15px solid #dededee1;

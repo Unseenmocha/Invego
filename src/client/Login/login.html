@@ -3,6 +3,8 @@
 	<link rel="stylesheet" href="login.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+	<script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
+	<script type="module" src="login.js"></script>
 </head>
 
 <body scroll="no">
@@ -12,18 +14,18 @@
 		<div class="title-text">Invego</div>
 		<div class="login-widget-container" id="login-widget">
 			<div>
-				<input type="text" class="text-entry" placeholder="Username">
-				<input type="password" class="text-entry" placeholder="Password">
-				<button type="submit" class="button">Login</button>
+				<input type="text" class="text-entry" id="user" placeholder="Username">
+				<input type="password" class="text-entry" id="pass" placeholder="Password">
+				<button type="submit" class="button" id="login-button">Login</button>
 				<div id="go-signup" type="text" class="text-button">New to Invego?</div>
 			</div>
 		</div>
 		<div class="login-widget-container" id="signup-widget">
 			<div>
-				<input type="text" class="text-entry" placeholder="create username">
+				<input type="text" id="create-username" class="text-entry" placeholder="create username">
 				<input id='create-password-1' type="password" class="text-entry" placeholder="create password">
 				<input id='create-password-2' type="password" class="text-entry" placeholder="confirm password">
-				<button type="submit" class="button">Signup</button>
+				<button type="submit" class="button" id ="signup-button">Signup</button>
 				<div id="go-login" type="text" class="text-button">Have an account?</div>
 			</div>
 		</div>
