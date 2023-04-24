@@ -1,6 +1,6 @@
-import e from "express";
-import PouchDb from "pouchdb";
-
+//import e from "express";
+//import PouchDB from 'pouchdb';
+import PouchDB from '../../node_modules/pouchdb/dist/pouchdb.js';
 
 let db = new PouchDB("posts");
 
@@ -281,3 +281,4 @@ export async function sellStockInPortfolio(id) {
   }
 
   */
+
