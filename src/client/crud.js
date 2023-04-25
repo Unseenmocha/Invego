@@ -40,6 +40,7 @@ export async function login(username, password) {
   }
 }
 
+
 export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
 

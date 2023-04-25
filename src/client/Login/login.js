@@ -26,7 +26,8 @@ signup.addEventListener('click', async () => {
         return;
     } else if (pass_one.value === pass_two.value && pass_one.value !== "" && pass_two.value !== "") {
         crud.createUser(new_username.value, pass_one.value);
-        closeSignUp();
+        //closeSignUp();
+        window.location.href = "../Discovery/discovery.html";
         return;
     }
 
