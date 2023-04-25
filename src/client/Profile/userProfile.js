@@ -5,6 +5,9 @@ const addButton = document.getElementById('crudAddStock');
 const removeButton = document.getElementById('crudRemoveStock');
 const redirectButton = document.getElementById('invego');
 const inputId = document.getElementById('inputId');
+const saveButton = document.getElementById('save');
+
+console.log("userProfile.js loaded");
 
 const generatePortfolio = async () => {
   console.log("generatePortfolio");
@@ -58,7 +61,13 @@ const generatePortfolio = async () => {
   }
 }
 
-
+saveButton.addEventListener('click', async (e) => {
+  const name = document.getElementById('input-name').value;
+  const bio = document.getElementById('input-bio').value;
+  if (name || bio) {
+    await crud.updateUser(name, bio);
+  }
+});
 
 addButton.addEventListener('click', async (e) => {
     // in the future this would more likely call the matching algorithm, for 'buy' 

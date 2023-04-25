@@ -1,7 +1,7 @@
 // import PouchDB from "../../node_modules/pouchdb/dist/pouchdb.min.js";
 // import * as PouchDB from '../../node_modules/pouchdb/dist/pouchdb.js';
 
-let db1 = new PouchDB("stocks");
+let db1 = new PouchDB("users");
 let db2 = new PouchDB("portfolios");
 
 // put in mock data
@@ -29,28 +29,17 @@ function getCookie(name) {
   return null;
 }
 
-// id closure
-const createGetNewID = () => { 
-  let id = 0;
-  return () => {
-    id++;
-    return String(id);
-  }
-}
-const getNewId = createGetNewID();
-
 export async function createUser(username, password) {
-  const id = getNewId();
-  setCookie("currentId", id);
   const user = {
-    _id: id,
     username: username,
     password: password,
     firstName: "",
     lastName: "",
   }
   try {
-    await db1.put(user);
+    await db1.post(user).get((response)=> {
+      setCookie("currentId", response.id);
+    });
     console.log("user created");
   } catch (err) {
     console.log("failed to create user. "+err);
@@ -59,6 +48,20 @@ export async function createUser(username, password) {
   await createPortfolio(id);
 }
 
+export async function updateUser(username, bio) {
+  //Find the user
+  const user = await db1.get(getCookie("currentId"));
+  user.bio = bio;
+  user.username = username;
+  try {
+    await db1.put(user);
+    console.log("User updated");
+  } catch (err) {
+    console.log("Failed to update user. "+err);
+  }
+}
+
+//Read user 
 export async function login(username, password) {
   console.log("log in");
   let user = null;
@@ -74,15 +77,25 @@ export async function login(username, password) {
           password: password
         }
       });
-      //console.log("user", user);
+      console.log("user", user);
     });
-    //setCookie("currentId", id);
+    if (user) {
+      setCookie("currentId", user.id);
+    }
     return user;
   } catch (err) {
     console.log("failed to read user. "+err);
   }
 }
 
+export async function readAllUser() {
+  try {
+    const allUser = await db1.allDocs({ include_docs: true });
+    return allUser;
+  } catch (err) {
+    console.log("failed to read all user. "+err);
+  }
+}
 
 export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
@@ -203,8 +216,6 @@ export async function createStock(id) {
 
   export async function test_getAllPorfolios() {
     try {
-        
-
         const docs = await db2.allDocs();
         console.log("Portfolio created successfully");
         return docs;
