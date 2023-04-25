@@ -10,8 +10,9 @@ const pass_two = document.getElementById('create-password-2');
 login.addEventListener('click', async () => {
     const username = document.getElementById('user').value;
     const password = document.getElementById('pass').value;
-    const data = await crud.readUser(username, password);
-    if(data.password === password){
+    const user = await crud.login(username, password);
+    console.log(user);
+    if(user){
         window.location.href = "../Discovery/discovery.html";
     } else {
         alert("Login failed, Please double check your username and password");
