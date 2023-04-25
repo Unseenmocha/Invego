@@ -29,4 +29,4 @@ const closeSignUp = ()=> {
 document.getElementById("go-signup").addEventListener("click", signUp);
 document.getElementById("go-login").addEventListener("click", closeSignUp);
 
-export {signUp, closeSignUp};
+//export {signUp, closeSignUp};
