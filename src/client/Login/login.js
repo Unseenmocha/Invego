@@ -1,5 +1,5 @@
 import * as crud from '../crud.js';
-import {closeSignUp} from './displaySignup.js';
+//import {closeSignUp} from './displaySignup.js';
 
 const login = document.getElementById('login-button');
 const signup = document.getElementById('signup-button');
@@ -11,8 +11,7 @@ login.addEventListener('click', async () => {
     const username = document.getElementById('user').value;
     const password = document.getElementById('pass').value;
     const user = await crud.login(username, password);
-    console.log(user);
-    if(user){
+    if(user && user.username === username && user.password === password){
         window.location.href = "../Discovery/discovery.html";
     } else {
         alert("Login failed, Please double check your username and password");
