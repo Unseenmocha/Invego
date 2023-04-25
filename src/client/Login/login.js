@@ -1,4 +1,5 @@
 import * as crud from '../crud.js';
+import {closeSignUp} from './displaySignup.js';
 
 const login = document.getElementById('login-button');
 const signup = document.getElementById('signup-button');
@@ -24,6 +25,8 @@ signup.addEventListener('click', async () => {
         return;
     } else {
         const data = crud.createUser(new_username.value, pass_one.value);
+        closeSignUp();
         return;
     }
+
 });

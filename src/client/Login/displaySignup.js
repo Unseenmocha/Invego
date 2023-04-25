@@ -1,5 +1,6 @@
 const signUpWidget = document.getElementById("signup-widget");
 const loginWidget = document.getElementById("login-widget");
+
 const signUp = ()=> { 
     loginWidget.style.animation = "fadeout";
     loginWidget.style.animationDuration = "1s";
@@ -27,3 +28,5 @@ const closeSignUp = ()=> {
 
 document.getElementById("go-signup").addEventListener("click", signUp);
 document.getElementById("go-login").addEventListener("click", closeSignUp);
+
+export {signUp, closeSignUp};
