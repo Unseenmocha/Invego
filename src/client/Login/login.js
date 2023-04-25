@@ -24,8 +24,8 @@ signup.addEventListener('click', async () => {
     if(pass_one.value !== pass_two.value){
         alert("Passwords do not match");
         return;
-    } else {
-        const data = crud.createUser(new_username.value, pass_one.value);
+    } else if (pass_one.value === pass_two.value && pass_one.value !== "" && pass_two.value !== "") {
+        crud.createUser(new_username.value, pass_one.value);
         closeSignUp();
         return;
     }
