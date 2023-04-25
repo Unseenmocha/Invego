@@ -24,17 +24,28 @@ export async function login(username, password) {
   
 }
 
+export function getSampleStockObject() {
+  // if we ever change the data schema, we change it here
+
+  const doc = {
+    _id: 0,
+    _bio: "",
+    firstName: "",
+    lastName: "",
+    username: "",
+    password: "",
+    bittle: 0,
+    market_price: 0,
+    total_shares: 0,
+    percent_growth: 0,
+  };
+
+  return doc;
+}
+
 export async function createStock(id) {
 
-    const doc = {
-        _id: 0,
-        _bio: "",
-        firstName: "",
-        lastName: "",
-        username: "",
-        password: "",
-        bittle: 0,
-    };
+    const doc = getSampleStockObject();
 
     try {
         await db1.put(doc);
@@ -57,6 +68,7 @@ export async function createStock(id) {
   }
   
   export async function updateStock(id, newValue) {
+    // use getSampleStockObject() to get a sample stock object to pass into newValue
 
     try {
         const doc = await db1.get(id);
