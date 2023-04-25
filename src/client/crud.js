@@ -29,28 +29,17 @@ function getCookie(name) {
   return null;
 }
 
-// id closure
-const createGetNewID = () => { 
-  let id = 0;
-  return () => {
-    id++;
-    return String(id);
-  }
-}
-const getNewId = createGetNewID();
-
 export async function createUser(username, password) {
-  const id = getNewId();
-  setCookie("currentId", id);
   const user = {
-    _id: id,
     username: username,
     password: password,
     firstName: "",
     lastName: "",
   }
   try {
-    await db1.put(user);
+    await db1.post(user).get((response)=> {
+      setCookie("currentId", response.id);
+    });
     console.log("user created");
   } catch (err) {
     console.log("failed to create user. "+err);
@@ -76,7 +65,9 @@ export async function login(username, password) {
       });
       //console.log("user", user);
     });
-    //setCookie("currentId", id);
+    if (user) {
+      setCookie("currentId", user.id);
+    }
     return user;
   } catch (err) {
     console.log("failed to read user. "+err);
