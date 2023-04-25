@@ -94,13 +94,25 @@ export function getSampleStockObject() {
     lastName: "",
     username: "",
     password: "",
-    bittle: 0,
-    market_price: 0,
+    bittels: 0,
+    market_value: 0,
     total_shares: 0,
     percent_growth: 0,
   };
 
   return doc;
+}
+
+export async function stockExists(id) {
+  console.log("does", id, "exist");
+  try {
+    const stock = await readStock(id);
+    console.log("stock does exist", id);
+    return true;
+  } catch (err) {
+    console.log("stock does not exist", id);
+    return false;
+  }
 }
 
 export async function createStock(id) {
@@ -111,7 +123,7 @@ export async function createStock(id) {
         await db1.put(doc);
         console.log('Data created successfully');
       } catch (err) {
-        console.log('Error creating data:', err);
+        console.log('Error in createStock:', err);
       }
       
   }
@@ -122,7 +134,7 @@ export async function createStock(id) {
         const doc = await db1.get(id);
         return doc;
       } catch (err) {
-        console.log('Error retrieving data:', err);
+        console.log('Error in readStock:', err);
       }
 
   }
@@ -135,7 +147,7 @@ export async function createStock(id) {
         await db1.put(newValue);
         console.log('Data updated successfully');
       } catch (err) {
-        console.log('Error updating data:', err);
+        console.log('Error in updateStock:', err);
       }
 
   }
@@ -147,12 +159,12 @@ export async function createStock(id) {
         await db1.remove(doc);
         console.log('Data deleted successfully');
       } catch (err) {
-        console.log('Error deleting data:', err);
+        console.log('Error in deleteStock:', err);
       }
 
   }
   
-  export async function getPortfolio() {
+  export async function readPortfolio() {
     try {
         const id = getCookie("currentId");
         console.log("finding portfolio for id:", id);
@@ -160,7 +172,7 @@ export async function createStock(id) {
         console.log("found portfolio:", docs);
         return docs;
       } catch (err) {
-        console.log('Error retrieving data:', err);
+        console.log('Error in readPortfolio:', err);
       }
 
   }
@@ -171,13 +183,20 @@ export async function createStock(id) {
         console.log("createPortfolio id:", id);
         const doc = {
             _id: id,
-            stocks: {},
+            stocks: {
+              /*
+              _id: {
+                num_shares: 0,
+                purchase_price: 0,
+              }
+              */
+            },
         };
 
         await db2.put(doc);
         console.log("Portfolio created successfully");
       } catch (err) {
-        console.log('Error retrieving data:', err);
+        console.log('Error in createPortfolio:', err);
       }
 
   }
@@ -197,49 +216,75 @@ export async function createStock(id) {
   
 // within portfolio
 
-export async function buyStockInPortfolio(userId, stockId) {
+export async function buyStockInPortfolio(stockId, num_shares) {
+      // if the user does not have the stock, then 'add'
 
-    try {
-        const doc = await db2.get(id);
+      // if the user does have the stock, then 'update'
 
-        if (stockId in doc.portfolio) {
-            ++doc.portfolio[stockId];
+      try {
+        const portfolio = await readPortfolio();
+
+        if (stockId in portfolio.stocks) {
+          portfolio.stocks[stockId].num_shares += num_shares;
+
+          db2.put(portfolio);
         } else {
-            doc.portfolio[stockId] = 1;
+          await addStockToPortfolio(stockId);
         }
 
-        await db2.put(doc);
-        console.log('Data updated successfully');
+
       } catch (err) {
-        console.log('Error updating data:', err);
+        console.log('Error in buyStockInPortfolio:', err);
       }
 
   }
 
-export async function sellStockInPortfolio(id) {
+  //export async function 
 
-    try {
-        const doc = await db2.get(id);
+export async function sellStockInPortfolio(stockId, num_shares) {
 
-        if (stockId in doc.portfolio) {
-            --doc.portfolio[stockId];
-            if (doc.portfolio[stockId] === 0) {
-                delete doc.portfolio[stockId];
-            }
+      try {
+        const portfolio = await readPortfolio();
+
+        if (stockId in portfolio.stocks) {
+          portfolio[stockId].num_shares -= num_shares;
+          if (portfolio.stocks[stockId].num_shares === 0) {
+            delete portfolio.stocks[stockId];
+
+            db2.put(portfolio);
+          }
         } else {
-            console.log('Error updating data:', err);
+          console.log('Error buying stocks:', err);
         }
 
-        await db2.put(doc);
-        console.log('Data updated successfully');
       } catch (err) {
-        console.log('Error updating data:', err);
+        console.log('Error in sellStockInPortfolio:', err);
       }
 
   }
 
+  export async function addStockToPortfolio(stockId, num_shares) {
+    try {
+      const purchase_price = await readStock(stockId).market_value;
+
+      const id = await getCookie("currentId");
+      const portfolio = await db2.get(id);
+
+      portfolio.stocks[stockId] = {
+        "num_shares": num_shares, 
+        "purchase_price": purchase_price,
+      };
+
+      await db2.put(portfolio);
+      console.log('Data updated successfully');
+
+
+    } catch (err) {
+      console.log('Error in addStockToPortfolio:', err);
+    }
+  }
   
-  export async function removeStockFromPortfolio(id) {
+  export async function removeStockFromPortfolio(stockId) {
     try {
         const doc = await db2.get(id);
 
@@ -252,6 +297,6 @@ export async function sellStockInPortfolio(id) {
         await db2.put(doc);
         console.log('Data updated successfully');
       } catch (err) {
-        console.log('Error updating data:', err);
+        console.log('Error in removeStockFromPortfolio:', err);
       }
   }
