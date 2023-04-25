@@ -57,41 +57,41 @@ async function createPortfolio(id, stocks){
 async function createStocks(){
     for(let i = 0; i<100; i++){
         let id = i+1; 
-        let val = getRandomNumber(99, 9999);
+        let market_value = getRandomNumber(10, 200);
         let numShares = getRandomNumber(99, 9999);
         let percentGrowth = getRandomNumber(0, 99)/100;
-        await createStock(id, val, numShares, percentGrowth)
+        await createStock(id, market_value, numShares, percentGrowth)
     }
 }
 
 async function createPortfolios(){
 
-    for(let i = 0; i<100; i++){
-        let id = getRandomNumber(0, 100);
-        let stocks = []
-        if(id%2 == 1){ 
-            stocks.push({[id]: getRandomNumber(1, 50)})
-        }else{
-            prev = []
-            for(let i = 0; i<5; i++){ 
-                id = getRandomNumber(0, 100);
-                if(prev.includes(id)){
-                    continue; 
-                }
-                stocks.push({[id]: getRandomNumber(1, 6)});
-                prev.push(id);
-            }
-        }
-        await createPortfolio(i+1, stocks)
-    }
-
+  for(let i = 0; i<100; i++){
+      let id = getRandomNumber(0, 100);
+      let stocks = {};
+      if(id%2 == 1){ 
+          stocks[id] = {num_shares: getRandomNumber(1, 50), purchase_price: getRandomNumber(1, 200)};
+      }else{
+          prev = []
+          for(let i = 0; i<5; i++){ 
+              id = getRandomNumber(0, 100);
+              if(prev.includes(id)){
+                  continue; 
+              }
+              stocks[id] = {num_shares: getRandomNumber(1, 6), purchase_price: getRandomNumber(1, 200)};
+              prev.push(id);
+          }
+      }
+      await createPortfolio(i+1, stocks)
+  }
 }
+
 
 
 
 const stockJSONfile = 'STOCK_MOCK_DATA.json';
 const portfolioJSONfile = 'PORTFOLIO_MOCK_DATA.json';
 console.log("shit8")
-createStocks();
-// createPortfolios();
+// createStocks();
+createPortfolios();
 
