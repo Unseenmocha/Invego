@@ -1,7 +1,7 @@
 // import PouchDB from "../../node_modules/pouchdb/dist/pouchdb.min.js";
 // import * as PouchDB from '../../node_modules/pouchdb/dist/pouchdb.js';
 
-let db1 = new PouchDB("users");
+let db1 = new PouchDB("stocks");
 let db2 = new PouchDB("portfolios");
 
 export async function createUser(username, password) {
@@ -11,11 +11,7 @@ export async function createUser(username, password) {
     password: password,
     firstName: "",
     lastName: "",
-    market_value: 50,
-    total_shares: 500,
-    percent_growth: 0,
   }
-
   try {
     await db1.post(user);
     console.log("user created");
@@ -36,15 +32,25 @@ export async function readUser(username, password) {
 export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
 
-    const doc = {
-        _id: 0,
-        _bio: "",
-        firstName: "",
-        lastName: "",
-        username: "",
-        password: "",
-        bittle: 0,
-    };
+  const doc = {
+    _id: 0,
+    _bio: "",
+    firstName: "",
+    lastName: "",
+    username: "",
+    password: "",
+    bittle: 0,
+    market_price: 0,
+    total_shares: 0,
+    percent_growth: 0,
+  };
+
+  return doc;
+}
+
+export async function createStock(id) {
+
+    const doc = getSampleStockObject();
 
     try {
         await db1.put(doc);
