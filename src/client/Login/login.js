@@ -12,6 +12,7 @@ login.addEventListener('click', async () => {
     const username = document.getElementById('user').value;
     const password = document.getElementById('pass').value;
     const response = await crud.login(username, password);
+    console.log(response);
     let user = response.docs[0];
     if(user && user.username === username && user.password === password){
         window.location.href = "../Discovery/discovery.html";

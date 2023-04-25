@@ -7,10 +7,10 @@ profile.addEventListener('click', () => {
     window.location.href = "../Profile/userProfile.html";
 });
 
-table.addEventListener('click', async () => {
+const populatePopularProfiles = async () => {
     const lst = await crud.readAllUser();
     //Loop through all users in the object
-    for (let i = 0; i < lst.rows.length; i++) {
+    for (let i = 0; i < 5; i++) {
         table.innerHTML += 
         `<tr class="main-row">
             <td>
@@ -24,4 +24,6 @@ table.addEventListener('click', async () => {
             </td>
         </tr>`
     }
-});
+}
+
+populatePopularProfiles();
