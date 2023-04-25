@@ -12,7 +12,7 @@ login.addEventListener('click', async () => {
     const password = document.getElementById('pass').value;
     const user = await crud.login(username, password);
     if(user && user.username === username && user.password === password){
-        // window.location.href = "../Discovery/discovery.html";
+        window.location.href = "../Discovery/discovery.html";
     } else {
         alert("Login failed, Please double check your username and password");
     }
@@ -24,7 +24,7 @@ signup.addEventListener('click', async () => {
         return;
     } else if (pass_one.value === pass_two.value && pass_one.value !== "" && pass_two.value !== "") {
         crud.createUser(new_username.value, pass_one.value);
-        //window.location.href = "../Discovery/discovery.html";
+        window.location.href = "../Discovery/discovery.html";
         return;
     }
 
