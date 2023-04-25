@@ -1,5 +1,4 @@
 import * as crud from '../crud.js';
-//import {closeSignUp} from './displaySignup.js';
 
 const login = document.getElementById('login-button');
 const signup = document.getElementById('signup-button');
@@ -11,15 +10,12 @@ login.addEventListener('click', async () => {
     console.log("clicked login");
     const username = document.getElementById('user').value;
     const password = document.getElementById('pass').value;
-    const response = await crud.login(username, password);
-    console.log(response);
-    let user = response.docs[0];
+    const user = await crud.login(username, password);
     if(user && user.username === username && user.password === password){
-        window.location.href = "../Discovery/discovery.html";
+        // window.location.href = "../Discovery/discovery.html";
     } else {
         alert("Login failed, Please double check your username and password");
     }
-   // window.location.href = "../Discovery/discovery.html";
 });
 
 signup.addEventListener('click', async () => {
@@ -28,8 +24,7 @@ signup.addEventListener('click', async () => {
         return;
     } else if (pass_one.value === pass_two.value && pass_one.value !== "" && pass_two.value !== "") {
         crud.createUser(new_username.value, pass_one.value);
-        //closeSignUp();
-        window.location.href = "../Discovery/discovery.html";
+        //window.location.href = "../Discovery/discovery.html";
         return;
     }
 
