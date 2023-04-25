@@ -1,0 +1,602 @@
+[
+    {
+        "_id": 1,
+        "market_value": 87,
+        "total_shares": 9089,
+        "percent_growth": 0.97
+    },
+    {
+        "_id": 2,
+        "market_value": 98,
+        "total_shares": 9427,
+        "percent_growth": 0.18
+    },
+    {
+        "_id": 3,
+        "market_value": 50,
+        "total_shares": 7894,
+        "percent_growth": 0.82
+    },
+    {
+        "_id": 4,
+        "market_value": 76,
+        "total_shares": 2073,
+        "percent_growth": 0.32
+    },
+    {
+        "_id": 5,
+        "market_value": 65,
+        "total_shares": 6636,
+        "percent_growth": 0.27
+    },
+    {
+        "_id": 6,
+        "market_value": 161,
+        "total_shares": 3590,
+        "percent_growth": 0.57
+    },
+    {
+        "_id": 7,
+        "market_value": 144,
+        "total_shares": 3905,
+        "percent_growth": 0.99
+    },
+    {
+        "_id": 8,
+        "market_value": 67,
+        "total_shares": 8235,
+        "percent_growth": 0.8
+    },
+    {
+        "_id": 9,
+        "market_value": 96,
+        "total_shares": 6509,
+        "percent_growth": 0.55
+    },
+    {
+        "_id": 10,
+        "market_value": 130,
+        "total_shares": 6807,
+        "percent_growth": 0.14
+    },
+    {
+        "_id": 11,
+        "market_value": 97,
+        "total_shares": 9116,
+        "percent_growth": 0.96
+    },
+    {
+        "_id": 12,
+        "market_value": 36,
+        "total_shares": 4517,
+        "percent_growth": 0.14
+    },
+    {
+        "_id": 13,
+        "market_value": 48,
+        "total_shares": 2033,
+        "percent_growth": 0.17
+    },
+    {
+        "_id": 14,
+        "market_value": 149,
+        "total_shares": 7702,
+        "percent_growth": 0.41
+    },
+    {
+        "_id": 15,
+        "market_value": 42,
+        "total_shares": 7863,
+        "percent_growth": 0.59
+    },
+    {
+        "_id": 16,
+        "market_value": 111,
+        "total_shares": 3492,
+        "percent_growth": 0.48
+    },
+    {
+        "_id": 17,
+        "market_value": 32,
+        "total_shares": 2775,
+        "percent_growth": 0.48
+    },
+    {
+        "_id": 18,
+        "market_value": 114,
+        "total_shares": 2358,
+        "percent_growth": 0.94
+    },
+    {
+        "_id": 19,
+        "market_value": 64,
+        "total_shares": 9771,
+        "percent_growth": 0.92
+    },
+    {
+        "_id": 20,
+        "market_value": 83,
+        "total_shares": 3125,
+        "percent_growth": 0.98
+    },
+    {
+        "_id": 21,
+        "market_value": 146,
+        "total_shares": 9937,
+        "percent_growth": 0.03
+    },
+    {
+        "_id": 22,
+        "market_value": 106,
+        "total_shares": 4793,
+        "percent_growth": 0.7
+    },
+    {
+        "_id": 23,
+        "market_value": 169,
+        "total_shares": 8495,
+        "percent_growth": 0.88
+    },
+    {
+        "_id": 24,
+        "market_value": 193,
+        "total_shares": 8069,
+        "percent_growth": 0.71
+    },
+    {
+        "_id": 25,
+        "market_value": 24,
+        "total_shares": 6127,
+        "percent_growth": 0.8
+    },
+    {
+        "_id": 26,
+        "market_value": 82,
+        "total_shares": 3578,
+        "percent_growth": 0.17
+    },
+    {
+        "_id": 27,
+        "market_value": 177,
+        "total_shares": 5442,
+        "percent_growth": 0.14
+    },
+    {
+        "_id": 28,
+        "market_value": 149,
+        "total_shares": 2194,
+        "percent_growth": 0.06
+    },
+    {
+        "_id": 29,
+        "market_value": 44,
+        "total_shares": 2227,
+        "percent_growth": 0.63
+    },
+    {
+        "_id": 30,
+        "market_value": 12,
+        "total_shares": 2882,
+        "percent_growth": 0.61
+    },
+    {
+        "_id": 31,
+        "market_value": 192,
+        "total_shares": 7992,
+        "percent_growth": 0.52
+    },
+    {
+        "_id": 32,
+        "market_value": 24,
+        "total_shares": 9001,
+        "percent_growth": 0.1
+    },
+    {
+        "_id": 33,
+        "market_value": 41,
+        "total_shares": 5992,
+        "percent_growth": 0.06
+    },
+    {
+        "_id": 34,
+        "market_value": 132,
+        "total_shares": 518,
+        "percent_growth": 0.85
+    },
+    {
+        "_id": 35,
+        "market_value": 161,
+        "total_shares": 8062,
+        "percent_growth": 0.55
+    },
+    {
+        "_id": 36,
+        "market_value": 55,
+        "total_shares": 5614,
+        "percent_growth": 0.49
+    },
+    {
+        "_id": 37,
+        "market_value": 199,
+        "total_shares": 3010,
+        "percent_growth": 0.02
+    },
+    {
+        "_id": 38,
+        "market_value": 183,
+        "total_shares": 4909,
+        "percent_growth": 0.25
+    },
+    {
+        "_id": 39,
+        "market_value": 117,
+        "total_shares": 2227,
+        "percent_growth": 0.71
+    },
+    {
+        "_id": 40,
+        "market_value": 82,
+        "total_shares": 7090,
+        "percent_growth": 0.05
+    },
+    {
+        "_id": 41,
+        "market_value": 158,
+        "total_shares": 5147,
+        "percent_growth": 0.35
+    },
+    {
+        "_id": 42,
+        "market_value": 75,
+        "total_shares": 4657,
+        "percent_growth": 0.33
+    },
+    {
+        "_id": 43,
+        "market_value": 74,
+        "total_shares": 3228,
+        "percent_growth": 0.77
+    },
+    {
+        "_id": 44,
+        "market_value": 160,
+        "total_shares": 4829,
+        "percent_growth": 0.17
+    },
+    {
+        "_id": 45,
+        "market_value": 106,
+        "total_shares": 6117,
+        "percent_growth": 0.92
+    },
+    {
+        "_id": 46,
+        "market_value": 110,
+        "total_shares": 8609,
+        "percent_growth": 0.97
+    },
+    {
+        "_id": 47,
+        "market_value": 70,
+        "total_shares": 1954,
+        "percent_growth": 0.7
+    },
+    {
+        "_id": 48,
+        "market_value": 175,
+        "total_shares": 5413,
+        "percent_growth": 0.9
+    },
+    {
+        "_id": 49,
+        "market_value": 130,
+        "total_shares": 9636,
+        "percent_growth": 0.23
+    },
+    {
+        "_id": 50,
+        "market_value": 31,
+        "total_shares": 3795,
+        "percent_growth": 0.82
+    },
+    {
+        "_id": 51,
+        "market_value": 68,
+        "total_shares": 1064,
+        "percent_growth": 0.09
+    },
+    {
+        "_id": 52,
+        "market_value": 84,
+        "total_shares": 9945,
+        "percent_growth": 0.67
+    },
+    {
+        "_id": 53,
+        "market_value": 152,
+        "total_shares": 3105,
+        "percent_growth": 0.82
+    },
+    {
+        "_id": 54,
+        "market_value": 120,
+        "total_shares": 1627,
+        "percent_growth": 0.65
+    },
+    {
+        "_id": 55,
+        "market_value": 75,
+        "total_shares": 9504,
+        "percent_growth": 0.61
+    },
+    {
+        "_id": 56,
+        "market_value": 94,
+        "total_shares": 564,
+        "percent_growth": 0.88
+    },
+    {
+        "_id": 57,
+        "market_value": 73,
+        "total_shares": 1893,
+        "percent_growth": 0.27
+    },
+    {
+        "_id": 58,
+        "market_value": 136,
+        "total_shares": 3082,
+        "percent_growth": 0.47
+    },
+    {
+        "_id": 59,
+        "market_value": 144,
+        "total_shares": 5154,
+        "percent_growth": 0.59
+    },
+    {
+        "_id": 60,
+        "market_value": 135,
+        "total_shares": 2117,
+        "percent_growth": 0.12
+    },
+    {
+        "_id": 61,
+        "market_value": 21,
+        "total_shares": 7382,
+        "percent_growth": 0.33
+    },
+    {
+        "_id": 62,
+        "market_value": 61,
+        "total_shares": 5161,
+        "percent_growth": 0.23
+    },
+    {
+        "_id": 63,
+        "market_value": 137,
+        "total_shares": 9702,
+        "percent_growth": 0.19
+    },
+    {
+        "_id": 64,
+        "market_value": 139,
+        "total_shares": 7929,
+        "percent_growth": 0.73
+    },
+    {
+        "_id": 65,
+        "market_value": 62,
+        "total_shares": 3710,
+        "percent_growth": 0.55
+    },
+    {
+        "_id": 66,
+        "market_value": 180,
+        "total_shares": 3075,
+        "percent_growth": 0.43
+    },
+    {
+        "_id": 67,
+        "market_value": 82,
+        "total_shares": 4231,
+        "percent_growth": 0.54
+    },
+    {
+        "_id": 68,
+        "market_value": 29,
+        "total_shares": 156,
+        "percent_growth": 0.49
+    },
+    {
+        "_id": 69,
+        "market_value": 114,
+        "total_shares": 1857,
+        "percent_growth": 0.53
+    },
+    {
+        "_id": 70,
+        "market_value": 21,
+        "total_shares": 3924,
+        "percent_growth": 0.3
+    },
+    {
+        "_id": 71,
+        "market_value": 13,
+        "total_shares": 4126,
+        "percent_growth": 0.99
+    },
+    {
+        "_id": 72,
+        "market_value": 130,
+        "total_shares": 377,
+        "percent_growth": 0.49
+    },
+    {
+        "_id": 73,
+        "market_value": 195,
+        "total_shares": 6141,
+        "percent_growth": 0.18
+    },
+    {
+        "_id": 74,
+        "market_value": 90,
+        "total_shares": 4331,
+        "percent_growth": 0.91
+    },
+    {
+        "_id": 75,
+        "market_value": 67,
+        "total_shares": 1104,
+        "percent_growth": 0.95
+    },
+    {
+        "_id": 76,
+        "market_value": 16,
+        "total_shares": 525,
+        "percent_growth": 0.29
+    },
+    {
+        "_id": 77,
+        "market_value": 13,
+        "total_shares": 7844,
+        "percent_growth": 0.24
+    },
+    {
+        "_id": 78,
+        "market_value": 40,
+        "total_shares": 1384,
+        "percent_growth": 0.8
+    },
+    {
+        "_id": 79,
+        "market_value": 11,
+        "total_shares": 9945,
+        "percent_growth": 0.75
+    },
+    {
+        "_id": 80,
+        "market_value": 159,
+        "total_shares": 1860,
+        "percent_growth": 0.95
+    },
+    {
+        "_id": 81,
+        "market_value": 173,
+        "total_shares": 8965,
+        "percent_growth": 0.61
+    },
+    {
+        "_id": 82,
+        "market_value": 196,
+        "total_shares": 7686,
+        "percent_growth": 0.11
+    },
+    {
+        "_id": 83,
+        "market_value": 108,
+        "total_shares": 7096,
+        "percent_growth": 0.04
+    },
+    {
+        "_id": 84,
+        "market_value": 178,
+        "total_shares": 1392,
+        "percent_growth": 0.3
+    },
+    {
+        "_id": 85,
+        "market_value": 165,
+        "total_shares": 897,
+        "percent_growth": 0.83
+    },
+    {
+        "_id": 86,
+        "market_value": 141,
+        "total_shares": 9460,
+        "percent_growth": 0.76
+    },
+    {
+        "_id": 87,
+        "market_value": 13,
+        "total_shares": 6845,
+        "percent_growth": 0.75
+    },
+    {
+        "_id": 88,
+        "market_value": 97,
+        "total_shares": 1950,
+        "percent_growth": 0.33
+    },
+    {
+        "_id": 89,
+        "market_value": 112,
+        "total_shares": 7392,
+        "percent_growth": 0.94
+    },
+    {
+        "_id": 90,
+        "market_value": 102,
+        "total_shares": 6121,
+        "percent_growth": 0.58
+    },
+    {
+        "_id": 91,
+        "market_value": 28,
+        "total_shares": 6558,
+        "percent_growth": 0.92
+    },
+    {
+        "_id": 92,
+        "market_value": 137,
+        "total_shares": 8710,
+        "percent_growth": 0.51
+    },
+    {
+        "_id": 93,
+        "market_value": 187,
+        "total_shares": 2575,
+        "percent_growth": 0.65
+    },
+    {
+        "_id": 94,
+        "market_value": 12,
+        "total_shares": 9276,
+        "percent_growth": 0.52
+    },
+    {
+        "_id": 95,
+        "market_value": 36,
+        "total_shares": 5339,
+        "percent_growth": 0.01
+    },
+    {
+        "_id": 96,
+        "market_value": 32,
+        "total_shares": 6923,
+        "percent_growth": 0.05
+    },
+    {
+        "_id": 97,
+        "market_value": 90,
+        "total_shares": 7630,
+        "percent_growth": 0.89
+    },
+    {
+        "_id": 98,
+        "market_value": 57,
+        "total_shares": 8620,
+        "percent_growth": 0.21
+    },
+    {
+        "_id": 99,
+        "market_value": 135,
+        "total_shares": 8621,
+        "percent_growth": 0.93
+    },
+    {
+        "_id": 100,
+        "market_value": 102,
+        "total_shares": 968,
+        "percent_growth": 0.89
+    }
+]

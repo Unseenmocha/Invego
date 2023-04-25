@@ -6,6 +6,7 @@ let db2 = new PouchDB("portfolios");
 
 export async function createUser(username, password) {
   const user = {
+    _id: "2",
     username: username,
     password: password,
     firstName: "",
@@ -23,22 +24,17 @@ export async function createUser(username, password) {
   }
 }
 
-export async function login(username, password) {
-  
-}
-
-export async function getUser(id) {
+export async function readUser(username, password) {
   try {
-    let user = await db1.get(id);
-    return user;
-  }
-  catch (err) {
-    console.log("failed to get user.");
-    return null;
+    const doc = await db1.get("2");
+    return doc;
+  } catch (err) {
+    console.log("failed to read user. "+err);
   }
 }
 
-export async function createStock(id) {
+export function getSampleStockObject() {
+  // if we ever change the data schema, we change it here
 
     const doc = {
         _id: 0,
@@ -71,6 +67,7 @@ export async function createStock(id) {
   }
   
   export async function updateStock(id, newValue) {
+    // use getSampleStockObject() to get a sample stock object to pass into newValue
 
     try {
         const doc = await db1.get(id);

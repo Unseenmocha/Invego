@@ -6,16 +6,16 @@ const new_username = document.getElementById('create-username');
 const pass_one = document.getElementById('create-password-1');
 const pass_two = document.getElementById('create-password-2');
 
-login.addEventListener('click', () => {
-    // const username = document.getElementById('username').value;
-    // const password = document.getElementById('password').value;
-    // const data = crud.readSomething(username, password);
-    // if(data.password === password){
-    //     alert("Login successful");
-    // } else {
-    //     alert("Login failed, Please double check your username and password");
-    // }
-    window.location.href = "../Discovery/discovery.html";
+login.addEventListener('click', async () => {
+    const username = document.getElementById('user').value;
+    const password = document.getElementById('pass').value;
+    const data = await crud.readUser(username, password);
+    if(data.password === password){
+        window.location.href = "../Discovery/discovery.html";
+    } else {
+        alert("Login failed, Please double check your username and password");
+    }
+   // window.location.href = "../Discovery/discovery.html";
 });
 
 signup.addEventListener('click', async () => {
@@ -23,6 +23,7 @@ signup.addEventListener('click', async () => {
         alert("Passwords do not match");
         return;
     } else {
-        await crud.createUser(new_username.value, pass_one.value);
+        const data = crud.createUser(new_username.value, pass_one.value);
+        return;
     }
 });
