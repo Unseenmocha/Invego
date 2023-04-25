@@ -1,19 +1,22 @@
 // import PouchDB from "../../node_modules/pouchdb/dist/pouchdb.min.js";
 // import * as PouchDB from '../../node_modules/pouchdb/dist/pouchdb.js';
 
-let db1 = new PouchDB("stocks");
+let db1 = new PouchDB("users");
 let db2 = new PouchDB("portfolios");
 
 export async function createUser(username, password) {
   const user = {
-    _id: 0, //needs work
     username: username,
     password: password,
     firstName: "",
     lastName: "",
+    market_value: 50,
+    total_shares: 500,
+    percent_growth: 0,
   }
+
   try {
-    await db1.put(user);
+    await db1.post(user);
     console.log("user created");
   } catch (err) {
     console.log("failed to create user. "+err);
@@ -22,6 +25,17 @@ export async function createUser(username, password) {
 
 export async function login(username, password) {
   
+}
+
+export async function getUser(id) {
+  try {
+    let user = await db1.get(id);
+    return user;
+  }
+  catch (err) {
+    console.log("failed to get user.");
+    return null;
+  }
 }
 
 export async function createStock(id) {
