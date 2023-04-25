@@ -6,31 +6,12 @@ let db2 = new PouchDB("portfolios");
 
 // put in mock data
 
-
-function setCookie(name, value) { 
-  console.log(name, value);
-  let expires = new Date();
-  expires.setTime(expires.getTime() + (1000 * 60 * 60 * 24 * 7));
-  document.cookie = name + "=" + value + ";path=/;expires=" + expires.toUTCString();
+function saveId(id) {
+  localStorage.setItem('currentId', id);
 }
 
-function getCookie(name) {
-  console.log(name);
-  let nameEQ = name + "=";
-  let ca = document.cookie.split(';');
-  console.log("ca len", ca.length);
-  for(let i=0;i < ca.length;i++) {
-    let c = ca[i];
-    while (c.charAt(0)==' ') {
-      c = c.substring(1,c.length);
-    }
-    
-    if (c.indexOf(nameEQ) == 0) {
-      return c.substring(nameEQ.length,c.length);
-    }
-  }
-  console.log("get cookie returning null");
-  return null;
+function getCurrentId() {
+  return localStorage.getItem('currentId');
 }
 
 export async function createUser(username, password) {
@@ -41,15 +22,14 @@ export async function createUser(username, password) {
     lastName: "",
   }
   try {
-    await db1.post(user).get((response)=> {
-      setCookie("currentId", response.id);
+    await db1.post(user).then((response)=> {
+      console.log(response); 
+      saveId(response.id);
     });
     console.log("user created");
   } catch (err) {
     console.log("failed to create user. "+err);
   }
-
-  await createPortfolio(id);
 }
 
 export async function updateUser(username, bio) {
@@ -74,17 +54,18 @@ export async function login(username, password) {
       index: {
         fields: ['username', 'password']
       }
-    }).then(function () {
-      user = db1.find({
+    }).then(async () => {
+      user = await db1.find({
         selector: {
           username: username,
           password: password
         }
       });
-      console.log("user", user);
     });
+    user = user? user.docs[0] : null;
+    console.log(user._id);
     if (user) {
-      setCookie("currentId", user.id);
+      saveId(user._id);
     }
     return user;
   } catch (err) {
