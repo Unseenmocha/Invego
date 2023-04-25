@@ -1,6 +1,6 @@
-body {
+/* body {
     overflow: hidden;
-}
+} */
 
 /* screen-container */
 .screen-container {
@@ -10,11 +10,11 @@ body {
     display: flex;
     flex-direction: column;
     place-items: center;
-    background: #F5F5F7;
+    /* background: #F5F5F7; */
 }
 
 /* grid-background-image */
-.grid-background-image {
+/* .grid-background-image {
     box-sizing: border-box;
     position: absolute;
     height: 100vh;
@@ -27,10 +27,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 /* stock-line */
-.stock-line {
+/* .stock-line {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -38,7 +38,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 /* title-text */
 .title-text {
@@ -51,7 +51,7 @@ body {
 }
 
 /*login-widget-container */
-.login-widget-container {
+/* .login-widget-container {
     position: relative;
     width: 400px;
     height:fit-content;
@@ -68,7 +68,7 @@ body {
     position: absolute;
     top:170px;
     visibility: hidden;
-}
+} */
 
 @keyframes fadein {
     from {opacity: 0%; visibility: hidden;}
@@ -121,7 +121,7 @@ body {
 
 
 .text-button {
-    left: 33%;
+    /* left: 33%; */
     position:relative;
     width: fit-content;
     height: fit-content;

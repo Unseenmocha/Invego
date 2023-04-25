@@ -1,12 +1,12 @@
-body {
+/* body {
     margin: 0px;
     background-color: white;
     height: 100vh;
     display: block;
     overflow: hidden;
-}
+} */
 
-
+/* 
 .display-card {
     background-color: white;
     border-radius: 10px;
@@ -19,9 +19,9 @@ body {
     margin: 50px 50px 0px 0px;
     filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.5));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
+} */
 
-.my-profile {
+/* .my-profile {
     width: 28vw;
     aspect-ratio: 5 / 7;
 
@@ -43,19 +43,25 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0px;
     margin: 0px;
     top: 0%;
-}
+} */
 
 .container {
-    display: flex;
+    /* display: flex;
     gap: 30vmin;
     position: relative;
     height: 100%;
     justify-content: space-between;
     align-items: top;
-    border-radius: 10px;
+    border-radius: 10px; */
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
 }
 
-.socials, .pic-and-name {
+/* .socials, .pic-and-name {
     display: flex;
     align-items: center;
 
@@ -64,9 +70,9 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 50%;
 
     gap: 10%;
-}
+} */
 
-.profile-pic {
+/* .profile-pic {
     display: flex;
     height: 5vh;
     width: 5vh;
@@ -78,7 +84,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .circle-crop {
     position: relative;
   
-}
+} */
 
 .input-bio {
     width: 80%;
@@ -110,15 +116,17 @@ input {
 }
 
 .save {
-    border-radius: 40px;
+    border-radius: 10px;
     background-color: #1C4FD1;
     color: white;
-    width: 10%;
-    height: 30%;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px 5px 10px;
     border-style: none;
+    align-self: center;
 }
 
-#grid-background-image {
+/* #grid-background-image {
     background-image: url(../../../assets/pngegg.png);
     background-repeat: repeat;
     opacity: 20%;
@@ -127,11 +135,11 @@ input {
     width: 100%;
     height: 100%;
     zoom: 50%;
-}
+} */
 
 
 
-table {
+/* table {
     margin: 0px;
     position:relative;
     width: 100%;
@@ -151,7 +159,7 @@ td, th {
     font-family: Inter;
     margin: auto;
 
-}
+} */
 
 td:nth-child(4) {
     color:red;
