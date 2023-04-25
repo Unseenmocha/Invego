@@ -6,7 +6,7 @@ let db2 = new PouchDB("portfolios");
 
 export async function createUser(username, password) {
   const user = {
-    _id: "0",
+    _id: "2",
     username: username,
     password: password,
     firstName: "",
@@ -22,7 +22,7 @@ export async function createUser(username, password) {
 
 export async function readUser(username, password) {
   try {
-    const doc = await db1.get(username);
+    const doc = await db1.get("2");
     return doc;
   } catch (err) {
     console.log("failed to read user. "+err);
