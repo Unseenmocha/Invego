@@ -1,7 +1,7 @@
 // import PouchDB from "../../node_modules/pouchdb/dist/pouchdb.min.js";
 // import * as PouchDB from '../../node_modules/pouchdb/dist/pouchdb.js';
 
-let db1 = new PouchDB("stocks");
+let db1 = new PouchDB("users");
 let db2 = new PouchDB("portfolios");
 
 // put in mock data
@@ -48,6 +48,7 @@ export async function createUser(username, password) {
   await createPortfolio(id);
 }
 
+//Read user 
 export async function login(username, password) {
   console.log("log in");
   let user = null;
@@ -74,6 +75,14 @@ export async function login(username, password) {
   }
 }
 
+export async function readAllUser() {
+  try {
+    const allUser = await db1.allDocs({ include_docs: true });
+    return allUser;
+  } catch (err) {
+    console.log("failed to read all user. "+err);
+  }
+}
 
 export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
@@ -175,8 +184,6 @@ export async function createStock(id) {
 
   export async function test_getAllPorfolios() {
     try {
-        
-
         const docs = await db2.allDocs();
         console.log("Portfolio created successfully");
         return docs;
