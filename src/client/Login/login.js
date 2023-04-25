@@ -8,8 +8,10 @@ const pass_one = document.getElementById('create-password-1');
 const pass_two = document.getElementById('create-password-2');
 
 login.addEventListener('click', async () => {
+    console.log("clicked login");
     const username = document.getElementById('user').value;
     const password = document.getElementById('pass').value;
+    console.log(username, password);
     const user = await crud.login(username, password);
     console.log(user);
     if(user){

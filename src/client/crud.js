@@ -4,22 +4,63 @@
 let db1 = new PouchDB("stocks");
 let db2 = new PouchDB("portfolios");
 
+// put in mock data
+
+
+function setCookie(name, value) { 
+  let expires = new Date();
+  expires.setTime(expires.getTime() + (1000 * 60 * 60 * 24 * 7));
+  document.cookie = name + "=" + value + ";path=/;expires=" + expires.toUTCString();
+}
+
+function getCookie(name) {
+  let nameEQ = name + "=";
+  let ca = document.cookie.split(';');
+  for(let i=0;i < ca.length;i++) {
+    let c = ca[i];
+    while (c.charAt(0)==' ') {
+      c = c.substring(1,c.length);
+    }
+    
+    if (c.indexOf(nameEQ) == 0) {
+      return c.substring(nameEQ.length,c.length);
+    }
+  }
+  return null;
+}
+
+// id closure
+const createGetNewID = () => { 
+  let id = 0;
+  return () => {
+    id++;
+    return String(id);
+  }
+}
+const getNewId = createGetNewID();
+
 export async function createUser(username, password) {
+  const id = getNewId();
+  setCookie("currentId", id);
   const user = {
+    _id: id,
     username: username,
     password: password,
     firstName: "",
     lastName: "",
   }
   try {
-    await db1.post(user);
+    await db1.put(user);
     console.log("user created");
   } catch (err) {
     console.log("failed to create user. "+err);
   }
+
+  await createPortfolio(id);
 }
 
 export async function login(username, password) {
+  console.log("log in");
   let user = null;
   try {
     await db1.createIndex({
@@ -33,7 +74,9 @@ export async function login(username, password) {
           password: password
         }
       });
+      //console.log("user", user);
     });
+    //setCookie("currentId", id);
     return user;
   } catch (err) {
     console.log("failed to read user. "+err);
@@ -108,9 +151,12 @@ export async function createStock(id) {
 
   }
   
-  export async function getPortfolio(userId) {
+  export async function getPortfolio() {
     try {
-        const docs = await db2.get(userId);
+        const id = getCookie("currentId");
+        console.log("finding portfolio for id:", id);
+        const docs = await db2.get(id);
+        console.log("found portfolio:", docs);
         return docs;
       } catch (err) {
         console.log('Error retrieving data:', err);
@@ -120,12 +166,28 @@ export async function createStock(id) {
 
   export async function createPortfolio(userId) {
     try {
+        const id = await getCookie("currentId");
+        console.log("createPortfolio id:", id);
         const doc = {
-            _id: 0,
+            _id: id,
+            stocks: {},
         };
 
         await db2.put(doc);
         console.log("Portfolio created successfully");
+      } catch (err) {
+        console.log('Error retrieving data:', err);
+      }
+
+  }
+
+  export async function test_getAllPorfolios() {
+    try {
+        
+
+        const docs = await db2.allDocs();
+        console.log("Portfolio created successfully");
+        return docs;
       } catch (err) {
         console.log('Error retrieving data:', err);
       }

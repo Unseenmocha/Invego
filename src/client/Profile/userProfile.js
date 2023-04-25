@@ -5,24 +5,37 @@ const addButton = document.getElementById('crudAddStock');
 const removeButton = document.getElementById('crudRemoveStock');
 const redirectButton = document.getElementById('invego');
 
+console.log("userProfile.js loaded");
 
 const generatePortfolio = async () => {
-    // const ownedStocks = await crud.readAllStocksInPortfolio();
+  console.log("generatePortfolio");
+
+  const allPortfolios = await crud.test_getAllPorfolios();
+  console.log("allPortfolios", allPortfolios);
+
   
-    // portTable.innerHTML = "";
+  const portfolio = await crud.getPortfolio();
+  console.log("portfolio", portfolio);
+
+  const ownedStocks = await portfolio.stocks;
+  console.log("ownedStocks", ownedStocks);
+
+
+  portTable.innerHTML = "";
+
   
-    // if (posts.length > 0) {
-    //   for (const stock of ownedStocks) {
-    //     portTable.innerHTML +=  `
-    //     <tr>
-    //         <td><img class="profile-pic" src="${stock.profilePicLink}" /></td>
-    //         <td>${stock.name}</td>
-    //         <td>${stock.bittle}</td>
-    //         <td>${stock.bittleChange}B</td>
-    //         <td>Shares: ${stock.number}</td>
-    //     </tr>`
-    //   }
-    // }
+  for (const stock of ownedStocks.values()) {
+      portTable.innerHTML +=  `
+      <tr>
+          <td><img class="profile-pic" src="${stock.profilePicLink}" /></td>
+          <td>${stock.name}</td>
+          <td>${stock.bittel}</td>
+          <td>${stock.bittelChange}B</td>
+          <td>Shares: ${stock.number}</td>
+      </tr>`
+  }
+  
+    
   };
 
 
@@ -36,9 +49,9 @@ addButton.addEventListener('click', async (e) => {
 });
 
 removeButton.addEventListener('click', async (e) => {
-    id = 0; // will need to get this from somewhere
+    
     await crud.removeStockFromPortfolio(id);
-    generatePortfolio()
+    generatePortfolio();
 });
 
 redirectButton.addEventListener("click", async () => {
