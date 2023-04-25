@@ -58,7 +58,7 @@ async function createStocks(){
 
 async function createPortfolio(id, stocks){
     obj ={
-        _id: id,
+        _id: String(id),
         stocks: stocks,
     }
     const existingArray = await reload(portfolioJSONfile);
@@ -89,7 +89,7 @@ async function createUser(id, firstName, lastName, bio, username, password, mark
 
 async function createUsers(){
   for(let i = 0; i<100; i++){
-    let id = i + 1;
+    let id = String(i + 1);
     let firstName = firstNames[i];
     let lastName = lastNames[i];
     let bio = bios[i];
@@ -104,7 +104,7 @@ async function createUsers(){
 async function createPortfolios(){
 
   for(let i = 0; i<100; i++){
-      let id = getRandomNumber(0, 100);
+      let id = String(i+1);
       let stocks = {};
       if(id%2 == 1){ 
           stocks[id] = {num_shares: getRandomNumber(1, 50), purchase_price: getRandomNumber(1, 200)};
@@ -132,5 +132,5 @@ const userJSONfile = 'USER_MOCK_DATA.json';
 
 // createStocks();
 // createPortfolios();
-// createUsers();
+createUsers();
 
