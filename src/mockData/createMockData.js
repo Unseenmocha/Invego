@@ -1,6 +1,10 @@
 const { readFile, writeFile, access } = require('fs').promises;
 // import { readFile, writeFile, access } from 'fs/promises';
 // import { constants, write } from 'fs';
+const { firstNames, lastNames, passwords, bios } = require('./mockDataArrays.js');
+
+// import { firstNames, lastNames, passwords, bios } from './mockDataArrays.js';
+
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -27,6 +31,7 @@ async function save(filename, arr) {
   }
 }
 
+
 async function createStock(id, val, numShares, percentGrowth) {
   const obj = {
     _id: id,
@@ -41,6 +46,15 @@ async function createStock(id, val, numShares, percentGrowth) {
 
   return obj;
 }
+async function createStocks(){
+  for(let i = 0; i<100; i++){
+      let id = i+1; 
+      let market_value = getRandomNumber(10, 200);
+      let numShares = getRandomNumber(99, 9999);
+      let percentGrowth = getRandomNumber(0, 99)/100;
+      await createStock(id, market_value, numShares, percentGrowth)
+  }
+}
 
 async function createPortfolio(id, stocks){
     obj ={
@@ -54,16 +68,39 @@ async function createPortfolio(id, stocks){
     return obj;
 }
 
-async function createStocks(){
-    for(let i = 0; i<100; i++){
-        let id = i+1; 
-        let market_value = getRandomNumber(10, 200);
-        let numShares = getRandomNumber(99, 9999);
-        let percentGrowth = getRandomNumber(0, 99)/100;
-        await createStock(id, market_value, numShares, percentGrowth)
-    }
+async function createUser(id, firstName, lastName, bio, username, password, marketValue, totalShares){
+  obj ={
+      _id: id,
+      first_name: firstName,
+      last_name: lastName,
+      bio: bio, 
+      username: username,
+      password: password,
+      bittels: getRandomNumber(100, 50000),
+      market_value: marketValue,
+      total_shares: totalShares,
+  }
+  const existingArray = await reload(userJSONfile);
+  existingArray.push(obj);
+  await save(userJSONfile, existingArray);
+
+  return obj;
 }
 
+async function createUsers(){
+  for(let i = 0; i<100; i++){
+    let id = i + 1;
+    let firstName = firstNames[i];
+    let lastName = lastNames[i];
+    let bio = bios[i];
+    let username = firstName + "." + lastName;
+    let password = passwords[i];
+    let marketValue = getRandomNumber(10, 200);
+    let totalShares = getRandomNumber(99, 9999);
+    await createUser(id, firstName, lastName, bio, username, password, marketValue, totalShares)
+  }
+
+}
 async function createPortfolios(){
 
   for(let i = 0; i<100; i++){
@@ -91,7 +128,9 @@ async function createPortfolios(){
 
 const stockJSONfile = 'STOCK_MOCK_DATA.json';
 const portfolioJSONfile = 'PORTFOLIO_MOCK_DATA.json';
-console.log("shit8")
+const userJSONfile = 'USER_MOCK_DATA.json';
+
 // createStocks();
-createPortfolios();
+// createPortfolios();
+// createUsers();
 
