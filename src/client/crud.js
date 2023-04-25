@@ -77,7 +77,7 @@ export async function login(username, password) {
           password: password
         }
       });
-      //console.log("user", user);
+      console.log("user", user);
     });
     if (user) {
       setCookie("currentId", user.id);
