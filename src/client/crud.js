@@ -8,14 +8,17 @@ let db2 = new PouchDB("portfolios");
 
 
 function setCookie(name, value) { 
+  console.log(name, value);
   let expires = new Date();
   expires.setTime(expires.getTime() + (1000 * 60 * 60 * 24 * 7));
   document.cookie = name + "=" + value + ";path=/;expires=" + expires.toUTCString();
 }
 
 function getCookie(name) {
+  console.log(name);
   let nameEQ = name + "=";
   let ca = document.cookie.split(';');
+  console.log("ca len", ca.length);
   for(let i=0;i < ca.length;i++) {
     let c = ca[i];
     while (c.charAt(0)==' ') {
@@ -26,6 +29,7 @@ function getCookie(name) {
       return c.substring(nameEQ.length,c.length);
     }
   }
+  console.log("get cookie returning null");
   return null;
 }
 
