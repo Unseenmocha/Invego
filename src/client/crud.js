@@ -48,6 +48,19 @@ export async function createUser(username, password) {
   await createPortfolio(id);
 }
 
+export async function updateUser(username, bio) {
+  //Find the user
+  const user = await db1.get(getCookie("currentId"));
+  user.bio = bio;
+  user.username = username;
+  try {
+    await db1.put(user);
+    console.log("User updated");
+  } catch (err) {
+    console.log("Failed to update user. "+err);
+  }
+}
+
 //Read user 
 export async function login(username, password) {
   console.log("log in");

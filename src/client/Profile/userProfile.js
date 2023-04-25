@@ -4,6 +4,7 @@ const portTable = document.getElementById('portTable');
 const addButton = document.getElementById('crudAddStock');
 const removeButton = document.getElementById('crudRemoveStock');
 const redirectButton = document.getElementById('invego');
+const saveButton = document.getElementById('save');
 
 console.log("userProfile.js loaded");
 
@@ -34,11 +35,15 @@ const generatePortfolio = async () => {
           <td>Shares: ${stock.number}</td>
       </tr>`
   }
-  
-    
   };
 
-
+saveButton.addEventListener('click', async (e) => {
+  const name = document.getElementById('input-name').value;
+  const bio = document.getElementById('input-bio').value;
+  if (name || bio) {
+    await crud.updateUser(name, bio);
+  }
+});
 
 addButton.addEventListener('click', async (e) => {
     // in the future this would more likely call the matching algorithm, for 'buy' 
