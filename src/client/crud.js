@@ -34,7 +34,7 @@ export async function createUser(username, password) {
 
 export async function updateUser(username, bio) {
   //Find the user
-  const user = await db1.get(getCookie("currentId"));
+  const user = await db1.get(getCurrentId("currentId"));
   user.bio = bio;
   user.username = username;
   try {
@@ -164,7 +164,7 @@ export async function createStock(id) {
   
   export async function readPortfolio() {
     try {
-        const id = getCookie("currentId");
+        const id = getCurrentId("currentId");
         console.log("finding portfolio for id:", id);
         const docs = await db2.get(id);
         console.log("found portfolio:", docs);
@@ -177,7 +177,7 @@ export async function createStock(id) {
 
   export async function createPortfolio(userId) {
     try {
-        const id = await getCookie("currentId");
+        const id = await getCurrentId("currentId");
         console.log("createPortfolio id:", id);
         const doc = {
             _id: id,
@@ -225,7 +225,7 @@ export async function buyStockInPortfolio(stockId, num_shares) {
 
           db2.put(portfolio);
         } else {
-          await addStockToPortfolio(stockId);
+          await addStockToPortfolio(stockId, num_shares);
         }
 
 
@@ -243,12 +243,11 @@ export async function sellStockInPortfolio(stockId, num_shares) {
         const portfolio = await readPortfolio();
 
         if (stockId in portfolio.stocks) {
-          portfolio[stockId].num_shares -= num_shares;
+          portfolio.stocks[stockId].num_shares -= num_shares;
           if (portfolio.stocks[stockId].num_shares === 0) {
             delete portfolio.stocks[stockId];
-
-            db2.put(portfolio);
           }
+          db2.put(portfolio);
         } else {
           console.log('Error buying stocks:', err);
         }
@@ -261,9 +260,13 @@ export async function sellStockInPortfolio(stockId, num_shares) {
 
   export async function addStockToPortfolio(stockId, num_shares) {
     try {
-      const purchase_price = await readStock(stockId).market_value;
+      //const purchase_price = await readStock(stockId).market_value;
 
-      const id = await getCookie("currentId");
+      const doc = await readStock(stockId);
+      console.log("addStockToPortfolio doc", doc);
+      const purchase_price = doc.market_value;
+
+      const id = await getCurrentId("currentId");
       const portfolio = await db2.get(id);
 
       portfolio.stocks[stockId] = {

@@ -10,7 +10,7 @@ const saveButton = document.getElementById('save');
 console.log("userProfile.js loaded");
 
 const generatePortfolio = async () => {
-  console.log("generatePortfolio");
+  //console.log("generatePortfolio");
 
   //const allPortfolios = await crud.test_getAllPorfolios();
   //console.log("allPortfolios", allPortfolios);
@@ -20,40 +20,51 @@ const generatePortfolio = async () => {
   console.log("portfolio", portfolio);
 
   const ownedStocks = portfolio.stocks;
-  console.log("stocks (within portfolio)", ownedStocks);
+  //console.log("stocks (within portfolio)", ownedStocks);
 
-  portTable.innerHTML = "";
+  portTable.innerHTML = `
+    <tr>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Market Value</th>
+      <th>ROI</th>
+      <th>Shares</th>
+    </tr>`;
 
   // key is the id of a stock in the porfolio, 
   // value is the contents of the portfolio  { has nothing inside of it }
-  for (const [key, value] of Object.entries(ownedStocks)) {
+  //for (const [key, value] of Object.entries(ownedStocks)) {
 
+  for (const key of Object.keys(ownedStocks)) {
+      const value = ownedStocks[key];
+
+      /*
       if (Object.values(ownedStocks).length === 0 || value[key] === undefined) {
         console.log("You own no stocks.");
         break;
-      }
+      }*/
       
-      console.log("key", key, "value", value);
+      //console.log("key", key);
+      //console.log("value", value);
 
       try {
         const stock = await crud.readStock(key);
 
-        console.log("stock", stock);
-        const name = stock.firstName + '' + stock.lastName;
-        const bittel = stock.bittel;
+        //console.log("stock", stock);
+        const name = stock.first_name + ' ' + stock.last_name;
         const market_value = stock.market_value;
-        const num_shares = value[key].num_shares;
-        const purchase_price = value[key].purchase_price;
-        const roi = market_value/purchase_price;
+        const num_shares = value.num_shares;
+        const purchase_price = value.purchase_price;
+        const roi = (market_value/purchase_price).toFixed(3);
 
 
         portTable.innerHTML +=  `
           <tr>
               <td><img class="profile-pic" src="${stock.profilePicLink}" ></td>
-              <td>${stock.name}</td>
-              <td>${stock.bittel}</td>
-              <td>${roi}B</td>
-              <td>Shares: ${num_shares}</td>
+              <td>${name}</td>
+              <td>${market_value}</td>
+              <td>${roi}%</td>
+              <td>${num_shares}</td>
           </tr>`
       } catch (err) {
         console.log('Error retrieving data:', err);
