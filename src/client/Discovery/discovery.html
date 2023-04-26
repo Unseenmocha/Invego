@@ -3,8 +3,8 @@
 
 <head>
     <title>Invego</title>
-    <link rel="stylesheet" href="../invegoStyles.css">
     <link rel="stylesheet" href="discovery.css">
+    <link rel="stylesheet" href="../invegoStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
@@ -15,38 +15,38 @@
 <body scroll="no">
     <div id="grid-background-image"></div>
     <div id="header-bar">
-        <text id="title-text">Invego</text>
+        <text class="title-text">Invego</text>
         <input id="search-bar" placeholder="Search Users" />
         <div class="profile" id="profile">
-            <img id="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
-            <text class="text-1">My Profile</text>
+            <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
+            <p class="text-normal">My Profile</p>
         </div>
     </div>
     <div id="container">
-        <div id="friends-bar">
-            <h class="header">Friends</h>
-            <div id="friends-container">
+        <div class="view" id="friends-bar">
+            <h1 class="header">Friends</h1>
+            <div class="flex-horizontal" >
                 <div class="profile">
-                    <img id="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
-                    <text class="text-1">Jenny</text>
+                    <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
+                    <p class="text-normal">Jenny</p>
                 </div>
                 <div class="profile">
-                    <img id="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
-                    <text class="text-1">Sam</text>
+                    <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
+                    <p class="text-1">Sam</p>
                 </div>
             </div>
         </div>
-        <div id="bottom-bar">
-            <div class="box-view" id="popular-profiles">
-                <h class="header">Popular Profiles</h>
+        <div class="flex-horizontal" id="bottom-bar">
+            <div class="view" id="popular-profiles-view">
+                <h1 class="header">Popular Profiles</h1>
                 <table id = "table">
                     <tr>
                         <td></td>
                         <td>
-                            <text class="text-2">Name</text>
+                            <h1 class="text-bold">Name</h1>
                         </td>
                         <td>
-                            <text class="text-2">Share Price</text>
+                            <h1 class="text-bold">Share Price</h1>
                         </td>
                     </tr>
                     <!--<hr/>
@@ -75,26 +75,26 @@
                 <!-->
                 </table>
             </div>
-            <div class="box-view" id="messages">
-                <h class="header">Messages</h>
+            <div class="view" id="messages-container-view">
+                <h1 class="header">Messages</h1>
                 <hr/>
                 <div id="message-view">
                     <div class="other-message">
                         <div class="profile">
-                            <img id="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
-                            <text class="text-1">William</text>
+                            <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
+                            <p class="text-normal">William</p>
                         </div>
                         <div class="message-bubble-other">
                             <div></div>
-                            <text class="text-1">Hello?</text>
+                            <p class="text-1">Hello?</p>
                         </div>
                     </div>
                 </div>
                 <hr id="hr-full"/>
-                <div id="enter-message">
+                <div class="flex-horizontal" id="enter-message">
                     <textarea id="message-entry" placeholder="Reply?"></textarea>
                     <button id="message-send">
-                        <text class="text-2" id="send-text">Send</text>
+                        <p class="text-bold" id="send-text">Send</p>
                     </button>
                 </div>
             </div>

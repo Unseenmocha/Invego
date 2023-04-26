@@ -1,7 +1,7 @@
 <head>
 	<title>Invego</title>
-	<link rel="stylesheet" href="../invegoStyles.css">
 	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="../invegoStyles.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 	<script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
@@ -14,25 +14,21 @@
 
 <body scroll="no">
 	<div class="screen-container">
-		<div class="grid-background-image"></div>
-		<div class="stock-line"></div>
-		<div class="title-text">Invego</div>
-		<div class="login-widget-container" id="login-widget">
-			<div>
-				<input type="text" class="text-entry" id="user" placeholder="Username">
-				<input type="password" class="text-entry" id="pass" placeholder="Password">
-				<button type="submit" class="button" id="login-button">Login</button>
-				<div id="go-signup" type="text" class="text-button">New to Invego?</div>
-			</div>
+		<div id="grid-background-image"></div>
+		<div id="stock-line"></div>
+		<div class="title-text-login">Invego</div>
+		<div class="view" id="login-view">
+			<input type="text" class="text-entry" id="user" placeholder="Username">
+			<input type="password" class="text-entry" id="pass" placeholder="Password">
+			<button type="submit" class="button" id="login-button">Login</button>
+			<div id="go-signup" type="text" class="text-button">New to Invego?</div>
 		</div>
-		<div class="login-widget-container" id="signup-widget">
-			<div>
-				<input type="text" id="create-username" class="text-entry" placeholder="create username">
-				<input id='create-password-1' type="password" class="text-entry" placeholder="create password">
-				<input id='create-password-2' type="password" class="text-entry" placeholder="confirm password">
-				<button type="submit" class="button" id ="signup-button">Signup</button>
-				<div id="go-login" type="text" class="text-button">Have an account?</div>
-			</div>
+		<div class="view" id="signup-view">
+			<input type="text" id="create-username" class="text-entry" placeholder="create username">
+			<input id='create-password-1' type="password" class="text-entry" placeholder="create password">
+			<input id='create-password-2' type="password" class="text-entry" placeholder="confirm password">
+			<button type="submit" class="button" id ="signup-button">Signup</button>
+			<div id="go-login" type="text" class="text-button">Have an account?</div>
 		</div>
 		<script src="displaySignup.js"></script>
 </body>

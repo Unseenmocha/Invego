@@ -74,6 +74,7 @@
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .profile:hover {
@@ -243,5 +244,5 @@ table {
     border-top: 15px solid transparent;
     border-bottom: 15px solid #dededee1;
     left: -24px;
-    top: 19px;
+    top: 14px;
 }
