@@ -6,9 +6,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Avery.Anderson",
         "password": "1wYtNnW8GtpfQh",
-        "bittels": 43367,
-        "market_value": 26,
-        "total_shares": 5367
+        "bittels": 16885,
+        "market_value": 69,
+        "total_shares": 3536,
+        "total_shares_owned": 18
     },
     {
         "_id": "2",
@@ -17,9 +18,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Blake.Bailey",
         "password": "2fSvPjM9XbHtKd",
-        "bittels": 20376,
-        "market_value": 52,
-        "total_shares": 3924
+        "bittels": 44704,
+        "market_value": 147,
+        "total_shares": 4756,
+        "total_shares_owned": 4
     },
     {
         "_id": "3",
@@ -28,9 +30,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Cameron.Carson",
         "password": "3cAeLmD4JnGyRs",
-        "bittels": 31880,
-        "market_value": 162,
-        "total_shares": 6727
+        "bittels": 46873,
+        "market_value": 166,
+        "total_shares": 5471,
+        "total_shares_owned": 73
     },
     {
         "_id": "4",
@@ -39,9 +42,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Dakota.Davies",
         "password": "4rUoZpB1TgQkIx",
-        "bittels": 8684,
-        "market_value": 73,
-        "total_shares": 2885
+        "bittels": 20851,
+        "market_value": 194,
+        "total_shares": 3249,
+        "total_shares_owned": 8
     },
     {
         "_id": "5",
@@ -50,9 +54,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Ellis.Ellis",
         "password": "5eKjWdM7ZlNfGh",
-        "bittels": 18546,
-        "market_value": 131,
-        "total_shares": 5367
+        "bittels": 1613,
+        "market_value": 61,
+        "total_shares": 794,
+        "total_shares_owned": 30
     },
     {
         "_id": "6",
@@ -61,9 +66,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Finley.Foster",
         "password": "6hCnRtV2QkPmDx",
-        "bittels": 30273,
-        "market_value": 148,
-        "total_shares": 4756
+        "bittels": 15818,
+        "market_value": 173,
+        "total_shares": 4055,
+        "total_shares_owned": 6
     },
     {
         "_id": "7",
@@ -72,9 +78,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Gael.Gibson",
         "password": "7iYbLqN3GcOeUz",
-        "bittels": 28168,
-        "market_value": 170,
-        "total_shares": 5456
+        "bittels": 36073,
+        "market_value": 103,
+        "total_shares": 5801,
+        "total_shares_owned": 47
     },
     {
         "_id": "8",
@@ -83,9 +90,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Harper.Harris",
         "password": "8tXrWmJ5FpVsZn",
-        "bittels": 43197,
-        "market_value": 72,
-        "total_shares": 6382
+        "bittels": 7168,
+        "market_value": 69,
+        "total_shares": 2232,
+        "total_shares_owned": 15
     },
     {
         "_id": "9",
@@ -94,9 +102,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Indiana.Jackson",
         "password": "9dAeGcK6LbVfHt",
-        "bittels": 45712,
-        "market_value": 118,
-        "total_shares": 6005
+        "bittels": 18378,
+        "market_value": 34,
+        "total_shares": 4088,
+        "total_shares_owned": 20
     },
     {
         "_id": "10",
@@ -105,9 +114,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Jaden.Kennedy",
         "password": "10gFyPnR2BxMlU",
-        "bittels": 12222,
-        "market_value": 42,
-        "total_shares": 1604
+        "bittels": 49690,
+        "market_value": 36,
+        "total_shares": 2665,
+        "total_shares_owned": 0
     },
     {
         "_id": "11",
@@ -116,9 +126,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Kai.Lopez",
         "password": "11qKjDcL6NpZfE",
-        "bittels": 36791,
-        "market_value": 196,
-        "total_shares": 1873
+        "bittels": 31657,
+        "market_value": 135,
+        "total_shares": 7759,
+        "total_shares_owned": 34
     },
     {
         "_id": "12",
@@ -127,9 +138,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Logan.Martinez",
         "password": "12hMlFjN9CpBdR",
-        "bittels": 38081,
-        "market_value": 94,
-        "total_shares": 9672
+        "bittels": 1925,
+        "market_value": 171,
+        "total_shares": 7350,
+        "total_shares_owned": 6
     },
     {
         "_id": "13",
@@ -138,9 +150,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Morgan.Nelson",
         "password": "13sWnZcQ2KjLxT",
-        "bittels": 49241,
-        "market_value": 198,
-        "total_shares": 9862
+        "bittels": 7700,
+        "market_value": 51,
+        "total_shares": 7567,
+        "total_shares_owned": 48
     },
     {
         "_id": "14",
@@ -149,9 +162,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Noah.Owens",
         "password": "14yTfHgB1VrDkS",
-        "bittels": 25014,
-        "market_value": 136,
-        "total_shares": 9428
+        "bittels": 5850,
+        "market_value": 33,
+        "total_shares": 8493,
+        "total_shares_owned": 7
     },
     {
         "_id": "15",
@@ -160,9 +174,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Oakley.Perez",
         "password": "15pLdCmK4NjTbG",
-        "bittels": 40942,
-        "market_value": 173,
-        "total_shares": 7534
+        "bittels": 26297,
+        "market_value": 129,
+        "total_shares": 7039,
+        "total_shares_owned": 36
     },
     {
         "_id": "16",
@@ -171,9 +186,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Parker.Quinn",
         "password": "16zSvFjL5GtMnH",
-        "bittels": 7925,
-        "market_value": 174,
-        "total_shares": 350
+        "bittels": 45009,
+        "market_value": 114,
+        "total_shares": 3244,
+        "total_shares_owned": 9
     },
     {
         "_id": "17",
@@ -182,9 +198,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Quinn.Ramirez",
         "password": "17tWmDcK6VfPbJ",
-        "bittels": 16950,
-        "market_value": 23,
-        "total_shares": 4977
+        "bittels": 19560,
+        "market_value": 124,
+        "total_shares": 626,
+        "total_shares_owned": 7
     },
     {
         "_id": "18",
@@ -193,9 +210,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Riley.Santos",
         "password": "18qXnBpJ3LdRyZ",
-        "bittels": 26776,
-        "market_value": 101,
-        "total_shares": 5756
+        "bittels": 5455,
+        "market_value": 74,
+        "total_shares": 6769,
+        "total_shares_owned": 16
     },
     {
         "_id": "19",
@@ -204,9 +222,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Sawyer.Thompson",
         "password": "19bNfCkR2VtGhS",
-        "bittels": 34658,
-        "market_value": 12,
-        "total_shares": 9212
+        "bittels": 28966,
+        "market_value": 44,
+        "total_shares": 9709,
+        "total_shares_owned": 37
     },
     {
         "_id": "20",
@@ -215,9 +234,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Taylor.Upton",
         "password": "20jLmPnK5GcDzQ",
-        "bittels": 39137,
-        "market_value": 72,
-        "total_shares": 4603
+        "bittels": 49895,
+        "market_value": 181,
+        "total_shares": 2254,
+        "total_shares_owned": 9
     },
     {
         "_id": "21",
@@ -226,9 +246,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Alex.Vargas",
         "password": "21rWdCnT8HbVfZ",
-        "bittels": 15760,
-        "market_value": 41,
-        "total_shares": 9937
+        "bittels": 6797,
+        "market_value": 43,
+        "total_shares": 1850,
+        "total_shares_owned": 29
     },
     {
         "_id": "22",
@@ -237,9 +258,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Bailey.Walker",
         "password": "22xPnGcK7VbMlQ",
-        "bittels": 33805,
-        "market_value": 110,
-        "total_shares": 4469
+        "bittels": 15988,
+        "market_value": 141,
+        "total_shares": 5647,
+        "total_shares_owned": 10
     },
     {
         "_id": "23",
@@ -248,9 +270,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Charlie.Xavier",
         "password": "23yFjHnD4BpVtL",
-        "bittels": 7478,
-        "market_value": 11,
-        "total_shares": 6492
+        "bittels": 1352,
+        "market_value": 116,
+        "total_shares": 2198,
+        "total_shares_owned": 6
     },
     {
         "_id": "24",
@@ -259,9 +282,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Drew.Yates",
         "password": "24zLmXkN5GcVfR",
-        "bittels": 3179,
-        "market_value": 34,
-        "total_shares": 6298
+        "bittels": 48956,
+        "market_value": 164,
+        "total_shares": 6935,
+        "total_shares_owned": 7
     },
     {
         "_id": "25",
@@ -270,9 +294,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Emerson.Zhang",
         "password": "25wYtBpJ9MhVnG",
-        "bittels": 32170,
-        "market_value": 141,
-        "total_shares": 279
+        "bittels": 49724,
+        "market_value": 96,
+        "total_shares": 4939,
+        "total_shares_owned": 13
     },
     {
         "_id": "26",
@@ -281,9 +306,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Flynn.Baker",
         "password": "26qZfHjL3KcNtS",
-        "bittels": 47162,
-        "market_value": 152,
-        "total_shares": 1049
+        "bittels": 31376,
+        "market_value": 14,
+        "total_shares": 5070,
+        "total_shares_owned": 7
     },
     {
         "_id": "27",
@@ -292,9 +318,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Grayson.Carter",
         "password": "27bVtCnF8RkGmL",
-        "bittels": 32229,
-        "market_value": 31,
-        "total_shares": 8206
+        "bittels": 24438,
+        "market_value": 169,
+        "total_shares": 3221,
+        "total_shares_owned": 24
     },
     {
         "_id": "28",
@@ -303,9 +330,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Hayden.Davidson",
         "password": "28mLpXcN4GhFjS",
-        "bittels": 42357,
-        "market_value": 170,
-        "total_shares": 7453
+        "bittels": 27273,
+        "market_value": 114,
+        "total_shares": 3262,
+        "total_shares_owned": 24
     },
     {
         "_id": "29",
@@ -314,9 +342,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Ira.Edwards",
         "password": "29nBmKcL7VfDxZ",
-        "bittels": 34702,
-        "market_value": 178,
-        "total_shares": 8635
+        "bittels": 28264,
+        "market_value": 170,
+        "total_shares": 5821,
+        "total_shares_owned": 54
     },
     {
         "_id": "30",
@@ -325,9 +354,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Jesse.Ferguson",
         "password": "30kSjMnH6VtBpL",
-        "bittels": 7266,
-        "market_value": 24,
-        "total_shares": 8472
+        "bittels": 31019,
+        "market_value": 124,
+        "total_shares": 2583,
+        "total_shares_owned": 11
     },
     {
         "_id": "31",
@@ -336,9 +366,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Kendall.Gonzalez",
         "password": "31tCmPnR5VfHbJ",
-        "bittels": 13144,
-        "market_value": 175,
-        "total_shares": 7107
+        "bittels": 28129,
+        "market_value": 139,
+        "total_shares": 151,
+        "total_shares_owned": 27
     },
     {
         "_id": "32",
@@ -347,9 +378,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Lennon.Henderson",
         "password": "32pDcKmJ4GtNfS",
-        "bittels": 29625,
-        "market_value": 31,
-        "total_shares": 4142
+        "bittels": 41933,
+        "market_value": 173,
+        "total_shares": 8232,
+        "total_shares_owned": 0
     },
     {
         "_id": "33",
@@ -358,9 +390,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Micah.Ingram",
         "password": "33hYnGcL7KtVfP",
-        "bittels": 35316,
-        "market_value": 55,
-        "total_shares": 1313
+        "bittels": 41215,
+        "market_value": 126,
+        "total_shares": 9365,
+        "total_shares_owned": 38
     },
     {
         "_id": "34",
@@ -369,9 +402,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Nico.Johnson",
         "password": "34xZfBpN2VrDmL",
-        "bittels": 5553,
-        "market_value": 56,
-        "total_shares": 9967
+        "bittels": 49601,
+        "market_value": 73,
+        "total_shares": 1958,
+        "total_shares_owned": 0
     },
     {
         "_id": "35",
@@ -380,9 +414,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Owen.Kim",
         "password": "35wLcMnF1VtGjK",
-        "bittels": 44828,
-        "market_value": 178,
-        "total_shares": 6398
+        "bittels": 39665,
+        "market_value": 199,
+        "total_shares": 1499,
+        "total_shares_owned": 20
     },
     {
         "_id": "36",
@@ -391,9 +426,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Phoenix.Lee",
         "password": "36jKpNnG5VfRbC",
-        "bittels": 1824,
-        "market_value": 36,
-        "total_shares": 187
+        "bittels": 42691,
+        "market_value": 198,
+        "total_shares": 9942,
+        "total_shares_owned": 9
     },
     {
         "_id": "37",
@@ -402,9 +438,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Reese.Miller",
         "password": "37tCmLpB8VfHnJ",
-        "bittels": 42706,
-        "market_value": 159,
-        "total_shares": 5893
+        "bittels": 9086,
+        "market_value": 161,
+        "total_shares": 4020,
+        "total_shares_owned": 32
     },
     {
         "_id": "38",
@@ -413,9 +450,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Sage.Nguyen",
         "password": "38kDjFhN6VtGcR",
-        "bittels": 37663,
-        "market_value": 157,
-        "total_shares": 4980
+        "bittels": 18855,
+        "market_value": 102,
+        "total_shares": 8208,
+        "total_shares_owned": 7
     },
     {
         "_id": "39",
@@ -424,9 +462,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Tatum.O'Brien",
         "password": "39pMnLcK3VfBxT",
-        "bittels": 6773,
-        "market_value": 92,
-        "total_shares": 4673
+        "bittels": 41546,
+        "market_value": 192,
+        "total_shares": 8272,
+        "total_shares_owned": 55
     },
     {
         "_id": "40",
@@ -435,9 +474,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Uri.Park",
         "password": "40qXbPjN2VrHlG",
-        "bittels": 4161,
-        "market_value": 151,
-        "total_shares": 2314
+        "bittels": 10548,
+        "market_value": 84,
+        "total_shares": 2784,
+        "total_shares_owned": 1
     },
     {
         "_id": "41",
@@ -446,9 +486,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Vaughn.Reyes",
         "password": "41zLmCkN6VfDcJ",
-        "bittels": 10608,
-        "market_value": 12,
-        "total_shares": 3066
+        "bittels": 3271,
+        "market_value": 58,
+        "total_shares": 3614,
+        "total_shares_owned": 7
     },
     {
         "_id": "42",
@@ -457,9 +498,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Wyatt.Smith",
         "password": "42rHcKmJ1VtGpN",
-        "bittels": 6289,
-        "market_value": 21,
-        "total_shares": 3131
+        "bittels": 18660,
+        "market_value": 10,
+        "total_shares": 2956,
+        "total_shares_owned": 9
     },
     {
         "_id": "43",
@@ -468,9 +510,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Yael.Taylor",
         "password": "43sNnLpB4VfTcM",
-        "bittels": 43513,
-        "market_value": 26,
-        "total_shares": 5306
+        "bittels": 20435,
+        "market_value": 156,
+        "total_shares": 8777,
+        "total_shares_owned": 23
     },
     {
         "_id": "44",
@@ -479,9 +522,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Zephyr.Ulrich",
         "password": "44tGcKjL7VfDmR",
-        "bittels": 40755,
-        "market_value": 193,
-        "total_shares": 4480
+        "bittels": 30040,
+        "market_value": 14,
+        "total_shares": 6702,
+        "total_shares_owned": 12
     },
     {
         "_id": "45",
@@ -490,9 +534,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Aspen.Valdez",
         "password": "45wYfP",
-        "bittels": 24634,
-        "market_value": 12,
-        "total_shares": 9884
+        "bittels": 7560,
+        "market_value": 117,
+        "total_shares": 2229,
+        "total_shares_owned": 32
     },
     {
         "_id": "46",
@@ -501,9 +546,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Briar.Williams",
         "password": "46rHcKmJ1VtGpN",
-        "bittels": 30663,
-        "market_value": 41,
-        "total_shares": 8714
+        "bittels": 14370,
+        "market_value": 180,
+        "total_shares": 5050,
+        "total_shares_owned": 15
     },
     {
         "_id": "47",
@@ -512,9 +558,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Cedar.Xiong",
         "password": "47rHcKmJ1VtGpN",
-        "bittels": 21292,
-        "market_value": 65,
-        "total_shares": 7889
+        "bittels": 34987,
+        "market_value": 191,
+        "total_shares": 5235,
+        "total_shares_owned": 48
     },
     {
         "_id": "48",
@@ -523,9 +570,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Dahlia.Ybarra",
         "password": "48rHcKmJ1VtGpN",
-        "bittels": 30071,
-        "market_value": 63,
-        "total_shares": 1029
+        "bittels": 9345,
+        "market_value": 36,
+        "total_shares": 965,
+        "total_shares_owned": 5
     },
     {
         "_id": "49",
@@ -534,9 +582,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Echo.Zuniga",
         "password": "49rHcKmJ1VtGpN",
-        "bittels": 5548,
-        "market_value": 100,
-        "total_shares": 4808
+        "bittels": 24092,
+        "market_value": 87,
+        "total_shares": 5339,
+        "total_shares_owned": 61
     },
     {
         "_id": "50",
@@ -545,9 +594,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Fern.Adams",
         "password": "50rHcKmJ1VtGpN",
-        "bittels": 16999,
-        "market_value": 95,
-        "total_shares": 3176
+        "bittels": 5129,
+        "market_value": 113,
+        "total_shares": 3918,
+        "total_shares_owned": 8
     },
     {
         "_id": "51",
@@ -556,9 +606,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Gardenia.Bell",
         "password": "1wYtNnW8GtpfQh",
-        "bittels": 37885,
-        "market_value": 144,
-        "total_shares": 1859
+        "bittels": 49786,
+        "market_value": 162,
+        "total_shares": 9636,
+        "total_shares_owned": 65
     },
     {
         "_id": "52",
@@ -567,9 +618,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Hazel.Cruz",
         "password": "2fSvPjM9XbHtKd",
-        "bittels": 29164,
-        "market_value": 17,
-        "total_shares": 785
+        "bittels": 33637,
+        "market_value": 138,
+        "total_shares": 6440,
+        "total_shares_owned": 5
     },
     {
         "_id": "53",
@@ -578,9 +630,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Ivy.Davis",
         "password": "3cAeLmD4JnGyRs",
-        "bittels": 15064,
-        "market_value": 28,
-        "total_shares": 9298
+        "bittels": 49641,
+        "market_value": 192,
+        "total_shares": 5349,
+        "total_shares_owned": 59
     },
     {
         "_id": "54",
@@ -589,9 +642,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Jasmine.Evans",
         "password": "4rUoZpB1TgQkIx",
-        "bittels": 39700,
-        "market_value": 196,
-        "total_shares": 8385
+        "bittels": 21924,
+        "market_value": 172,
+        "total_shares": 5782,
+        "total_shares_owned": 12
     },
     {
         "_id": "55",
@@ -600,9 +654,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Koa.Fitzgerald",
         "password": "5eKjWdM7ZlNfGh",
-        "bittels": 41503,
-        "market_value": 64,
-        "total_shares": 5883
+        "bittels": 27045,
+        "market_value": 45,
+        "total_shares": 2016,
+        "total_shares_owned": 53
     },
     {
         "_id": "56",
@@ -611,9 +666,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Lilac.Gomez",
         "password": "6hCnRtV2QkPmDx",
-        "bittels": 2186,
-        "market_value": 148,
-        "total_shares": 2901
+        "bittels": 43793,
+        "market_value": 113,
+        "total_shares": 9128,
+        "total_shares_owned": 0
     },
     {
         "_id": "57",
@@ -622,9 +678,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Magnolia.Hernandez",
         "password": "7iYbLqN3GcOeUz",
-        "bittels": 2470,
-        "market_value": 181,
-        "total_shares": 7224
+        "bittels": 33981,
+        "market_value": 136,
+        "total_shares": 4204,
+        "total_shares_owned": 7
     },
     {
         "_id": "58",
@@ -633,9 +690,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Nectar.Irwin",
         "password": "8tXrWmJ5FpVsZn",
-        "bittels": 18420,
-        "market_value": 15,
-        "total_shares": 3667
+        "bittels": 29715,
+        "market_value": 43,
+        "total_shares": 1030,
+        "total_shares_owned": 8
     },
     {
         "_id": "59",
@@ -644,9 +702,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Oak.Jones",
         "password": "9dAeGcK6LbVfHt",
-        "bittels": 14543,
-        "market_value": 44,
-        "total_shares": 2212
+        "bittels": 32666,
+        "market_value": 70,
+        "total_shares": 5009,
+        "total_shares_owned": 26
     },
     {
         "_id": "60",
@@ -655,9 +714,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Poppy.Keller",
         "password": "10gFyPnR2BxMlU",
-        "bittels": 32475,
-        "market_value": 96,
-        "total_shares": 1386
+        "bittels": 45584,
+        "market_value": 116,
+        "total_shares": 8264,
+        "total_shares_owned": 19
     },
     {
         "_id": "61",
@@ -666,9 +726,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Rain.Lam",
         "password": "11qKjDcL6NpZfE",
-        "bittels": 2701,
-        "market_value": 27,
-        "total_shares": 1740
+        "bittels": 42399,
+        "market_value": 71,
+        "total_shares": 2279,
+        "total_shares_owned": 37
     },
     {
         "_id": "62",
@@ -677,9 +738,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Saffron.Morales",
         "password": "12hMlFjN9CpBdR",
-        "bittels": 48271,
-        "market_value": 156,
-        "total_shares": 765
+        "bittels": 1557,
+        "market_value": 122,
+        "total_shares": 6758,
+        "total_shares_owned": 2
     },
     {
         "_id": "63",
@@ -688,9 +750,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Tulip.Nash",
         "password": "13sWnZcQ2KjLxT",
-        "bittels": 8004,
-        "market_value": 50,
-        "total_shares": 3257
+        "bittels": 9804,
+        "market_value": 118,
+        "total_shares": 4630,
+        "total_shares_owned": 36
     },
     {
         "_id": "64",
@@ -699,9 +762,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Violet.O'Connor",
         "password": "14yTfHgB1VrDkS",
-        "bittels": 2084,
-        "market_value": 132,
-        "total_shares": 2310
+        "bittels": 33846,
+        "market_value": 80,
+        "total_shares": 4042,
+        "total_shares_owned": 4
     },
     {
         "_id": "65",
@@ -710,9 +774,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Willow.Parker",
         "password": "15pLdCmK4NjTbG",
-        "bittels": 8956,
-        "market_value": 146,
-        "total_shares": 2480
+        "bittels": 30625,
+        "market_value": 184,
+        "total_shares": 9899,
+        "total_shares_owned": 32
     },
     {
         "_id": "66",
@@ -721,9 +786,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Xanthe.Rivera",
         "password": "16zSvFjL5GtMnH",
-        "bittels": 41636,
-        "market_value": 119,
-        "total_shares": 1462
+        "bittels": 4530,
+        "market_value": 112,
+        "total_shares": 8007,
+        "total_shares_owned": 13
     },
     {
         "_id": "67",
@@ -732,9 +798,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Yarrow.Scott",
         "password": "17tWmDcK6VfPbJ",
-        "bittels": 3041,
-        "market_value": 39,
-        "total_shares": 1037
+        "bittels": 24437,
+        "market_value": 165,
+        "total_shares": 8165,
+        "total_shares_owned": 6
     },
     {
         "_id": "68",
@@ -743,9 +810,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Zinnia.Turner",
         "password": "18qXnBpJ3LdRyZ",
-        "bittels": 40025,
-        "market_value": 32,
-        "total_shares": 6367
+        "bittels": 47739,
+        "market_value": 64,
+        "total_shares": 169,
+        "total_shares_owned": 1
     },
     {
         "_id": "69",
@@ -754,9 +822,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Aria.Underwood",
         "password": "19bNfCkR2VtGhS",
-        "bittels": 3879,
-        "market_value": 181,
-        "total_shares": 5008
+        "bittels": 32986,
+        "market_value": 172,
+        "total_shares": 8217,
+        "total_shares_owned": 26
     },
     {
         "_id": "70",
@@ -765,9 +834,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Bella.Vance",
         "password": "20jLmPnK5GcDzQ",
-        "bittels": 12557,
-        "market_value": 91,
-        "total_shares": 1715
+        "bittels": 49140,
+        "market_value": 120,
+        "total_shares": 8660,
+        "total_shares_owned": 2
     },
     {
         "_id": "71",
@@ -776,9 +846,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Cora.Wright",
         "password": "21rWdCnT8HbVfZ",
-        "bittels": 3557,
-        "market_value": 43,
-        "total_shares": 4350
+        "bittels": 48664,
+        "market_value": 72,
+        "total_shares": 1982,
+        "total_shares_owned": 33
     },
     {
         "_id": "72",
@@ -787,9 +858,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Delilah.Xander",
         "password": "22xPnGcK7VbMlQ",
-        "bittels": 34616,
-        "market_value": 87,
-        "total_shares": 302
+        "bittels": 1865,
+        "market_value": 67,
+        "total_shares": 323,
+        "total_shares_owned": 3
     },
     {
         "_id": "73",
@@ -798,9 +870,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Evelyn.Young",
         "password": "23yFjHnD4BpVtL",
-        "bittels": 27912,
-        "market_value": 172,
-        "total_shares": 7554
+        "bittels": 45598,
+        "market_value": 114,
+        "total_shares": 8876,
+        "total_shares_owned": 62
     },
     {
         "_id": "74",
@@ -809,9 +882,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Freya.Zimmerman",
         "password": "24zLmXkN5GcVfR",
-        "bittels": 20041,
-        "market_value": 104,
-        "total_shares": 2818
+        "bittels": 26706,
+        "market_value": 183,
+        "total_shares": 9229,
+        "total_shares_owned": 18
     },
     {
         "_id": "75",
@@ -820,9 +894,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Grace.Atkins",
         "password": "25wYtBpJ9MhVnG",
-        "bittels": 1117,
-        "market_value": 141,
-        "total_shares": 8190
+        "bittels": 388,
+        "market_value": 62,
+        "total_shares": 7507,
+        "total_shares_owned": 49
     },
     {
         "_id": "76",
@@ -831,9 +906,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Hannah.Bennett",
         "password": "26qZfHjL3KcNtS",
-        "bittels": 15911,
-        "market_value": 147,
-        "total_shares": 6170
+        "bittels": 32746,
+        "market_value": 175,
+        "total_shares": 1209,
+        "total_shares_owned": 7
     },
     {
         "_id": "77",
@@ -842,9 +918,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Isabella.Chen",
         "password": "27bVtCnF8RkGmL",
-        "bittels": 29620,
-        "market_value": 11,
-        "total_shares": 4776
+        "bittels": 4018,
+        "market_value": 77,
+        "total_shares": 4930,
+        "total_shares_owned": 14
     },
     {
         "_id": "78",
@@ -853,9 +930,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Julia.Duncan",
         "password": "28mLpXcN4GhFjS",
-        "bittels": 14060,
-        "market_value": 92,
-        "total_shares": 1232
+        "bittels": 1419,
+        "market_value": 159,
+        "total_shares": 7250,
+        "total_shares_owned": 7
     },
     {
         "_id": "79",
@@ -864,9 +942,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Kayla.Ellison",
         "password": "29nBmKcL7VfDxZ",
-        "bittels": 18924,
-        "market_value": 136,
-        "total_shares": 7591
+        "bittels": 31515,
+        "market_value": 123,
+        "total_shares": 5102,
+        "total_shares_owned": 25
     },
     {
         "_id": "80",
@@ -875,9 +954,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Lila.Frost",
         "password": "30kSjMnH6VtBpL",
-        "bittels": 23632,
-        "market_value": 91,
-        "total_shares": 2583
+        "bittels": 39200,
+        "market_value": 164,
+        "total_shares": 1396,
+        "total_shares_owned": 5
     },
     {
         "_id": "81",
@@ -886,9 +966,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Mia.Gordon",
         "password": "31tCmPnR5VfHbJ",
-        "bittels": 25752,
-        "market_value": 43,
-        "total_shares": 819
+        "bittels": 39319,
+        "market_value": 199,
+        "total_shares": 789,
+        "total_shares_owned": 25
     },
     {
         "_id": "82",
@@ -897,9 +978,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Nora.Huang",
         "password": "32pDcKmJ4GtNfS",
-        "bittels": 7637,
-        "market_value": 73,
-        "total_shares": 994
+        "bittels": 44122,
+        "market_value": 124,
+        "total_shares": 4255,
+        "total_shares_owned": 3
     },
     {
         "_id": "83",
@@ -908,9 +990,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Olivia.Ingram",
         "password": "33hYnGcL7KtVfP",
-        "bittels": 14456,
-        "market_value": 94,
-        "total_shares": 665
+        "bittels": 18462,
+        "market_value": 116,
+        "total_shares": 3284,
+        "total_shares_owned": 31
     },
     {
         "_id": "84",
@@ -919,9 +1002,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Penelope.Jensen",
         "password": "34xZfBpN2VrDmL",
-        "bittels": 49349,
-        "market_value": 136,
-        "total_shares": 2018
+        "bittels": 30938,
+        "market_value": 154,
+        "total_shares": 4042,
+        "total_shares_owned": 13
     },
     {
         "_id": "85",
@@ -930,9 +1014,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Quinn.Kumar",
         "password": "35wLcMnF1VtGjK",
-        "bittels": 31447,
-        "market_value": 152,
-        "total_shares": 4938
+        "bittels": 26496,
+        "market_value": 76,
+        "total_shares": 502,
+        "total_shares_owned": 45
     },
     {
         "_id": "86",
@@ -941,9 +1026,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Rosalie.Larsen",
         "password": "36jKpNnG5VfRbC",
-        "bittels": 16019,
-        "market_value": 53,
-        "total_shares": 4864
+        "bittels": 28199,
+        "market_value": 15,
+        "total_shares": 6501,
+        "total_shares_owned": 10
     },
     {
         "_id": "87",
@@ -952,9 +1038,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Sophia.Mendoza",
         "password": "37tCmLpB8VfHnJ",
-        "bittels": 635,
-        "market_value": 119,
-        "total_shares": 1954
+        "bittels": 20067,
+        "market_value": 53,
+        "total_shares": 9067,
+        "total_shares_owned": 40
     },
     {
         "_id": "88",
@@ -963,9 +1050,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Tessa.Ng",
         "password": "38kDjFhN6VtGcR",
-        "bittels": 9544,
-        "market_value": 67,
-        "total_shares": 9997
+        "bittels": 24500,
+        "market_value": 25,
+        "total_shares": 4714,
+        "total_shares_owned": 9
     },
     {
         "_id": "89",
@@ -974,9 +1062,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Una.Oliver",
         "password": "39pMnLcK3VfBxT",
-        "bittels": 17738,
-        "market_value": 13,
-        "total_shares": 6343
+        "bittels": 11994,
+        "market_value": 178,
+        "total_shares": 4928,
+        "total_shares_owned": 14
     },
     {
         "_id": "90",
@@ -985,9 +1074,10 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Violet.Patel",
         "password": "40qXbPjN2VrHlG",
-        "bittels": 25083,
-        "market_value": 89,
-        "total_shares": 3080
+        "bittels": 37887,
+        "market_value": 18,
+        "total_shares": 1158,
+        "total_shares_owned": 17
     },
     {
         "_id": "91",
@@ -996,9 +1086,10 @@
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec luctus tellus, ac tincidunt elit. Sed eu elit ut nunc maximus congue sit amet vel arcu.",
         "username": "Waverly.Rogers",
         "password": "41zLmCkN6VfDcJ",
-        "bittels": 45633,
-        "market_value": 36,
-        "total_shares": 3928
+        "bittels": 29722,
+        "market_value": 171,
+        "total_shares": 7897,
+        "total_shares_owned": 25
     },
     {
         "_id": "92",
@@ -1007,9 +1098,10 @@
         "bio": "Nulla semper, arcu vitae pulvinar consectetur, ipsum nibh faucibus justo, vel facilisis sapien quam eu orci. Etiam sit amet faucibus libero.",
         "username": "Ximena.Sullivan",
         "password": "42rHcKmJ1VtGpN",
-        "bittels": 39710,
-        "market_value": 63,
-        "total_shares": 7068
+        "bittels": 41317,
+        "market_value": 43,
+        "total_shares": 2791,
+        "total_shares_owned": 0
     },
     {
         "_id": "93",
@@ -1018,9 +1110,10 @@
         "bio": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Fusce pharetra lacinia tortor id bibendum.",
         "username": "Yara.Thomas",
         "password": "43sNnLpB4VfTcM",
-        "bittels": 6706,
-        "market_value": 135,
-        "total_shares": 2534
+        "bittels": 37967,
+        "market_value": 11,
+        "total_shares": 2575,
+        "total_shares_owned": 10
     },
     {
         "_id": "94",
@@ -1029,9 +1122,10 @@
         "bio": "Nunc nec augue ligula. Fusce euismod nisl et metus scelerisque, ac accumsan augue bibendum. Nullam blandit lobortis eros, eu faucibus nisi lobortis eu.",
         "username": "Zara.Underwood",
         "password": "44tGcKjL7VfDmR",
-        "bittels": 40808,
-        "market_value": 143,
-        "total_shares": 6500
+        "bittels": 9018,
+        "market_value": 93,
+        "total_shares": 1487,
+        "total_shares_owned": 0
     },
     {
         "_id": "95",
@@ -1040,9 +1134,10 @@
         "bio": "Sed cursus tincidunt justo, a lobortis nunc bibendum at. Sed lobortis, nisi vel sollicitudin elementum, turpis elit vestibulum ex, quis commodo elit sapien sit amet lorem.",
         "username": "Avery.Villanueva",
         "password": "45wYfP",
-        "bittels": 3904,
-        "market_value": 17,
-        "total_shares": 6189
+        "bittels": 8425,
+        "market_value": 151,
+        "total_shares": 5640,
+        "total_shares_owned": 53
     },
     {
         "_id": "96",
@@ -1051,9 +1146,10 @@
         "bio": "Donec in lacus ac nisl lacinia rutrum sed eget erat. Quisque commodo vitae ante id semper. Morbi tincidunt orci augue, vel sagittis purus elementum quis.",
         "username": "Blake.Wang",
         "password": "46rHcKmJ1VtGpN",
-        "bittels": 733,
-        "market_value": 165,
-        "total_shares": 868
+        "bittels": 5753,
+        "market_value": 146,
+        "total_shares": 5139,
+        "total_shares_owned": 4
     },
     {
         "_id": "97",
@@ -1062,9 +1158,10 @@
         "bio": "Suspendisse tincidunt accumsan magna, nec ultrices massa dapibus in. Sed congue tincidunt blandit. Proin commodo lacinia mi, sit amet sollicitudin velit lacinia at.",
         "username": "Cameron.Xu",
         "password": "47rHcKmJ1VtGpN",
-        "bittels": 23602,
-        "market_value": 57,
-        "total_shares": 7446
+        "bittels": 22150,
+        "market_value": 10,
+        "total_shares": 7312,
+        "total_shares_owned": 45
     },
     {
         "_id": "98",
@@ -1073,9 +1170,10 @@
         "bio": "Vivamus eleifend eget massa sit amet fringilla. In ut mi vel ipsum pharetra sollicitudin ac id lectus. Etiam nec consequat massa.",
         "username": "Dakota.Yang",
         "password": "48rHcKmJ1VtGpN",
-        "bittels": 16990,
-        "market_value": 69,
-        "total_shares": 8267
+        "bittels": 48141,
+        "market_value": 197,
+        "total_shares": 9613,
+        "total_shares_owned": 13
     },
     {
         "_id": "99",
@@ -1084,9 +1182,10 @@
         "bio": "Aenean efficitur arcu sed felis laoreet, a luctus lorem rutrum. Vestibulum eu quam sed nisi consequat dignissim. Nam eget elit fermentum, euismod elit vel, rutrum tortor.",
         "username": "Ellis.Zhou",
         "password": "49rHcKmJ1VtGpN",
-        "bittels": 48003,
-        "market_value": 178,
-        "total_shares": 1631
+        "bittels": 3264,
+        "market_value": 114,
+        "total_shares": 9339,
+        "total_shares_owned": 40
     },
     {
         "_id": "100",
@@ -1095,8 +1194,9 @@
         "bio": "Praesent eget lorem magna. Sed varius leo eget dapibus efficitur. Nulla in eleifend felis, non placerat sapien.",
         "username": "Finley.Boatgas",
         "password": "50rHcKmJ1VtGpN",
-        "bittels": 19268,
-        "market_value": 87,
-        "total_shares": 7541
+        "bittels": 4918,
+        "market_value": 133,
+        "total_shares": 2284,
+        "total_shares_owned": 13
     }
 ]
