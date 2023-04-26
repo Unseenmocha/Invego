@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { readFile, writeFile, access } = require('fs').promises;
 // import { readFile, writeFile, access } from 'fs/promises';
 // import { constants, write } from 'fs';
@@ -126,11 +127,23 @@ async function createPortfolios(){
 
 
 
+
+
+
 const stockJSONfile = 'STOCK_MOCK_DATA.json';
 const portfolioJSONfile = 'PORTFOLIO_MOCK_DATA.json';
 const userJSONfile = 'USER_MOCK_DATA.json';
+let totalOwnedSharesDict = {};
+for(let i = 1; i<=100; i++){ totalOwnedSharesDict[String(i)] = 0;}
 
-// createStocks();
-// createPortfolios();
-createUsers();
+async function main(){
+  fs.writeFileSync(portfolioJSONfile, '');
+  fs.writeFileSync(userJSONfile, '');
+
+  await createPortfolios();
+  await createUsers();
+  console.log(totalOwnedSharesDict)
+}
+
+main();
 
