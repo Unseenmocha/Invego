@@ -4,8 +4,6 @@
 let db1 = new PouchDB("users");
 let db2 = new PouchDB("portfolios");
 
-// put in mock data
-
 function saveId(id) {
   localStorage.setItem('currentId', id);
 }
@@ -150,14 +148,16 @@ export async function createStock(id) {
 
   }
   
-  export async function deleteStock(id) {
+  export async function deleteUser(id) {
 
     try {
-        const doc = await db1.get(docId);
-        await db1.remove(doc);
+        const user = await db1.get(id);
+        await db1.remove(user);
+        const portfolio = await db2.get(id);
+        await db2.remove(portfolio);
         console.log('Data deleted successfully');
       } catch (err) {
-        console.log('Error in deleteStock:', err);
+        console.log('Error in deleteUsesr:', err);
       }
 
   }

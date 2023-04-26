@@ -59,8 +59,8 @@ const generatePortfolio = async () => {
 
 
         portTable.innerHTML +=  `
-          <tr>
-              <td><img class="profile-pic" src="${stock.profilePicLink}" ></td>
+          <tr id="${key}">
+              <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" ></td>
               <td>${name}</td>
               <td>${market_value}</td>
               <td>${roi}%</td>
@@ -68,7 +68,14 @@ const generatePortfolio = async () => {
           </tr>`
       } catch (err) {
         console.log('Error retrieving data:', err);
-      }   
+      }
+  }
+  for (const key of Object.keys(ownedStocks)) {
+    let row = document.getElementById(key);
+    row.addEventListener('click', async (e) => {
+      localStorage.setItem("BuySellId", key);
+      window.location.href = "../BuySell/buySellPage.html";
+    })
   }
 }
 
