@@ -12,13 +12,11 @@ function getCurrentId() {
   return localStorage.getItem('currentId');
 }
 
+
 export async function createUser(username, password) {
-  const user = {
-    username: username,
-    password: password,
-    firstName: "",
-    lastName: "",
-  }
+  const user = getSampleStockObject();
+  user.username = username;
+  user.password = password;
   try {
     await db1.post(user).then((response)=> {
       console.log(response); 
@@ -84,15 +82,15 @@ export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
 
   const doc = {
-    _id: 0,
+    /*_id: 0,*/ // don't need to generate this? 
     _bio: "",
     firstName: "",
     lastName: "",
     username: "",
     password: "",
     bittels: 0,
-    market_value: 0,
-    total_shares: 0,
+    market_value: 100, // default values
+    total_shares: 1000, 
     percent_growth: 0,
   };
 
@@ -111,18 +109,20 @@ export async function stockExists(id) {
   }
 }
 
-export async function createStock(id) {
-
-    const doc = getSampleStockObject();
-
+/*
+export async function createUser(doc) {
     try {
-        await db1.put(doc);
+        await db1.post(doc).then((response)=> {
+          console.log(response); 
+          saveId(response.id);
+        });
         console.log('Data created successfully');
       } catch (err) {
         console.log('Error in createStock:', err);
       }
       
   }
+  */
   
   export async function readStock(id) {
 

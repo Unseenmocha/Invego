@@ -8,6 +8,7 @@ export const portfolioSchema = mongoose.Schema({
     market_value: Number,
     total_shares: Number,
     percent_growth: String,
+    stocks: 
 });
 
 

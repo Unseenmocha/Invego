@@ -15,3 +15,6 @@ router.put('/buy/:id', auth, buy);
 router.put('/sell/:id', auth, sell);
 router.delete('/:id', auth, deletePortfolio);
 
+
+
+
