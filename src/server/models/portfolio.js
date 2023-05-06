@@ -3,13 +3,19 @@
 import mongoose from 'mongoose';
 
 
-export const portfolioSchema = mongoose.Schema({
-    _id: Number,
-    market_value: Number,
-    total_shares: Number,
-    percent_growth: String,
-    stocks: 
+const stockSchema = new mongoose.Schema({
+    num_shares: { type: Number, required: true },
+    purchase_price: { type: Number, required: true }
+  });
+  
+const portfolioSchema = new mongoose.Schema({
+    _id: { type: String, required: true },
+    stocks: { 
+        type: Map,
+        of: stockSchema
+    }
 });
+
 
 
 export const Portfolio = mongoose.model('Portfolio', portfolioSchema)
