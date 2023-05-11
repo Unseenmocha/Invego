@@ -7,6 +7,7 @@ const redirectButton = document.getElementById('invego');
 const inputId = document.getElementById('inputId');
 const saveButton = document.getElementById('save');
 
+
 console.log("userProfile.js loaded");
 
 const generatePortfolio = async () => {
@@ -61,10 +62,10 @@ const generatePortfolio = async () => {
         portTable.innerHTML +=  `
           <tr id="${key}">
               <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" ></td>
-              <td>${name}</td>
-              <td>${market_value}</td>
-              <td>${roi}%</td>
-              <td>${num_shares}</td>
+              <td><p>${name}<p></td>
+              <td><p>${market_value}<p></td>
+              <td><p>${roi}%<p></td>
+              <td><p>${num_shares}<p></td>
           </tr>`
       } catch (err) {
         console.log('Error retrieving data:', err);
@@ -141,7 +142,3 @@ redirectButton.addEventListener("click", async () => {
 });
 
 generatePortfolio();
-
-
-
-

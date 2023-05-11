@@ -4,7 +4,8 @@
 <head>
     <title>Invego</title>
     <link rel="stylesheet" href="userProfile.css">
-    <link rel="stylesheet" href="../header.css">
+    <!-- <link rel="stylesheet" href="../header.css"> -->
+    <link rel="stylesheet" href="../invegoStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
@@ -12,93 +13,63 @@
     <script type="module" src="userProfile.js"></script>
 </head>
 
-<div class="App-header">
-    <div class="header-left"><a href="#" id="invego">Invego</a></div>
-    <div class="header-right"></img><span class="bittels-text">Bittels: </span><span class="bittels-text">284.28</span></div>
-</div>
-
 <body scroll="no">
     <div id="grid-background-image"></div>
+    <div class="header-bar">
+        <text class="title-text" id="invego">Invego</text>
+        <h2 class="white-text">Bittels: 284.28</h2>
+        <!-- <div class="header-right"></img><span class="bittels-text">Bittels: </span><span class="bittels-text">284.28</span></div> -->
+    </div>
 
-    <div class="container">
-        <div class="my-profile display-card" >
-            <h1>Profile</h1>
 
-            <div class="pic-and-name">
+
+    <div class="flex-horizontal">
+        <div class="view" id="profile-view">
+            <h4>Profile</h4>
+
+            <div class="flex-horizontal">
                 <div class="circle-crop"><img class="profile-pic" src="../../../assets/smile.jpg" /></div>
-                <input class="input-name" id ="input-name" placeholder="Add a name." />  
+                <input class="input-name" id="input-name" placeholder="Add a name." />
             </div>
 
-            <h1>About Me</h1>
+            <h4>About Me</h4>
 
             <div>
-                <textarea class="input-bio" id ="input-bio" placeholder="Add a bio."></textarea>  
+                <textarea class="input-bio" id="input-bio" placeholder="Add a bio."></textarea>
             </div>
-            <div class="socials">
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/pngtree-instagram-icon-png-image_6315974.png" /></div>
+            <div class="flex-horizontal">
+                <div class="circle-crop"><img class="profile-pic"
+                        src="../../../assets/pngtree-instagram-icon-png-image_6315974.png" /></div>
 
                 <div class="circle-crop"><img class="profile-pic" src="../../../assets/Snapchat-logo.png" /></div>
 
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/LinkedIn_logo_initials.png" /></div>
+                <div class="circle-crop"><img class="profile-pic" src="../../../assets/LinkedIn_logo_initials.png" />
+                </div>
             </div>
 
-            <div> <!-- centers this button-->
-                <button class="save" type="button" id="save">Save</button>
-            </div>
+            <button class="small-blue-button" type="button" id="save">Save</button>
         </div>
 
 
-        <div class="my-portfolio display-card">
-            <h1>Portfolio</h1>
+        <div class="view" id="portfolio-view">
+            <h4>Portfolio</h4>
 
             <table id="portTable">
                 <!--
-
                 <tr>
                     <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
                   <td>Person Name</td>
                   <td>1000B</td>
                   <td>-10B</td>
                 </tr>
-                <tr>
-                    <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
-                  <td>Person Name</td>
-                  <td>1000B</td>
-                  <td>-10B</td>
-                </tr>
-                <tr>
-                    <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
-                  <td>Person Name</td>
-                  <td>1000B</td>
-                  <td>-10B</td>
-                </tr>
-
-                <tr>
-                    <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
-                  <td>Person Name</td>
-                  <td>1000B</td>
-                  <td>-10B</td>
-                </tr>
-
-                <tr>
-                    <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
-                  <td>Person Name</td>
-                  <td>1000B</td>
-                  <td>-10B</td>
-                </tr>
-
-                <tr>
-                    <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
-                  <td>Person Name</td>
-                  <td>1000B</td>
-                  <td>-10B</td>
-                </tr>
-
             -->
-                
+
             </table>
-            <button id="crudAddStock">Buy 1</button>
-            <button id="crudRemoveStock">Sell 1</button>
-            <input id="inputId">
+            <div class="flex-horizontal"> 
+                <button class="small-blue-button" id="crudAddStock">Buy 1</button>
+                <button class="small-blue-button" id="crudRemoveStock">Sell 1</button>
+                <input id="inputId">
+            </div>
+
         </div>
     </div>
