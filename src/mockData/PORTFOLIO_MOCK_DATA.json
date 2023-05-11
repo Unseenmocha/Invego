@@ -1,1694 +1,685 @@
 [
-    {
-        "_id": "1",
-        "stocks": {
-            "1": {
-                "num_shares": 11,
-                "purchase_price": 71
-            }
-        }
-    },
-    {
-        "_id": "2",
-        "stocks": {
-            "3": {
-                "num_shares": 6,
-                "purchase_price": 130
-            },
-            "26": {
-                "num_shares": 5,
-                "purchase_price": 191
-            },
-            "43": {
-                "num_shares": 4,
-                "purchase_price": 15
-            },
-            "66": {
-                "num_shares": 2,
-                "purchase_price": 152
-            },
-            "93": {
-                "num_shares": 4,
-                "purchase_price": 40
-            }
-        }
-    },
-    {
-        "_id": "3",
-        "stocks": {
-            "3": {
-                "num_shares": 39,
-                "purchase_price": 133
-            }
-        }
-    },
-    {
-        "_id": "4",
-        "stocks": {
-            "71": {
-                "num_shares": 1,
-                "purchase_price": 122
-            },
-            "79": {
-                "num_shares": 5,
-                "purchase_price": 33
-            },
-            "88": {
-                "num_shares": 3,
-                "purchase_price": 155
-            },
-            "97": {
-                "num_shares": 1,
-                "purchase_price": 55
-            },
-            "100": {
-                "num_shares": 3,
-                "purchase_price": 70
-            }
-        }
-    },
-    {
-        "_id": "5",
-        "stocks": {
-            "5": {
-                "num_shares": 21,
-                "purchase_price": 46
-            }
-        }
-    },
-    {
-        "_id": "6",
-        "stocks": {
-            "3": {
-                "num_shares": 5,
-                "purchase_price": 123
-            },
-            "65": {
-                "num_shares": 3,
-                "purchase_price": 110
-            },
-            "69": {
-                "num_shares": 4,
-                "purchase_price": 159
-            },
-            "77": {
-                "num_shares": 4,
-                "purchase_price": 179
-            },
-            "83": {
-                "num_shares": 6,
-                "purchase_price": 82
-            }
-        }
-    },
-    {
-        "_id": "7",
-        "stocks": {
-            "7": {
-                "num_shares": 42,
-                "purchase_price": 150
-            }
-        }
-    },
-    {
-        "_id": "8",
-        "stocks": {
-            "11": {
-                "num_shares": 1,
-                "purchase_price": 103
-            },
-            "16": {
-                "num_shares": 4,
-                "purchase_price": 169
-            },
-            "52": {
-                "num_shares": 5,
-                "purchase_price": 166
-            },
-            "63": {
-                "num_shares": 6,
-                "purchase_price": 116
-            },
-            "98": {
-                "num_shares": 3,
-                "purchase_price": 102
-            }
-        }
-    },
-    {
-        "_id": "9",
-        "stocks": {
-            "9": {
-                "num_shares": 12,
-                "purchase_price": 51
-            }
-        }
-    },
-    {
-        "_id": "10",
-        "stocks": {
-            "20": {
-                "num_shares": 2,
-                "purchase_price": 7
-            },
-            "29": {
-                "num_shares": 3,
-                "purchase_price": 154
-            },
-            "30": {
-                "num_shares": 1,
-                "purchase_price": 149
-            },
-            "53": {
-                "num_shares": 1,
-                "purchase_price": 38
-            },
-            "93": {
-                "num_shares": 5,
-                "purchase_price": 20
-            }
-        }
-    },
-    {
-        "_id": "11",
-        "stocks": {
-            "11": {
-                "num_shares": 31,
-                "purchase_price": 61
-            }
-        }
-    },
-    {
-        "_id": "12",
-        "stocks": {
-            "9": {
-                "num_shares": 6,
-                "purchase_price": 66
-            },
-            "18": {
-                "num_shares": 3,
-                "purchase_price": 14
-            },
-            "79": {
-                "num_shares": 5,
-                "purchase_price": 73
-            },
-            "83": {
-                "num_shares": 6,
-                "purchase_price": 128
-            },
-            "95": {
-                "num_shares": 2,
-                "purchase_price": 8
-            }
-        }
-    },
-    {
-        "_id": "13",
-        "stocks": {
-            "13": {
-                "num_shares": 30,
-                "purchase_price": 16
-            }
-        }
-    },
-    {
-        "_id": "14",
-        "stocks": {
-            "12": {
-                "num_shares": 1,
-                "purchase_price": 154
-            },
-            "13": {
-                "num_shares": 6,
-                "purchase_price": 155
-            },
-            "28": {
-                "num_shares": 6,
-                "purchase_price": 176
-            },
-            "44": {
-                "num_shares": 3,
-                "purchase_price": 181
-            },
-            "89": {
-                "num_shares": 2,
-                "purchase_price": 184
-            }
-        }
-    },
-    {
-        "_id": "15",
-        "stocks": {
-            "15": {
-                "num_shares": 32,
-                "purchase_price": 1
-            }
-        }
-    },
-    {
-        "_id": "16",
-        "stocks": {
-            "28": {
-                "num_shares": 4,
-                "purchase_price": 71
-            },
-            "43": {
-                "num_shares": 3,
-                "purchase_price": 174
-            },
-            "44": {
-                "num_shares": 3,
-                "purchase_price": 147
-            },
-            "97": {
-                "num_shares": 5,
-                "purchase_price": 16
-            },
-            "98": {
-                "num_shares": 6,
-                "purchase_price": 157
-            }
-        }
-    },
-    {
-        "_id": "17",
-        "stocks": {
-            "17": {
-                "num_shares": 4,
-                "purchase_price": 200
-            }
-        }
-    },
-    {
-        "_id": "18",
-        "stocks": {
-            "2": {
-                "num_shares": 4,
-                "purchase_price": 76
-            },
-            "35": {
-                "num_shares": 5,
-                "purchase_price": 2
-            },
-            "36": {
-                "num_shares": 1,
-                "purchase_price": 183
-            },
-            "40": {
-                "num_shares": 1,
-                "purchase_price": 36
-            },
-            "99": {
-                "num_shares": 5,
-                "purchase_price": 192
-            }
-        }
-    },
-    {
-        "_id": "19",
-        "stocks": {
-            "19": {
-                "num_shares": 33,
-                "purchase_price": 138
-            }
-        }
-    },
-    {
-        "_id": "20",
-        "stocks": {
-            "18": {
-                "num_shares": 1,
-                "purchase_price": 10
-            },
-            "19": {
-                "num_shares": 1,
-                "purchase_price": 76
-            },
-            "31": {
-                "num_shares": 3,
-                "purchase_price": 23
-            },
-            "46": {
-                "num_shares": 2,
-                "purchase_price": 110
-            },
-            "66": {
-                "num_shares": 1,
-                "purchase_price": 82
-            }
-        }
-    },
-    {
-        "_id": "21",
-        "stocks": {
-            "21": {
-                "num_shares": 20,
-                "purchase_price": 82
-            }
-        }
-    },
-    {
-        "_id": "22",
-        "stocks": {
-            "4": {
-                "num_shares": 2,
-                "purchase_price": 44
-            },
-            "39": {
-                "num_shares": 3,
-                "purchase_price": 38
-            },
-            "51": {
-                "num_shares": 6,
-                "purchase_price": 56
-            },
-            "74": {
-                "num_shares": 5,
-                "purchase_price": 21
-            },
-            "99": {
-                "num_shares": 1,
-                "purchase_price": 99
-            }
-        }
-    },
-    {
-        "_id": "23",
-        "stocks": {
-            "23": {
-                "num_shares": 4,
-                "purchase_price": 29
-            }
-        }
-    },
-    {
-        "_id": "24",
-        "stocks": {
-            "3": {
-                "num_shares": 6,
-                "purchase_price": 174
-            },
-            "25": {
-                "num_shares": 5,
-                "purchase_price": 91
-            },
-            "53": {
-                "num_shares": 6,
-                "purchase_price": 38
-            },
-            "95": {
-                "num_shares": 1,
-                "purchase_price": 95
-            },
-            "99": {
-                "num_shares": 4,
-                "purchase_price": 93
-            }
-        }
-    },
-    {
-        "_id": "25",
-        "stocks": {
-            "25": {
-                "num_shares": 8,
-                "purchase_price": 42
-            }
-        }
-    },
-    {
-        "_id": "26",
-        "stocks": {
-            "0": {
-                "num_shares": 4,
-                "purchase_price": 116
-            },
-            "53": {
-                "num_shares": 6,
-                "purchase_price": 69
-            },
-            "59": {
-                "num_shares": 1,
-                "purchase_price": 63
-            },
-            "76": {
-                "num_shares": 3,
-                "purchase_price": 4
-            },
-            "98": {
-                "num_shares": 4,
-                "purchase_price": 43
-            }
-        }
-    },
-    {
-        "_id": "27",
-        "stocks": {
-            "27": {
-                "num_shares": 10,
-                "purchase_price": 58
-            }
-        }
-    },
-    {
-        "_id": "28",
-        "stocks": {
-            "1": {
-                "num_shares": 6,
-                "purchase_price": 8
-            },
-            "5": {
-                "num_shares": 5,
-                "purchase_price": 97
-            },
-            "6": {
-                "num_shares": 6,
-                "purchase_price": 127
-            },
-            "67": {
-                "num_shares": 5,
-                "purchase_price": 167
-            },
-            "86": {
-                "num_shares": 5,
-                "purchase_price": 188
-            }
-        }
-    },
-    {
-        "_id": "29",
-        "stocks": {
-            "29": {
-                "num_shares": 43,
-                "purchase_price": 152
-            }
-        }
-    },
-    {
-        "_id": "30",
-        "stocks": {
-            "8": {
-                "num_shares": 2,
-                "purchase_price": 67
-            },
-            "22": {
-                "num_shares": 3,
-                "purchase_price": 67
-            },
-            "60": {
-                "num_shares": 5,
-                "purchase_price": 38
-            },
-            "72": {
-                "num_shares": 3,
-                "purchase_price": 3
-            },
-            "73": {
-                "num_shares": 3,
-                "purchase_price": 159
-            }
-        }
-    },
-    {
-        "_id": "31",
-        "stocks": {
-            "31": {
-                "num_shares": 24,
-                "purchase_price": 197
-            }
-        }
-    },
-    {
-        "_id": "32",
-        "stocks": {
-            "21": {
-                "num_shares": 3,
-                "purchase_price": 110
-            },
-            "48": {
-                "num_shares": 5,
-                "purchase_price": 194
-            },
-            "69": {
-                "num_shares": 2,
-                "purchase_price": 6
-            },
-            "88": {
-                "num_shares": 3,
-                "purchase_price": 101
-            },
-            "97": {
-                "num_shares": 6,
-                "purchase_price": 36
-            }
-        }
-    },
-    {
-        "_id": "33",
-        "stocks": {
-            "33": {
-                "num_shares": 34,
-                "purchase_price": 20
-            }
-        }
-    },
-    {
-        "_id": "34",
-        "stocks": {
-            "50": {
-                "num_shares": 4,
-                "purchase_price": 105
-            },
-            "55": {
-                "num_shares": 3,
-                "purchase_price": 87
-            },
-            "58": {
-                "num_shares": 6,
-                "purchase_price": 128
-            },
-            "91": {
-                "num_shares": 5,
-                "purchase_price": 67
-            },
-            "100": {
-                "num_shares": 5,
-                "purchase_price": 182
-            }
-        }
-    },
-    {
-        "_id": "35",
-        "stocks": {
-            "35": {
-                "num_shares": 5,
-                "purchase_price": 5
-            }
-        }
-    },
-    {
-        "_id": "36",
-        "stocks": {
-            "3": {
-                "num_shares": 2,
-                "purchase_price": 161
-            },
-            "12": {
-                "num_shares": 5,
-                "purchase_price": 86
-            },
-            "39": {
-                "num_shares": 3,
-                "purchase_price": 27
-            },
-            "51": {
-                "num_shares": 2,
-                "purchase_price": 143
-            },
-            "65": {
-                "num_shares": 5,
-                "purchase_price": 62
-            }
-        }
-    },
-    {
-        "_id": "37",
-        "stocks": {
-            "37": {
-                "num_shares": 14,
-                "purchase_price": 119
-            }
-        }
-    },
-    {
-        "_id": "38",
-        "stocks": {
-            "28": {
-                "num_shares": 5,
-                "purchase_price": 138
-            },
-            "42": {
-                "num_shares": 4,
-                "purchase_price": 118
-            },
-            "70": {
-                "num_shares": 2,
-                "purchase_price": 35
-            },
-            "85": {
-                "num_shares": 3,
-                "purchase_price": 122
-            },
-            "90": {
-                "num_shares": 4,
-                "purchase_price": 183
-            }
-        }
-    },
-    {
-        "_id": "39",
-        "stocks": {
-            "39": {
-                "num_shares": 41,
-                "purchase_price": 163
-            }
-        }
-    },
-    {
-        "_id": "40",
-        "stocks": {
-            "7": {
-                "num_shares": 2,
-                "purchase_price": 62
-            },
-            "75": {
-                "num_shares": 3,
-                "purchase_price": 132
-            },
-            "79": {
-                "num_shares": 6,
-                "purchase_price": 125
-            },
-            "84": {
-                "num_shares": 2,
-                "purchase_price": 81
-            },
-            "100": {
-                "num_shares": 4,
-                "purchase_price": 49
-            }
-        }
-    },
-    {
-        "_id": "41",
-        "stocks": {
-            "41": {
-                "num_shares": 5,
-                "purchase_price": 181
-            }
-        }
-    },
-    {
-        "_id": "42",
-        "stocks": {
-            "3": {
-                "num_shares": 4,
-                "purchase_price": 148
-            },
-            "27": {
-                "num_shares": 2,
-                "purchase_price": 137
-            },
-            "35": {
-                "num_shares": 4,
-                "purchase_price": 166
-            },
-            "62": {
-                "num_shares": 2,
-                "purchase_price": 125
-            },
-            "74": {
-                "num_shares": 3,
-                "purchase_price": 44
-            }
-        }
-    },
-    {
-        "_id": "43",
-        "stocks": {
-            "43": {
-                "num_shares": 10,
-                "purchase_price": 178
-            }
-        }
-    },
-    {
-        "_id": "44",
-        "stocks": {
-            "22": {
-                "num_shares": 1,
-                "purchase_price": 9
-            },
-            "54": {
-                "num_shares": 5,
-                "purchase_price": 162
-            },
-            "60": {
-                "num_shares": 5,
-                "purchase_price": 45
-            },
-            "77": {
-                "num_shares": 5,
-                "purchase_price": 112
-            },
-            "86": {
-                "num_shares": 5,
-                "purchase_price": 107
-            }
-        }
-    },
-    {
-        "_id": "45",
-        "stocks": {
-            "45": {
-                "num_shares": 25,
-                "purchase_price": 78
-            }
-        }
-    },
-    {
-        "_id": "46",
-        "stocks": {
-            "9": {
-                "num_shares": 1,
-                "purchase_price": 10
-            },
-            "27": {
-                "num_shares": 5,
-                "purchase_price": 108
-            },
-            "39": {
-                "num_shares": 2,
-                "purchase_price": 36
-            },
-            "50": {
-                "num_shares": 1,
-                "purchase_price": 50
-            },
-            "69": {
-                "num_shares": 6,
-                "purchase_price": 39
-            }
-        }
-    },
-    {
-        "_id": "47",
-        "stocks": {
-            "47": {
-                "num_shares": 42,
-                "purchase_price": 177
-            }
-        }
-    },
-    {
-        "_id": "48",
-        "stocks": {
-            "22": {
-                "num_shares": 3,
-                "purchase_price": 52
-            },
-            "44": {
-                "num_shares": 4,
-                "purchase_price": 16
-            },
-            "60": {
-                "num_shares": 4,
-                "purchase_price": 17
-            },
-            "83": {
-                "num_shares": 5,
-                "purchase_price": 118
-            },
-            "96": {
-                "num_shares": 4,
-                "purchase_price": 32
-            }
-        }
-    },
-    {
-        "_id": "49",
-        "stocks": {
-            "49": {
-                "num_shares": 46,
-                "purchase_price": 49
-            }
-        }
-    },
-    {
-        "_id": "50",
-        "stocks": {
-            "20": {
-                "num_shares": 2,
-                "purchase_price": 106
-            },
-            "54": {
-                "num_shares": 5,
-                "purchase_price": 142
-            },
-            "74": {
-                "num_shares": 1,
-                "purchase_price": 48
-            },
-            "90": {
-                "num_shares": 6,
-                "purchase_price": 88
-            },
-            "97": {
-                "num_shares": 5,
-                "purchase_price": 96
-            }
-        }
-    },
-    {
-        "_id": "51",
-        "stocks": {
-            "51": {
-                "num_shares": 47,
-                "purchase_price": 191
-            }
-        }
-    },
-    {
-        "_id": "52",
-        "stocks": {
-            "1": {
-                "num_shares": 1,
-                "purchase_price": 3
-            },
-            "8": {
-                "num_shares": 4,
-                "purchase_price": 187
-            },
-            "13": {
-                "num_shares": 5,
-                "purchase_price": 95
-            },
-            "17": {
-                "num_shares": 3,
-                "purchase_price": 122
-            },
-            "37": {
-                "num_shares": 6,
-                "purchase_price": 30
-            }
-        }
-    },
-    {
-        "_id": "53",
-        "stocks": {
-            "53": {
-                "num_shares": 46,
-                "purchase_price": 104
-            }
-        }
-    },
-    {
-        "_id": "54",
-        "stocks": {
-            "16": {
-                "num_shares": 2,
-                "purchase_price": 27
-            },
-            "38": {
-                "num_shares": 3,
-                "purchase_price": 192
-            },
-            "45": {
-                "num_shares": 5,
-                "purchase_price": 78
-            },
-            "46": {
-                "num_shares": 5,
-                "purchase_price": 3
-            },
-            "85": {
-                "num_shares": 2,
-                "purchase_price": 50
-            }
-        }
-    },
-    {
-        "_id": "55",
-        "stocks": {
-            "55": {
-                "num_shares": 45,
-                "purchase_price": 151
-            }
-        }
-    },
-    {
-        "_id": "56",
-        "stocks": {
-            "13": {
-                "num_shares": 5,
-                "purchase_price": 34
-            },
-            "27": {
-                "num_shares": 3,
-                "purchase_price": 80
-            },
-            "33": {
-                "num_shares": 3,
-                "purchase_price": 134
-            },
-            "35": {
-                "num_shares": 3,
-                "purchase_price": 169
-            },
-            "71": {
-                "num_shares": 1,
-                "purchase_price": 177
-            }
-        }
-    },
-    {
-        "_id": "57",
-        "stocks": {
-            "57": {
-                "num_shares": 1,
-                "purchase_price": 1
-            }
-        }
-    },
-    {
-        "_id": "58",
-        "stocks": {
-            "24": {
-                "num_shares": 4,
-                "purchase_price": 107
-            },
-            "37": {
-                "num_shares": 2,
-                "purchase_price": 87
-            },
-            "54": {
-                "num_shares": 2,
-                "purchase_price": 107
-            },
-            "65": {
-                "num_shares": 5,
-                "purchase_price": 94
-            },
-            "81": {
-                "num_shares": 6,
-                "purchase_price": 63
-            }
-        }
-    },
-    {
-        "_id": "59",
-        "stocks": {
-            "59": {
-                "num_shares": 25,
-                "purchase_price": 25
-            }
-        }
-    },
-    {
-        "_id": "60",
-        "stocks": {
-            "14": {
-                "num_shares": 1,
-                "purchase_price": 132
-            },
-            "24": {
-                "num_shares": 3,
-                "purchase_price": 116
-            },
-            "30": {
-                "num_shares": 4,
-                "purchase_price": 20
-            },
-            "41": {
-                "num_shares": 1,
-                "purchase_price": 106
-            },
-            "90": {
-                "num_shares": 1,
-                "purchase_price": 12
-            }
-        }
-    },
-    {
-        "_id": "61",
-        "stocks": {
-            "61": {
-                "num_shares": 37,
-                "purchase_price": 128
-            }
-        }
-    },
-    {
-        "_id": "62",
-        "stocks": {
-            "8": {
-                "num_shares": 1,
-                "purchase_price": 98
-            },
-            "16": {
-                "num_shares": 3,
-                "purchase_price": 69
-            },
-            "18": {
-                "num_shares": 6,
-                "purchase_price": 98
-            },
-            "27": {
-                "num_shares": 4,
-                "purchase_price": 102
-            },
-            "38": {
-                "num_shares": 4,
-                "purchase_price": 35
-            }
-        }
-    },
-    {
-        "_id": "63",
-        "stocks": {
-            "63": {
-                "num_shares": 30,
-                "purchase_price": 138
-            }
-        }
-    },
-    {
-        "_id": "64",
-        "stocks": {
-            "13": {
-                "num_shares": 2,
-                "purchase_price": 74
-            },
-            "22": {
-                "num_shares": 3,
-                "purchase_price": 111
-            },
-            "84": {
-                "num_shares": 3,
-                "purchase_price": 66
-            },
-            "85": {
-                "num_shares": 2,
-                "purchase_price": 79
-            },
-            "90": {
-                "num_shares": 2,
-                "purchase_price": 93
-            }
-        }
-    },
-    {
-        "_id": "65",
-        "stocks": {
-            "65": {
-                "num_shares": 19,
-                "purchase_price": 182
-            }
-        }
-    },
-    {
-        "_id": "66",
-        "stocks": {
-            "45": {
-                "num_shares": 2,
-                "purchase_price": 102
-            },
-            "49": {
-                "num_shares": 5,
-                "purchase_price": 80
-            },
-            "57": {
-                "num_shares": 6,
-                "purchase_price": 71
-            },
-            "78": {
-                "num_shares": 6,
-                "purchase_price": 115
-            }
-        }
-    },
-    {
-        "_id": "67",
-        "stocks": {
-            "67": {
-                "num_shares": 1,
-                "purchase_price": 111
-            }
-        }
-    },
-    {
-        "_id": "68",
-        "stocks": {
-            "8": {
-                "num_shares": 1,
-                "purchase_price": 182
-            },
-            "14": {
-                "num_shares": 4,
-                "purchase_price": 8
-            },
-            "26": {
-                "num_shares": 2,
-                "purchase_price": 183
-            },
-            "46": {
-                "num_shares": 4,
-                "purchase_price": 187
-            },
-            "66": {
-                "num_shares": 4,
-                "purchase_price": 44
-            }
-        }
-    },
-    {
-        "_id": "69",
-        "stocks": {
-            "69": {
-                "num_shares": 10,
-                "purchase_price": 110
-            }
-        }
-    },
-    {
-        "_id": "70",
-        "stocks": {
-            "3": {
-                "num_shares": 6,
-                "purchase_price": 144
-            },
-            "8": {
-                "num_shares": 6,
-                "purchase_price": 178
-            },
-            "15": {
-                "num_shares": 4,
-                "purchase_price": 19
-            },
-            "20": {
-                "num_shares": 1,
-                "purchase_price": 196
-            },
-            "39": {
-                "num_shares": 6,
-                "purchase_price": 189
-            }
-        }
-    },
-    {
-        "_id": "71",
-        "stocks": {
-            "71": {
-                "num_shares": 26,
-                "purchase_price": 126
-            }
-        }
-    },
-    {
-        "_id": "72",
-        "stocks": {
-            "18": {
-                "num_shares": 1,
-                "purchase_price": 158
-            },
-            "49": {
-                "num_shares": 2,
-                "purchase_price": 48
-            },
-            "51": {
-                "num_shares": 1,
-                "purchase_price": 186
-            },
-            "84": {
-                "num_shares": 5,
-                "purchase_price": 175
-            },
-            "97": {
-                "num_shares": 1,
-                "purchase_price": 191
-            }
-        }
-    },
-    {
-        "_id": "73",
-        "stocks": {
-            "73": {
-                "num_shares": 47,
-                "purchase_price": 132
-            }
-        }
-    },
-    {
-        "_id": "74",
-        "stocks": {
-            "35": {
-                "num_shares": 3,
-                "purchase_price": 79
-            },
-            "36": {
-                "num_shares": 2,
-                "purchase_price": 193
-            },
-            "55": {
-                "num_shares": 5,
-                "purchase_price": 108
-            },
-            "79": {
-                "num_shares": 6,
-                "purchase_price": 19
-            },
-            "91": {
-                "num_shares": 2,
-                "purchase_price": 170
-            }
-        }
-    },
-    {
-        "_id": "75",
-        "stocks": {
-            "75": {
-                "num_shares": 46,
-                "purchase_price": 172
-            }
-        }
-    },
-    {
-        "_id": "76",
-        "stocks": {
-            "4": {
-                "num_shares": 5,
-                "purchase_price": 143
-            },
-            "7": {
-                "num_shares": 3,
-                "purchase_price": 176
-            },
-            "11": {
-                "num_shares": 2,
-                "purchase_price": 170
-            },
-            "88": {
-                "num_shares": 3,
-                "purchase_price": 121
-            }
-        }
-    },
-    {
-        "_id": "77",
-        "stocks": {
-            "77": {
-                "num_shares": 1,
-                "purchase_price": 64
-            }
-        }
-    },
-    {
-        "_id": "78",
-        "stocks": {
-            "20": {
-                "num_shares": 4,
-                "purchase_price": 107
-            },
-            "29": {
-                "num_shares": 5,
-                "purchase_price": 97
-            },
-            "51": {
-                "num_shares": 4,
-                "purchase_price": 27
-            },
-            "66": {
-                "num_shares": 6,
-                "purchase_price": 66
-            },
-            "76": {
-                "num_shares": 4,
-                "purchase_price": 181
-            }
-        }
-    },
-    {
-        "_id": "79",
-        "stocks": {
-            "79": {
-                "num_shares": 3,
-                "purchase_price": 22
-            }
-        }
-    },
-    {
-        "_id": "80",
-        "stocks": {
-            "18": {
-                "num_shares": 3,
-                "purchase_price": 19
-            },
-            "21": {
-                "num_shares": 6,
-                "purchase_price": 149
-            },
-            "44": {
-                "num_shares": 2,
-                "purchase_price": 133
-            },
-            "49": {
-                "num_shares": 4,
-                "purchase_price": 40
-            },
-            "73": {
-                "num_shares": 5,
-                "purchase_price": 135
-            }
-        }
-    },
-    {
-        "_id": "81",
-        "stocks": {
-            "81": {
-                "num_shares": 19,
-                "purchase_price": 80
-            }
-        }
-    },
-    {
-        "_id": "82",
-        "stocks": {
-            "3": {
-                "num_shares": 4,
-                "purchase_price": 66
-            },
-            "14": {
-                "num_shares": 2,
-                "purchase_price": 44
-            },
-            "30": {
-                "num_shares": 6,
-                "purchase_price": 114
-            },
-            "90": {
-                "num_shares": 4,
-                "purchase_price": 22
-            },
-            "91": {
-                "num_shares": 1,
-                "purchase_price": 19
-            }
-        }
-    },
-    {
-        "_id": "83",
-        "stocks": {
-            "83": {
-                "num_shares": 14,
-                "purchase_price": 137
-            }
-        }
-    },
-    {
-        "_id": "84",
-        "stocks": {
-            "36": {
-                "num_shares": 6,
-                "purchase_price": 36
-            },
-            "37": {
-                "num_shares": 5,
-                "purchase_price": 139
-            },
-            "46": {
-                "num_shares": 4,
-                "purchase_price": 129
-            },
-            "50": {
-                "num_shares": 3,
-                "purchase_price": 60
-            },
-            "77": {
-                "num_shares": 4,
-                "purchase_price": 2
-            }
-        }
-    },
-    {
-        "_id": "85",
-        "stocks": {
-            "85": {
-                "num_shares": 34,
-                "purchase_price": 33
-            }
-        }
-    },
-    {
-        "_id": "86",
-        "stocks": {
-            "4": {
-                "num_shares": 1,
-                "purchase_price": 161
-            },
-            "18": {
-                "num_shares": 2,
-                "purchase_price": 57
-            },
-            "37": {
-                "num_shares": 5,
-                "purchase_price": 127
-            },
-            "51": {
-                "num_shares": 5,
-                "purchase_price": 169
-            },
-            "84": {
-                "num_shares": 3,
-                "purchase_price": 9
-            }
-        }
-    },
-    {
-        "_id": "87",
-        "stocks": {
-            "87": {
-                "num_shares": 34,
-                "purchase_price": 13
-            }
-        }
-    },
-    {
-        "_id": "88",
-        "stocks": {
-            "43": {
-                "num_shares": 6,
-                "purchase_price": 126
-            },
-            "64": {
-                "num_shares": 4,
-                "purchase_price": 177
-            },
-            "68": {
-                "num_shares": 1,
-                "purchase_price": 110
-            },
-            "71": {
-                "num_shares": 5,
-                "purchase_price": 50
-            },
-            "78": {
-                "num_shares": 1,
-                "purchase_price": 38
-            }
-        }
-    },
-    {
-        "_id": "89",
-        "stocks": {
-            "89": {
-                "num_shares": 12,
-                "purchase_price": 146
-            }
-        }
-    },
-    {
-        "_id": "90",
-        "stocks": {
-            "5": {
-                "num_shares": 4,
-                "purchase_price": 39
-            },
-            "42": {
-                "num_shares": 5,
-                "purchase_price": 75
-            },
-            "49": {
-                "num_shares": 4,
-                "purchase_price": 148
-            },
-            "69": {
-                "num_shares": 4,
-                "purchase_price": 117
-            },
-            "87": {
-                "num_shares": 1,
-                "purchase_price": 90
-            }
-        }
-    },
-    {
-        "_id": "91",
-        "stocks": {
-            "91": {
-                "num_shares": 17,
-                "purchase_price": 193
-            }
-        }
-    },
-    {
-        "_id": "92",
-        "stocks": {
-            "9": {
-                "num_shares": 1,
-                "purchase_price": 45
-            },
-            "23": {
-                "num_shares": 2,
-                "purchase_price": 63
-            },
-            "33": {
-                "num_shares": 1,
-                "purchase_price": 90
-            },
-            "41": {
-                "num_shares": 1,
-                "purchase_price": 142
-            },
-            "73": {
-                "num_shares": 1,
-                "purchase_price": 182
-            }
-        }
-    },
-    {
-        "_id": "93",
-        "stocks": {
-            "93": {
-                "num_shares": 1,
-                "purchase_price": 165
-            }
-        }
-    },
-    {
-        "_id": "94",
-        "stocks": {
-            "0": {
-                "num_shares": 6,
-                "purchase_price": 128
-            },
-            "28": {
-                "num_shares": 1,
-                "purchase_price": 171
-            },
-            "60": {
-                "num_shares": 5,
-                "purchase_price": 119
-            },
-            "82": {
-                "num_shares": 3,
-                "purchase_price": 31
-            },
-            "85": {
-                "num_shares": 4,
-                "purchase_price": 91
-            }
-        }
-    },
-    {
-        "_id": "95",
-        "stocks": {
-            "95": {
-                "num_shares": 50,
-                "purchase_price": 166
-            }
-        }
-    },
-    {
-        "_id": "96",
-        "stocks": {
-            "28": {
-                "num_shares": 5,
-                "purchase_price": 106
-            },
-            "29": {
-                "num_shares": 3,
-                "purchase_price": 70
-            },
-            "58": {
-                "num_shares": 2,
-                "purchase_price": 7
-            },
-            "73": {
-                "num_shares": 6,
-                "purchase_price": 147
-            },
-            "100": {
-                "num_shares": 1,
-                "purchase_price": 81
-            }
-        }
-    },
-    {
-        "_id": "97",
-        "stocks": {
-            "97": {
-                "num_shares": 21,
-                "purchase_price": 187
-            }
-        }
-    },
-    {
-        "_id": "98",
-        "stocks": {
-            "3": {
-                "num_shares": 1,
-                "purchase_price": 66
-            },
-            "28": {
-                "num_shares": 3,
-                "purchase_price": 151
-            },
-            "74": {
-                "num_shares": 5,
-                "purchase_price": 166
-            },
-            "80": {
-                "num_shares": 5,
-                "purchase_price": 115
-            },
-            "87": {
-                "num_shares": 5,
-                "purchase_price": 194
-            }
-        }
-    },
-    {
-        "_id": "99",
-        "stocks": {
-            "99": {
-                "num_shares": 30,
-                "purchase_price": 111
-            }
-        }
-    },
-    {
-        "_id": "100",
-        "stocks": {
-            "8": {
-                "num_shares": 1,
-                "purchase_price": 100
-            },
-            "19": {
-                "num_shares": 3,
-                "purchase_price": 107
-            },
-            "47": {
-                "num_shares": 6,
-                "purchase_price": 197
-            },
-            "74": {
-                "num_shares": 4,
-                "purchase_price": 191
-            },
-            "97": {
-                "num_shares": 6,
-                "purchase_price": 171
-            }
-        }
+  { "_id": "1", "stocks": { "1": { "num_shares": 11, "purchase_price": 71 } } },
+  {
+    "_id": "2",
+    "stocks": {
+      "3": { "num_shares": 6, "purchase_price": 130 },
+      "26": { "num_shares": 5, "purchase_price": 191 },
+      "43": { "num_shares": 4, "purchase_price": 15 },
+      "66": { "num_shares": 2, "purchase_price": 152 },
+      "93": { "num_shares": 4, "purchase_price": 40 }
     }
+  },
+  {
+    "_id": "3",
+    "stocks": { "3": { "num_shares": 39, "purchase_price": 133 } }
+  },
+  {
+    "_id": "4",
+    "stocks": {
+      "71": { "num_shares": 1, "purchase_price": 122 },
+      "79": { "num_shares": 5, "purchase_price": 33 },
+      "88": { "num_shares": 3, "purchase_price": 155 },
+      "97": { "num_shares": 1, "purchase_price": 55 },
+      "100": { "num_shares": 3, "purchase_price": 70 }
+    }
+  },
+  { "_id": "5", "stocks": { "5": { "num_shares": 21, "purchase_price": 46 } } },
+  {
+    "_id": "6",
+    "stocks": {
+      "3": { "num_shares": 5, "purchase_price": 123 },
+      "65": { "num_shares": 3, "purchase_price": 110 },
+      "69": { "num_shares": 4, "purchase_price": 159 },
+      "77": { "num_shares": 4, "purchase_price": 179 },
+      "83": { "num_shares": 6, "purchase_price": 82 }
+    }
+  },
+  {
+    "_id": "7",
+    "stocks": { "7": { "num_shares": 42, "purchase_price": 150 } }
+  },
+  {
+    "_id": "8",
+    "stocks": {
+      "11": { "num_shares": 1, "purchase_price": 103 },
+      "16": { "num_shares": 4, "purchase_price": 169 },
+      "52": { "num_shares": 5, "purchase_price": 166 },
+      "63": { "num_shares": 6, "purchase_price": 116 },
+      "98": { "num_shares": 3, "purchase_price": 102 }
+    }
+  },
+  { "_id": "9", "stocks": { "9": { "num_shares": 12, "purchase_price": 51 } } },
+  {
+    "_id": "10",
+    "stocks": {
+      "20": { "num_shares": 2, "purchase_price": 7 },
+      "29": { "num_shares": 3, "purchase_price": 154 },
+      "30": { "num_shares": 1, "purchase_price": 149 },
+      "53": { "num_shares": 1, "purchase_price": 38 },
+      "93": { "num_shares": 5, "purchase_price": 20 }
+    }
+  },
+  {
+    "_id": "11",
+    "stocks": { "11": { "num_shares": 31, "purchase_price": 61 } }
+  },
+  {
+    "_id": "12",
+    "stocks": {
+      "9": { "num_shares": 6, "purchase_price": 66 },
+      "18": { "num_shares": 3, "purchase_price": 14 },
+      "79": { "num_shares": 5, "purchase_price": 73 },
+      "83": { "num_shares": 6, "purchase_price": 128 },
+      "95": { "num_shares": 2, "purchase_price": 8 }
+    }
+  },
+  {
+    "_id": "13",
+    "stocks": { "13": { "num_shares": 30, "purchase_price": 16 } }
+  },
+  {
+    "_id": "14",
+    "stocks": {
+      "12": { "num_shares": 1, "purchase_price": 154 },
+      "13": { "num_shares": 6, "purchase_price": 155 },
+      "28": { "num_shares": 6, "purchase_price": 176 },
+      "44": { "num_shares": 3, "purchase_price": 181 },
+      "89": { "num_shares": 2, "purchase_price": 184 }
+    }
+  },
+  {
+    "_id": "15",
+    "stocks": { "15": { "num_shares": 32, "purchase_price": 1 } }
+  },
+  {
+    "_id": "16",
+    "stocks": {
+      "28": { "num_shares": 4, "purchase_price": 71 },
+      "43": { "num_shares": 3, "purchase_price": 174 },
+      "44": { "num_shares": 3, "purchase_price": 147 },
+      "97": { "num_shares": 5, "purchase_price": 16 },
+      "98": { "num_shares": 6, "purchase_price": 157 }
+    }
+  },
+  {
+    "_id": "17",
+    "stocks": { "17": { "num_shares": 4, "purchase_price": 200 } }
+  },
+  {
+    "_id": "18",
+    "stocks": {
+      "2": { "num_shares": 4, "purchase_price": 76 },
+      "35": { "num_shares": 5, "purchase_price": 2 },
+      "36": { "num_shares": 1, "purchase_price": 183 },
+      "40": { "num_shares": 1, "purchase_price": 36 },
+      "99": { "num_shares": 5, "purchase_price": 192 }
+    }
+  },
+  {
+    "_id": "19",
+    "stocks": { "19": { "num_shares": 33, "purchase_price": 138 } }
+  },
+  {
+    "_id": "20",
+    "stocks": {
+      "18": { "num_shares": 1, "purchase_price": 10 },
+      "19": { "num_shares": 1, "purchase_price": 76 },
+      "31": { "num_shares": 3, "purchase_price": 23 },
+      "46": { "num_shares": 2, "purchase_price": 110 },
+      "66": { "num_shares": 1, "purchase_price": 82 }
+    }
+  },
+  {
+    "_id": "21",
+    "stocks": { "21": { "num_shares": 20, "purchase_price": 82 } }
+  },
+  {
+    "_id": "22",
+    "stocks": {
+      "4": { "num_shares": 2, "purchase_price": 44 },
+      "39": { "num_shares": 3, "purchase_price": 38 },
+      "51": { "num_shares": 6, "purchase_price": 56 },
+      "74": { "num_shares": 5, "purchase_price": 21 },
+      "99": { "num_shares": 1, "purchase_price": 99 }
+    }
+  },
+  {
+    "_id": "23",
+    "stocks": { "23": { "num_shares": 4, "purchase_price": 29 } }
+  },
+  {
+    "_id": "24",
+    "stocks": {
+      "3": { "num_shares": 6, "purchase_price": 174 },
+      "25": { "num_shares": 5, "purchase_price": 91 },
+      "53": { "num_shares": 6, "purchase_price": 38 },
+      "95": { "num_shares": 1, "purchase_price": 95 },
+      "99": { "num_shares": 4, "purchase_price": 93 }
+    }
+  },
+  {
+    "_id": "25",
+    "stocks": { "25": { "num_shares": 8, "purchase_price": 42 } }
+  },
+  {
+    "_id": "26",
+    "stocks": {
+      "0": { "num_shares": 4, "purchase_price": 116 },
+      "53": { "num_shares": 6, "purchase_price": 69 },
+      "59": { "num_shares": 1, "purchase_price": 63 },
+      "76": { "num_shares": 3, "purchase_price": 4 },
+      "98": { "num_shares": 4, "purchase_price": 43 }
+    }
+  },
+  {
+    "_id": "27",
+    "stocks": { "27": { "num_shares": 10, "purchase_price": 58 } }
+  },
+  {
+    "_id": "28",
+    "stocks": {
+      "1": { "num_shares": 6, "purchase_price": 8 },
+      "5": { "num_shares": 5, "purchase_price": 97 },
+      "6": { "num_shares": 6, "purchase_price": 127 },
+      "67": { "num_shares": 5, "purchase_price": 167 },
+      "86": { "num_shares": 5, "purchase_price": 188 }
+    }
+  },
+  {
+    "_id": "29",
+    "stocks": { "29": { "num_shares": 43, "purchase_price": 152 } }
+  },
+  {
+    "_id": "30",
+    "stocks": {
+      "8": { "num_shares": 2, "purchase_price": 67 },
+      "22": { "num_shares": 3, "purchase_price": 67 },
+      "60": { "num_shares": 5, "purchase_price": 38 },
+      "72": { "num_shares": 3, "purchase_price": 3 },
+      "73": { "num_shares": 3, "purchase_price": 159 }
+    }
+  },
+  {
+    "_id": "31",
+    "stocks": { "31": { "num_shares": 24, "purchase_price": 197 } }
+  },
+  {
+    "_id": "32",
+    "stocks": {
+      "21": { "num_shares": 3, "purchase_price": 110 },
+      "48": { "num_shares": 5, "purchase_price": 194 },
+      "69": { "num_shares": 2, "purchase_price": 6 },
+      "88": { "num_shares": 3, "purchase_price": 101 },
+      "97": { "num_shares": 6, "purchase_price": 36 }
+    }
+  },
+  {
+    "_id": "33",
+    "stocks": { "33": { "num_shares": 34, "purchase_price": 20 } }
+  },
+  {
+    "_id": "34",
+    "stocks": {
+      "50": { "num_shares": 4, "purchase_price": 105 },
+      "55": { "num_shares": 3, "purchase_price": 87 },
+      "58": { "num_shares": 6, "purchase_price": 128 },
+      "91": { "num_shares": 5, "purchase_price": 67 },
+      "100": { "num_shares": 5, "purchase_price": 182 }
+    }
+  },
+  { "_id": "35", "stocks": { "35": { "num_shares": 5, "purchase_price": 5 } } },
+  {
+    "_id": "36",
+    "stocks": {
+      "3": { "num_shares": 2, "purchase_price": 161 },
+      "12": { "num_shares": 5, "purchase_price": 86 },
+      "39": { "num_shares": 3, "purchase_price": 27 },
+      "51": { "num_shares": 2, "purchase_price": 143 },
+      "65": { "num_shares": 5, "purchase_price": 62 }
+    }
+  },
+  {
+    "_id": "37",
+    "stocks": { "37": { "num_shares": 14, "purchase_price": 119 } }
+  },
+  {
+    "_id": "38",
+    "stocks": {
+      "28": { "num_shares": 5, "purchase_price": 138 },
+      "42": { "num_shares": 4, "purchase_price": 118 },
+      "70": { "num_shares": 2, "purchase_price": 35 },
+      "85": { "num_shares": 3, "purchase_price": 122 },
+      "90": { "num_shares": 4, "purchase_price": 183 }
+    }
+  },
+  {
+    "_id": "39",
+    "stocks": { "39": { "num_shares": 41, "purchase_price": 163 } }
+  },
+  {
+    "_id": "40",
+    "stocks": {
+      "7": { "num_shares": 2, "purchase_price": 62 },
+      "75": { "num_shares": 3, "purchase_price": 132 },
+      "79": { "num_shares": 6, "purchase_price": 125 },
+      "84": { "num_shares": 2, "purchase_price": 81 },
+      "100": { "num_shares": 4, "purchase_price": 49 }
+    }
+  },
+  {
+    "_id": "41",
+    "stocks": { "41": { "num_shares": 5, "purchase_price": 181 } }
+  },
+  {
+    "_id": "42",
+    "stocks": {
+      "3": { "num_shares": 4, "purchase_price": 148 },
+      "27": { "num_shares": 2, "purchase_price": 137 },
+      "35": { "num_shares": 4, "purchase_price": 166 },
+      "62": { "num_shares": 2, "purchase_price": 125 },
+      "74": { "num_shares": 3, "purchase_price": 44 }
+    }
+  },
+  {
+    "_id": "43",
+    "stocks": { "43": { "num_shares": 10, "purchase_price": 178 } }
+  },
+  {
+    "_id": "44",
+    "stocks": {
+      "22": { "num_shares": 1, "purchase_price": 9 },
+      "54": { "num_shares": 5, "purchase_price": 162 },
+      "60": { "num_shares": 5, "purchase_price": 45 },
+      "77": { "num_shares": 5, "purchase_price": 112 },
+      "86": { "num_shares": 5, "purchase_price": 107 }
+    }
+  },
+  {
+    "_id": "45",
+    "stocks": { "45": { "num_shares": 25, "purchase_price": 78 } }
+  },
+  {
+    "_id": "46",
+    "stocks": {
+      "9": { "num_shares": 1, "purchase_price": 10 },
+      "27": { "num_shares": 5, "purchase_price": 108 },
+      "39": { "num_shares": 2, "purchase_price": 36 },
+      "50": { "num_shares": 1, "purchase_price": 50 },
+      "69": { "num_shares": 6, "purchase_price": 39 }
+    }
+  },
+  {
+    "_id": "47",
+    "stocks": { "47": { "num_shares": 42, "purchase_price": 177 } }
+  },
+  {
+    "_id": "48",
+    "stocks": {
+      "22": { "num_shares": 3, "purchase_price": 52 },
+      "44": { "num_shares": 4, "purchase_price": 16 },
+      "60": { "num_shares": 4, "purchase_price": 17 },
+      "83": { "num_shares": 5, "purchase_price": 118 },
+      "96": { "num_shares": 4, "purchase_price": 32 }
+    }
+  },
+  {
+    "_id": "49",
+    "stocks": { "49": { "num_shares": 46, "purchase_price": 49 } }
+  },
+  {
+    "_id": "50",
+    "stocks": {
+      "20": { "num_shares": 2, "purchase_price": 106 },
+      "54": { "num_shares": 5, "purchase_price": 142 },
+      "74": { "num_shares": 1, "purchase_price": 48 },
+      "90": { "num_shares": 6, "purchase_price": 88 },
+      "97": { "num_shares": 5, "purchase_price": 96 }
+    }
+  },
+  {
+    "_id": "51",
+    "stocks": { "51": { "num_shares": 47, "purchase_price": 191 } }
+  },
+  {
+    "_id": "52",
+    "stocks": {
+      "1": { "num_shares": 1, "purchase_price": 3 },
+      "8": { "num_shares": 4, "purchase_price": 187 },
+      "13": { "num_shares": 5, "purchase_price": 95 },
+      "17": { "num_shares": 3, "purchase_price": 122 },
+      "37": { "num_shares": 6, "purchase_price": 30 }
+    }
+  },
+  {
+    "_id": "53",
+    "stocks": { "53": { "num_shares": 46, "purchase_price": 104 } }
+  },
+  {
+    "_id": "54",
+    "stocks": {
+      "16": { "num_shares": 2, "purchase_price": 27 },
+      "38": { "num_shares": 3, "purchase_price": 192 },
+      "45": { "num_shares": 5, "purchase_price": 78 },
+      "46": { "num_shares": 5, "purchase_price": 3 },
+      "85": { "num_shares": 2, "purchase_price": 50 }
+    }
+  },
+  {
+    "_id": "55",
+    "stocks": { "55": { "num_shares": 45, "purchase_price": 151 } }
+  },
+  {
+    "_id": "56",
+    "stocks": {
+      "13": { "num_shares": 5, "purchase_price": 34 },
+      "27": { "num_shares": 3, "purchase_price": 80 },
+      "33": { "num_shares": 3, "purchase_price": 134 },
+      "35": { "num_shares": 3, "purchase_price": 169 },
+      "71": { "num_shares": 1, "purchase_price": 177 }
+    }
+  },
+  { "_id": "57", "stocks": { "57": { "num_shares": 1, "purchase_price": 1 } } },
+  {
+    "_id": "58",
+    "stocks": {
+      "24": { "num_shares": 4, "purchase_price": 107 },
+      "37": { "num_shares": 2, "purchase_price": 87 },
+      "54": { "num_shares": 2, "purchase_price": 107 },
+      "65": { "num_shares": 5, "purchase_price": 94 },
+      "81": { "num_shares": 6, "purchase_price": 63 }
+    }
+  },
+  {
+    "_id": "59",
+    "stocks": { "59": { "num_shares": 25, "purchase_price": 25 } }
+  },
+  {
+    "_id": "60",
+    "stocks": {
+      "14": { "num_shares": 1, "purchase_price": 132 },
+      "24": { "num_shares": 3, "purchase_price": 116 },
+      "30": { "num_shares": 4, "purchase_price": 20 },
+      "41": { "num_shares": 1, "purchase_price": 106 },
+      "90": { "num_shares": 1, "purchase_price": 12 }
+    }
+  },
+  {
+    "_id": "61",
+    "stocks": { "61": { "num_shares": 37, "purchase_price": 128 } }
+  },
+  {
+    "_id": "62",
+    "stocks": {
+      "8": { "num_shares": 1, "purchase_price": 98 },
+      "16": { "num_shares": 3, "purchase_price": 69 },
+      "18": { "num_shares": 6, "purchase_price": 98 },
+      "27": { "num_shares": 4, "purchase_price": 102 },
+      "38": { "num_shares": 4, "purchase_price": 35 }
+    }
+  },
+  {
+    "_id": "63",
+    "stocks": { "63": { "num_shares": 30, "purchase_price": 138 } }
+  },
+  {
+    "_id": "64",
+    "stocks": {
+      "13": { "num_shares": 2, "purchase_price": 74 },
+      "22": { "num_shares": 3, "purchase_price": 111 },
+      "84": { "num_shares": 3, "purchase_price": 66 },
+      "85": { "num_shares": 2, "purchase_price": 79 },
+      "90": { "num_shares": 2, "purchase_price": 93 }
+    }
+  },
+  {
+    "_id": "65",
+    "stocks": { "65": { "num_shares": 19, "purchase_price": 182 } }
+  },
+  {
+    "_id": "66",
+    "stocks": {
+      "45": { "num_shares": 2, "purchase_price": 102 },
+      "49": { "num_shares": 5, "purchase_price": 80 },
+      "57": { "num_shares": 6, "purchase_price": 71 },
+      "78": { "num_shares": 6, "purchase_price": 115 }
+    }
+  },
+  {
+    "_id": "67",
+    "stocks": { "67": { "num_shares": 1, "purchase_price": 111 } }
+  },
+  {
+    "_id": "68",
+    "stocks": {
+      "8": { "num_shares": 1, "purchase_price": 182 },
+      "14": { "num_shares": 4, "purchase_price": 8 },
+      "26": { "num_shares": 2, "purchase_price": 183 },
+      "46": { "num_shares": 4, "purchase_price": 187 },
+      "66": { "num_shares": 4, "purchase_price": 44 }
+    }
+  },
+  {
+    "_id": "69",
+    "stocks": { "69": { "num_shares": 10, "purchase_price": 110 } }
+  },
+  {
+    "_id": "70",
+    "stocks": {
+      "3": { "num_shares": 6, "purchase_price": 144 },
+      "8": { "num_shares": 6, "purchase_price": 178 },
+      "15": { "num_shares": 4, "purchase_price": 19 },
+      "20": { "num_shares": 1, "purchase_price": 196 },
+      "39": { "num_shares": 6, "purchase_price": 189 }
+    }
+  },
+  {
+    "_id": "71",
+    "stocks": { "71": { "num_shares": 26, "purchase_price": 126 } }
+  },
+  {
+    "_id": "72",
+    "stocks": {
+      "18": { "num_shares": 1, "purchase_price": 158 },
+      "49": { "num_shares": 2, "purchase_price": 48 },
+      "51": { "num_shares": 1, "purchase_price": 186 },
+      "84": { "num_shares": 5, "purchase_price": 175 },
+      "97": { "num_shares": 1, "purchase_price": 191 }
+    }
+  },
+  {
+    "_id": "73",
+    "stocks": { "73": { "num_shares": 47, "purchase_price": 132 } }
+  },
+  {
+    "_id": "74",
+    "stocks": {
+      "35": { "num_shares": 3, "purchase_price": 79 },
+      "36": { "num_shares": 2, "purchase_price": 193 },
+      "55": { "num_shares": 5, "purchase_price": 108 },
+      "79": { "num_shares": 6, "purchase_price": 19 },
+      "91": { "num_shares": 2, "purchase_price": 170 }
+    }
+  },
+  {
+    "_id": "75",
+    "stocks": { "75": { "num_shares": 46, "purchase_price": 172 } }
+  },
+  {
+    "_id": "76",
+    "stocks": {
+      "4": { "num_shares": 5, "purchase_price": 143 },
+      "7": { "num_shares": 3, "purchase_price": 176 },
+      "11": { "num_shares": 2, "purchase_price": 170 },
+      "88": { "num_shares": 3, "purchase_price": 121 }
+    }
+  },
+  {
+    "_id": "77",
+    "stocks": { "77": { "num_shares": 1, "purchase_price": 64 } }
+  },
+  {
+    "_id": "78",
+    "stocks": {
+      "20": { "num_shares": 4, "purchase_price": 107 },
+      "29": { "num_shares": 5, "purchase_price": 97 },
+      "51": { "num_shares": 4, "purchase_price": 27 },
+      "66": { "num_shares": 6, "purchase_price": 66 },
+      "76": { "num_shares": 4, "purchase_price": 181 }
+    }
+  },
+  {
+    "_id": "79",
+    "stocks": { "79": { "num_shares": 3, "purchase_price": 22 } }
+  },
+  {
+    "_id": "80",
+    "stocks": {
+      "18": { "num_shares": 3, "purchase_price": 19 },
+      "21": { "num_shares": 6, "purchase_price": 149 },
+      "44": { "num_shares": 2, "purchase_price": 133 },
+      "49": { "num_shares": 4, "purchase_price": 40 },
+      "73": { "num_shares": 5, "purchase_price": 135 }
+    }
+  },
+  {
+    "_id": "81",
+    "stocks": { "81": { "num_shares": 19, "purchase_price": 80 } }
+  },
+  {
+    "_id": "82",
+    "stocks": {
+      "3": { "num_shares": 4, "purchase_price": 66 },
+      "14": { "num_shares": 2, "purchase_price": 44 },
+      "30": { "num_shares": 6, "purchase_price": 114 },
+      "90": { "num_shares": 4, "purchase_price": 22 },
+      "91": { "num_shares": 1, "purchase_price": 19 }
+    }
+  },
+  {
+    "_id": "83",
+    "stocks": { "83": { "num_shares": 14, "purchase_price": 137 } }
+  },
+  {
+    "_id": "84",
+    "stocks": {
+      "36": { "num_shares": 6, "purchase_price": 36 },
+      "37": { "num_shares": 5, "purchase_price": 139 },
+      "46": { "num_shares": 4, "purchase_price": 129 },
+      "50": { "num_shares": 3, "purchase_price": 60 },
+      "77": { "num_shares": 4, "purchase_price": 2 }
+    }
+  },
+  {
+    "_id": "85",
+    "stocks": { "85": { "num_shares": 34, "purchase_price": 33 } }
+  },
+  {
+    "_id": "86",
+    "stocks": {
+      "4": { "num_shares": 1, "purchase_price": 161 },
+      "18": { "num_shares": 2, "purchase_price": 57 },
+      "37": { "num_shares": 5, "purchase_price": 127 },
+      "51": { "num_shares": 5, "purchase_price": 169 },
+      "84": { "num_shares": 3, "purchase_price": 9 }
+    }
+  },
+  {
+    "_id": "87",
+    "stocks": { "87": { "num_shares": 34, "purchase_price": 13 } }
+  },
+  {
+    "_id": "88",
+    "stocks": {
+      "43": { "num_shares": 6, "purchase_price": 126 },
+      "64": { "num_shares": 4, "purchase_price": 177 },
+      "68": { "num_shares": 1, "purchase_price": 110 },
+      "71": { "num_shares": 5, "purchase_price": 50 },
+      "78": { "num_shares": 1, "purchase_price": 38 }
+    }
+  },
+  {
+    "_id": "89",
+    "stocks": { "89": { "num_shares": 12, "purchase_price": 146 } }
+  },
+  {
+    "_id": "90",
+    "stocks": {
+      "5": { "num_shares": 4, "purchase_price": 39 },
+      "42": { "num_shares": 5, "purchase_price": 75 },
+      "49": { "num_shares": 4, "purchase_price": 148 },
+      "69": { "num_shares": 4, "purchase_price": 117 },
+      "87": { "num_shares": 1, "purchase_price": 90 }
+    }
+  },
+  {
+    "_id": "91",
+    "stocks": { "91": { "num_shares": 17, "purchase_price": 193 } }
+  },
+  {
+    "_id": "92",
+    "stocks": {
+      "9": { "num_shares": 1, "purchase_price": 45 },
+      "23": { "num_shares": 2, "purchase_price": 63 },
+      "33": { "num_shares": 1, "purchase_price": 90 },
+      "41": { "num_shares": 1, "purchase_price": 142 },
+      "73": { "num_shares": 1, "purchase_price": 182 }
+    }
+  },
+  {
+    "_id": "93",
+    "stocks": { "93": { "num_shares": 1, "purchase_price": 165 } }
+  },
+  {
+    "_id": "94",
+    "stocks": {
+      "0": { "num_shares": 6, "purchase_price": 128 },
+      "28": { "num_shares": 1, "purchase_price": 171 },
+      "60": { "num_shares": 5, "purchase_price": 119 },
+      "82": { "num_shares": 3, "purchase_price": 31 },
+      "85": { "num_shares": 4, "purchase_price": 91 }
+    }
+  },
+  {
+    "_id": "95",
+    "stocks": { "95": { "num_shares": 50, "purchase_price": 166 } }
+  },
+  {
+    "_id": "96",
+    "stocks": {
+      "28": { "num_shares": 5, "purchase_price": 106 },
+      "29": { "num_shares": 3, "purchase_price": 70 },
+      "58": { "num_shares": 2, "purchase_price": 7 },
+      "73": { "num_shares": 6, "purchase_price": 147 },
+      "100": { "num_shares": 1, "purchase_price": 81 }
+    }
+  },
+  {
+    "_id": "97",
+    "stocks": { "97": { "num_shares": 21, "purchase_price": 187 } }
+  },
+  {
+    "_id": "98",
+    "stocks": {
+      "3": { "num_shares": 1, "purchase_price": 66 },
+      "28": { "num_shares": 3, "purchase_price": 151 },
+      "74": { "num_shares": 5, "purchase_price": 166 },
+      "80": { "num_shares": 5, "purchase_price": 115 },
+      "87": { "num_shares": 5, "purchase_price": 194 }
+    }
+  },
+  {
+    "_id": "99",
+    "stocks": { "99": { "num_shares": 30, "purchase_price": 111 } }
+  },
+  {
+    "_id": "100",
+    "stocks": {
+      "8": { "num_shares": 1, "purchase_price": 100 },
+      "19": { "num_shares": 3, "purchase_price": 107 },
+      "47": { "num_shares": 6, "purchase_price": 197 },
+      "74": { "num_shares": 4, "purchase_price": 191 },
+      "97": { "num_shares": 6, "purchase_price": 171 }
+    }
+  }
 ]
