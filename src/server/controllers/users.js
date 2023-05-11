@@ -1,4 +1,4 @@
-import { User } from '../models/user.js';
+import { User } from '../models/users.js';
 
 // this file sends the json files to the frontend for each of the crud operations
 
