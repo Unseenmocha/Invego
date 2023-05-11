@@ -12,6 +12,17 @@ const readUsers = async (req, res) => {
     }
 };
 
+const createUser = async (req, res) => {
+    const user = req.body;
+    const newUser = new User(user);
+    try {
+        await newUser.save(); 
+        res.status(201).json(newUser);
+    } catch (error) {
+        res.status(409).json({ message: error.message });
+    }
+};
+
 
 /* 
     write more crud operations
