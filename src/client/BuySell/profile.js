@@ -9,6 +9,7 @@ const profileChange = document.getElementById("profileChange");
 const profileShares = document.getElementById("profileShares");
 const buyButton = document.getElementById("buyButton");
 const sellButton = document.getElementById("sellButton");
+const redirectButton = document.getElementById('invego');
 
 // Similar to populateFeed() on the home page, we send a fetch() request to our Express API to grab the post with the specific ID in the url.
 // We then display it's information on the page using our elements from the DOM
@@ -24,7 +25,7 @@ const populateStockProfile = async () => {
     profileShares.innerHTML = profile.shares;
 };
 
-populatePostPage();
+//populatePostPage();
 
 const buy = async () => {
 
@@ -34,14 +35,27 @@ const sell = async () => {
     
 }
 
-buyButton.addEventListener("click", async () => {
-    // buys stock, adds it?
-    await buy();
-});
+// buyButton.addEventListener("click", async () => {
+//     // buys stock, adds it?
+//     await buy();
+// });
 
-sellButton.addEventListener("click", async () => {
-    // do we need to do anything in order to handle users, this being only visible to the owning user?
-    // okay this is all done by middleware in the server and app.use under express
-    await sell();
-});
+// sellButton.addEventListener("click", async () => {
+//     // do we need to do anything in order to handle users, this being only visible to the owning user?
+//     // okay this is all done by middleware in the server and app.use under express
+//     await sell();
+// });
 
+
+
+import * as getInfo from "./getInfo.js";
+
+document.getElementById("Bittels").textContent = getInfo.getHowMuch() + " B";
+document.getElementById("percentBittel").textContent = getInfo.getPercentBittel();
+document.getElementById("aboutMe").textContent = getInfo.getAboutMe(); 
+document.getElementById("profileName").textContent = getInfo.getProfileName(); 
+
+
+redirectButton.addEventListener("click", async () => {
+    window.location.href = "../Discovery/discovery.html";
+  });

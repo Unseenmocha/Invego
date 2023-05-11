@@ -1,5 +1,5 @@
-const signUpWidget = document.getElementById("signup-widget");
-const loginWidget = document.getElementById("login-widget");
+const signUpWidget = document.getElementById("signup-view");
+const loginWidget = document.getElementById("login-view");
 
 const signUp = ()=> { 
     loginWidget.style.animation = "fadeout";
