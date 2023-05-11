@@ -40,3 +40,9 @@ export const updatePortfolio = async (req, res) => {
         res.status(404).json({ message: error.message });
     }
 }
+
+export const buy = async (req, res) => {
+}
+
+export const sell = async (req, res) => {
+}
