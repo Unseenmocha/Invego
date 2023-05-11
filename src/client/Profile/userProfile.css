@@ -45,21 +45,21 @@ p, h1, h2, h3, h4, h5, h6 {
     top: 0%;
 } */
 
-.container {
-    /* display: flex;
+/* .container {
+    display: flex;
     gap: 30vmin;
     position: relative;
     height: 100%;
     justify-content: space-between;
     align-items: top;
-    border-radius: 10px; */
+    border-radius: 10px;
 
     position: relative;
     height: 100%;
     width: 100%;
     display: flex;
-    /* flex-direction: column; */
-}
+    flex-direction: column;
+} */
 
 /* .socials, .pic-and-name {
     display: flex;
@@ -115,7 +115,7 @@ input {
     border-radius: 10px;
 }
 
-.save {
+/* .save {
     border-radius: 10px;
     background-color: #1C4FD1;
     color: white;
@@ -124,7 +124,7 @@ input {
     padding: 5px 10px 5px 10px;
     border-style: none;
     align-self: center;
-}
+} */
 
 /* #grid-background-image {
     background-image: url(../../../assets/pngegg.png);
@@ -161,6 +161,3 @@ td, th {
 
 } */
 
-td:nth-child(4) {
-    color:red;
-}

@@ -18,10 +18,10 @@ const populatePopularProfiles = async () => {
                 <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
             </td>
             <td>
-                <p class="text-normal">${lst.rows[i].doc.username}</p>
+                <p>${lst.rows[i].doc.username}</p>
             </td>
             <td>
-                <p class="text-normal">${lst.rows[i].doc.bittels}</p>
+                <p>${lst.rows[i].doc.bittels}</p>
             </td>
         </tr>`
     }

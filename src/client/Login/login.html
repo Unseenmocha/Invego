@@ -13,24 +13,23 @@
 </head>
 
 <body scroll="no">
-	<div class="screen-container">
-		<div id="grid-background-image"></div>
-		<div id="stock-line"></div>
-		<div class="title-text-login">Invego</div>
-		<div class="view" id="login-view">
-			<input type="text" class="text-entry" id="user" placeholder="Username">
-			<input type="password" class="text-entry" id="pass" placeholder="Password">
-			<button type="submit" class="button" id="login-button">Login</button>
-			<div id="go-signup" type="text" class="text-button">New to Invego?</div>
-		</div>
-		<div class="view" id="signup-view">
-			<input type="text" id="create-username" class="text-entry" placeholder="create username">
-			<input id='create-password-1' type="password" class="text-entry" placeholder="create password">
-			<input id='create-password-2' type="password" class="text-entry" placeholder="confirm password">
-			<button type="submit" class="button" id ="signup-button">Signup</button>
-			<div id="go-login" type="text" class="text-button">Have an account?</div>
-		</div>
-		<script src="displaySignup.js"></script>
+	<div id="grid-background-image"></div>
+	<div id="stock-line"></div>
+	<div class="title-text-login">Invego</div>
+	<div class="view" id="login-view">
+		<input type="text" class="text-entry login-text-entry" id="user" placeholder="Username">
+		<input type="password" class="text-entry login-text-entry" id="pass" placeholder="Password">
+		<button type="submit" class="big-blue-button" id="login-button">Login</button>
+		<div id="go-signup" type="text" class="text-button">New to Invego?</div>
+	</div>
+	<div class="view" id="signup-view">
+		<input type="text" id="create-username" class="text-entry login-text-entry" placeholder="create username">
+		<input id='create-password-1' type="password" class="text-entry login-text-entry" placeholder="create password">
+		<input id='create-password-2' type="password" class="text-entry login-text-entry" placeholder="confirm password">
+		<button type="submit" class="big-blue-button" id="signup-button">Signup</button>
+		<div id="go-login" type="text" class="text-button">Have an account?</div>
+	</div>
+	<script src="displaySignup.js"></script>
 </body>
 
 </html>

@@ -3,15 +3,15 @@
 } */
 
 /* screen-container */
-.screen-container {
+/* .screen-container {
     position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     place-items: center;
-    /* background: #F5F5F7; */
-}
+    background: #F5F5F7;
+} */
 
 /* grid-background-image */
 /* .grid-background-image {
@@ -41,14 +41,14 @@
 } */
 
 /* title-text */
-.title-text {
+/* .title-text {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 128px;
     line-height: 170px;
     z-index: 0;
     color: #1C4FD1;
-}
+} */
 
 /*login-widget-container */
 /* .login-widget-container {
@@ -70,7 +70,7 @@
     visibility: hidden;
 } */
 
-@keyframes fadein {
+/* @keyframes fadein {
     from {opacity: 0%; visibility: hidden;}
     to {opacity: 100%; visibility: visible}
 }
@@ -78,9 +78,9 @@
 @keyframes fadeout {
     from {opacity: 100%; visibility: visible;}
     to {opacity: 0%; visibility: hidden;}
-}
+} */
 
-.text-entry {
+/* .text-entry {
     position: relative;
     width: 300px;
     height: 50px;
@@ -95,10 +95,10 @@
     background: #FFFFFF;
     color: #000000;
     font-family: 'DM Sans', sans-serif;
-}
+} */
 
 /* big blue button */
-.button {
+/* .button {
     position: relative;
     width: 300px;
     height: 50px;
@@ -121,7 +121,6 @@
 
 
 .text-button {
-    /* left: 33%; */
     position:relative;
     width: fit-content;
     height: fit-content;
@@ -136,4 +135,4 @@
 
 .text-button:hover {
     cursor:pointer;
-}
+} */

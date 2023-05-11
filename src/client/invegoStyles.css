@@ -1,3 +1,27 @@
+/*
+* CTRL-F with section name to find css code for specific section
+* 
+* Sections:
+* 
+* BACKGROUND STYLING, 
+* HEADER STYLING,
+* HORIZONTAL LINE STYLING, 
+* TEXT STYLING, 
+* TABLE STYLING, 
+* VIEWS, 
+* FLEX ORGANIZERS, 
+* PICTURES, 
+* WIDGETS, 
+* BUTTONS, 
+* ANIMATIONS, 
+* MESSAGES 
+*
+*/
+
+/*************************************
+BACKGROUND STYLING
+**************************************/
+
 body {
     margin: 0px;
     background-color: white;
@@ -6,7 +30,6 @@ body {
     display: flex;
     flex-direction: column;
     /* overflow: hidden; */
-    /* position: absolute; */
 }
 
 #grid-background-image {
@@ -28,6 +51,41 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/*************************************
+HEADER STYLING
+**************************************/
+
+.header-bar {
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: #1C4FD1;
+}
+
+.title-text-login {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 128px;
+    line-height: 170px;
+    z-index: 0;
+    color: #1C4FD1;
+    place-self: center;
+}
+
+.title-text {
+    color: white;
+    font-family: 'Lato';
+    font-style: sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    margin-left: 20px;
+}
+
+.title-text:hover {
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.5));
 }
 
 /*************************************
@@ -53,39 +111,47 @@ hr {
 TEXT STYLING
 **************************************/
 
-p, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter';
     position: relative;
-    width: 100%;
-    padding: 0px;
+    font-style: normal;
     margin: 0px;
-    top: 0%;
-    font-size: medium;
+    padding: 0px;
+}
+
+p {
+    font-size: 12pt;
 }
 
 h1 {
-    font-family: 'Inter';
-    font-style: normal;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-right: 20px;
+}
+  
+h3 {
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+h4 {
     font-size: 20px;
-    /* margin-left: 16px; */
 }
 
-.title-text-login {
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 170px;
-    z-index: 0;
-    color: #1C4FD1;
-}
-
-.title-text {
+.white-text {
     color: white;
-    font-family: 'Lato';
-    font-style: sans-serif;
-    font-weight: 500;
-    font-size: 60px;
-    margin-left: 20px;
+}
+
+.red-text {
+    color: red;
+}
+
+/*buy sell page*/
+#aboutMe {
+    margin: 10px 60px 40px 20px;
 }
 
 /*************************************
@@ -110,9 +176,13 @@ tr {
 td, th {
     position: relative;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 12pt;
     font-family: Inter;
     padding: 10px 10px 10px 10px;
+}
+
+#portTable td:nth-child(4) {
+    color:red;
 }
 
 /*************************************
@@ -120,28 +190,24 @@ VIEWS
 **************************************/
 
 .view {
-    position: relative;
+    position:relative;
     background-color: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    height:min-content;
-    width:min-content;
     border-radius: 10px;
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
-
     display: flex;
-    flex: 1;
     flex-direction: column;
     padding: 20px;
-    margin: 40px;
 
     overflow: scroll;
 }
-
+/*login page*/
 #login-view {
     max-height: fit-content;
     align-items: center;
+    place-self: center;
 }
 
 #signup-view {
@@ -151,30 +217,44 @@ VIEWS
     z-index: 2;
     top: 170px;
     visibility: hidden;
+    place-self: center;
 }
-
+/*profile page*/
 #profile-view {
-    height: 50%;
-    margin-bottom: 350px;
+    max-height: 600px;
+    min-height: 550px;
+    margin: 40px;
+    justify-content: space-around;
+    flex:1;
 }
 
 #portfolio-view {
-    height: 70%;
-    margin-bottom: 200px;
+    min-height: 550px;
+    max-height: 600px;
+    margin: 40px;
+    flex:1;
 }
 
+/*discovery page*/
 #friends-bar {
     width: 100%;
+    height: 120px;
     margin: 40px 0px 0px 0px;
     border-radius: 0;
 }
 
-#popular-profiles-view {
-    height: 80%;
-}
-
+#popular-profiles-view,
 #messages-container-view {
     height: 80%;
+    margin: 40px 40px 40px 40px;
+    flex: 1;
+}
+/*buy sell page*/
+#buy-sell-view {
+    height: 70%;
+    width: 90%;
+    place-self: center;
+    margin-top: 4%;
 }
 
 /*************************************
@@ -184,10 +264,21 @@ FLEX ORGANIZERS
 .flex-horizontal {
     position: relative;
     display: flex;
-    flex-grow: 1;
     flex-direction: row;
     align-items: center;
 }
+
+/*discovery page*/
+#bottom-bar {
+    height: 60%;
+}
+
+/*buy sell page*/
+#buy-sell-profile-header {
+    justify-content: space-between;
+    margin: 20px 0px 40px 0px;
+}
+
 
 /*************************************
 PICTURES
@@ -199,4 +290,201 @@ PICTURES
     margin: 0px 20px 0px 20px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/*************************************
+WIDGETS
+**************************************/
+
+.profile {
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+.profile:hover {
+    opacity: 70%;
+}
+
+.text-entry {
+    position: relative;
+    font-size: larger;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #FFFFFF;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
+    
+    /* transform: translateX(-50%);
+    margin-top: 30px;
+    left: 50%;
+    width: 300px;
+    height: 50px; */
+}
+
+.buy-sell-entry {
+    margin: 0px;
+}
+
+.login-text-entry {
+    transform: translateX(-50%);
+    margin-top: 30px;
+    left: 50%;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+}
+
+#search-bar {
+    height: 28px;
+    border-radius: 4px;
+    width: 500px;
+    font-size: large;
+    border: none;
+    padding: 0px 0px 0px 10px;
+}
+
+/*************************************
+BUTTONS
+**************************************/
+
+/* big blue button */
+.big-blue-button {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1C4FD1;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.medium-blue-button {
+    border-radius: 10px;
+    background-color: #1C4FD1;
+    color: white;
+    font-size: 15pt;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px 10px 15px;
+    margin: 20px;
+    border: none;
+    align-self: center;
+}
+
+.medium-blue-select select {
+    display: none; /*hide original SELECT element: */
+  }
+
+.medium-blue-select {
+    appearance: none;
+    background-color: #1C4FD1;
+    color: white;
+    font-size: 15pt;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+}
+
+.button:hover {
+    cursor:pointer;
+}
+
+.text-button {
+    position:relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px 0px 20px 0px;
+    color: #1C4FD1;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.text-button:hover {
+    cursor:pointer;
+}
+
+.small-blue-button {
+    border-radius: 10px;
+    background-color: #1C4FD1;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    align-self: center;
+}
+
+/*************************************
+ANIMATIONS
+**************************************/
+
+@keyframes fadein {
+    from {opacity: 0%; visibility: hidden;}
+    to {opacity: 100%; visibility: visible}
+}
+
+@keyframes fadeout {
+    from {opacity: 100%; visibility: visible;}
+    to {opacity: 0%; visibility: hidden;}
+}
+
+/*************************************
+MESSAGES 
+**************************************/
+
+#message-view {
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column-reverse;
+}
+#messages {
+    margin-right: 32px;
+    margin-left: 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#message-entry {
+    border-radius: 10px;
+    flex-grow:8;
+    margin: 10px;
+    padding: 10px;
+    border-color: white;
+    background-color: #dededee1;
+    resize: none;
+}
+.other-message {
+    margin: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: start;
+}
+.message-bubble-other {
+    padding: 10px;
+    border-radius: 10px;
+    width:fit-content;
+    height:fit-content;
+    background-color:#dededee1;
+}
+.message-bubble-other::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-left:15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #dededee1;
+    left: -24px;
+    top: 14px;
 }
