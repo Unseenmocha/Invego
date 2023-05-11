@@ -29,7 +29,7 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 #grid-background-image {
@@ -200,9 +200,12 @@ VIEWS
     display: flex;
     flex-direction: column;
     padding: 20px;
-
-    overflow: scroll;
 }
+
+.view::-webkit-scrollbar {
+    display: none;
+  }
+
 /*login page*/
 #login-view {
     max-height: fit-content;
@@ -233,6 +236,7 @@ VIEWS
     max-height: 600px;
     margin: 40px;
     flex:1;
+    overflow: scroll;
 }
 
 /*discovery page*/
@@ -248,6 +252,7 @@ VIEWS
     height: 80%;
     margin: 40px 40px 40px 40px;
     flex: 1;
+    overflow: scroll;
 }
 /*buy sell page*/
 #buy-sell-view {
@@ -305,6 +310,27 @@ WIDGETS
     opacity: 70%;
 }
 
+textarea {
+    /* width: 80%;
+    height: 80%; */
+    resize: none;
+    border-radius: 10px;
+    border-color: white;
+    background-color: #CCC;
+    position: relative;
+    padding: 10px;
+}
+
+.text-entry-gray {
+    resize: none;
+    border-radius: 10px;
+    border-color: white;
+    background-color: #CCC;
+    position: relative;
+    padding: 10px;
+    border-style: none;
+}
+
 .text-entry {
     position: relative;
     font-size: larger;
@@ -314,12 +340,6 @@ WIDGETS
     background: #FFFFFF;
     color: #000000;
     font-family: 'DM Sans', sans-serif;
-    
-    /* transform: translateX(-50%);
-    margin-top: 30px;
-    left: 50%;
-    width: 300px;
-    height: 50px; */
 }
 
 .buy-sell-entry {

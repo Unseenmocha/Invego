@@ -3,8 +3,6 @@
 
 <head>
     <title>Invego</title>
-    <link rel="stylesheet" href="userProfile.css">
-    <!-- <link rel="stylesheet" href="../header.css"> -->
     <link rel="stylesheet" href="../invegoStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
@@ -18,7 +16,6 @@
     <div class="header-bar">
         <text class="title-text" id="invego">Invego</text>
         <h2 class="white-text">Bittels: 284.28</h2>
-        <!-- <div class="header-right"></img><span class="bittels-text">Bittels: </span><span class="bittels-text">284.28</span></div> -->
     </div>
 
 
@@ -29,13 +26,13 @@
 
             <div class="flex-horizontal">
                 <div class="circle-crop"><img class="profile-pic" src="../../../assets/smile.jpg" /></div>
-                <input class="input-name" id="input-name" placeholder="Add a name." />
+                <input class="text-entry-gray" id="input-name" placeholder="Add a name." />
             </div>
 
             <h4>About Me</h4>
 
             <div>
-                <textarea class="input-bio" id="input-bio" placeholder="Add a bio."></textarea>
+                <textarea id="input-bio" placeholder="Add a bio."></textarea>
             </div>
             <div class="flex-horizontal">
                 <div class="circle-crop"><img class="profile-pic"
@@ -68,7 +65,7 @@
             <div class="flex-horizontal"> 
                 <button class="small-blue-button" id="crudAddStock">Buy 1</button>
                 <button class="small-blue-button" id="crudRemoveStock">Sell 1</button>
-                <input id="inputId">
+                <input class="text-entry-gray" id="inputId" placeholder="Enter number of shares"/>
             </div>
 
         </div>
