@@ -2,9 +2,8 @@ import express from 'express';
 import mongoose from'mongoose'; // are we using mongoose?
 // I don't know if we are allowed to use any more defined libraries
 
-const userRoutes = require('./routes/users.js'); // I'm not sure how to convert this syntax to the import syntax, or whether it is necessary
-const portfolioRoutes = require('./routes/professors.js');
-
+import { userRoutes } from './routes/users.js';
+import { portfolioRoutes } from './routes/portfolios.js';
 
 const app = express();
 
