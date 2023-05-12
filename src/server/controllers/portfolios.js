@@ -1,16 +1,7 @@
 import { Portfolio } from '../models/portfolios.js';
 
-export const getPortfolio = async (req, res) => {
-    try {
-        const portfolio = await Portfolio.find();
-        res.status(200).json(portfolio);
-    } catch (error) {
-        res.status(404).json({ message: error.message });
-    }
-};
-
-export const createPortfolio = async (req, res) => {
-    const portfolio = req.body;
+export const createPortfolioByID = async (req, res) => {
+    const portfolio = req.body; // make sure to pass in id in the request
     const newPortfolio = new Portfolio(portfolio);
     try {
         await newPortfolio.save();
@@ -19,6 +10,16 @@ export const createPortfolio = async (req, res) => {
         res.status(409).json({ message: error.message });
     }
 }
+
+export const getPortfolioByID = async (req, res) => {
+    const id = req.params.id;
+    try {
+        const portfolio = await Portfolio.findById(id);
+        res.status(200).json(portfolio);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+};
 
 export const deletePortfolio = async (req, res) => {
     const id = req.params.id;

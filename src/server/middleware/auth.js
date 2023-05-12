@@ -7,5 +7,8 @@ import passportLocal from 'passport-local'
 
 
 // I don't know how this works
-
+export function auth (req, res, next) {
+    console.log("auth called");
+    next()
+  }
 
