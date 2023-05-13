@@ -1,4 +1,5 @@
 import { User } from '../models/users.js';
+import { createPortfolioByID } from './portfolios.js';
 
 // this file sends the json files to the frontend for each of the crud operations
 
@@ -24,8 +25,8 @@ export const getUserByID = async (req, res) => {
 
 
 export const createUser = async (req, res) => {
-    const User = req.body;
-    const newUser = new User(User);
+    const user = req.body;
+    const newUser = new User(user);
     try {
         await newUser.save();
         res.status(201).json(newUser);
@@ -84,8 +85,9 @@ export const signup = async (req, res) => {
     if (usernameAlreadyUsed) {
         res.status(409).json({message: "Username taken"});
     } else {
-        const response = await createUser();
-        res.body = response.body;
+        const response = await createUser(req, res);
+        const portfolioRequest = {_id: response._id, stocks: {}}
+        //res.body = response.body;
     }
 
     

@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 
 export const userSchema = mongoose.Schema({
-    _id: String,
+    // _id: String,          // should be implicit and defined automatically by mongodb? --> this works!
     first_name: String,
     last_name: String,
     bio: String,
