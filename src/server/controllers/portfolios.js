@@ -11,7 +11,7 @@ export const createPortfolioByID = async (req, res) => {
         console.log("about to save");
         await newPortfolio.save();
         console.log("saved");
-        res.status(201).json(newPortfolio);
+        //res.status(201).json(newPortfolio); // status is undefined so an error is thrown, but this still creates the portfolio
     } catch (error) {
         console.log("error " + error);
         res.status(409).json({ message: error.message });

@@ -16,7 +16,7 @@ export const getUsers = async (req, res) => {
 export const getUserByID = async (req, res) => {
     const id = req.params.id;
     try {
-        const user = await User.findById(id);
+        const user = await User.findById(id);  // this is happening when I try login...
         res.status(200).json(user);
     } catch (error) {
         console.log(error);
@@ -65,16 +65,24 @@ export const updateUser = async (req, res) => {
 }
 
 export const login = async (req, res) => {
+    console.log("started login");
     const username = req.body.username;
     const password = req.body.password;
 
-    await User.findOne({ username: username }, function (err, user) {
-        if (user.password === password) {
-            res.send({ok: true, user:user});
+    try {
+        const foundUser = await User.findOne({ username: username });
+        console.log("found user", foundUser);
+        if (foundUser.password == password) {
+            res.status(200).json({ result: foundUser });
         } else {
+            console.log("incorrect password")
             res.status(401).json({message: "Incorrect username or password"});
         }
-    });
+    } catch (err) {
+        console.log("incorrect other issue")
+        console.log("error: " + err.message);
+        res.status(401).json({message: "Incorrect username or password"});
+    }
 }
 
 export const signup = async (req, res) => {
