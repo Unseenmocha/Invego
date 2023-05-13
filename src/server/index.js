@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config({path: '../../process.env'});
 import mongoose from'mongoose'; 
+import auth from './middleware/auth.js';
 // I don't know if we are allowed to use any more defined libraries
 
 import { userRoutes } from './routes/users.js';
