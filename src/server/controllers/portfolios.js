@@ -1,12 +1,19 @@
 import { Portfolio } from '../models/portfolios.js';
 
 export const createPortfolioByID = async (req, res) => {
-    const portfolio = req.body; // make sure to pass in id in the request
+    console.log("createPortfolioByID")
+    console.log("req", req);
+    const portfolio = req; // make sure to pass in id in the request
+    console.log("portfolio", portfolio);
     const newPortfolio = new Portfolio(portfolio);
+    console.log("made new portfolio");
     try {
+        console.log("about to save");
         await newPortfolio.save();
+        console.log("saved");
         res.status(201).json(newPortfolio);
     } catch (error) {
+        console.log("error " + error);
         res.status(409).json({ message: error.message });
     }
 }

@@ -25,11 +25,16 @@ export const getUserByID = async (req, res) => {
 
 
 export const createUser = async (req, res) => {
+    console.log("create user")
     const user = req.body;
     const newUser = new User(user);
+    console.log("newUser")
     try {
         await newUser.save();
+        console.log("newUser after save", newUser);
+        await createPortfolioByID({_id : newUser._id, stocks : {}})
         res.status(201).json(newUser);
+        console.log("create user res.body", res.json());
     } catch (error) {
         res.status(409).json({ message: error.message });
     }
@@ -73,6 +78,7 @@ export const login = async (req, res) => {
 }
 
 export const signup = async (req, res) => {
+    console.log("signup req res", req, res);
 
     // 1. make sure there are no duplicate usernames
     const username = req.body.username;
@@ -85,8 +91,13 @@ export const signup = async (req, res) => {
     if (usernameAlreadyUsed) {
         res.status(409).json({message: "Username taken"});
     } else {
+        
         const response = await createUser(req, res);
-        const portfolioRequest = {_id: response._id, stocks: {}}
+        // creating portfolio within createUser call
+
+        //console.log(response)
+        //const portfolioRequest = {_id: res._id, stocks: {}}
+        //await createPortfolioByID(portfolioRequest)
         //res.body = response.body;
     }
 
