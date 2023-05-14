@@ -1,4 +1,5 @@
 // seems like for this course they want you to use passport and passport-local, according to the lecture slides
+/*
 import passport from 'passport'
 import passportLocal from 'passport-local'
 
@@ -52,4 +53,4 @@ export default {
   authenticate: (domain, where) => {
     return passport.authenticate(domain, where);
   },
-}
+}*/

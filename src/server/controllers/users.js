@@ -14,9 +14,9 @@ export const getUsers = async (req, res) => {
 };
 
 export const getUserByID = async (req, res) => {
-    const id = req.params.id;
+    const _id = req.params.id;
     try {
-        const user = await User.findById(id);  // this is happening when I try login...
+        const user = await User.findById(_id);  
         res.status(200).json(user);
     } catch (error) {
         console.log(error);
