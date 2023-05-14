@@ -1,20 +1,21 @@
 import express from 'express'
 
-import { createPortfolio, readPortfolio, updatePortfolio, buy, sell, deletePortfolio } from '../controllers/portfolios.js';
-import { auth }  from '../middleware/auth.js';
+import { createPortfolioByID, getPortfolioByID, updatePortfolio, buy, sell, deletePortfolio } from '../controllers/portfolios.js';
+//import { auth }  from '../middleware/auth.js';
 
 
 export const portfolioRoutes = express.Router();
 
 
 // routing for crud operations for within the portfolio
-router.post('/', auth, createPortfolio);
-router.get('/:id', auth, readPortfolio);
-router.put('/:id', auth, updatePortfolio);
-router.put('/buy/:id', auth, buy);
-router.put('/sell/:id', auth, sell);
-router.delete('/:id', auth, deletePortfolio);
+portfolioRoutes.post('/:username', /*auth, */ createPortfolioByUsername);
+portfolioRoutes.get('/:username', /*auth, */ getPortfolioByUsername);
+portfolioRoutes.put('/:username', /*auth, */ updatePortfolio);
+portfolioRoutes.put('/buy/:username', /*auth, */ buy);
+portfolioRoutes.put('/sell/:username', /*auth, */ sell);
+portfolioRoutes.delete('/:username', /*auth, */ deletePortfolio);
 
 export default portfolioRoutes;
+
 
 

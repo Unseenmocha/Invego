@@ -6,8 +6,6 @@
 	<script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.indexeddb.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.find.min.js"></script>
-	<!-- Include this to reset pouchDB and exclude and reload to use data in application-->
-	<!-- <script type="module" src="../../mockData/uploadMockData.js"></script>  -->
 	<script type="module" src="login.js"></script>
 </head>
 
@@ -22,9 +20,11 @@
 		<div id="go-signup" type="text" class="text-button">New to Invego?</div>
 	</div>
 	<div class="view" id="signup-view">
-		<input type="text" id="create-username" class="text-entry login-text-entry" placeholder="create username">
-		<input id='create-password-1' type="password" class="text-entry login-text-entry" placeholder="create password">
-		<input id='create-password-2' type="password" class="text-entry login-text-entry" placeholder="confirm password">
+		<input type="text" id="create-name" class="text-entry login-text-entry" placeholder="First Name">
+		<input type="text" id="create-last-name" class="text-entry login-text-entry" placeholder="Last Name">
+		<input type="text" id="create-username" class="text-entry login-text-entry" placeholder="Your Username">
+		<input id='create-password-1' type="password" class="text-entry login-text-entry" placeholder="Your Password">
+		<input id='create-password-2' type="password" class="text-entry login-text-entry" placeholder="Confirm Password">
 		<button type="submit" class="big-blue-button" id="signup-button">Signup</button>
 		<div id="go-login" type="text" class="text-button">Have an account?</div>
 	</div>

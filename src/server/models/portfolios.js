@@ -9,7 +9,7 @@ const stockSchema = new mongoose.Schema({
   });
   
 const portfolioSchema = new mongoose.Schema({
-    _id: { type: String, required: true },
+    username: String, 
     stocks: { 
         type: Map,
         of: stockSchema
