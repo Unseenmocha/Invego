@@ -1,4 +1,4 @@
-import { saveId, getCurrentId } from "./userId";
+//import { saveId, getCurrentId } from "./userId";
 
 /* Frontend CRUD operations; only coding what is necessary
  * 
@@ -19,10 +19,10 @@ export async function login(username,password) {
   const doc = getSampleStockObject();
   doc.username = username;
   doc.password = password;
-
   try {
-    await createUser(doc).then((response) => {
-      saveId(response.id); // will this work?
+    await readUser(doc).then((response) => {
+      //saveId(response.id); // will this work?
+      return response; //Maybe having return?
       // route to discovery page here, if that is necessary
     });
   } catch (err) {
@@ -107,7 +107,7 @@ export async function createUser(doc) {
 export async function readUser(doc) {  
   // reads user according to the id supplied
   try{
-    const response = await fetch(`/${doc.id}`, {
+    const response = await fetch(`/user/${doc.id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
