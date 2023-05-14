@@ -13,12 +13,10 @@ export const getUsers = async (req, res) => {
     }
 };
 
-export const getUserByUsername = async (req, res) => {
-    console.log("getUserByUsername");
-    const username = req.params.username;
+export const getUserByID = async (req, res) => {
+    const _id = req.params.id;
     try {
-        const user = await User.findOne({ username: username });
-        console.log("user", user)
+        const user = await User.findById(_id);  
         res.status(200).json(user);
     } catch (error) {
         console.log(error);

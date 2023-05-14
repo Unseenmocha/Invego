@@ -48,7 +48,12 @@ const sell = async () => {
 
 
 
-import * as getInfo from "./getInfo.js";
+import * as crud from "../crud.js";
+
+//Grab info from database
+// let bittels = crud.dosomething with bittles
+// let about = crud.dosomething with about
+// let profileName = crud.dosomething with profileName
 
 document.getElementById("Bittels").textContent = getInfo.getHowMuch() + " B";
 document.getElementById("percentBittel").textContent = getInfo.getPercentBittel();
