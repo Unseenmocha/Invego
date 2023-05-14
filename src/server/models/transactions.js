@@ -4,10 +4,8 @@ import mongoose from 'mongoose';
 
 
 export const transactionSchema = mongoose.Schema({
-    stocks: { 
-        type: Map,
-        of: stockSchema
-    }
+    buy: [{username: String, shares: Number}],
+    sell: [{username: String, shares: Number}]
 });
 
 
