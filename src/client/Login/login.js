@@ -10,12 +10,7 @@ login.addEventListener('click', async () => {
     console.log("clicked login");
     const username = document.getElementById('user').value;
     const password = document.getElementById('pass').value;
-    const user = await crud.login(username, password);
-    if(user && user.username === username && user.password === password){
-        window.location.href = "../Discovery/discovery.html";
-    } else {
-        alert("Login failed, Please double check your username and password");
-    }
+    await crud.login(username, password);
 });
 
 signup.addEventListener('click', async () => {
