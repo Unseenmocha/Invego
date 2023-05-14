@@ -15,12 +15,8 @@
 
 export async function login(username,password) {
   // uses readUser
-
-  const doc = getSampleStockObject();
-  doc.username = username;
-  doc.password = password;
   try {
-    await readUser(doc).then((response) => {
+    await readUser(username).then((response) => {
       //saveId(response.id); // will this work?
       return response; //Maybe having return?
       // route to discovery page here, if that is necessary
@@ -104,10 +100,10 @@ export async function createUser(doc) {
 
 }
 
-export async function readUser(doc) {  
+export async function readUser(username) {  
   // reads user according to the id supplied
   try{
-    const response = await fetch(`/user/${doc.id}`, {
+    const response = await fetch(`/user/${username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
