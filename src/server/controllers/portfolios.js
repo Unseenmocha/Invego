@@ -50,7 +50,11 @@ export const updatePortfolio = async (req, res) => {
 }
 
 export const buy = async (req, res) => {
+    // will do stuff with transactions --> or should there be a route for transactions that does this? 
+
+
 }
 
 export const sell = async (req, res) => {
+
 }

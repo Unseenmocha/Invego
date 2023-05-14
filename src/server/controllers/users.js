@@ -13,10 +13,12 @@ export const getUsers = async (req, res) => {
     }
 };
 
-export const getUserByID = async (req, res) => {
-    const id = req.params.id;
+export const getUserByUsername = async (req, res) => {
+    console.log("getUserByUsername");
+    const username = req.params.username;
     try {
-        const user = await User.findById(id);  // this is happening when I try login...
+        const user = await User.findOne({ username: username });
+        console.log("user", user)
         res.status(200).json(user);
     } catch (error) {
         console.log(error);
