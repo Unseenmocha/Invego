@@ -13,18 +13,20 @@
  */
 
 
-export async function login(username,password) {
+export async function login(username, password) {
   // uses readUser
-
   const doc = getSampleStockObject();
   doc.username = username;
   doc.password = password;
   try {
-    await readUser(doc).then((response) => {
-      //saveId(response.id); // will this work?
-      return response; //Maybe having return?
-      // route to discovery page here, if that is necessary
-    });
+    const user = await readUser(doc)
+    localStorage.setItem('currentUser', user.username);
+    // route to discovery page here, if that is necessary
+    if (user && user.username === username && user.password === password) {
+      window.location.href = "../Discovery/discovery.html";
+    } else {
+      alert("Login failed, Please double check your username and password");
+    }
   } catch (err) {
     console.log(err);
   }
@@ -46,7 +48,7 @@ export async function signup(username, password) {
   } catch (err) {
     console.log(err);
   }
-  
+
 }
 
 export async function buy() {
@@ -91,34 +93,28 @@ export async function createUser(doc) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(doc)
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
     });
-    
-  } catch(err) {
+    const data = await response.json();
+    return data;
+  } catch (err) {
     console.log(err);
   }
 
 
 }
 
-export async function readUser(doc) {  
+export async function readUser(doc) {
   // reads user according to the id supplied
-  try{
-    const response = await fetch(`/user/${doc.id}`, {
+  try {
+    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
-    }
-    );
-  } catch(err) {
+    });
+    const data = await response.json();
+    return data;
+  } catch (err) {
     console.log(err);
   }
 }
@@ -136,9 +132,9 @@ export async function updateUser(doc) {
       console.log(data);
       return data;
     });
-  } catch(err) {
+  } catch (err) {
     console.log(err);
-  } 
+  }
 }
 
 export async function deleteUser(doc) {
@@ -176,7 +172,7 @@ export async function readPortfolio() {
       console.log(data);
       return data;
     });
-  } catch(err) {
+  } catch (err) {
     console.log(err);
   }
 }
