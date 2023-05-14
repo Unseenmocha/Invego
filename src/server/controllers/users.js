@@ -1,5 +1,5 @@
 import { User } from '../models/users.js';
-import { createPortfolioByID } from './portfolios.js';
+import { createPortfolioByUsername } from './portfolios.js';
 
 // this file sends the json files to the frontend for each of the crud operations
 
@@ -34,7 +34,7 @@ export const createUser = async (req, res) => {
     try {
         await newUser.save();
         console.log("newUser after save", newUser);
-        await createPortfolioByID({_id : newUser._id, stocks : {}})
+        await createPortfolioByUsername({username : newUser.username, stocks : {}})
         res.status(201).json(newUser);
         console.log("create user res.body", res.json());
     } catch (error) {
@@ -44,9 +44,9 @@ export const createUser = async (req, res) => {
 
 
 export const deleteUser = async (req, res) => {
-    const id = req.params.id;
+    const username = req.params.username;
     try {
-        await User.findByIdAndRemove(id).exec();
+        await User.remove({username : username}).exec();
         res.send('Successfully deleted!');
     } catch (error) {
         console.log(error);
@@ -55,11 +55,11 @@ export const deleteUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
     console.log(req);
-    const id = req.params.id;
+    const username = req.params.username;
     const updates = req.body;
     console.log(updates);
     try {
-        const updateUser = await User.findByIdAndUpdate(id, updates);
+        const updateUser = await User.updateOne({username : username}, updates);
         res.send(updateUser);
     }  catch (error) {
         res.status(404).json({ message: error.message });
