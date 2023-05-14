@@ -9,7 +9,7 @@ const stockSchema = new mongoose.Schema({
   });
   
 const portfolioSchema = new mongoose.Schema({
-    _id: { type: mongoose.Schema.Types.ObjectId, required: true }, // needs to be explicitly added in order to be the same as the user
+    username: String, 
     stocks: { 
         type: Map,
         of: stockSchema
