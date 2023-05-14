@@ -39,11 +39,10 @@ export async function signup(username, password) {
   const doc = getSampleStockObject();
   doc.username = username;
   doc.password = password;
-
   try {
     await createUser(doc).then((response) => {
-      saveId(response.id); // will this work?
-      // route to discovery page here, if that is necessary
+      localStorage.setItem('currentUser', user.username);
+    // route to discovery page here, if that is necessary
     });
   } catch (err) {
     console.log(err);
@@ -68,7 +67,7 @@ export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
 
   const doc = {
-    _id: 0,
+    //_id: "",
     _bio: "",
     firstName: "",
     lastName: "",
@@ -85,9 +84,9 @@ export function getSampleStockObject() {
 
 export async function createUser(doc) {
   // creates user according to the doc object supplied (follows user schema)
-
+  console.log(doc)
   try {
-    const response = await fetch('/signup', {
+    const response = await fetch('http://localhost:5000/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -177,3 +176,4 @@ export async function readPortfolio() {
   }
 }
 
+3
