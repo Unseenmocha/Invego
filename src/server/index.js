@@ -40,9 +40,7 @@ app.use((req, res, next) => {
    Here we connect to the database 
 */
 
-mongoose
-  .connect(process.env.DB.toString(), { useNewUrlParser: true })
-  .then(() => {
+mongoose.connect(process.env.DB.toString(), { useNewUrlParser: true }).then(() => {
     console.log("Database successfully connected!");
     //start server
     app.listen(port, () => {
