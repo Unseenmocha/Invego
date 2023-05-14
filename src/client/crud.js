@@ -164,26 +164,20 @@ export async function deleteUser(doc) {
  */
 
 export async function readPortfolio() {
-
-}
-
-/**
- *  CRUD for transactions
- */
-
-export async function createTransaction() {
-  
-}
-
-export async function readTransaction() {
-
-}
-
-export async function updateTransaction() {
-
-}
-
-export async function deleteTransaction() {
-
+  // returns portfolio object
+  try {
+    const response = await fetch(`/portfolio/${getCurrentId()}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(async (response) => {
+      const data = await response.json();
+      console.log(data);
+      return data;
+    });
+  } catch(err) {
+    console.log(err);
+  }
 }
 
