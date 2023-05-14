@@ -23,7 +23,7 @@ export const createPortfolioByUsername = async (req, res) => {
 export const getPortfolioByUsername = async (req, res) => {
     const username = req.params.username;
     try {
-        const portfolio = await Portfolio.findOne({ username: username });
+        const portfolio = await Portfolio.findOne({username: username});
         res.status(200).json(portfolio);
     } catch (error) {
         res.status(404).json({ message: error.message });
@@ -33,7 +33,7 @@ export const getPortfolioByUsername = async (req, res) => {
 export const deletePortfolio = async (req, res) => {
     const username = req.params.username;
     try {
-        await Portfolio.remove({ username: username }).exec();
+        await Portfolio.remove({ username : username}).exec();
         res.send('Successfully deleted!');
     } catch (error) {
         console.log(error);
@@ -44,9 +44,9 @@ export const updatePortfolio = async (req, res) => {
     const username = req.params.username;
     const updates = req.body;
     try {
-        const updatePortfolio = await Portfolio.update({ username: username }, updates);
+        const updatePortfolio = await Portfolio.update({username : username}, updates);
         res.send(updatePortfolio);
-    } catch (error) {
+    }  catch (error) {
         res.status(404).json({ message: error.message });
     }
 }
@@ -54,7 +54,7 @@ export const updatePortfolio = async (req, res) => {
 export const buy = async (req, res) => {
 
     // check if SELL transaction exists for same username, try to get close to the number of stocks/price
-
+    
     /* 
     req should have:
     {
@@ -71,7 +71,7 @@ export const buy = async (req, res) => {
     const upperBoundPrice = transaction.requiredPrice * 1.05;
     let netBittels = 0; // price difference after all transactions are completed
 
-    const matches = Transaction.find({ transactionType: 'SELL', username: req.username2, desiredPrice: { $lt: upperBoundPrice } });
+    const matches = Transaction.find({transactionType: 'SELL', username : req.username2, desiredPrice : {$lt:upperBoundPrice}});
 
     // find minimum difference in shares
     // go until no more matches, or all shares bought/sold
@@ -91,17 +91,17 @@ export const buy = async (req, res) => {
             netSingleTransaction -= match.shares * match.desiredPrice;
             netBittels += netSingleTransaction
 
-            Transaction.find({ _id: match._id }).remove().exec();
+            Transaction.find({ _id : match._id }).remove().exec();
 
             return;
-
+            
 
         } else if (moreLeft) {
             // delete this match and continue
             netSingleTransaction -= match.shares * match.desiredPrice;
             netBittels += netSingleTransaction;
 
-            Transaction.find({ _id: match._id }).remove().exec();
+            Transaction.find({ _id : match._id }).remove().exec();
 
 
         } else {
@@ -110,18 +110,18 @@ export const buy = async (req, res) => {
             netSingleTransaction -= match.shares * transaction.shares;
             netBittels += netSingleTransaction;
 
-            updateShares = { shares: match.shares - transaction.shares }
-            Transaction.findOneAndUpdate({ _id: match._id }, updateShares);
-
+            updateShares = {shares : match.shares - transaction.shares}
+            Transaction.findOneAndUpdate({_id : match._id}, updateShares);
+            
         }
 
         // pay seller
-        updateSeller = { $inc: { bittels: -netSingleTransaction } }
-        User.findOneAndUpdate({ username: match.transactionOwner }, updateSeller);
+        updateSeller = {$inc : {bittels: -netSingleTransaction}}
+        User.findOneAndUpdate({ username : match.transactionOwner}, updateSeller);
 
         // charge buyer (we will go into negatives for now)
-        updateBuyer = { $inc: { bittels: netSingleTransaction } }
-        User.findOneAndUpdate({ username: transaction.username1 }, updateBuyer);
+        updateBuyer = {$inc : {bittels: netSingleTransaction}}
+        User.findOneAndUpdate({ username : transaction.username1}, updateBuyer);
 
 
     }
@@ -149,7 +149,7 @@ export const sell = async (req, res) => {
     const lowerBoundPrice = transaction.requiredPrice * 0.95;
     let netBittels = 0; // price difference after all transactions are completed
 
-    const matches = Transaction.find({ transactionType: 'BUY', username: req.username2, desiredPrice: { $gt: lowerBoundPrice } });
+    const matches = Transaction.find({transactionType: 'BUY', username : req.username2, desiredPrice : {$gt:lowerBoundPrice}});
 
     // find minimum difference in shares
     // go until no more matches, or all shares bought/sold
@@ -169,16 +169,16 @@ export const sell = async (req, res) => {
             netSingleTransaction += match.shares * match.desiredPrice;
             netBittels += netSingleTransaction
 
-            Transaction.find({ _id: match._id }).remove().exec();
+            Transaction.find({ _id : match._id }).remove().exec();
 
-
+            
 
         } else if (moreLeft) {
             // delete this match and continue
             netSingleTransaction += match.shares * match.desiredPrice;
             netBittels += netSingleTransaction;
 
-            Transaction.find({ _id: match._id }).remove().exec();
+            Transaction.find({ _id : match._id }).remove().exec();
 
 
         } else {
@@ -187,18 +187,18 @@ export const sell = async (req, res) => {
             netSingleTransaction += match.shares * transaction.shares;
             netBittels += netSingleTransaction;
 
-            updateShares = { shares: match.shares - transaction.shares }
-            Transaction.findOneAndUpdate({ _id: match._id }, updateShares);
-
+            updateShares = {shares : match.shares - transaction.shares}
+            Transaction.findOneAndUpdate({_id : match._id}, updateShares);
+            
         }
 
         // pay seller
-        updateSeller = { $inc: { bittels: -netSingleTransaction } }
-        User.findOneAndUpdate({ username: match.transactionOwner }, updateSeller);
+        updateSeller = {$inc : {bittels: -netSingleTransaction}}
+        User.findOneAndUpdate({ username : match.transactionOwner}, updateSeller);
 
         // charge buyer (we will go into negatives for now)
-        updateBuyer = { $inc: { bittels: netSingleTransaction } }
-        User.findOneAndUpdate({ username: transaction.username1 }, updateBuyer);
+        updateBuyer = {$inc : {bittels: netSingleTransaction}}
+        User.findOneAndUpdate({ username : transaction.username1}, updateBuyer);
 
         if (exactZero) {
             return;
@@ -206,3 +206,4 @@ export const sell = async (req, res) => {
     }
 
 }
+

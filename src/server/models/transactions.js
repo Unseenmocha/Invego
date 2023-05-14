@@ -4,11 +4,14 @@ import mongoose from 'mongoose';
 
 
 export const transactionSchema = mongoose.Schema({
-    buy: [{username: String, shares: Number}],
-    sell: [{username: String, shares: Number}]
+    transactionType: String, // 'BUY' or 'SELL'
+    username: String, 
+    shares: Number, 
+    desiredPrice: Number, 
+    transactionOwner: String
 });
 
 
-export const User = mongoose.model('Transaction', transactionSchema)
+export const Transaction = mongoose.model('Transaction', transactionSchema)
 
 //module.exports = { User, userSchema };

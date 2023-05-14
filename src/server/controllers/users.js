@@ -13,10 +13,10 @@ export const getUsers = async (req, res) => {
     }
 };
 
-export const getUserByID = async (req, res) => {
-    const _id = req.params.id;
+export const getUserByUsername = async (req, res) => {
+    const username = req.params.username;
     try {
-        const user = await User.findById(_id);  
+        const user = await User.find({username : username});  
         res.status(200).json(user);
     } catch (error) {
         console.log(error);
@@ -94,7 +94,7 @@ export const signup = async (req, res) => {
     /* there might be other fields here stored in the body, like first_name, last_name
      * those are just put in through the body, but not required for this signup function
     */
-    const usernameAlreadyUsed = await User.exists({ username: username });
+    const usernameAlreadyUsed = await User.exists({ username : username });
 
     if (usernameAlreadyUsed) {
         res.status(409).json({message: "Username taken"});
