@@ -81,10 +81,10 @@ export const login = async (req, res) => {
     const password = req.body.password;
 
     try {
-        const foundUser = await User.findOne({ username: username });
+        const foundUser = await User.findOne({ username: username }).lean();
         console.log("found user", foundUser);
         if (foundUser.password == password) {
-            res.status(200).json({ result: foundUser });
+            res.status(200).json( foundUser );
         } else {
             console.log("incorrect password")
             res.status(401).json({message: "Incorrect username or password"});

@@ -23,7 +23,7 @@ export const createPortfolioByUsername = async (req, res) => {
 export const getPortfolioByUsername = async (req, res) => {
     const username = req.params.username;
     try {
-        const portfolio = await Portfolio.findOne({username: username});
+        const portfolio = await Portfolio.findOne({username: username}).lean();
         res.status(200).json(portfolio);
     } catch (error) {
         res.status(404).json({ message: error.message });
