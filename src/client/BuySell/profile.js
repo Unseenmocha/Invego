@@ -64,3 +64,4 @@ document.getElementById("profileName").textContent = getInfo.getProfileName();
 redirectButton.addEventListener("click", async () => {
     window.location.href = "../Discovery/discovery.html";
   });
+

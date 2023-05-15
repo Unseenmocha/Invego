@@ -138,7 +138,8 @@ removeButton.addEventListener('click', async (e) => {
 });
 
 redirectButton.addEventListener("click", async () => {
+  console.log("redirecting to discovery")
   window.location.href = "../Discovery/discovery.html";
-});
+  });
 
 generatePortfolio();
