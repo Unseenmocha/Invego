@@ -19,9 +19,20 @@ export const getUserByUsername = async (req, res) => {
         const user = await User.findOne({username : username});  
         res.status(200).json(user);
     } catch (error) {
+        res.status(500).json({message: error});
         console.log(error);
     }
 };
+
+export const getTopFiveUsers = async (req, res) => {
+    try {
+        const users = await User.find().sort({market_value: -1}).limit(5);
+        res.status(201).json(users);
+    } catch (error) {
+        res.status(500).json({message: error});
+        console.log(error);
+    }
+}
 
 
 export const createUser = async (req, res) => {

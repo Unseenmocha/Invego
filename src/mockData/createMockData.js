@@ -35,7 +35,7 @@ async function save(filename, arr) {
 
 async function createStock(id, val, numShares, percentGrowth) {
   const obj = {
-    _id: id,
+    // _id: id,
     market_value: val,
     total_shares: numShares,
     percent_growth: percentGrowth,
