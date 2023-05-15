@@ -183,19 +183,17 @@ export async function deleteUser(doc) {
  *  R for portfolio
  */
 
-export async function readPortfolio() {
+export async function readPortfolio(username) {
   // returns portfolio object
   try {
-    const response = await fetch(`/portfolio/${getCurrentId()}`, {
+    const response = await fetch(`http://localhost:5000/portfolio/${username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
     });
+    const data = await response.json();
+    return data;
   } catch (err) {
     console.log(err);
   }

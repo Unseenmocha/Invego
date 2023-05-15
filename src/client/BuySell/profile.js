@@ -12,6 +12,7 @@ const redirectButton = document.getElementById('invego');
 
 import * as crud from '../crud.js';
 
+
 // Similar to populateFeed() on the home page, we send a fetch() request to our Express API to grab the post with the specific ID in the url.
 // We then display it's information on the page using our elements from the DOM
 const populateStockProfile = async () => {
@@ -44,19 +45,6 @@ const sell = async () => {
 //     // okay this is all done by middleware in the server and app.use under express
 //     await sell();
 // });
-
-
-
-//Grab info from database
-// let bittels = crud.dosomething with bittles
-// let about = crud.dosomething with about
-// let profileName = crud.dosomething with profileName
-
-// document.getElementById("Bittels").textContent = getInfo.getHowMuch() + " B";
-// document.getElementById("percentBittel").textContent = getInfo.getPercentBittel();
-// document.getElementById("aboutMe").textContent = getInfo.getAboutMe(); 
-// document.getElementById("profileName").textContent = getInfo.getProfileName(); 
-
 
 redirectButton.addEventListener("click", async () => {
     window.location.href = "../Discovery/discovery.html";
