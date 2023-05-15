@@ -6,26 +6,25 @@ const profileName = document.getElementById("profileName");
 const profileBio = document.getElementById("profileBio");
 const profilePrice = document.getElementById("profilePrice");
 const profileChange = document.getElementById("profileChange");
-const profileShares = document.getElementById("profileShares");
 const buyButton = document.getElementById("buyButton");
 const sellButton = document.getElementById("sellButton");
 const redirectButton = document.getElementById('invego');
 
+import * as crud from '../crud.js';
+
 // Similar to populateFeed() on the home page, we send a fetch() request to our Express API to grab the post with the specific ID in the url.
 // We then display it's information on the page using our elements from the DOM
 const populateStockProfile = async () => {
-    // here profiles and stocks used interchangeably
-    const profileRes = await fetch(`/stocks/${stockId}`);
-    const profile = await profileRes.json();
+    const doc = {username: localStorage.getItem("BuySellName")};
+    const buySellUser = await crud.readUser(doc);
 
-    profileName.innerHTML = profile.name;
-    profileBio.innerHTML = profile.bio;
-    profilePrice.innerHTML = profile.price;
-    profileChange.innerHTML = profile.change;
-    profileShares.innerHTML = profile.shares;
+    profileName.innerHTML = `${buySellUser.first_name} ${buySellUser.last_name}`;
+    profileBio.innerHTML = buySellUser.bio;
+    profilePrice.innerHTML = buySellUser.market_value;
+    profileChange.innerHTML = "0%";
 };
 
-//populatePostPage();
+populateStockProfile();
 
 const buy = async () => {
 
@@ -48,17 +47,15 @@ const sell = async () => {
 
 
 
-import * as crud from "../crud.js";
-
 //Grab info from database
 // let bittels = crud.dosomething with bittles
 // let about = crud.dosomething with about
 // let profileName = crud.dosomething with profileName
 
-document.getElementById("Bittels").textContent = getInfo.getHowMuch() + " B";
-document.getElementById("percentBittel").textContent = getInfo.getPercentBittel();
-document.getElementById("aboutMe").textContent = getInfo.getAboutMe(); 
-document.getElementById("profileName").textContent = getInfo.getProfileName(); 
+// document.getElementById("Bittels").textContent = getInfo.getHowMuch() + " B";
+// document.getElementById("percentBittel").textContent = getInfo.getPercentBittel();
+// document.getElementById("aboutMe").textContent = getInfo.getAboutMe(); 
+// document.getElementById("profileName").textContent = getInfo.getProfileName(); 
 
 
 redirectButton.addEventListener("click", async () => {
