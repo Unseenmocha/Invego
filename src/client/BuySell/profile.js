@@ -3,9 +3,11 @@
 const postId = window.location.pathname.split("/")[2];
 // Then, we grab all of our DOM elements
 const profileName = document.getElementById("profileName");
-const profileBio = document.getElementById("profileBio");
+const profileBio = document.getElementById("aboutMe");
 const profilePrice = document.getElementById("profilePrice");
 const profileChange = document.getElementById("profileChange");
+const profileMarketCap = document.getElementById("marketCap");
+const profileSharesOut = document.getElementById("sharesOutstanding");
 const buyButton = document.getElementById("buyButton");
 const sellButton = document.getElementById("sellButton");
 const redirectButton = document.getElementById('invego');
@@ -21,8 +23,10 @@ const populateStockProfile = async () => {
 
     profileName.innerHTML = `${buySellUser.first_name} ${buySellUser.last_name}`;
     profileBio.innerHTML = buySellUser.bio;
-    profilePrice.innerHTML = buySellUser.market_value;
+    profilePrice.innerHTML = `${buySellUser.market_value} Bittels`;
     profileChange.innerHTML = "0%";
+    profileMarketCap.innerHTML = `${buySellUser.market_value*buySellUser.total_shares} Bittels`;
+    profileSharesOut.innerHTML = `${buySellUser.total_shares_owned}`;
 };
 
 populateStockProfile();
