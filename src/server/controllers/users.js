@@ -39,14 +39,15 @@ export const createUser = async (req, res) => {
     console.log("create user")
     const user = req.body;
     const newUser = new User(user);
-    console.log("newUser")
+    console.log("newUser");
     try {
-        await newUser.save();
+        await newUser.save();       
         console.log("newUser after save", newUser);
         await createPortfolioByUsername({username : newUser.username, stocks : {}})
         res.status(201).json(newUser);
         console.log("create user res.body", res.json());
     } catch (error) {
+        console.log(error);
         res.status(409).json({ message: error.message });
     }
 }
