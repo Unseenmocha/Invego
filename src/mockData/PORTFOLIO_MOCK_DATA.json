@@ -1,684 +1,2569 @@
-  { "_id": "1", "stocks": { "1": { "num_shares": 11, "purchase_price": 71 } } },
-  {
-    "_id": "2",
-    "stocks": {
-      "3": { "num_shares": 6, "purchase_price": 130 },
-      "26": { "num_shares": 5, "purchase_price": 191 },
-      "43": { "num_shares": 4, "purchase_price": 15 },
-      "66": { "num_shares": 2, "purchase_price": 152 },
-      "93": { "num_shares": 4, "purchase_price": 40 }
+[
+    {
+        "_id": "64619bae9190440d3ada3ae8",
+        "username": "Avery.Anderson",
+        "stocks": {
+            "Kendall.Gonzalez": {
+                "num_shares": 4,
+                "purchase_price": 147
+            },
+            "Koa.Fitzgerald": {
+                "num_shares": 3,
+                "purchase_price": 21
+            },
+            "Isabella.Chen": {
+                "num_shares": 4,
+                "purchase_price": 30
+            },
+            "Lila.Frost": {
+                "num_shares": 5,
+                "purchase_price": 125
+            },
+            "Jesse.Ferguson": {
+                "num_shares": 5,
+                "purchase_price": 152
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3ae9",
+        "username": "Blake.Bailey",
+        "stocks": {
+            "Nico.Johnson": {
+                "num_shares": 2,
+                "purchase_price": 108
+            },
+            "Poppy.Keller": {
+                "num_shares": 2,
+                "purchase_price": 103
+            },
+            "Blake.Wang": {
+                "num_shares": 2,
+                "purchase_price": 200
+            },
+            "Magnolia.Hernandez": {
+                "num_shares": 6,
+                "purchase_price": 174
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aea",
+        "username": "Cameron.Carson",
+        "stocks": {
+            "Isabella.Chen": {
+                "num_shares": 5,
+                "purchase_price": 55
+            },
+            "Micah.Ingram": {
+                "num_shares": 5,
+                "purchase_price": 5
+            },
+            "Hayden.Davidson": {
+                "num_shares": 5,
+                "purchase_price": 178
+            },
+            "Willow.Parker": {
+                "num_shares": 3,
+                "purchase_price": 115
+            },
+            "Dahlia.Ybarra": {
+                "num_shares": 6,
+                "purchase_price": 144
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aeb",
+        "username": "Dakota.Davies",
+        "stocks": {
+            "Gael.Gibson": {
+                "num_shares": 6,
+                "purchase_price": 124
+            },
+            "Morgan.Nelson": {
+                "num_shares": 6,
+                "purchase_price": 45
+            },
+            "Violet.O'Connor": {
+                "num_shares": 4,
+                "purchase_price": 15
+            },
+            "Cameron.Xu": {
+                "num_shares": 4,
+                "purchase_price": 64
+            },
+            "Waverly.Rogers": {
+                "num_shares": 4,
+                "purchase_price": 67
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aec",
+        "username": "Ellis.Ellis",
+        "stocks": {
+            "Olivia.Ingram": {
+                "num_shares": 2,
+                "purchase_price": 187
+            },
+            "Wyatt.Smith": {
+                "num_shares": 6,
+                "purchase_price": 158
+            },
+            "Dakota.Davies": {
+                "num_shares": 3,
+                "purchase_price": 189
+            },
+            "Briar.Williams": {
+                "num_shares": 5,
+                "purchase_price": 45
+            },
+            "Quinn.Kumar": {
+                "num_shares": 5,
+                "purchase_price": 155
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aed",
+        "username": "Finley.Foster",
+        "stocks": {
+            "Ira.Edwards": {
+                "num_shares": 1,
+                "purchase_price": 117
+            },
+            "Una.Oliver": {
+                "num_shares": 4,
+                "purchase_price": 61
+            },
+            "Kayla.Ellison": {
+                "num_shares": 1,
+                "purchase_price": 15
+            },
+            "Jasmine.Evans": {
+                "num_shares": 1,
+                "purchase_price": 164
+            },
+            "Cedar.Xiong": {
+                "num_shares": 4,
+                "purchase_price": 126
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aee",
+        "username": "Gael.Gibson",
+        "stocks": {
+            "Wyatt.Smith": {
+                "num_shares": 4,
+                "purchase_price": 54
+            },
+            "Kai.Lopez": {
+                "num_shares": 1,
+                "purchase_price": 8
+            },
+            "Vaughn.Reyes": {
+                "num_shares": 3,
+                "purchase_price": 64
+            },
+            "Penelope.Jensen": {
+                "num_shares": 6,
+                "purchase_price": 6
+            },
+            "Noah.Owens": {
+                "num_shares": 4,
+                "purchase_price": 23
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aef",
+        "username": "Harper.Harris",
+        "stocks": {
+            "Avery.Villanueva": {
+                "num_shares": 3,
+                "purchase_price": 52
+            },
+            "Micah.Ingram": {
+                "num_shares": 3,
+                "purchase_price": 192
+            },
+            "Briar.Williams": {
+                "num_shares": 5,
+                "purchase_price": 14
+            },
+            "Una.Oliver": {
+                "num_shares": 2,
+                "purchase_price": 151
+            },
+            "Kendall.Gonzalez": {
+                "num_shares": 2,
+                "purchase_price": 17
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af0",
+        "username": "Indiana.Jackson",
+        "stocks": {
+            "Jesse.Ferguson": {
+                "num_shares": 2,
+                "purchase_price": 128
+            },
+            "Indiana.Jackson": {
+                "num_shares": 1,
+                "purchase_price": 12
+            },
+            "Vaughn.Reyes": {
+                "num_shares": 3,
+                "purchase_price": 41
+            },
+            "Blake.Wang": {
+                "num_shares": 6,
+                "purchase_price": 172
+            },
+            "Una.Oliver": {
+                "num_shares": 2,
+                "purchase_price": 96
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af1",
+        "username": "Jaden.Kennedy",
+        "stocks": {
+            "Lila.Frost": {
+                "num_shares": 4,
+                "purchase_price": 5
+            },
+            "Mia.Gordon": {
+                "num_shares": 2,
+                "purchase_price": 132
+            },
+            "Parker.Quinn": {
+                "num_shares": 3,
+                "purchase_price": 136
+            },
+            "Cora.Wright": {
+                "num_shares": 3,
+                "purchase_price": 83
+            },
+            "Tulip.Nash": {
+                "num_shares": 5,
+                "purchase_price": 166
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af2",
+        "username": "Kai.Lopez",
+        "stocks": {
+            "Una.Oliver": {
+                "num_shares": 3,
+                "purchase_price": 143
+            },
+            "Flynn.Baker": {
+                "num_shares": 6,
+                "purchase_price": 72
+            },
+            "Violet.Patel": {
+                "num_shares": 6,
+                "purchase_price": 190
+            },
+            "Dahlia.Ybarra": {
+                "num_shares": 1,
+                "purchase_price": 162
+            },
+            "Fern.Adams": {
+                "num_shares": 2,
+                "purchase_price": 146
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af3",
+        "username": "Logan.Martinez",
+        "stocks": {
+            "Parker.Quinn": {
+                "num_shares": 4,
+                "purchase_price": 124
+            },
+            "Tulip.Nash": {
+                "num_shares": 5,
+                "purchase_price": 78
+            },
+            "Bella.Vance": {
+                "num_shares": 3,
+                "purchase_price": 14
+            },
+            "Morgan.Nelson": {
+                "num_shares": 5,
+                "purchase_price": 121
+            },
+            "Ivy.Davis": {
+                "num_shares": 2,
+                "purchase_price": 111
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af4",
+        "username": "Morgan.Nelson",
+        "stocks": {
+            "Dahlia.Ybarra": {
+                "num_shares": 1,
+                "purchase_price": 200
+            },
+            "Avery.Anderson": {
+                "num_shares": 4,
+                "purchase_price": 182
+            },
+            "Zephyr.Ulrich": {
+                "num_shares": 4,
+                "purchase_price": 155
+            },
+            "Jasmine.Evans": {
+                "num_shares": 5,
+                "purchase_price": 184
+            },
+            "Evelyn.Young": {
+                "num_shares": 3,
+                "purchase_price": 126
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af5",
+        "username": "Noah.Owens",
+        "stocks": {
+            "Dakota.Davies": {
+                "num_shares": 4,
+                "purchase_price": 76
+            },
+            "Alex.Vargas": {
+                "num_shares": 6,
+                "purchase_price": 90
+            },
+            "Saffron.Morales": {
+                "num_shares": 3,
+                "purchase_price": 49
+            },
+            "Cora.Wright": {
+                "num_shares": 2,
+                "purchase_price": 167
+            },
+            "Una.Oliver": {
+                "num_shares": 1,
+                "purchase_price": 125
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af6",
+        "username": "Oakley.Perez",
+        "stocks": {
+            "Yara.Thomas": {
+                "num_shares": 3,
+                "purchase_price": 125
+            },
+            "Oak.Jones": {
+                "num_shares": 5,
+                "purchase_price": 194
+            },
+            "Sophia.Mendoza": {
+                "num_shares": 4,
+                "purchase_price": 5
+            },
+            "Grayson.Carter": {
+                "num_shares": 5,
+                "purchase_price": 133
+            },
+            "Lilac.Gomez": {
+                "num_shares": 1,
+                "purchase_price": 4
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af7",
+        "username": "Parker.Quinn",
+        "stocks": {
+            "Violet.Patel": {
+                "num_shares": 2,
+                "purchase_price": 12
+            },
+            "Flynn.Baker": {
+                "num_shares": 4,
+                "purchase_price": 119
+            },
+            "Nectar.Irwin": {
+                "num_shares": 5,
+                "purchase_price": 75
+            },
+            "Finley.Boatgas": {
+                "num_shares": 5,
+                "purchase_price": 92
+            },
+            "Grace.Atkins": {
+                "num_shares": 4,
+                "purchase_price": 6
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af8",
+        "username": "Quinn.Ramirez",
+        "stocks": {
+            "Tulip.Nash": {
+                "num_shares": 2,
+                "purchase_price": 135
+            },
+            "Nora.Huang": {
+                "num_shares": 2,
+                "purchase_price": 171
+            },
+            "Dakota.Yang": {
+                "num_shares": 2,
+                "purchase_price": 193
+            },
+            "Charlie.Xavier": {
+                "num_shares": 6,
+                "purchase_price": 184
+            },
+            "Ximena.Sullivan": {
+                "num_shares": 1,
+                "purchase_price": 166
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3af9",
+        "username": "Riley.Santos",
+        "stocks": {
+            "Una.Oliver": {
+                "num_shares": 2,
+                "purchase_price": 166
+            },
+            "Avery.Anderson": {
+                "num_shares": 3,
+                "purchase_price": 134
+            },
+            "Lilac.Gomez": {
+                "num_shares": 4,
+                "purchase_price": 25
+            },
+            "Gardenia.Bell": {
+                "num_shares": 5,
+                "purchase_price": 154
+            },
+            "Drew.Yates": {
+                "num_shares": 4,
+                "purchase_price": 177
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3afa",
+        "username": "Sawyer.Thompson",
+        "stocks": {
+            "Fern.Adams": {
+                "num_shares": 3,
+                "purchase_price": 26
+            },
+            "Avery.Anderson": {
+                "num_shares": 1,
+                "purchase_price": 177
+            },
+            "Penelope.Jensen": {
+                "num_shares": 2,
+                "purchase_price": 151
+            },
+            "Rain.Lam": {
+                "num_shares": 6,
+                "purchase_price": 133
+            },
+            "Zara.Underwood": {
+                "num_shares": 1,
+                "purchase_price": 62
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3afb",
+        "username": "Taylor.Upton",
+        "stocks": {
+            "Rain.Lam": {
+                "num_shares": 2,
+                "purchase_price": 43
+            },
+            "Kai.Lopez": {
+                "num_shares": 4,
+                "purchase_price": 131
+            },
+            "Oak.Jones": {
+                "num_shares": 5,
+                "purchase_price": 164
+            },
+            "Cameron.Xu": {
+                "num_shares": 2,
+                "purchase_price": 148
+            },
+            "Dakota.Davies": {
+                "num_shares": 3,
+                "purchase_price": 11
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3afc",
+        "username": "Alex.Vargas",
+        "stocks": {
+            "Morgan.Nelson": {
+                "num_shares": 3,
+                "purchase_price": 117
+            },
+            "Tatum.O'Brien": {
+                "num_shares": 4,
+                "purchase_price": 120
+            },
+            "Logan.Martinez": {
+                "num_shares": 2,
+                "purchase_price": 41
+            },
+            "Lennon.Henderson": {
+                "num_shares": 3,
+                "purchase_price": 29
+            },
+            "Magnolia.Hernandez": {
+                "num_shares": 6,
+                "purchase_price": 193
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3afd",
+        "username": "Bailey.Walker",
+        "stocks": {
+            "Rain.Lam": {
+                "num_shares": 4,
+                "purchase_price": 116
+            },
+            "Kai.Lopez": {
+                "num_shares": 5,
+                "purchase_price": 137
+            },
+            "Tulip.Nash": {
+                "num_shares": 4,
+                "purchase_price": 190
+            },
+            "Cora.Wright": {
+                "num_shares": 5,
+                "purchase_price": 40
+            },
+            "Kayla.Ellison": {
+                "num_shares": 6,
+                "purchase_price": 27
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3afe",
+        "username": "Charlie.Xavier",
+        "stocks": {
+            "Tulip.Nash": {
+                "num_shares": 5,
+                "purchase_price": 107
+            },
+            "Reese.Miller": {
+                "num_shares": 3,
+                "purchase_price": 127
+            },
+            "Tatum.O'Brien": {
+                "num_shares": 2,
+                "purchase_price": 60
+            },
+            "Ximena.Sullivan": {
+                "num_shares": 3,
+                "purchase_price": 82
+            },
+            "Dakota.Davies": {
+                "num_shares": 6,
+                "purchase_price": 190
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3aff",
+        "username": "Drew.Yates",
+        "stocks": {
+            "Waverly.Rogers": {
+                "num_shares": 6,
+                "purchase_price": 24
+            },
+            "Tulip.Nash": {
+                "num_shares": 5,
+                "purchase_price": 77
+            },
+            "Parker.Quinn": {
+                "num_shares": 2,
+                "purchase_price": 155
+            },
+            "Emerson.Zhang": {
+                "num_shares": 6,
+                "purchase_price": 66
+            },
+            "Olivia.Ingram": {
+                "num_shares": 3,
+                "purchase_price": 125
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b00",
+        "username": "Emerson.Zhang",
+        "stocks": {
+            "Grayson.Carter": {
+                "num_shares": 6,
+                "purchase_price": 44
+            },
+            "Blake.Bailey": {
+                "num_shares": 1,
+                "purchase_price": 140
+            },
+            "Mia.Gordon": {
+                "num_shares": 1,
+                "purchase_price": 33
+            },
+            "Cedar.Xiong": {
+                "num_shares": 3,
+                "purchase_price": 4
+            },
+            "Riley.Santos": {
+                "num_shares": 4,
+                "purchase_price": 164
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b01",
+        "username": "Flynn.Baker",
+        "stocks": {
+            "Echo.Zuniga": {
+                "num_shares": 5,
+                "purchase_price": 89
+            },
+            "Blake.Bailey": {
+                "num_shares": 1,
+                "purchase_price": 48
+            },
+            "Dakota.Davies": {
+                "num_shares": 1,
+                "purchase_price": 128
+            },
+            "Violet.O'Connor": {
+                "num_shares": 4,
+                "purchase_price": 118
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b02",
+        "username": "Grayson.Carter",
+        "stocks": {
+            "Mia.Gordon": {
+                "num_shares": 1,
+                "purchase_price": 139
+            },
+            "Noah.Owens": {
+                "num_shares": 5,
+                "purchase_price": 115
+            },
+            "Xanthe.Rivera": {
+                "num_shares": 3,
+                "purchase_price": 151
+            },
+            "Wyatt.Smith": {
+                "num_shares": 2,
+                "purchase_price": 141
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b03",
+        "username": "Hayden.Davidson",
+        "stocks": {
+            "Sage.Nguyen": {
+                "num_shares": 4,
+                "purchase_price": 136
+            },
+            "Ivy.Davis": {
+                "num_shares": 2,
+                "purchase_price": 111
+            },
+            "Julia.Duncan": {
+                "num_shares": 5,
+                "purchase_price": 173
+            },
+            "Ellis.Zhou": {
+                "num_shares": 5,
+                "purchase_price": 25
+            },
+            "Sawyer.Thompson": {
+                "num_shares": 4,
+                "purchase_price": 4
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b04",
+        "username": "Ira.Edwards",
+        "stocks": {
+            "Julia.Duncan": {
+                "num_shares": 2,
+                "purchase_price": 7
+            },
+            "Wyatt.Smith": {
+                "num_shares": 3,
+                "purchase_price": 3
+            },
+            "Lilac.Gomez": {
+                "num_shares": 2,
+                "purchase_price": 199
+            },
+            "Tatum.O'Brien": {
+                "num_shares": 5,
+                "purchase_price": 98
+            },
+            "Bailey.Walker": {
+                "num_shares": 5,
+                "purchase_price": 38
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b05",
+        "username": "Jesse.Ferguson",
+        "stocks": {
+            "Lennon.Henderson": {
+                "num_shares": 2,
+                "purchase_price": 135
+            },
+            "Grace.Atkins": {
+                "num_shares": 6,
+                "purchase_price": 182
+            },
+            "Dakota.Davies": {
+                "num_shares": 1,
+                "purchase_price": 31
+            },
+            "Blake.Wang": {
+                "num_shares": 4,
+                "purchase_price": 64
+            },
+            "Olivia.Ingram": {
+                "num_shares": 2,
+                "purchase_price": 114
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b06",
+        "username": "Kendall.Gonzalez",
+        "stocks": {
+            "Julia.Duncan": {
+                "num_shares": 3,
+                "purchase_price": 121
+            },
+            "Drew.Yates": {
+                "num_shares": 3,
+                "purchase_price": 143
+            },
+            "Fern.Adams": {
+                "num_shares": 4,
+                "purchase_price": 102
+            },
+            "Dakota.Yang": {
+                "num_shares": 5,
+                "purchase_price": 25
+            },
+            "Violet.Patel": {
+                "num_shares": 4,
+                "purchase_price": 75
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b07",
+        "username": "Lennon.Henderson",
+        "stocks": {
+            "Quinn.Ramirez": {
+                "num_shares": 4,
+                "purchase_price": 194
+            },
+            "Jaden.Kennedy": {
+                "num_shares": 4,
+                "purchase_price": 37
+            },
+            "Sawyer.Thompson": {
+                "num_shares": 2,
+                "purchase_price": 65
+            },
+            "Blake.Wang": {
+                "num_shares": 6,
+                "purchase_price": 129
+            },
+            "Kai.Lopez": {
+                "num_shares": 3,
+                "purchase_price": 45
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b08",
+        "username": "Micah.Ingram",
+        "stocks": {
+            "Hayden.Davidson": {
+                "num_shares": 2,
+                "purchase_price": 53
+            },
+            "Kayla.Ellison": {
+                "num_shares": 4,
+                "purchase_price": 195
+            },
+            "Yara.Thomas": {
+                "num_shares": 3,
+                "purchase_price": 192
+            },
+            "Jaden.Kennedy": {
+                "num_shares": 3,
+                "purchase_price": 45
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b09",
+        "username": "Nico.Johnson",
+        "stocks": {
+            "Logan.Martinez": {
+                "num_shares": 5,
+                "purchase_price": 192
+            },
+            "Alex.Vargas": {
+                "num_shares": 2,
+                "purchase_price": 2
+            },
+            "Koa.Fitzgerald": {
+                "num_shares": 6,
+                "purchase_price": 108
+            },
+            "Blake.Bailey": {
+                "num_shares": 3,
+                "purchase_price": 194
+            },
+            "Violet.Patel": {
+                "num_shares": 2,
+                "purchase_price": 159
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b0a",
+        "username": "Owen.Kim",
+        "stocks": {
+            "Isabella.Chen": {
+                "num_shares": 6,
+                "purchase_price": 22
+            },
+            "Kendall.Gonzalez": {
+                "num_shares": 5,
+                "purchase_price": 142
+            },
+            "Alex.Vargas": {
+                "num_shares": 3,
+                "purchase_price": 98
+            },
+            "Charlie.Xavier": {
+                "num_shares": 1,
+                "purchase_price": 49
+            },
+            "Tatum.O'Brien": {
+                "num_shares": 3,
+                "purchase_price": 82
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b0b",
+        "username": "Phoenix.Lee",
+        "stocks": {
+            "Tatum.O'Brien": {
+                "num_shares": 6,
+                "purchase_price": 44
+            },
+            "Waverly.Rogers": {
+                "num_shares": 5,
+                "purchase_price": 17
+            },
+            "Owen.Kim": {
+                "num_shares": 3,
+                "purchase_price": 17
+            },
+            "Indiana.Jackson": {
+                "num_shares": 1,
+                "purchase_price": 164
+            },
+            "Dakota.Yang": {
+                "num_shares": 4,
+                "purchase_price": 134
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b0c",
+        "username": "Reese.Miller",
+        "stocks": {
+            "Jesse.Ferguson": {
+                "num_shares": 1,
+                "purchase_price": 20
+            },
+            "Nora.Huang": {
+                "num_shares": 1,
+                "purchase_price": 133
+            },
+            "Zara.Underwood": {
+                "num_shares": 4,
+                "purchase_price": 144
+            },
+            "Violet.O'Connor": {
+                "num_shares": 5,
+                "purchase_price": 35
+            },
+            "Hannah.Bennett": {
+                "num_shares": 6,
+                "purchase_price": 61
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b0d",
+        "username": "Sage.Nguyen",
+        "stocks": {
+            "Alex.Vargas": {
+                "num_shares": 4,
+                "purchase_price": 155
+            },
+            "Blake.Wang": {
+                "num_shares": 3,
+                "purchase_price": 10
+            },
+            "Waverly.Rogers": {
+                "num_shares": 1,
+                "purchase_price": 77
+            },
+            "Owen.Kim": {
+                "num_shares": 5,
+                "purchase_price": 194
+            },
+            "Isabella.Chen": {
+                "num_shares": 1,
+                "purchase_price": 198
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b0e",
+        "username": "Tatum.O'Brien",
+        "stocks": {
+            "Cedar.Xiong": {
+                "num_shares": 4,
+                "purchase_price": 174
+            },
+            "Mia.Gordon": {
+                "num_shares": 2,
+                "purchase_price": 90
+            },
+            "Blake.Bailey": {
+                "num_shares": 5,
+                "purchase_price": 62
+            },
+            "Aspen.Valdez": {
+                "num_shares": 1,
+                "purchase_price": 198
+            },
+            "Ellis.Zhou": {
+                "num_shares": 6,
+                "purchase_price": 18
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b0f",
+        "username": "Uri.Park",
+        "stocks": {
+            "Gael.Gibson": {
+                "num_shares": 3,
+                "purchase_price": 1
+            },
+            "Fern.Adams": {
+                "num_shares": 5,
+                "purchase_price": 38
+            },
+            "Nora.Huang": {
+                "num_shares": 6,
+                "purchase_price": 83
+            },
+            "Charlie.Xavier": {
+                "num_shares": 4,
+                "purchase_price": 56
+            },
+            "Willow.Parker": {
+                "num_shares": 5,
+                "purchase_price": 191
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b10",
+        "username": "Vaughn.Reyes",
+        "stocks": {
+            "Hazel.Cruz": {
+                "num_shares": 3,
+                "purchase_price": 161
+            },
+            "Nora.Huang": {
+                "num_shares": 1,
+                "purchase_price": 55
+            },
+            "Echo.Zuniga": {
+                "num_shares": 5,
+                "purchase_price": 14
+            },
+            "Koa.Fitzgerald": {
+                "num_shares": 3,
+                "purchase_price": 42
+            },
+            "Bella.Vance": {
+                "num_shares": 2,
+                "purchase_price": 59
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b11",
+        "username": "Wyatt.Smith",
+        "stocks": {
+            "Saffron.Morales": {
+                "num_shares": 5,
+                "purchase_price": 159
+            },
+            "Owen.Kim": {
+                "num_shares": 6,
+                "purchase_price": 157
+            },
+            "Lilac.Gomez": {
+                "num_shares": 6,
+                "purchase_price": 70
+            },
+            "Nora.Huang": {
+                "num_shares": 5,
+                "purchase_price": 85
+            },
+            "Phoenix.Lee": {
+                "num_shares": 2,
+                "purchase_price": 176
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b12",
+        "username": "Yael.Taylor",
+        "stocks": {
+            "Avery.Anderson": {
+                "num_shares": 3,
+                "purchase_price": 59
+            },
+            "Wyatt.Smith": {
+                "num_shares": 1,
+                "purchase_price": 7
+            },
+            "Nectar.Irwin": {
+                "num_shares": 6,
+                "purchase_price": 103
+            },
+            "Rosalie.Larsen": {
+                "num_shares": 6,
+                "purchase_price": 200
+            },
+            "Micah.Ingram": {
+                "num_shares": 1,
+                "purchase_price": 64
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b13",
+        "username": "Zephyr.Ulrich",
+        "stocks": {
+            "Cameron.Carson": {
+                "num_shares": 1,
+                "purchase_price": 49
+            },
+            "Cameron.Xu": {
+                "num_shares": 6,
+                "purchase_price": 46
+            },
+            "Avery.Anderson": {
+                "num_shares": 1,
+                "purchase_price": 171
+            },
+            "Freya.Zimmerman": {
+                "num_shares": 6,
+                "purchase_price": 21
+            },
+            "Quinn.Ramirez": {
+                "num_shares": 6,
+                "purchase_price": 8
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b14",
+        "username": "Aspen.Valdez",
+        "stocks": {
+            "Evelyn.Young": {
+                "num_shares": 5,
+                "purchase_price": 76
+            },
+            "Una.Oliver": {
+                "num_shares": 2,
+                "purchase_price": 129
+            },
+            "Cedar.Xiong": {
+                "num_shares": 1,
+                "purchase_price": 73
+            },
+            "Briar.Williams": {
+                "num_shares": 4,
+                "purchase_price": 109
+            },
+            "Quinn.Kumar": {
+                "num_shares": 4,
+                "purchase_price": 189
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b15",
+        "username": "Briar.Williams",
+        "stocks": {
+            "Phoenix.Lee": {
+                "num_shares": 2,
+                "purchase_price": 72
+            },
+            "Violet.Patel": {
+                "num_shares": 6,
+                "purchase_price": 168
+            },
+            "Jesse.Ferguson": {
+                "num_shares": 6,
+                "purchase_price": 87
+            },
+            "Quinn.Kumar": {
+                "num_shares": 5,
+                "purchase_price": 108
+            },
+            "Rosalie.Larsen": {
+                "num_shares": 4,
+                "purchase_price": 149
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b16",
+        "username": "Cedar.Xiong",
+        "stocks": {
+            "Rosalie.Larsen": {
+                "num_shares": 2,
+                "purchase_price": 101
+            },
+            "Grace.Atkins": {
+                "num_shares": 3,
+                "purchase_price": 181
+            },
+            "Freya.Zimmerman": {
+                "num_shares": 1,
+                "purchase_price": 123
+            },
+            "Fern.Adams": {
+                "num_shares": 5,
+                "purchase_price": 183
+            },
+            "Cameron.Xu": {
+                "num_shares": 1,
+                "purchase_price": 7
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b17",
+        "username": "Dahlia.Ybarra",
+        "stocks": {
+            "Cedar.Xiong": {
+                "num_shares": 6,
+                "purchase_price": 3
+            },
+            "Sage.Nguyen": {
+                "num_shares": 3,
+                "purchase_price": 71
+            },
+            "Flynn.Baker": {
+                "num_shares": 3,
+                "purchase_price": 147
+            },
+            "Oakley.Perez": {
+                "num_shares": 5,
+                "purchase_price": 112
+            },
+            "Micah.Ingram": {
+                "num_shares": 2,
+                "purchase_price": 146
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b18",
+        "username": "Echo.Zuniga",
+        "stocks": {
+            "Cameron.Carson": {
+                "num_shares": 4,
+                "purchase_price": 174
+            },
+            "Dahlia.Ybarra": {
+                "num_shares": 4,
+                "purchase_price": 110
+            },
+            "Alex.Vargas": {
+                "num_shares": 3,
+                "purchase_price": 5
+            },
+            "Micah.Ingram": {
+                "num_shares": 6,
+                "purchase_price": 129
+            },
+            "Aspen.Valdez": {
+                "num_shares": 1,
+                "purchase_price": 129
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b19",
+        "username": "Fern.Adams",
+        "stocks": {
+            "Magnolia.Hernandez": {
+                "num_shares": 2,
+                "purchase_price": 21
+            },
+            "Zephyr.Ulrich": {
+                "num_shares": 5,
+                "purchase_price": 170
+            },
+            "Logan.Martinez": {
+                "num_shares": 5,
+                "purchase_price": 27
+            },
+            "Briar.Williams": {
+                "num_shares": 5,
+                "purchase_price": 96
+            },
+            "Taylor.Upton": {
+                "num_shares": 3,
+                "purchase_price": 55
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b1a",
+        "username": "Gardenia.Bell",
+        "stocks": {
+            "Sawyer.Thompson": {
+                "num_shares": 5,
+                "purchase_price": 157
+            },
+            "Ira.Edwards": {
+                "num_shares": 4,
+                "purchase_price": 194
+            },
+            "Aspen.Valdez": {
+                "num_shares": 3,
+                "purchase_price": 123
+            },
+            "Lilac.Gomez": {
+                "num_shares": 5,
+                "purchase_price": 20
+            },
+            "Kai.Lopez": {
+                "num_shares": 1,
+                "purchase_price": 55
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b1b",
+        "username": "Hazel.Cruz",
+        "stocks": {
+            "Alex.Vargas": {
+                "num_shares": 4,
+                "purchase_price": 189
+            },
+            "Rain.Lam": {
+                "num_shares": 2,
+                "purchase_price": 126
+            },
+            "Dakota.Yang": {
+                "num_shares": 2,
+                "purchase_price": 48
+            },
+            "Zinnia.Turner": {
+                "num_shares": 2,
+                "purchase_price": 175
+            },
+            "Yarrow.Scott": {
+                "num_shares": 5,
+                "purchase_price": 154
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b1c",
+        "username": "Ivy.Davis",
+        "stocks": {
+            "Dakota.Davies": {
+                "num_shares": 5,
+                "purchase_price": 88
+            },
+            "Olivia.Ingram": {
+                "num_shares": 2,
+                "purchase_price": 162
+            },
+            "Zinnia.Turner": {
+                "num_shares": 1,
+                "purchase_price": 178
+            },
+            "Ivy.Davis": {
+                "num_shares": 2,
+                "purchase_price": 31
+            },
+            "Micah.Ingram": {
+                "num_shares": 4,
+                "purchase_price": 120
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b1d",
+        "username": "Jasmine.Evans",
+        "stocks": {
+            "Zinnia.Turner": {
+                "num_shares": 2,
+                "purchase_price": 109
+            },
+            "Wyatt.Smith": {
+                "num_shares": 5,
+                "purchase_price": 40
+            },
+            "Nico.Johnson": {
+                "num_shares": 1,
+                "purchase_price": 169
+            },
+            "Jasmine.Evans": {
+                "num_shares": 2,
+                "purchase_price": 183
+            },
+            "Cedar.Xiong": {
+                "num_shares": 5,
+                "purchase_price": 28
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b1e",
+        "username": "Koa.Fitzgerald",
+        "stocks": {
+            "Kendall.Gonzalez": {
+                "num_shares": 6,
+                "purchase_price": 184
+            },
+            "Penelope.Jensen": {
+                "num_shares": 5,
+                "purchase_price": 157
+            },
+            "Mia.Gordon": {
+                "num_shares": 6,
+                "purchase_price": 82
+            },
+            "Hayden.Davidson": {
+                "num_shares": 2,
+                "purchase_price": 65
+            },
+            "Saffron.Morales": {
+                "num_shares": 5,
+                "purchase_price": 70
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b1f",
+        "username": "Lilac.Gomez",
+        "stocks": {
+            "Yael.Taylor": {
+                "num_shares": 1,
+                "purchase_price": 34
+            },
+            "Cora.Wright": {
+                "num_shares": 5,
+                "purchase_price": 139
+            },
+            "Oak.Jones": {
+                "num_shares": 1,
+                "purchase_price": 21
+            },
+            "Gael.Gibson": {
+                "num_shares": 1,
+                "purchase_price": 102
+            },
+            "Dakota.Yang": {
+                "num_shares": 2,
+                "purchase_price": 61
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b20",
+        "username": "Magnolia.Hernandez",
+        "stocks": {
+            "Ivy.Davis": {
+                "num_shares": 4,
+                "purchase_price": 171
+            },
+            "Echo.Zuniga": {
+                "num_shares": 6,
+                "purchase_price": 13
+            },
+            "Violet.O'Connor": {
+                "num_shares": 3,
+                "purchase_price": 167
+            },
+            "Gael.Gibson": {
+                "num_shares": 3,
+                "purchase_price": 177
+            },
+            "Owen.Kim": {
+                "num_shares": 2,
+                "purchase_price": 138
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b21",
+        "username": "Nectar.Irwin",
+        "stocks": {
+            "Harper.Harris": {
+                "num_shares": 1,
+                "purchase_price": 103
+            },
+            "Una.Oliver": {
+                "num_shares": 5,
+                "purchase_price": 33
+            },
+            "Aria.Underwood": {
+                "num_shares": 5,
+                "purchase_price": 40
+            },
+            "Briar.Williams": {
+                "num_shares": 1,
+                "purchase_price": 170
+            },
+            "Vaughn.Reyes": {
+                "num_shares": 6,
+                "purchase_price": 127
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b22",
+        "username": "Oak.Jones",
+        "stocks": {
+            "Nectar.Irwin": {
+                "num_shares": 2,
+                "purchase_price": 73
+            },
+            "Aria.Underwood": {
+                "num_shares": 4,
+                "purchase_price": 77
+            },
+            "Taylor.Upton": {
+                "num_shares": 1,
+                "purchase_price": 193
+            },
+            "Avery.Anderson": {
+                "num_shares": 3,
+                "purchase_price": 96
+            },
+            "Quinn.Kumar": {
+                "num_shares": 4,
+                "purchase_price": 59
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b23",
+        "username": "Poppy.Keller",
+        "stocks": {
+            "Vaughn.Reyes": {
+                "num_shares": 4,
+                "purchase_price": 112
+            },
+            "Gael.Gibson": {
+                "num_shares": 6,
+                "purchase_price": 144
+            },
+            "Blake.Bailey": {
+                "num_shares": 2,
+                "purchase_price": 60
+            },
+            "Ira.Edwards": {
+                "num_shares": 2,
+                "purchase_price": 121
+            },
+            "Bella.Vance": {
+                "num_shares": 5,
+                "purchase_price": 179
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b24",
+        "username": "Rain.Lam",
+        "stocks": {
+            "Gardenia.Bell": {
+                "num_shares": 5,
+                "purchase_price": 120
+            },
+            "Nora.Huang": {
+                "num_shares": 6,
+                "purchase_price": 42
+            },
+            "Evelyn.Young": {
+                "num_shares": 5,
+                "purchase_price": 185
+            },
+            "Zinnia.Turner": {
+                "num_shares": 2,
+                "purchase_price": 38
+            },
+            "Flynn.Baker": {
+                "num_shares": 1,
+                "purchase_price": 169
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b25",
+        "username": "Saffron.Morales",
+        "stocks": {
+            "Cora.Wright": {
+                "num_shares": 4,
+                "purchase_price": 89
+            },
+            "Rosalie.Larsen": {
+                "num_shares": 6,
+                "purchase_price": 148
+            },
+            "Oakley.Perez": {
+                "num_shares": 5,
+                "purchase_price": 46
+            },
+            "Cedar.Xiong": {
+                "num_shares": 5,
+                "purchase_price": 17
+            },
+            "Hannah.Bennett": {
+                "num_shares": 5,
+                "purchase_price": 92
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b26",
+        "username": "Tulip.Nash",
+        "stocks": {
+            "Ellis.Ellis": {
+                "num_shares": 4,
+                "purchase_price": 192
+            },
+            "Indiana.Jackson": {
+                "num_shares": 1,
+                "purchase_price": 159
+            },
+            "Aspen.Valdez": {
+                "num_shares": 1,
+                "purchase_price": 60
+            },
+            "Zinnia.Turner": {
+                "num_shares": 3,
+                "purchase_price": 140
+            },
+            "Nora.Huang": {
+                "num_shares": 1,
+                "purchase_price": 172
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b27",
+        "username": "Violet.O'Connor",
+        "stocks": {
+            "Indiana.Jackson": {
+                "num_shares": 2,
+                "purchase_price": 73
+            },
+            "Aspen.Valdez": {
+                "num_shares": 5,
+                "purchase_price": 32
+            },
+            "Tatum.O'Brien": {
+                "num_shares": 5,
+                "purchase_price": 151
+            },
+            "Noah.Owens": {
+                "num_shares": 5,
+                "purchase_price": 121
+            },
+            "Kendall.Gonzalez": {
+                "num_shares": 3,
+                "purchase_price": 95
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b28",
+        "username": "Willow.Parker",
+        "stocks": {
+            "Tulip.Nash": {
+                "num_shares": 2,
+                "purchase_price": 18
+            },
+            "Grayson.Carter": {
+                "num_shares": 1,
+                "purchase_price": 163
+            },
+            "Kendall.Gonzalez": {
+                "num_shares": 5,
+                "purchase_price": 195
+            },
+            "Sawyer.Thompson": {
+                "num_shares": 2,
+                "purchase_price": 66
+            },
+            "Wyatt.Smith": {
+                "num_shares": 6,
+                "purchase_price": 91
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b29",
+        "username": "Xanthe.Rivera",
+        "stocks": {
+            "Bailey.Walker": {
+                "num_shares": 2,
+                "purchase_price": 128
+            },
+            "Gardenia.Bell": {
+                "num_shares": 6,
+                "purchase_price": 109
+            },
+            "Kai.Lopez": {
+                "num_shares": 5,
+                "purchase_price": 82
+            },
+            "Violet.Patel": {
+                "num_shares": 1,
+                "purchase_price": 9
+            },
+            "Cameron.Xu": {
+                "num_shares": 2,
+                "purchase_price": 92
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b2a",
+        "username": "Yarrow.Scott",
+        "stocks": {
+            "Jasmine.Evans": {
+                "num_shares": 4,
+                "purchase_price": 113
+            },
+            "Willow.Parker": {
+                "num_shares": 2,
+                "purchase_price": 172
+            },
+            "Ellis.Zhou": {
+                "num_shares": 1,
+                "purchase_price": 153
+            },
+            "Jesse.Ferguson": {
+                "num_shares": 1,
+                "purchase_price": 16
+            },
+            "Oak.Jones": {
+                "num_shares": 1,
+                "purchase_price": 137
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b2b",
+        "username": "Zinnia.Turner",
+        "stocks": {
+            "Harper.Harris": {
+                "num_shares": 5,
+                "purchase_price": 183
+            },
+            "Parker.Quinn": {
+                "num_shares": 3,
+                "purchase_price": 67
+            },
+            "Jasmine.Evans": {
+                "num_shares": 2,
+                "purchase_price": 47
+            },
+            "Cedar.Xiong": {
+                "num_shares": 1,
+                "purchase_price": 142
+            },
+            "Mia.Gordon": {
+                "num_shares": 3,
+                "purchase_price": 21
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b2c",
+        "username": "Aria.Underwood",
+        "stocks": {
+            "Avery.Anderson": {
+                "num_shares": 2,
+                "purchase_price": 119
+            },
+            "Ximena.Sullivan": {
+                "num_shares": 1,
+                "purchase_price": 37
+            },
+            "Ellis.Ellis": {
+                "num_shares": 3,
+                "purchase_price": 131
+            },
+            "Cameron.Xu": {
+                "num_shares": 5,
+                "purchase_price": 48
+            },
+            "Olivia.Ingram": {
+                "num_shares": 4,
+                "purchase_price": 10
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b2d",
+        "username": "Bella.Vance",
+        "stocks": {
+            "Reese.Miller": {
+                "num_shares": 6,
+                "purchase_price": 134
+            },
+            "Wyatt.Smith": {
+                "num_shares": 5,
+                "purchase_price": 156
+            },
+            "Uri.Park": {
+                "num_shares": 5,
+                "purchase_price": 30
+            },
+            "Yael.Taylor": {
+                "num_shares": 3,
+                "purchase_price": 89
+            },
+            "Blake.Wang": {
+                "num_shares": 6,
+                "purchase_price": 61
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b2e",
+        "username": "Cora.Wright",
+        "stocks": {
+            "Jasmine.Evans": {
+                "num_shares": 1,
+                "purchase_price": 109
+            },
+            "Waverly.Rogers": {
+                "num_shares": 3,
+                "purchase_price": 15
+            },
+            "Wyatt.Smith": {
+                "num_shares": 2,
+                "purchase_price": 47
+            },
+            "Bella.Vance": {
+                "num_shares": 4,
+                "purchase_price": 88
+            },
+            "Yael.Taylor": {
+                "num_shares": 1,
+                "purchase_price": 111
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b2f",
+        "username": "Delilah.Xander",
+        "stocks": {
+            "Nico.Johnson": {
+                "num_shares": 3,
+                "purchase_price": 71
+            },
+            "Delilah.Xander": {
+                "num_shares": 2,
+                "purchase_price": 122
+            },
+            "Alex.Vargas": {
+                "num_shares": 4,
+                "purchase_price": 105
+            },
+            "Yara.Thomas": {
+                "num_shares": 2,
+                "purchase_price": 94
+            },
+            "Violet.Patel": {
+                "num_shares": 1,
+                "purchase_price": 24
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b30",
+        "username": "Evelyn.Young",
+        "stocks": {
+            "Yael.Taylor": {
+                "num_shares": 2,
+                "purchase_price": 162
+            },
+            "Tessa.Ng": {
+                "num_shares": 6,
+                "purchase_price": 131
+            },
+            "Quinn.Ramirez": {
+                "num_shares": 6,
+                "purchase_price": 71
+            },
+            "Rain.Lam": {
+                "num_shares": 2,
+                "purchase_price": 164
+            },
+            "Kayla.Ellison": {
+                "num_shares": 5,
+                "purchase_price": 72
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b31",
+        "username": "Freya.Zimmerman",
+        "stocks": {
+            "Tessa.Ng": {
+                "num_shares": 2,
+                "purchase_price": 123
+            },
+            "Phoenix.Lee": {
+                "num_shares": 5,
+                "purchase_price": 31
+            },
+            "Blake.Wang": {
+                "num_shares": 4,
+                "purchase_price": 6
+            },
+            "Yara.Thomas": {
+                "num_shares": 6,
+                "purchase_price": 89
+            },
+            "Saffron.Morales": {
+                "num_shares": 2,
+                "purchase_price": 22
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b32",
+        "username": "Grace.Atkins",
+        "stocks": {
+            "Magnolia.Hernandez": {
+                "num_shares": 5,
+                "purchase_price": 92
+            },
+            "Kayla.Ellison": {
+                "num_shares": 6,
+                "purchase_price": 64
+            },
+            "Olivia.Ingram": {
+                "num_shares": 3,
+                "purchase_price": 169
+            },
+            "Una.Oliver": {
+                "num_shares": 5,
+                "purchase_price": 36
+            },
+            "Avery.Villanueva": {
+                "num_shares": 3,
+                "purchase_price": 78
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b33",
+        "username": "Hannah.Bennett",
+        "stocks": {
+            "Quinn.Ramirez": {
+                "num_shares": 4,
+                "purchase_price": 85
+            },
+            "Cora.Wright": {
+                "num_shares": 6,
+                "purchase_price": 50
+            },
+            "Noah.Owens": {
+                "num_shares": 4,
+                "purchase_price": 163
+            },
+            "Violet.O'Connor": {
+                "num_shares": 5,
+                "purchase_price": 24
+            },
+            "Quinn.Kumar": {
+                "num_shares": 4,
+                "purchase_price": 134
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b34",
+        "username": "Isabella.Chen",
+        "stocks": {
+            "Cameron.Xu": {
+                "num_shares": 1,
+                "purchase_price": 57
+            },
+            "Lennon.Henderson": {
+                "num_shares": 4,
+                "purchase_price": 102
+            },
+            "Magnolia.Hernandez": {
+                "num_shares": 1,
+                "purchase_price": 109
+            },
+            "Grace.Atkins": {
+                "num_shares": 5,
+                "purchase_price": 59
+            },
+            "Lila.Frost": {
+                "num_shares": 2,
+                "purchase_price": 15
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b35",
+        "username": "Julia.Duncan",
+        "stocks": {
+            "Jaden.Kennedy": {
+                "num_shares": 2,
+                "purchase_price": 149
+            },
+            "Rain.Lam": {
+                "num_shares": 5,
+                "purchase_price": 198
+            },
+            "Logan.Martinez": {
+                "num_shares": 2,
+                "purchase_price": 80
+            },
+            "Reese.Miller": {
+                "num_shares": 6,
+                "purchase_price": 187
+            },
+            "Sawyer.Thompson": {
+                "num_shares": 2,
+                "purchase_price": 7
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b36",
+        "username": "Kayla.Ellison",
+        "stocks": {
+            "Echo.Zuniga": {
+                "num_shares": 2,
+                "purchase_price": 101
+            },
+            "Bella.Vance": {
+                "num_shares": 6,
+                "purchase_price": 6
+            },
+            "Waverly.Rogers": {
+                "num_shares": 2,
+                "purchase_price": 142
+            },
+            "Cameron.Carson": {
+                "num_shares": 6,
+                "purchase_price": 112
+            },
+            "Hazel.Cruz": {
+                "num_shares": 3,
+                "purchase_price": 195
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b37",
+        "username": "Lila.Frost",
+        "stocks": {
+            "Grayson.Carter": {
+                "num_shares": 2,
+                "purchase_price": 101
+            },
+            "Morgan.Nelson": {
+                "num_shares": 5,
+                "purchase_price": 97
+            },
+            "Koa.Fitzgerald": {
+                "num_shares": 1,
+                "purchase_price": 142
+            },
+            "Flynn.Baker": {
+                "num_shares": 4,
+                "purchase_price": 88
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b38",
+        "username": "Mia.Gordon",
+        "stocks": {
+            "Aria.Underwood": {
+                "num_shares": 6,
+                "purchase_price": 66
+            },
+            "Lilac.Gomez": {
+                "num_shares": 4,
+                "purchase_price": 164
+            },
+            "Gardenia.Bell": {
+                "num_shares": 2,
+                "purchase_price": 7
+            },
+            "Dakota.Davies": {
+                "num_shares": 6,
+                "purchase_price": 82
+            },
+            "Wyatt.Smith": {
+                "num_shares": 2,
+                "purchase_price": 33
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b39",
+        "username": "Nora.Huang",
+        "stocks": {
+            "Aria.Underwood": {
+                "num_shares": 3,
+                "purchase_price": 151
+            },
+            "Owen.Kim": {
+                "num_shares": 6,
+                "purchase_price": 98
+            },
+            "Sawyer.Thompson": {
+                "num_shares": 3,
+                "purchase_price": 96
+            },
+            "Jesse.Ferguson": {
+                "num_shares": 4,
+                "purchase_price": 134
+            },
+            "Quinn.Ramirez": {
+                "num_shares": 3,
+                "purchase_price": 194
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b3a",
+        "username": "Olivia.Ingram",
+        "stocks": {
+            "Kayla.Ellison": {
+                "num_shares": 5,
+                "purchase_price": 151
+            },
+            "Freya.Zimmerman": {
+                "num_shares": 1,
+                "purchase_price": 167
+            },
+            "Owen.Kim": {
+                "num_shares": 6,
+                "purchase_price": 156
+            },
+            "Yarrow.Scott": {
+                "num_shares": 5,
+                "purchase_price": 106
+            },
+            "Delilah.Xander": {
+                "num_shares": 6,
+                "purchase_price": 119
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b3b",
+        "username": "Penelope.Jensen",
+        "stocks": {
+            "Grayson.Carter": {
+                "num_shares": 2,
+                "purchase_price": 47
+            },
+            "Sage.Nguyen": {
+                "num_shares": 5,
+                "purchase_price": 18
+            },
+            "Julia.Duncan": {
+                "num_shares": 1,
+                "purchase_price": 140
+            },
+            "Cora.Wright": {
+                "num_shares": 3,
+                "purchase_price": 79
+            },
+            "Phoenix.Lee": {
+                "num_shares": 1,
+                "purchase_price": 8
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b3c",
+        "username": "Quinn.Kumar",
+        "stocks": {
+            "Yarrow.Scott": {
+                "num_shares": 3,
+                "purchase_price": 57
+            },
+            "Waverly.Rogers": {
+                "num_shares": 3,
+                "purchase_price": 151
+            },
+            "Koa.Fitzgerald": {
+                "num_shares": 1,
+                "purchase_price": 145
+            },
+            "Rain.Lam": {
+                "num_shares": 6,
+                "purchase_price": 83
+            },
+            "Sage.Nguyen": {
+                "num_shares": 1,
+                "purchase_price": 138
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b3d",
+        "username": "Rosalie.Larsen",
+        "stocks": {
+            "Gael.Gibson": {
+                "num_shares": 2,
+                "purchase_price": 7
+            },
+            "Finley.Boatgas": {
+                "num_shares": 4,
+                "purchase_price": 196
+            },
+            "Riley.Santos": {
+                "num_shares": 1,
+                "purchase_price": 159
+            },
+            "Nectar.Irwin": {
+                "num_shares": 2,
+                "purchase_price": 61
+            },
+            "Violet.O'Connor": {
+                "num_shares": 1,
+                "purchase_price": 23
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b3e",
+        "username": "Sophia.Mendoza",
+        "stocks": {
+            "Freya.Zimmerman": {
+                "num_shares": 3,
+                "purchase_price": 85
+            },
+            "Waverly.Rogers": {
+                "num_shares": 6,
+                "purchase_price": 53
+            },
+            "Penelope.Jensen": {
+                "num_shares": 5,
+                "purchase_price": 59
+            },
+            "Violet.Patel": {
+                "num_shares": 2,
+                "purchase_price": 176
+            },
+            "Cora.Wright": {
+                "num_shares": 5,
+                "purchase_price": 150
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b3f",
+        "username": "Tessa.Ng",
+        "stocks": {
+            "Violet.O'Connor": {
+                "num_shares": 4,
+                "purchase_price": 94
+            },
+            "Kai.Lopez": {
+                "num_shares": 4,
+                "purchase_price": 157
+            },
+            "Dakota.Davies": {
+                "num_shares": 1,
+                "purchase_price": 172
+            },
+            "Poppy.Keller": {
+                "num_shares": 1,
+                "purchase_price": 135
+            },
+            "Zara.Underwood": {
+                "num_shares": 5,
+                "purchase_price": 158
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b40",
+        "username": "Una.Oliver",
+        "stocks": {
+            "Xanthe.Rivera": {
+                "num_shares": 6,
+                "purchase_price": 50
+            },
+            "Isabella.Chen": {
+                "num_shares": 3,
+                "purchase_price": 170
+            },
+            "Rosalie.Larsen": {
+                "num_shares": 4,
+                "purchase_price": 97
+            },
+            "Grace.Atkins": {
+                "num_shares": 3,
+                "purchase_price": 6
+            },
+            "Wyatt.Smith": {
+                "num_shares": 4,
+                "purchase_price": 181
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b41",
+        "username": "Violet.Patel",
+        "stocks": {
+            "Kai.Lopez": {
+                "num_shares": 5,
+                "purchase_price": 30
+            },
+            "Violet.O'Connor": {
+                "num_shares": 5,
+                "purchase_price": 25
+            },
+            "Lilac.Gomez": {
+                "num_shares": 1,
+                "purchase_price": 72
+            },
+            "Yael.Taylor": {
+                "num_shares": 6,
+                "purchase_price": 44
+            },
+            "Quinn.Kumar": {
+                "num_shares": 6,
+                "purchase_price": 129
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b42",
+        "username": "Waverly.Rogers",
+        "stocks": {
+            "Jasmine.Evans": {
+                "num_shares": 3,
+                "purchase_price": 144
+            },
+            "Tessa.Ng": {
+                "num_shares": 3,
+                "purchase_price": 99
+            },
+            "Rosalie.Larsen": {
+                "num_shares": 5,
+                "purchase_price": 97
+            },
+            "Gardenia.Bell": {
+                "num_shares": 6,
+                "purchase_price": 104
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b43",
+        "username": "Ximena.Sullivan",
+        "stocks": {
+            "Owen.Kim": {
+                "num_shares": 2,
+                "purchase_price": 52
+            },
+            "Lennon.Henderson": {
+                "num_shares": 3,
+                "purchase_price": 185
+            },
+            "Gael.Gibson": {
+                "num_shares": 1,
+                "purchase_price": 193
+            },
+            "Blake.Wang": {
+                "num_shares": 6,
+                "purchase_price": 41
+            },
+            "Nora.Huang": {
+                "num_shares": 6,
+                "purchase_price": 104
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b44",
+        "username": "Yara.Thomas",
+        "stocks": {
+            "Lennon.Henderson": {
+                "num_shares": 6,
+                "purchase_price": 67
+            },
+            "Kendall.Gonzalez": {
+                "num_shares": 1,
+                "purchase_price": 148
+            },
+            "Zara.Underwood": {
+                "num_shares": 1,
+                "purchase_price": 179
+            },
+            "Willow.Parker": {
+                "num_shares": 5,
+                "purchase_price": 111
+            },
+            "Koa.Fitzgerald": {
+                "num_shares": 6,
+                "purchase_price": 140
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b45",
+        "username": "Zara.Underwood",
+        "stocks": {
+            "Dahlia.Ybarra": {
+                "num_shares": 2,
+                "purchase_price": 77
+            },
+            "Quinn.Kumar": {
+                "num_shares": 5,
+                "purchase_price": 88
+            },
+            "Hazel.Cruz": {
+                "num_shares": 6,
+                "purchase_price": 164
+            },
+            "Aria.Underwood": {
+                "num_shares": 4,
+                "purchase_price": 136
+            },
+            "Rosalie.Larsen": {
+                "num_shares": 5,
+                "purchase_price": 149
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b46",
+        "username": "Avery.Villanueva",
+        "stocks": {
+            "Hannah.Bennett": {
+                "num_shares": 5,
+                "purchase_price": 114
+            },
+            "Violet.Patel": {
+                "num_shares": 3,
+                "purchase_price": 23
+            },
+            "Reese.Miller": {
+                "num_shares": 1,
+                "purchase_price": 3
+            },
+            "Grace.Atkins": {
+                "num_shares": 1,
+                "purchase_price": 80
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b47",
+        "username": "Blake.Wang",
+        "stocks": {
+            "Kendall.Gonzalez": {
+                "num_shares": 2,
+                "purchase_price": 64
+            },
+            "Jesse.Ferguson": {
+                "num_shares": 5,
+                "purchase_price": 187
+            },
+            "Violet.Patel": {
+                "num_shares": 6,
+                "purchase_price": 90
+            },
+            "Cedar.Xiong": {
+                "num_shares": 6,
+                "purchase_price": 65
+            },
+            "Olivia.Ingram": {
+                "num_shares": 1,
+                "purchase_price": 29
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b48",
+        "username": "Cameron.Xu",
+        "stocks": {
+            "Gael.Gibson": {
+                "num_shares": 4,
+                "purchase_price": 30
+            },
+            "Vaughn.Reyes": {
+                "num_shares": 2,
+                "purchase_price": 9
+            },
+            "Fern.Adams": {
+                "num_shares": 4,
+                "purchase_price": 66
+            },
+            "Yara.Thomas": {
+                "num_shares": 4,
+                "purchase_price": 161
+            },
+            "Julia.Duncan": {
+                "num_shares": 1,
+                "purchase_price": 29
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b49",
+        "username": "Dakota.Yang",
+        "stocks": {
+            "Quinn.Ramirez": {
+                "num_shares": 2,
+                "purchase_price": 132
+            },
+            "Sawyer.Thompson": {
+                "num_shares": 6,
+                "purchase_price": 156
+            },
+            "Logan.Martinez": {
+                "num_shares": 5,
+                "purchase_price": 132
+            },
+            "Bella.Vance": {
+                "num_shares": 1,
+                "purchase_price": 21
+            },
+            "Cedar.Xiong": {
+                "num_shares": 4,
+                "purchase_price": 42
+            }
+        }
+    },
+    {
+        "_id": "64619bae9190440d3ada3b4a",
+        "username": "Ellis.Zhou",
+        "stocks": {
+            "Ellis.Zhou": {
+                "num_shares": 1,
+                "purchase_price": 39
+            },
+            "Dakota.Davies": {
+                "num_shares": 6,
+                "purchase_price": 17
+            },
+            "Fern.Adams": {
+                "num_shares": 4,
+                "purchase_price": 151
+            },
+            "Poppy.Keller": {
+                "num_shares": 6,
+                "purchase_price": 193
+            },
+            "Yael.Taylor": {
+                "num_shares": 6,
+                "purchase_price": 165
+            }
+        }
+    },
+    {
+        "username": "Finley.Boatgas",
+        "stocks": {
+            "Isabella.Chen": {
+                "num_shares": 2,
+                "purchase_price": 192
+            },
+            "Hannah.Bennett": {
+                "num_shares": 1,
+                "purchase_price": 172
+            },
+            "Owen.Kim": {
+                "num_shares": 1,
+                "purchase_price": 130
+            },
+            "Willow.Parker": {
+                "num_shares": 6,
+                "purchase_price": 185
+            }
+        }
     }
-  },
-  {
-    "_id": "3",
-    "stocks": { "3": { "num_shares": 39, "purchase_price": 133 } }
-  },
-  {
-    "_id": "4",
-    "stocks": {
-      "71": { "num_shares": 1, "purchase_price": 122 },
-      "79": { "num_shares": 5, "purchase_price": 33 },
-      "88": { "num_shares": 3, "purchase_price": 155 },
-      "97": { "num_shares": 1, "purchase_price": 55 },
-      "100": { "num_shares": 3, "purchase_price": 70 }
-    }
-  },
-  { "_id": "5", "stocks": { "5": { "num_shares": 21, "purchase_price": 46 } } },
-  {
-    "_id": "6",
-    "stocks": {
-      "3": { "num_shares": 5, "purchase_price": 123 },
-      "65": { "num_shares": 3, "purchase_price": 110 },
-      "69": { "num_shares": 4, "purchase_price": 159 },
-      "77": { "num_shares": 4, "purchase_price": 179 },
-      "83": { "num_shares": 6, "purchase_price": 82 }
-    }
-  },
-  {
-    "_id": "7",
-    "stocks": { "7": { "num_shares": 42, "purchase_price": 150 } }
-  },
-  {
-    "_id": "8",
-    "stocks": {
-      "11": { "num_shares": 1, "purchase_price": 103 },
-      "16": { "num_shares": 4, "purchase_price": 169 },
-      "52": { "num_shares": 5, "purchase_price": 166 },
-      "63": { "num_shares": 6, "purchase_price": 116 },
-      "98": { "num_shares": 3, "purchase_price": 102 }
-    }
-  },
-  { "_id": "9", "stocks": { "9": { "num_shares": 12, "purchase_price": 51 } } },
-  {
-    "_id": "10",
-    "stocks": {
-      "20": { "num_shares": 2, "purchase_price": 7 },
-      "29": { "num_shares": 3, "purchase_price": 154 },
-      "30": { "num_shares": 1, "purchase_price": 149 },
-      "53": { "num_shares": 1, "purchase_price": 38 },
-      "93": { "num_shares": 5, "purchase_price": 20 }
-    }
-  },
-  {
-    "_id": "11",
-    "stocks": { "11": { "num_shares": 31, "purchase_price": 61 } }
-  },
-  {
-    "_id": "12",
-    "stocks": {
-      "9": { "num_shares": 6, "purchase_price": 66 },
-      "18": { "num_shares": 3, "purchase_price": 14 },
-      "79": { "num_shares": 5, "purchase_price": 73 },
-      "83": { "num_shares": 6, "purchase_price": 128 },
-      "95": { "num_shares": 2, "purchase_price": 8 }
-    }
-  },
-  {
-    "_id": "13",
-    "stocks": { "13": { "num_shares": 30, "purchase_price": 16 } }
-  },
-  {
-    "_id": "14",
-    "stocks": {
-      "12": { "num_shares": 1, "purchase_price": 154 },
-      "13": { "num_shares": 6, "purchase_price": 155 },
-      "28": { "num_shares": 6, "purchase_price": 176 },
-      "44": { "num_shares": 3, "purchase_price": 181 },
-      "89": { "num_shares": 2, "purchase_price": 184 }
-    }
-  },
-  {
-    "_id": "15",
-    "stocks": { "15": { "num_shares": 32, "purchase_price": 1 } }
-  },
-  {
-    "_id": "16",
-    "stocks": {
-      "28": { "num_shares": 4, "purchase_price": 71 },
-      "43": { "num_shares": 3, "purchase_price": 174 },
-      "44": { "num_shares": 3, "purchase_price": 147 },
-      "97": { "num_shares": 5, "purchase_price": 16 },
-      "98": { "num_shares": 6, "purchase_price": 157 }
-    }
-  },
-  {
-    "_id": "17",
-    "stocks": { "17": { "num_shares": 4, "purchase_price": 200 } }
-  },
-  {
-    "_id": "18",
-    "stocks": {
-      "2": { "num_shares": 4, "purchase_price": 76 },
-      "35": { "num_shares": 5, "purchase_price": 2 },
-      "36": { "num_shares": 1, "purchase_price": 183 },
-      "40": { "num_shares": 1, "purchase_price": 36 },
-      "99": { "num_shares": 5, "purchase_price": 192 }
-    }
-  },
-  {
-    "_id": "19",
-    "stocks": { "19": { "num_shares": 33, "purchase_price": 138 } }
-  },
-  {
-    "_id": "20",
-    "stocks": {
-      "18": { "num_shares": 1, "purchase_price": 10 },
-      "19": { "num_shares": 1, "purchase_price": 76 },
-      "31": { "num_shares": 3, "purchase_price": 23 },
-      "46": { "num_shares": 2, "purchase_price": 110 },
-      "66": { "num_shares": 1, "purchase_price": 82 }
-    }
-  },
-  {
-    "_id": "21",
-    "stocks": { "21": { "num_shares": 20, "purchase_price": 82 } }
-  },
-  {
-    "_id": "22",
-    "stocks": {
-      "4": { "num_shares": 2, "purchase_price": 44 },
-      "39": { "num_shares": 3, "purchase_price": 38 },
-      "51": { "num_shares": 6, "purchase_price": 56 },
-      "74": { "num_shares": 5, "purchase_price": 21 },
-      "99": { "num_shares": 1, "purchase_price": 99 }
-    }
-  },
-  {
-    "_id": "23",
-    "stocks": { "23": { "num_shares": 4, "purchase_price": 29 } }
-  },
-  {
-    "_id": "24",
-    "stocks": {
-      "3": { "num_shares": 6, "purchase_price": 174 },
-      "25": { "num_shares": 5, "purchase_price": 91 },
-      "53": { "num_shares": 6, "purchase_price": 38 },
-      "95": { "num_shares": 1, "purchase_price": 95 },
-      "99": { "num_shares": 4, "purchase_price": 93 }
-    }
-  },
-  {
-    "_id": "25",
-    "stocks": { "25": { "num_shares": 8, "purchase_price": 42 } }
-  },
-  {
-    "_id": "26",
-    "stocks": {
-      "0": { "num_shares": 4, "purchase_price": 116 },
-      "53": { "num_shares": 6, "purchase_price": 69 },
-      "59": { "num_shares": 1, "purchase_price": 63 },
-      "76": { "num_shares": 3, "purchase_price": 4 },
-      "98": { "num_shares": 4, "purchase_price": 43 }
-    }
-  },
-  {
-    "_id": "27",
-    "stocks": { "27": { "num_shares": 10, "purchase_price": 58 } }
-  },
-  {
-    "_id": "28",
-    "stocks": {
-      "1": { "num_shares": 6, "purchase_price": 8 },
-      "5": { "num_shares": 5, "purchase_price": 97 },
-      "6": { "num_shares": 6, "purchase_price": 127 },
-      "67": { "num_shares": 5, "purchase_price": 167 },
-      "86": { "num_shares": 5, "purchase_price": 188 }
-    }
-  },
-  {
-    "_id": "29",
-    "stocks": { "29": { "num_shares": 43, "purchase_price": 152 } }
-  },
-  {
-    "_id": "30",
-    "stocks": {
-      "8": { "num_shares": 2, "purchase_price": 67 },
-      "22": { "num_shares": 3, "purchase_price": 67 },
-      "60": { "num_shares": 5, "purchase_price": 38 },
-      "72": { "num_shares": 3, "purchase_price": 3 },
-      "73": { "num_shares": 3, "purchase_price": 159 }
-    }
-  },
-  {
-    "_id": "31",
-    "stocks": { "31": { "num_shares": 24, "purchase_price": 197 } }
-  },
-  {
-    "_id": "32",
-    "stocks": {
-      "21": { "num_shares": 3, "purchase_price": 110 },
-      "48": { "num_shares": 5, "purchase_price": 194 },
-      "69": { "num_shares": 2, "purchase_price": 6 },
-      "88": { "num_shares": 3, "purchase_price": 101 },
-      "97": { "num_shares": 6, "purchase_price": 36 }
-    }
-  },
-  {
-    "_id": "33",
-    "stocks": { "33": { "num_shares": 34, "purchase_price": 20 } }
-  },
-  {
-    "_id": "34",
-    "stocks": {
-      "50": { "num_shares": 4, "purchase_price": 105 },
-      "55": { "num_shares": 3, "purchase_price": 87 },
-      "58": { "num_shares": 6, "purchase_price": 128 },
-      "91": { "num_shares": 5, "purchase_price": 67 },
-      "100": { "num_shares": 5, "purchase_price": 182 }
-    }
-  },
-  { "_id": "35", "stocks": { "35": { "num_shares": 5, "purchase_price": 5 } } },
-  {
-    "_id": "36",
-    "stocks": {
-      "3": { "num_shares": 2, "purchase_price": 161 },
-      "12": { "num_shares": 5, "purchase_price": 86 },
-      "39": { "num_shares": 3, "purchase_price": 27 },
-      "51": { "num_shares": 2, "purchase_price": 143 },
-      "65": { "num_shares": 5, "purchase_price": 62 }
-    }
-  },
-  {
-    "_id": "37",
-    "stocks": { "37": { "num_shares": 14, "purchase_price": 119 } }
-  },
-  {
-    "_id": "38",
-    "stocks": {
-      "28": { "num_shares": 5, "purchase_price": 138 },
-      "42": { "num_shares": 4, "purchase_price": 118 },
-      "70": { "num_shares": 2, "purchase_price": 35 },
-      "85": { "num_shares": 3, "purchase_price": 122 },
-      "90": { "num_shares": 4, "purchase_price": 183 }
-    }
-  },
-  {
-    "_id": "39",
-    "stocks": { "39": { "num_shares": 41, "purchase_price": 163 } }
-  },
-  {
-    "_id": "40",
-    "stocks": {
-      "7": { "num_shares": 2, "purchase_price": 62 },
-      "75": { "num_shares": 3, "purchase_price": 132 },
-      "79": { "num_shares": 6, "purchase_price": 125 },
-      "84": { "num_shares": 2, "purchase_price": 81 },
-      "100": { "num_shares": 4, "purchase_price": 49 }
-    }
-  },
-  {
-    "_id": "41",
-    "stocks": { "41": { "num_shares": 5, "purchase_price": 181 } }
-  },
-  {
-    "_id": "42",
-    "stocks": {
-      "3": { "num_shares": 4, "purchase_price": 148 },
-      "27": { "num_shares": 2, "purchase_price": 137 },
-      "35": { "num_shares": 4, "purchase_price": 166 },
-      "62": { "num_shares": 2, "purchase_price": 125 },
-      "74": { "num_shares": 3, "purchase_price": 44 }
-    }
-  },
-  {
-    "_id": "43",
-    "stocks": { "43": { "num_shares": 10, "purchase_price": 178 } }
-  },
-  {
-    "_id": "44",
-    "stocks": {
-      "22": { "num_shares": 1, "purchase_price": 9 },
-      "54": { "num_shares": 5, "purchase_price": 162 },
-      "60": { "num_shares": 5, "purchase_price": 45 },
-      "77": { "num_shares": 5, "purchase_price": 112 },
-      "86": { "num_shares": 5, "purchase_price": 107 }
-    }
-  },
-  {
-    "_id": "45",
-    "stocks": { "45": { "num_shares": 25, "purchase_price": 78 } }
-  },
-  {
-    "_id": "46",
-    "stocks": {
-      "9": { "num_shares": 1, "purchase_price": 10 },
-      "27": { "num_shares": 5, "purchase_price": 108 },
-      "39": { "num_shares": 2, "purchase_price": 36 },
-      "50": { "num_shares": 1, "purchase_price": 50 },
-      "69": { "num_shares": 6, "purchase_price": 39 }
-    }
-  },
-  {
-    "_id": "47",
-    "stocks": { "47": { "num_shares": 42, "purchase_price": 177 } }
-  },
-  {
-    "_id": "48",
-    "stocks": {
-      "22": { "num_shares": 3, "purchase_price": 52 },
-      "44": { "num_shares": 4, "purchase_price": 16 },
-      "60": { "num_shares": 4, "purchase_price": 17 },
-      "83": { "num_shares": 5, "purchase_price": 118 },
-      "96": { "num_shares": 4, "purchase_price": 32 }
-    }
-  },
-  {
-    "_id": "49",
-    "stocks": { "49": { "num_shares": 46, "purchase_price": 49 } }
-  },
-  {
-    "_id": "50",
-    "stocks": {
-      "20": { "num_shares": 2, "purchase_price": 106 },
-      "54": { "num_shares": 5, "purchase_price": 142 },
-      "74": { "num_shares": 1, "purchase_price": 48 },
-      "90": { "num_shares": 6, "purchase_price": 88 },
-      "97": { "num_shares": 5, "purchase_price": 96 }
-    }
-  },
-  {
-    "_id": "51",
-    "stocks": { "51": { "num_shares": 47, "purchase_price": 191 } }
-  },
-  {
-    "_id": "52",
-    "stocks": {
-      "1": { "num_shares": 1, "purchase_price": 3 },
-      "8": { "num_shares": 4, "purchase_price": 187 },
-      "13": { "num_shares": 5, "purchase_price": 95 },
-      "17": { "num_shares": 3, "purchase_price": 122 },
-      "37": { "num_shares": 6, "purchase_price": 30 }
-    }
-  },
-  {
-    "_id": "53",
-    "stocks": { "53": { "num_shares": 46, "purchase_price": 104 } }
-  },
-  {
-    "_id": "54",
-    "stocks": {
-      "16": { "num_shares": 2, "purchase_price": 27 },
-      "38": { "num_shares": 3, "purchase_price": 192 },
-      "45": { "num_shares": 5, "purchase_price": 78 },
-      "46": { "num_shares": 5, "purchase_price": 3 },
-      "85": { "num_shares": 2, "purchase_price": 50 }
-    }
-  },
-  {
-    "_id": "55",
-    "stocks": { "55": { "num_shares": 45, "purchase_price": 151 } }
-  },
-  {
-    "_id": "56",
-    "stocks": {
-      "13": { "num_shares": 5, "purchase_price": 34 },
-      "27": { "num_shares": 3, "purchase_price": 80 },
-      "33": { "num_shares": 3, "purchase_price": 134 },
-      "35": { "num_shares": 3, "purchase_price": 169 },
-      "71": { "num_shares": 1, "purchase_price": 177 }
-    }
-  },
-  { "_id": "57", "stocks": { "57": { "num_shares": 1, "purchase_price": 1 } } },
-  {
-    "_id": "58",
-    "stocks": {
-      "24": { "num_shares": 4, "purchase_price": 107 },
-      "37": { "num_shares": 2, "purchase_price": 87 },
-      "54": { "num_shares": 2, "purchase_price": 107 },
-      "65": { "num_shares": 5, "purchase_price": 94 },
-      "81": { "num_shares": 6, "purchase_price": 63 }
-    }
-  },
-  {
-    "_id": "59",
-    "stocks": { "59": { "num_shares": 25, "purchase_price": 25 } }
-  },
-  {
-    "_id": "60",
-    "stocks": {
-      "14": { "num_shares": 1, "purchase_price": 132 },
-      "24": { "num_shares": 3, "purchase_price": 116 },
-      "30": { "num_shares": 4, "purchase_price": 20 },
-      "41": { "num_shares": 1, "purchase_price": 106 },
-      "90": { "num_shares": 1, "purchase_price": 12 }
-    }
-  },
-  {
-    "_id": "61",
-    "stocks": { "61": { "num_shares": 37, "purchase_price": 128 } }
-  },
-  {
-    "_id": "62",
-    "stocks": {
-      "8": { "num_shares": 1, "purchase_price": 98 },
-      "16": { "num_shares": 3, "purchase_price": 69 },
-      "18": { "num_shares": 6, "purchase_price": 98 },
-      "27": { "num_shares": 4, "purchase_price": 102 },
-      "38": { "num_shares": 4, "purchase_price": 35 }
-    }
-  },
-  {
-    "_id": "63",
-    "stocks": { "63": { "num_shares": 30, "purchase_price": 138 } }
-  },
-  {
-    "_id": "64",
-    "stocks": {
-      "13": { "num_shares": 2, "purchase_price": 74 },
-      "22": { "num_shares": 3, "purchase_price": 111 },
-      "84": { "num_shares": 3, "purchase_price": 66 },
-      "85": { "num_shares": 2, "purchase_price": 79 },
-      "90": { "num_shares": 2, "purchase_price": 93 }
-    }
-  },
-  {
-    "_id": "65",
-    "stocks": { "65": { "num_shares": 19, "purchase_price": 182 } }
-  },
-  {
-    "_id": "66",
-    "stocks": {
-      "45": { "num_shares": 2, "purchase_price": 102 },
-      "49": { "num_shares": 5, "purchase_price": 80 },
-      "57": { "num_shares": 6, "purchase_price": 71 },
-      "78": { "num_shares": 6, "purchase_price": 115 }
-    }
-  },
-  {
-    "_id": "67",
-    "stocks": { "67": { "num_shares": 1, "purchase_price": 111 } }
-  },
-  {
-    "_id": "68",
-    "stocks": {
-      "8": { "num_shares": 1, "purchase_price": 182 },
-      "14": { "num_shares": 4, "purchase_price": 8 },
-      "26": { "num_shares": 2, "purchase_price": 183 },
-      "46": { "num_shares": 4, "purchase_price": 187 },
-      "66": { "num_shares": 4, "purchase_price": 44 }
-    }
-  },
-  {
-    "_id": "69",
-    "stocks": { "69": { "num_shares": 10, "purchase_price": 110 } }
-  },
-  {
-    "_id": "70",
-    "stocks": {
-      "3": { "num_shares": 6, "purchase_price": 144 },
-      "8": { "num_shares": 6, "purchase_price": 178 },
-      "15": { "num_shares": 4, "purchase_price": 19 },
-      "20": { "num_shares": 1, "purchase_price": 196 },
-      "39": { "num_shares": 6, "purchase_price": 189 }
-    }
-  },
-  {
-    "_id": "71",
-    "stocks": { "71": { "num_shares": 26, "purchase_price": 126 } }
-  },
-  {
-    "_id": "72",
-    "stocks": {
-      "18": { "num_shares": 1, "purchase_price": 158 },
-      "49": { "num_shares": 2, "purchase_price": 48 },
-      "51": { "num_shares": 1, "purchase_price": 186 },
-      "84": { "num_shares": 5, "purchase_price": 175 },
-      "97": { "num_shares": 1, "purchase_price": 191 }
-    }
-  },
-  {
-    "_id": "73",
-    "stocks": { "73": { "num_shares": 47, "purchase_price": 132 } }
-  },
-  {
-    "_id": "74",
-    "stocks": {
-      "35": { "num_shares": 3, "purchase_price": 79 },
-      "36": { "num_shares": 2, "purchase_price": 193 },
-      "55": { "num_shares": 5, "purchase_price": 108 },
-      "79": { "num_shares": 6, "purchase_price": 19 },
-      "91": { "num_shares": 2, "purchase_price": 170 }
-    }
-  },
-  {
-    "_id": "75",
-    "stocks": { "75": { "num_shares": 46, "purchase_price": 172 } }
-  },
-  {
-    "_id": "76",
-    "stocks": {
-      "4": { "num_shares": 5, "purchase_price": 143 },
-      "7": { "num_shares": 3, "purchase_price": 176 },
-      "11": { "num_shares": 2, "purchase_price": 170 },
-      "88": { "num_shares": 3, "purchase_price": 121 }
-    }
-  },
-  {
-    "_id": "77",
-    "stocks": { "77": { "num_shares": 1, "purchase_price": 64 } }
-  },
-  {
-    "_id": "78",
-    "stocks": {
-      "20": { "num_shares": 4, "purchase_price": 107 },
-      "29": { "num_shares": 5, "purchase_price": 97 },
-      "51": { "num_shares": 4, "purchase_price": 27 },
-      "66": { "num_shares": 6, "purchase_price": 66 },
-      "76": { "num_shares": 4, "purchase_price": 181 }
-    }
-  },
-  {
-    "_id": "79",
-    "stocks": { "79": { "num_shares": 3, "purchase_price": 22 } }
-  },
-  {
-    "_id": "80",
-    "stocks": {
-      "18": { "num_shares": 3, "purchase_price": 19 },
-      "21": { "num_shares": 6, "purchase_price": 149 },
-      "44": { "num_shares": 2, "purchase_price": 133 },
-      "49": { "num_shares": 4, "purchase_price": 40 },
-      "73": { "num_shares": 5, "purchase_price": 135 }
-    }
-  },
-  {
-    "_id": "81",
-    "stocks": { "81": { "num_shares": 19, "purchase_price": 80 } }
-  },
-  {
-    "_id": "82",
-    "stocks": {
-      "3": { "num_shares": 4, "purchase_price": 66 },
-      "14": { "num_shares": 2, "purchase_price": 44 },
-      "30": { "num_shares": 6, "purchase_price": 114 },
-      "90": { "num_shares": 4, "purchase_price": 22 },
-      "91": { "num_shares": 1, "purchase_price": 19 }
-    }
-  },
-  {
-    "_id": "83",
-    "stocks": { "83": { "num_shares": 14, "purchase_price": 137 } }
-  },
-  {
-    "_id": "84",
-    "stocks": {
-      "36": { "num_shares": 6, "purchase_price": 36 },
-      "37": { "num_shares": 5, "purchase_price": 139 },
-      "46": { "num_shares": 4, "purchase_price": 129 },
-      "50": { "num_shares": 3, "purchase_price": 60 },
-      "77": { "num_shares": 4, "purchase_price": 2 }
-    }
-  },
-  {
-    "_id": "85",
-    "stocks": { "85": { "num_shares": 34, "purchase_price": 33 } }
-  },
-  {
-    "_id": "86",
-    "stocks": {
-      "4": { "num_shares": 1, "purchase_price": 161 },
-      "18": { "num_shares": 2, "purchase_price": 57 },
-      "37": { "num_shares": 5, "purchase_price": 127 },
-      "51": { "num_shares": 5, "purchase_price": 169 },
-      "84": { "num_shares": 3, "purchase_price": 9 }
-    }
-  },
-  {
-    "_id": "87",
-    "stocks": { "87": { "num_shares": 34, "purchase_price": 13 } }
-  },
-  {
-    "_id": "88",
-    "stocks": {
-      "43": { "num_shares": 6, "purchase_price": 126 },
-      "64": { "num_shares": 4, "purchase_price": 177 },
-      "68": { "num_shares": 1, "purchase_price": 110 },
-      "71": { "num_shares": 5, "purchase_price": 50 },
-      "78": { "num_shares": 1, "purchase_price": 38 }
-    }
-  },
-  {
-    "_id": "89",
-    "stocks": { "89": { "num_shares": 12, "purchase_price": 146 } }
-  },
-  {
-    "_id": "90",
-    "stocks": {
-      "5": { "num_shares": 4, "purchase_price": 39 },
-      "42": { "num_shares": 5, "purchase_price": 75 },
-      "49": { "num_shares": 4, "purchase_price": 148 },
-      "69": { "num_shares": 4, "purchase_price": 117 },
-      "87": { "num_shares": 1, "purchase_price": 90 }
-    }
-  },
-  {
-    "_id": "91",
-    "stocks": { "91": { "num_shares": 17, "purchase_price": 193 } }
-  },
-  {
-    "_id": "92",
-    "stocks": {
-      "9": { "num_shares": 1, "purchase_price": 45 },
-      "23": { "num_shares": 2, "purchase_price": 63 },
-      "33": { "num_shares": 1, "purchase_price": 90 },
-      "41": { "num_shares": 1, "purchase_price": 142 },
-      "73": { "num_shares": 1, "purchase_price": 182 }
-    }
-  },
-  {
-    "_id": "93",
-    "stocks": { "93": { "num_shares": 1, "purchase_price": 165 } }
-  },
-  {
-    "_id": "94",
-    "stocks": {
-      "0": { "num_shares": 6, "purchase_price": 128 },
-      "28": { "num_shares": 1, "purchase_price": 171 },
-      "60": { "num_shares": 5, "purchase_price": 119 },
-      "82": { "num_shares": 3, "purchase_price": 31 },
-      "85": { "num_shares": 4, "purchase_price": 91 }
-    }
-  },
-  {
-    "_id": "95",
-    "stocks": { "95": { "num_shares": 50, "purchase_price": 166 } }
-  },
-  {
-    "_id": "96",
-    "stocks": {
-      "28": { "num_shares": 5, "purchase_price": 106 },
-      "29": { "num_shares": 3, "purchase_price": 70 },
-      "58": { "num_shares": 2, "purchase_price": 7 },
-      "73": { "num_shares": 6, "purchase_price": 147 },
-      "100": { "num_shares": 1, "purchase_price": 81 }
-    }
-  },
-  {
-    "_id": "97",
-    "stocks": { "97": { "num_shares": 21, "purchase_price": 187 } }
-  },
-  {
-    "_id": "98",
-    "stocks": {
-      "3": { "num_shares": 1, "purchase_price": 66 },
-      "28": { "num_shares": 3, "purchase_price": 151 },
-      "74": { "num_shares": 5, "purchase_price": 166 },
-      "80": { "num_shares": 5, "purchase_price": 115 },
-      "87": { "num_shares": 5, "purchase_price": 194 }
-    }
-  },
-  {
-    "_id": "99",
-    "stocks": { "99": { "num_shares": 30, "purchase_price": 111 } }
-  },
-  {
-    "_id": "100",
-    "stocks": {
-      "8": { "num_shares": 1, "purchase_price": 100 },
-      "19": { "num_shares": 3, "purchase_price": 107 },
-      "47": { "num_shares": 6, "purchase_price": 197 },
-      "74": { "num_shares": 4, "purchase_price": 191 },
-      "97": { "num_shares": 6, "purchase_price": 171 }
-    }
-  }
 ]
