@@ -22,52 +22,91 @@
 
 
     <div class="flex-horizontal">
+
         <div class="view" id="profile-view">
+
             <h4>Profile</h4>
 
-            <div class="flex-horizontal">
+            <table id="profile-table">
+                <tr>
+                    <td><h5>Profile Pic</h5></td>
+                    <td> <img class="profile-pic" src="../../../assets/smile.jpg" /></td>
+                </tr>
+                <tr>
+                    <td><h5>Firstname</h5></td>
+                    <td><input class="text-entry-gray" id="input-name" placeholder="Firstname" /></td>
+                </tr>
+                <tr>
+                    <td><h5>Lastname</h5></td>
+                    <td><input class="text-entry-gray" id="input-name" placeholder="Lastname" /></td>
+                </tr>
+                <tr>
+                    <td><h5>Username</h5></td>
+                    <td><input class="text-entry-gray" id="input-name" placeholder="Username" /></td>
+                </tr>
+                <tr>
+                    <td><h5>Bio</h5></td>
+                    <td><textarea id="input-bio" placeholder="Add a bio."></textarea></td>
+                </tr>
+            </table>
+
+            <!-- <div class="flex-horizontal profile-flex" id="profile-pic">
+                <h5>Profile Pic:</h5>
                 <div class="circle-crop"><img class="profile-pic" src="../../../assets/smile.jpg" /></div>
-                <input class="text-entry-gray" id="input-name" placeholder="Add a name." />
             </div>
 
-            <h4>About Me</h4>
+            <div class="flex-horizontal profile-flex" id="profile-firstname">
+                <h5>Firstname:</h5>
+                <input class="text-entry-gray" id="input-name" placeholder="Firstname" />
+            </div>
 
-            <div>
+            <div class="flex-horizontal profile-flex" id="profile-lastname">
+                <h5>Lastname:</h5>
+                <input class="text-entry-gray" id="input-name" placeholder="Lastname" />
+            </div>
+
+            <div class="flex-horizontal profile-flex" id="profile-username">
+                <h5>Username:</h5>
+                <input class="text-entry-gray" id="input-name" placeholder="Username" />
+            </div>
+
+            <div class="flex-horizontal profile-flex" id="bio-container">
+                <h5>Bio:</h5>
                 <textarea id="input-bio" placeholder="Add a bio."></textarea>
             </div>
-            <div class="flex-horizontal">
-                <div class="circle-crop"><img class="profile-pic"
-                        src="../../../assets/pngtree-instagram-icon-png-image_6315974.png" /></div>
 
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/Snapchat-logo.png" /></div>
+            <div class="flex-horizontal profile-flex" id="socials">
+                <h5>Socials:</h5>
+                <div class="circle-crop"><img class="profile-pic" src="../../../assets/pngtree-instagram-icon-png-image_6315974.png"/></div>
+                <div class="circle-crop"><img class="profile-pic" src="../../../assets/Snapchat-logo.png"/></div>
+                <div class="circle-crop"><img class="profile-pic" src="../../../assets/LinkedIn_logo_initials.png"/></div>
+            </div> -->
 
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/LinkedIn_logo_initials.png" />
-                </div>
+            <div class="flex-horizontal profile-flex" id="profile-toggle">
+                <button class="small-blue-button" type="button" id="save">Save</button>
             </div>
 
-            <button class="small-blue-button" type="button" id="save">Save</button>
         </div>
-
 
         <div class="view" id="portfolio-view">
             <h4>Portfolio</h4>
 
             <table id="portTable">
-                <!--
+            <!--
                 <tr>
-                    <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" /></td>
-                  <td>Person Name</td>
-                  <td>1000B</td>
-                  <td>-10B</td>
+                    <td><img class="profile-pic" src="../../../assets/default-profile.jpg" /></td>
+                    <td>Person Name</td>
+                    <td>1000B</td>
+                    <td>-10B</td>
                 </tr>
             -->
-
             </table>
-            <div class="flex-horizontal"> 
-                <button class="small-blue-button" id="crudAddStock">Buy 1</button>
-                <button class="small-blue-button" id="crudRemoveStock">Sell 1</button>
-                <input class="text-entry-gray" id="inputId" placeholder="Enter number of shares"/>
-            </div>
-
+            <!-- 
+                <div class="flex-horizontal"> 
+                    <button class="small-blue-button" id="crudAddStock">Buy 1</button>
+                    <button class="small-blue-button" id="crudRemoveStock">Sell 1</button>
+                    <input class="text-entry-gray" id="inputId" placeholder="Enter number of shares"/>
+                </div> 
+            -->
         </div>
     </div>

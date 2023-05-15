@@ -60,7 +60,7 @@ const generatePortfolio = async () => {
 
         portTable.innerHTML +=  `
           <tr id="${key}">
-              <td><img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" ></td>
+              <td><img class="profile-pic" src="../../../assets/default-profile.jpg" ></td>
               <td><p>${name}<p></td>
               <td><p>${market_value}<p></td>
               <td><p>${roi}%<p></td>
@@ -87,54 +87,54 @@ saveButton.addEventListener('click', async (e) => {
   }
 });
 
-addButton.addEventListener('click', async (e) => {
-    // in the future this would more likely call the matching algorithm, for 'buy' 
+// addButton.addEventListener('click', async (e) => {
+//     // in the future this would more likely call the matching algorithm, for 'buy' 
 
-    console.log("buy -- ");
+//     console.log("buy -- ");
 
-    let stockId = inputId.value;
-    if (stockId == null) {
-      alert("Please enter a valid stock ID");
-    } else {
-      try {
-        // if stock exists
+//     let stockId = inputId.value;
+//     if (stockId == null) {
+//       alert("Please enter a valid stock ID");
+//     } else {
+//       try {
+//         // if stock exists
 
-        if (crud.stockExists(stockId)) {
-          await crud.buyStockInPortfolio(stockId, 1);
-        } else {
-          console.log("Stock does not exist");
-          alert("Stock does not exist");
-        }
-      } catch (err) {
-        console.log('Error retrieving data:', err);
-      }
-    }
-    generatePortfolio();
-});
+//         if (crud.stockExists(stockId)) {
+//           await crud.buyStockInPortfolio(stockId, 1);
+//         } else {
+//           console.log("Stock does not exist");
+//           alert("Stock does not exist");
+//         }
+//       } catch (err) {
+//         console.log('Error retrieving data:', err);
+//       }
+//     }
+//     generatePortfolio();
+// });
 
-removeButton.addEventListener('click', async (e) => {
+// removeButton.addEventListener('click', async (e) => {
     
-  console.log("sell -- ");
+//   console.log("sell -- ");
 
-  let stockId = inputId.value;
-  if (stockId == null) {
-    alert("Please enter a valid stock ID");
-  } else {
-    try {
-      // if stock exists
+//   let stockId = inputId.value;
+//   if (stockId == null) {
+//     alert("Please enter a valid stock ID");
+//   } else {
+//     try {
+//       // if stock exists
 
-      if (crud.stockExists(stockId)) {
-        await crud.sellStockInPortfolio(stockId, 1);
-      } else {
-        console.log("Stock does not exist");
-        alert("Stock does not exist");
-      }
-    } catch (err) {
-      console.log('Error retrieving data:', err);
-    }
-  }
-  generatePortfolio();
-});
+//       if (crud.stockExists(stockId)) {
+//         await crud.sellStockInPortfolio(stockId, 1);
+//       } else {
+//         console.log("Stock does not exist");
+//         alert("Stock does not exist");
+//       }
+//     } catch (err) {
+//       console.log('Error retrieving data:', err);
+//     }
+//   }
+//   generatePortfolio();
+// });
 
 redirectButton.addEventListener("click", async () => {
   window.location.href = "../Discovery/discovery.html";
