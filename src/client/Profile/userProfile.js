@@ -17,11 +17,11 @@ const generatePortfolio = async () => {
   //console.log("allPortfolios", allPortfolios);
 
   
-  const portfolio = await crud.readPortfolio();
+  const portfolio = await crud.readPortfolio(localStorage.getItem("currentUser"));
   console.log("portfolio", portfolio);
 
   const ownedStocks = portfolio.stocks;
-  //console.log("stocks (within portfolio)", ownedStocks);
+  // console.log("stocks (within portfolio)", ownedStocks);
 
   portTable.innerHTML = `
     <tr>
@@ -37,7 +37,7 @@ const generatePortfolio = async () => {
   //for (const [key, value] of Object.entries(ownedStocks)) {
 
   for (const key of Object.keys(ownedStocks)) {
-      const value = ownedStocks[key];
+      const stock = ownedStocks[key];
 
       /*
       if (Object.values(ownedStocks).length === 0 || value[key] === undefined) {
@@ -49,13 +49,12 @@ const generatePortfolio = async () => {
       //console.log("value", value);
 
       try {
-        const stock = await crud.readStock(key);
-
+        const stockUser = await crud.readUser({username: key});
         //console.log("stock", stock);
-        const name = stock.first_name + ' ' + stock.last_name;
-        const market_value = stock.market_value;
-        const num_shares = value.num_shares;
-        const purchase_price = value.purchase_price;
+        const name = stockUser.first_name + ' ' + stockUser.last_name;
+        const market_value = stockUser.market_value;
+        const num_shares = stock.num_shares;
+        const purchase_price = stock.purchase_price;
         const roi = (market_value/purchase_price).toFixed(3);
 
 
@@ -74,7 +73,7 @@ const generatePortfolio = async () => {
   for (const key of Object.keys(ownedStocks)) {
     let row = document.getElementById(key);
     row.addEventListener('click', async (e) => {
-      localStorage.setItem("BuySellId", key);
+      localStorage.setItem("BuySellName", key);
       window.location.href = "../BuySell/buySellPage.html";
     })
   }
