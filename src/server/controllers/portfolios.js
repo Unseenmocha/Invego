@@ -7,7 +7,7 @@ export const createPortfolioByUsername = async (req, res) => {
     // console.log("createPortfolioByID")
     // console.log("req", req);
     const portfolio = req; // make sure to pass in id in the request
-    console.log("portfolio", portfolio);
+    // console.log("portfolio", portfolio);
     const newPortfolio = new Portfolio(portfolio);
     // console.log("made new portfolio");
     try {
@@ -16,7 +16,7 @@ export const createPortfolioByUsername = async (req, res) => {
         // console.log("saved");
         //res.status(201).json(newPortfolio); // status is undefined so an error is thrown, but this still creates the portfolio
     } catch (error) {
-        console.log("error " + error);
+        // console.log("error " + error);
         res.status(409).json({ message: error.message });
     }
 }
@@ -91,13 +91,13 @@ export const buy = async (req, res) => {
     // console.log("test4", test4);
 
     const transaction = req.body;
-    console.log(transaction);
+    // console.log(transaction);
 
 
     try {
         const matches = await Transaction.find({transactionType: 'SELL', username : transaction.username2, desiredPrice : {$lte : transaction.desiredPrice}}).lean();
 
-        console.log("matches", matches)
+        // console.log("matches", matches)
 
         // find minimum difference in shares
         // go until no more matches, or all shares bought/sold
@@ -111,9 +111,9 @@ export const buy = async (req, res) => {
             const zeroLeft = remainder == 0;
             let netSingleTransaction = 0;
             
-            console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft)
+            // console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft)
             if (zeroLeft || moreLeft) {
-                console.log("more or zero left");
+                // console.log("more or zero left");
                 // in these cases, remove SELL transaction
                 netSingleTransaction -= match.shares * match.desiredPrice;
                 await Transaction.deleteOne({ _id : match._id });
@@ -121,8 +121,9 @@ export const buy = async (req, res) => {
                 netChange = match.shares;
 
             } else {
-                console.log("seller has more than buyer wants to buy");
+                // console.log("seller has more than buyer wants to buy");
                 // in this case, update the SELL, end the user's buying
+                netSingleTransaction -= transaction.shares * match.desiredPrice;
                 await Transaction.findOneAndUpdate({ _id : match._id }, 
                     {$inc : {shares: -transaction.shares}});
                 netChange = transaction.shares;
@@ -131,18 +132,18 @@ export const buy = async (req, res) => {
             }
 
             // charge buyer
-            console.log("charge buyer");
+            // console.log("charge buyer");
             await resolveTransactionInUser(transaction.username1, -netSingleTransaction);
             await resolveTransactionInPortfolio(transaction.username1, transaction.username2, netChange, match.desiredPrice);
 
             // pay seller
-            console.log("pay seller");
+            // console.log("pay seller");
             await resolveTransactionInUser(match.transactionOwner, netSingleTransaction);
             await resolveTransactionInPortfolio(match.transactionOwner, transaction.username2, -netChange, match.desiredPrice);
 
             if (zeroLeft || transaction.shares == 0) {
                 // stop iterating through matching transactions
-                console.log("zero left -> return");
+                // console.log("zero left -> return");
                 res.status(200).json({status : "ok"});
                 return;
             }
@@ -151,7 +152,7 @@ export const buy = async (req, res) => {
       console.log(err);          
     }
 
-    console.log("BUY not satisfied, post");
+    // console.log("BUY not satisfied, post");
 
     // if remainder left, then post new transaction owned by buyer
     // only do this if you want to buy more than there is supply
@@ -182,17 +183,17 @@ export const sell = async (req, res) => {
     const transaction = req.body;
 
     const sellersPortfolio = await Portfolio.findOne({username : transaction.username1}).lean();
-    console.log("sellersPortfolio", sellersPortfolio);
+    // console.log("sellersPortfolio", sellersPortfolio);
 
     const hasStockShare = (transaction.username2 in sellersPortfolio.stocks);
-    console.log(sellersPortfolio.stocks[transaction.username2]);
+    // console.log(sellersPortfolio.stocks[transaction.username2]);
     const hasEnoughShares = hasStockShare ? (sellersPortfolio.stocks[transaction.username2].num_shares >= transaction.shares) : false
 
-    console.log("hasStockShare", hasStockShare)
-    console.log("hasEnoughShares", hasEnoughShares);
+    // console.log("hasStockShare", hasStockShare)
+    // console.log("hasEnoughShares", hasEnoughShares);
 
     if (!hasStockShare || !hasEnoughShares){
-        console.log("Can not sell more than owned");
+        // console.log("Can not sell more than owned");
         res.status(400).json({message : "Can not sell more than owned."})
         return;
     }
@@ -214,7 +215,7 @@ export const sell = async (req, res) => {
         const zeroLeft = remainder == 0;
         let netSingleTransaction = 0;
 
-        console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft);
+        // console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft);
 
         
         if (zeroLeft || moreLeft) {
@@ -226,6 +227,7 @@ export const sell = async (req, res) => {
 
         } else {
             // in this case, update the SELL, end the user's buying
+            netSingleTransaction -= transaction.shares * match.desiredPrice;
             await Transaction.findOneAndUpdate({ _id : match._id }, 
                 {$inc : {shares: -transaction.shares}});
             netChange = transaction.shares;
@@ -234,18 +236,18 @@ export const sell = async (req, res) => {
         }
 
         // pay seller 
-        console.log("pay seller");
+        // console.log("pay seller");
         await resolveTransactionInUser(transaction.username1, netSingleTransaction);
         await resolveTransactionInPortfolio(transaction.username1, transaction.username2, -netChange, match.desiredPrice);
 
         // charge buyer
-        console.log("charge buyer");
+        // console.log("charge buyer");
         await resolveTransactionInUser(match.transactionOwner, -netSingleTransaction);
         await resolveTransactionInPortfolio(match.transactionOwner, transaction.username2, netChange, match.desiredPrice);
 
         if (zeroLeft || transaction.shares == 0) {
             // stop iterating through matching transactions
-            console.log("zero left -> return");
+            // console.log("zero left -> return");
             res.status(200).json({status : "ok"});
             return;
         }
@@ -253,7 +255,7 @@ export const sell = async (req, res) => {
 
     // if remainder left, then post new transaction owned by buyer
     // only do this if you want to buy more than there is supply
-    console.log("posting SELL");
+    // console.log("posting SELL");
     await createTransaction('SELL', transaction.username2, transaction.shares, transaction.desiredPrice, transaction.username1, transaction.username1);
 
     res.status(200).json({status : "ok"});
@@ -263,17 +265,17 @@ export const sell = async (req, res) => {
 }
 
 async function resolveTransactionInPortfolio(stockOwner, stock, netChange, purchasePrice) {
-    console.log("resolve for portfolio", stockOwner, stock, netChange);
+    // console.log("resolve for portfolio", stockOwner, stock, netChange);
     const portfolio = await Portfolio.findOne({username : stockOwner}).lean();
-    console.log(portfolio.stocks);
-    console.log(portfolio.stocks[stock]);
-    console.log("portfolio", stockOwner, "->", portfolio);
+    // console.log(portfolio.stocks);
+    // console.log(portfolio.stocks[stock]);
+    // console.log("portfolio", stockOwner, "->", portfolio);
 
     // if they don't own the stock yet
     if (!(stock in portfolio.stocks)) {
-        console.log("adding stock");
+        // console.log("adding stock");
         if (purchasePrice == null) {
-            console.log("purchasePrice null for ", stockOwner, stock, netChange, purchasePrice);
+            // console.log("purchasePrice null for ", stockOwner, stock, netChange, purchasePrice);
         }
         portfolio.stocks[stock] = {num_shares : 0, purchase_price : purchasePrice};
     }
@@ -284,7 +286,7 @@ async function resolveTransactionInPortfolio(stockOwner, stock, netChange, purch
     if (numShares == 0) {
         delete portfolio.stocks[stock];
     } if (numShares < 0) {
-        console.log("This should not happen!")
+        // console.log("This should not happen!")
     } else {
         portfolio.stocks[stock].num_shares = numShares;
     }
@@ -295,8 +297,14 @@ async function resolveTransactionInPortfolio(stockOwner, stock, netChange, purch
 async function resolveTransactionInUser(username, netBittelChange) {
     console.log("resolving transaction in user", username, netBittelChange);
 
-    const update = {$inc : {bittels: netBittelChange}}
-    User.findOneAndUpdate({username : username}, update, {upsert : true});
+    const user = await User.findOne({username : username});
+    console.log("before user", user);
+    const bittels = user.bittels + netBittelChange;
+    user.bittels = bittels;
+
+    console.log("in resolve for user", user);
+
+    await User.findOneAndUpdate({username : username}, user);
 }
 
 async function createTransaction(type, ofUsername, shares, desiredPrice, transactionOwner, res) {
@@ -309,12 +317,12 @@ async function createTransaction(type, ofUsername, shares, desiredPrice, transac
     });
 
     //try {
-        console.log("about to save");
+        // console.log("about to save");
         await newTransaction.save();
-        console.log("saved");
+        // console.log("saved");
     //     res.status(201).json({status : "ok"}); // status is undefined so an error is thrown, but this still creates the portfolio
     // } catch (error) {
-    //     console.log("error " + error);
+    //     // console.log("error " + error);
     //     res.status(409).json({ message: error.message });
     // }
 
