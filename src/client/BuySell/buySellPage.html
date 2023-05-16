@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
   <script type="module" src="../BuySell/profile.js"></script>
+  <script type="module" src="../siteScripts.js"></script>
 </head>
 
 <body>
@@ -17,19 +18,25 @@
 
   <div class="header-bar">
     <text class="title-text" id="invego">Invego</text>
-    <!-- <button class="button">Logout</button> -->
-    <text class= "logout-button" id=logout> Logout</text>
-    <h2 class="white-text" id="account_balance">Bittels: 284.28</h2>
+
+
+    <div class="flex-horizontal">
+      <h3 class="white-text" id="account_balance">Bittels: 284.28</h3>
+      <div class="profile flex-vertical" id="profile">
+        <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
+        <p class="white-text">My Profile</p>
+      </div>
+      <text class="logout-button" id=logout> Logout</text>
+    </div>
+
   </div>
 
   <div class="view" id="buy-sell-view">
 
     <div class="flex-horizontal buy-sell-profile-flex">
       <div class="flex-horizontal">
-        <img class="circle-pic pic-outline"
-          src="../../../assets/default-profile.jpg"
-          alt="Profile picture">
-          <h2 id="profileName"> </h2>
+        <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" alt="Profile picture">
+        <h2 id="profileName"> </h2>
       </div>
       <div class="flex-vertical view">
         <h5>Market Value</h5>
@@ -55,19 +62,20 @@
 
       <div class="view flex-vertical">
         <h3>Buy</h3>
-        <div class="flex-horizontal">     
-          
-          
+        <div class="flex-horizontal">
+
+
           <div class="flex-vertical">
             <p class="tiny-text">number of shares to buy...</p>
-            <input type="number" class="text-entry buy-sell-entry" id="sharesBuy" name="sharesBuy" min="1" placeholder="shares">
+            <input type="number" class="text-entry buy-sell-entry" id="sharesBuy" name="sharesBuy" min="1"
+              placeholder="shares">
           </div>
           <div class="flex-vertical">
             <p class="tiny-text">limit price (buy this price or lower)</p>
             <input type="number" class="text-entry buy-sell-entry" id="bid-price" name="bid-price" placeholder="price">
           </div>
           <button class="medium-blue-button" id="buyButton">Buy</button>
-  
+
         </div>
       </div>
 
@@ -77,15 +85,17 @@
 
           <div class="flex-vertical">
             <p class="tiny-text">number of shares to sell...</p>
-            <input type="number" class="text-entry buy-sell-entry" id="sharesSell" name="sharesSell" min="1" placeholder="shares">
+            <input type="number" class="text-entry buy-sell-entry" id="sharesSell" name="sharesSell" min="1"
+              placeholder="shares">
           </div>
-  
+
           <div class="flex-vertical">
             <p class="tiny-text">limit sell (this price or higher)</p>
-            <input type="number" class="text-entry buy-sell-entry" id="sell-price" name="sell-price" placeholder="price">
+            <input type="number" class="text-entry buy-sell-entry" id="sell-price" name="sell-price"
+              placeholder="price">
           </div>
           <button class="medium-blue-button" id="sellButton">Sell</button>
-  
+
         </div>
       </div>
 

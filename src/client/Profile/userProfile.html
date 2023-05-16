@@ -9,15 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
     <script type="module" src="../Profile/userProfile.js"></script>
+    <script type="module" src="../siteScripts.js"></script>
 </head>
 
 <body scroll="no">
     <div id="grid-background-image"></div>
     <div class="header-bar">
+
         <text class="title-text" id="invego">Invego</text>
-        <h2 class="white-text">Bittels: 284.28</h2>
-        <!-- <button class = "button">Logout</button> -->
-        <text class= "logout-button" id=logout> Logout</text>
+
+        <div class="flex-horizontal">
+            <h3 class="white-text">Bittels: 284.28</h3>
+            <text class= "logout-button" id=logout> Logout</text>
+        </div>
     </div>
 
 
@@ -31,7 +35,7 @@
             <table id="profile-table">
                 <tr>
                     <td><h5>Profile Pic</h5></td>
-                    <td> <img class="circle-pic pic-outline" src="../../../assets/smile.jpg" /></td>
+                    <td> <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" /></td>
                 </tr>
                 <tr>
                     <td><h5>Firstname</h5></td>
@@ -80,12 +84,6 @@
                 </tr>
             -->
             </table>
-            
-                <div class="flex-horizontal"> 
-                    <button class="small-blue-button" id="crudAddStock">Buy 1</button>
-                    <button class="small-blue-button" id="crudRemoveStock">Sell 1</button>
-                    <input class="text-entry-gray" id="inputId" placeholder="Enter number of shares"/>
-                </div> 
            
         </div>
     </div>

@@ -10,7 +10,7 @@ const profileMarketCap = document.getElementById("marketCap");
 const profileSharesOut = document.getElementById("sharesOutstanding");
 const buyButton = document.getElementById("buyButton");
 const sellButton = document.getElementById("sellButton");
-const redirectButton = document.getElementById('invego');
+
 
 import * as crud from '../crud.js';
 
@@ -50,6 +50,4 @@ sellButton.addEventListener("click", async () => {
     await sell();
 });
 
-redirectButton.addEventListener("click", async () => {
-    window.location.href = "../Discovery/discovery.html";
-  });
+
