@@ -1,9 +1,6 @@
 import * as crud from '../crud.js';
 
 const portTable = document.getElementById('portTable');
-const addButton = document.getElementById('crudAddStock');
-const removeButton = document.getElementById('crudRemoveStock');
-const inputId = document.getElementById('inputId');
 const firstnameCell = document.getElementById('first-name-cell');
 const lastnameCell = document.getElementById('last-name-cell');
 const usernameCell = document.getElementById('username-cell');
@@ -12,18 +9,11 @@ const profileButton = document.getElementById('profile-button');
 
 console.log("userProfile.js loaded");
 
-const generatePortfolio = async () => {
-  //console.log("generatePortfolio");
-
-  //const allPortfolios = await crud.test_getAllPorfolios();
-  //console.log("allPortfolios", allPortfolios);
-
-  
+const generatePortfolio = async () => {  
   const portfolio = await crud.readPortfolio(localStorage.getItem("currentUser"));
   console.log("portfolio", portfolio);
 
   const ownedStocks = portfolio.stocks;
-  // console.log("stocks (within portfolio)", ownedStocks);
 
   portTable.innerHTML = `
     <tr>
@@ -34,25 +24,12 @@ const generatePortfolio = async () => {
       <th>Shares</th>
     </tr>`;
 
-  // key is the id of a stock in the porfolio, 
-  // value is the contents of the portfolio  { has nothing inside of it }
-  //for (const [key, value] of Object.entries(ownedStocks)) {
 
   for (const key of Object.keys(ownedStocks)) {
       const stock = ownedStocks[key];
 
-      /*
-      if (Object.values(ownedStocks).length === 0 || value[key] === undefined) {
-        console.log("You own no stocks.");
-        break;
-      }*/
-      
-      //console.log("key", key);
-      //console.log("value", value);
-
       try {
         const stockUser = await crud.readUser({username: key});
-        //console.log("stock", stock);
         const name = stockUser.first_name + ' ' + stockUser.last_name;
         const market_value = stockUser.market_value;
         const num_shares = stock.num_shares;
@@ -68,6 +45,7 @@ const generatePortfolio = async () => {
               <td><p>${roi}%<p></td>
               <td><p>${num_shares}<p></td>
           </tr>`
+        
       } catch (err) {
         console.log('Error retrieving data:', err);
       }
@@ -163,55 +141,6 @@ profileButton.addEventListener('click', async (e) => {
     showProfileEdit();
   }
 });
-
-// addButton.addEventListener('click', async (e) => {
-//     // in the future this would more likely call the matching algorithm, for 'buy' 
-
-//     console.log("buy -- ");
-
-//     let stockId = inputId.value;
-//     if (stockId == null) {
-//       alert("Please enter a valid stock ID");
-//     } else {
-//       try {
-//         // if stock exists
-
-//         if (crud.stockExists(stockId)) {
-//           await crud.buyStockInPortfolio(stockId, 1);
-//         } else {
-//           console.log("Stock does not exist");
-//           alert("Stock does not exist");
-//         }
-//       } catch (err) {
-//         console.log('Error retrieving data:', err);
-//       }
-//     }
-//     generatePortfolio();
-// });
-
-// removeButton.addEventListener('click', async (e) => {
-    
-//   console.log("sell -- ");
-
-//   let stockId = inputId.value;
-//   if (stockId == null) {
-//     alert("Please enter a valid stock ID");
-//   } else {
-//     try {
-//       // if stock exists
-
-//       if (crud.stockExists(stockId)) {
-//         await crud.sellStockInPortfolio(stockId, 1);
-//       } else {
-//         console.log("Stock does not exist");
-//         alert("Stock does not exist");
-//       }
-//     } catch (err) {
-//       console.log('Error retrieving data:', err);
-//     }
-//   }
-//   generatePortfolio();
-// });
 
 
 generatePortfolio();

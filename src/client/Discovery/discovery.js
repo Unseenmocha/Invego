@@ -1,7 +1,10 @@
 import * as crud from '../crud.js';
 
 
-const table = document.getElementById('table');
+const table = document.getElementById('popular-table');
+const messageView = document.getElementById('messages-container-view');
+const friendsView = document.getElementById('friends-bar');
+const searchBar = document.getElementById('search-bar');
 
 
 const populatePopularProfiles = async () => {
@@ -34,3 +37,15 @@ const populatePopularProfiles = async () => {
 }
 
 populatePopularProfiles();
+
+messageView.addEventListener('click', () => {
+    alert('Messaging functionality has not been implemented for the scope of this project.');
+});
+
+friendsView.addEventListener('click', () => {
+    alert('Friends functionality has not been implemented for the scope of this project.');
+});
+
+searchBar.addEventListener('click', () => {
+    alert('Searching for users has not yet been implemented');
+});
