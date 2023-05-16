@@ -5,8 +5,11 @@ const addButton = document.getElementById('crudAddStock');
 const removeButton = document.getElementById('crudRemoveStock');
 const redirectButton = document.getElementById('invego');
 const inputId = document.getElementById('inputId');
-const saveButton = document.getElementById('save');
-
+const firstnameCell = document.getElementById('first-name-cell');
+const lastnameCell = document.getElementById('last-name-cell');
+const usernameCell = document.getElementById('username-cell');
+const bioCell = document.getElementById('bio-cell');
+const profileButton = document.getElementById('profile-button');
 
 console.log("userProfile.js loaded");
 
@@ -60,7 +63,7 @@ const generatePortfolio = async () => {
 
         portTable.innerHTML +=  `
           <tr id="${key}">
-              <td><img class="profile-pic" src="../../../assets/default-profile.jpg" ></td>
+              <td><img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" ></td>
               <td><p>${name}<p></td>
               <td><p>${market_value}<p></td>
               <td><p>${roi}%<p></td>
@@ -79,12 +82,75 @@ const generatePortfolio = async () => {
   }
 }
 
-saveButton.addEventListener('click', async (e) => {
-  const name = document.getElementById('input-name').value;
-  const bio = document.getElementById('input-bio').value;
-  if (name || bio) {
-    await crud.updateUser(name, bio);
+const showProfile = async () => {
+  const user = await crud.readUser({username: localStorage.getItem("currentUser")});
+
+  const firstname = document.createElement('p');
+  firstname.id = 'firstname-p';
+  firstname.textContent = user.first_name;
+  firstnameCell.replaceChild(firstname,firstnameCell.firstChild);
+
+  const lastname = document.createElement('p');
+  lastname.id = 'lastname-p';
+  lastname.textContent = user.last_name;
+  lastnameCell.replaceChild(lastname, lastnameCell.firstChild);
+
+  const username = document.createElement('p');
+  username.id = 'username-p';
+  username.textContent = user.username;
+  usernameCell.replaceChild(username, usernameCell.firstChild);
+
+  const bio = document.createElement('p');
+  bio.id = 'bio-p';
+  bio.textContent = user.bio;
+  bioCell.replaceChild(bio, bioCell.firstChild);
+
+  profileButton.textContent = "Edit";
+}
+
+const showProfileEdit = () => {
+  const firstNameInput = document.createElement('input');
+  const lastNameInput = document.createElement('input');
+  const usernameInput = document.createElement('input');
+  const bioInput = document.createElement('textarea');
+
+  firstNameInput.id = 'input-first-name';
+  lastNameInput.id = 'input-last-name';
+  usernameInput.id = 'input-username';
+  bioInput.id = 'input-bio';
+
+  firstNameInput.placeholder = "Firstname";
+  lastNameInput.placeholder = "Lastname";
+  usernameInput.placeholder = "Username"
+  bioInput.placeholder = "Add a bio.";
+
+  [firstNameInput, lastNameInput, usernameInput].forEach((e)=> {e.classList.add('text-entry-gray')});
+
+  firstNameInput.value = document.getElementById("firstname-p").textContent;
+  lastNameInput.value = document.getElementById("lastname-p").textContent;
+  usernameInput.value = document.getElementById("username-p").textContent;
+  bioInput.value = document.getElementById("bio-p").textContent;
+
+  firstnameCell.replaceChild(firstNameInput, firstnameCell.firstChild);
+  lastnameCell.replaceChild(lastNameInput, lastnameCell.firstChild);
+  usernameCell.replaceChild(usernameInput, usernameCell.firstChild);
+  bioCell.replaceChild(bioInput, bioCell.firstChild);
+  profileButton.textContent = "Save";
+}
+
+profileButton.addEventListener('click', async (e) => {
+  // const name = document.getElementById('input-name').value;
+  // const bio = document.getElementById('input-bio').value;
+  const mode = e.target.textContent;
+  if (mode === "Save") {
+    await showProfile();
   }
+  else if (mode === "Edit") {
+    showProfileEdit();
+  }
+  // if (name || bio) {
+  //   await crud.updateUser(name, bio);
+  // }
 });
 
 // addButton.addEventListener('click', async (e) => {
@@ -141,3 +207,4 @@ redirectButton.addEventListener("click", async () => {
 });
 
 generatePortfolio();
+await showProfile();

@@ -180,7 +180,7 @@ tr:nth-child(n+2):hover {
 }
 
 #profile-table {
-    margin: 50px 0px 50px 0px;
+    margin: 30px 0px 50px 0px;
 }
 
 #profile-table tr:hover {
@@ -323,7 +323,7 @@ FLEX ORGANIZERS
     margin: 20px 50px 20px 50px;
 }
 
-#profile-toggle,
+#profile-button-container,
 #buy {
     justify-content: center;
 }
@@ -333,15 +333,19 @@ FLEX ORGANIZERS
 PICTURES
 **************************************/
 
-.profile-pic {
+.circle-pic {
     height: 45px;
     width: 45px;
     margin: 0px 20px 0px 20px;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+.pic-outline {
     border-style: solid;
     border-width:2px;
     border-color:#333333e1;
-    object-fit: cover;
+
 }
 
 /*************************************

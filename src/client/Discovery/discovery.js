@@ -15,7 +15,7 @@ const populatePopularProfiles = async () => {
         table.innerHTML += 
         `<tr class="main-row" id="${username}">
             <td>
-                <img class="profile-pic" src="../../../assets/default-profile.jpg" />
+                <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
             </td>
             <td>
                 <p>${lst[i].username}</p>

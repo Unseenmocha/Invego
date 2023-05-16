@@ -30,60 +30,38 @@
             <table id="profile-table">
                 <tr>
                     <td><h5>Profile Pic</h5></td>
-                    <td> <img class="profile-pic" src="../../../assets/smile.jpg" /></td>
+                    <td> <img class="circle-pic pic-outline" src="../../../assets/smile.jpg" /></td>
                 </tr>
                 <tr>
                     <td><h5>Firstname</h5></td>
-                    <td><input class="text-entry-gray" id="input-name" placeholder="Firstname" /></td>
+                    <td id="first-name-cell"><!--<input class="text-entry-gray" id="input-first-name" placeholder="Firstname" />--></td>
                 </tr>
                 <tr>
                     <td><h5>Lastname</h5></td>
-                    <td><input class="text-entry-gray" id="input-name" placeholder="Lastname" /></td>
+                    <td id="last-name-cell"><!--<input class="text-entry-gray" id="input-last-name" placeholder="Lastname" />--></td>
                 </tr>
                 <tr>
                     <td><h5>Username</h5></td>
-                    <td><input class="text-entry-gray" id="input-name" placeholder="Username" /></td>
+                    <td id="username-cell"><!--<input class="text-entry-gray" id="input-user-name" placeholder="Username" />--></td>
                 </tr>
                 <tr>
                     <td><h5>Bio</h5></td>
-                    <td><textarea id="input-bio" placeholder="Add a bio."></textarea></td>
+                    <td id="bio-cell"><!--<textarea id="input-bio" placeholder="Add a bio."></textarea>--></td>
+                </tr>
+                <tr>
+                    <td><h5>Socials</h5></td>
+                    <td>
+                        <div class="flex-horizontal">
+                            <img class="circle-pic" src="../../../assets/pngtree-instagram-icon-png-image_6315974.png"/>
+                            <img class="circle-pic" src="../../../assets/Snapchat-logo.png"/>
+                            <img class="circle-pic" src="../../../assets/LinkedIn_logo_initials.png"/>
+                        </div>
+                    </td>
                 </tr>
             </table>
 
-            <!-- <div class="flex-horizontal profile-flex" id="profile-pic">
-                <h5>Profile Pic:</h5>
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/smile.jpg" /></div>
-            </div>
-
-            <div class="flex-horizontal profile-flex" id="profile-firstname">
-                <h5>Firstname:</h5>
-                <input class="text-entry-gray" id="input-name" placeholder="Firstname" />
-            </div>
-
-            <div class="flex-horizontal profile-flex" id="profile-lastname">
-                <h5>Lastname:</h5>
-                <input class="text-entry-gray" id="input-name" placeholder="Lastname" />
-            </div>
-
-            <div class="flex-horizontal profile-flex" id="profile-username">
-                <h5>Username:</h5>
-                <input class="text-entry-gray" id="input-name" placeholder="Username" />
-            </div>
-
-            <div class="flex-horizontal profile-flex" id="bio-container">
-                <h5>Bio:</h5>
-                <textarea id="input-bio" placeholder="Add a bio."></textarea>
-            </div>
-
-            <div class="flex-horizontal profile-flex" id="socials">
-                <h5>Socials:</h5>
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/pngtree-instagram-icon-png-image_6315974.png"/></div>
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/Snapchat-logo.png"/></div>
-                <div class="circle-crop"><img class="profile-pic" src="../../../assets/LinkedIn_logo_initials.png"/></div>
-            </div> -->
-
-            <div class="flex-horizontal profile-flex" id="profile-toggle">
-                <button class="small-blue-button" type="button" id="save">Save</button>
+            <div class="flex-horizontal profile-flex" id="profile-button-container">
+                <button class="small-blue-button" type="button" id="profile-button">Save</button>
             </div>
 
         </div>
@@ -94,19 +72,19 @@
             <table id="portTable">
             <!--
                 <tr>
-                    <td><img class="profile-pic" src="../../../assets/default-profile.jpg" /></td>
+                    <td><img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" /></td>
                     <td>Person Name</td>
                     <td>1000B</td>
                     <td>-10B</td>
                 </tr>
             -->
             </table>
-            <!-- 
+            
                 <div class="flex-horizontal"> 
                     <button class="small-blue-button" id="crudAddStock">Buy 1</button>
                     <button class="small-blue-button" id="crudRemoveStock">Sell 1</button>
                     <input class="text-entry-gray" id="inputId" placeholder="Enter number of shares"/>
                 </div> 
-            -->
+           
         </div>
     </div>
