@@ -30,6 +30,7 @@ const populatePopularProfiles = async () => {
         let row = document.getElementById(username);
         row.addEventListener('click', (e) => {
             console.log("here");
+<<<<<<<<< Temporary merge branch 1
             localStorage.setItem("BuySellName", username);
             window.location.href = "../BuySell/buySellPage.html";
         });
