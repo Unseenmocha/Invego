@@ -139,18 +139,30 @@ const showProfileEdit = () => {
 }
 
 profileButton.addEventListener('click', async (e) => {
-  // const name = document.getElementById('input-name').value;
-  // const bio = document.getElementById('input-bio').value;
+  const firstNameInput = document.getElementById('input-first-name');
+  const lastNameInput = document.getElementById('input-last-name');
+  const usernameInput = document.getElementById('input-username');
+  const bioInput = document.getElementById('input-bio');
+
   const mode = e.target.textContent;
+
   if (mode === "Save") {
-    await showProfile();
+    const changes = {
+      first_name: firstNameInput.value,
+      last_name: lastNameInput.value,
+      username: usernameInput.value,
+      bio: bioInput.value,
+    };
+    const response = await crud.updateUser({username:localStorage.getItem("currentUser")}, changes);
+    if (response.message !== undefined) {
+      alert(response.message);
+    } else {
+      await showProfile();
+    }
   }
   else if (mode === "Edit") {
     showProfileEdit();
   }
-  // if (name || bio) {
-  //   await crud.updateUser(name, bio);
-  // }
 });
 
 // addButton.addEventListener('click', async (e) => {
