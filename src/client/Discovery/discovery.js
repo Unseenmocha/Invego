@@ -1,11 +1,8 @@
 import * as crud from '../crud.js';
 
-const profile = document.getElementById('profile');
+
 const table = document.getElementById('table');
 
-profile.addEventListener('click', () => {
-    window.location.href = "http://localhost:5000/page/userProfile";
-});
 
 const populatePopularProfiles = async () => {
     const lst = await crud.readTopFive();

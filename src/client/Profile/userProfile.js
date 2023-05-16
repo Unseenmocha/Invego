@@ -3,7 +3,6 @@ import * as crud from '../crud.js';
 const portTable = document.getElementById('portTable');
 const addButton = document.getElementById('crudAddStock');
 const removeButton = document.getElementById('crudRemoveStock');
-const redirectButton = document.getElementById('invego');
 const inputId = document.getElementById('inputId');
 const firstnameCell = document.getElementById('first-name-cell');
 const lastnameCell = document.getElementById('last-name-cell');
@@ -214,9 +213,6 @@ profileButton.addEventListener('click', async (e) => {
 //   generatePortfolio();
 // });
 
-redirectButton.addEventListener("click", async () => {
-  window.location.href = "http://localhost:5000/page/discovery";
-});
 
 generatePortfolio();
 await showProfile();

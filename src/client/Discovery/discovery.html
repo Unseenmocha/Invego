@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
     <script type="module" src="../Discovery/discovery.js"></script>
+    <script type="module" src="../siteScripts.js"></script>
 </head>
 
 <body scroll="no">
@@ -16,12 +17,21 @@
     <div id="grid-background-image"></div>
 
     <div class="header-bar">
-        <text class="title-text">Invego</text>
-        <input id="search-bar" placeholder="Search Users" />
-        <div class="profile flex-vertical" id="profile">
-            <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
-            <p class="white-text">My Profile</p>
+
+        <div class="flex-horizontal">
+            <text class="title-text" id="invego">Invego</text>
+            <input id="search-bar" placeholder="Search Users" />
         </div>
+
+
+        <div class="flex-horizontal">
+            <div class="profile flex-vertical" id="profile">
+                <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
+                <p class="white-text">My Profile</p>
+            </div>
+            <text class= "logout-button" id=logout> Logout</text>
+        </div>
+
     </div>
 
     <div class="view" id="friends-bar">
