@@ -31,7 +31,7 @@ const populatePopularProfiles = async () => {
         row.addEventListener('click', (e) => {
             console.log("here");
             localStorage.setItem("BuySellId", id);
-            window.location.href = "../BuySell/buySellPage.html";
+            window.location.href = "http://localhost:5000/page/buySell";
         });
     }
 }
