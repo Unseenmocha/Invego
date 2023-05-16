@@ -59,8 +59,43 @@ export async function signup(username, password) {
 
 }
 
-export async function buy() {
-  // uses createTransaction
+export async function buy(username1, username2, desiredPrice, shares) {
+
+  /* 
+    req should have:
+    {
+        username1: the current user
+        // username2: the user to buy from // nevermind, the user doesn't determine who they buy from
+        username2: the user stock
+        desiredPrice: the desired price
+        shares: the number of shares bought/sold
+
+    }
+    */
+  
+  try {
+    const response = await fetch(`http://localhost:5000/portfolio/buy/${username}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username1: username1,
+        username2: username2,
+        desiredPrice: desiredPrice,
+        shares: shares
+      })
+    });
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+
+
+
+
+
 }
 
 export async function sell() {

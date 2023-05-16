@@ -1,18 +1,19 @@
+import { Types } from 'mongoose';
 import { Portfolio } from '../models/portfolios.js';
 import { Transaction } from '../models/transactions.js';
 import { User } from '../models/users.js';
 
 export const createPortfolioByUsername = async (req, res) => {
-    console.log("createPortfolioByID")
-    console.log("req", req);
+    // console.log("createPortfolioByID")
+    // console.log("req", req);
     const portfolio = req; // make sure to pass in id in the request
     console.log("portfolio", portfolio);
     const newPortfolio = new Portfolio(portfolio);
-    console.log("made new portfolio");
+    // console.log("made new portfolio");
     try {
-        console.log("about to save");
+        // console.log("about to save");
         await newPortfolio.save();
-        console.log("saved");
+        // console.log("saved");
         //res.status(201).json(newPortfolio); // status is undefined so an error is thrown, but this still creates the portfolio
     } catch (error) {
         console.log("error " + error);
@@ -43,12 +44,22 @@ export const deletePortfolio = async (req, res) => {
 export const updatePortfolio = async (req, res) => {
     const username = req.params.username;
     const updates = req.body;
-    try {
-        const updatePortfolio = await Portfolio.update({username : username}, updates);
-        res.send(updatePortfolio);
-    }  catch (error) {
-        res.status(404).json({ message: error.message });
-    }
+
+    const updatePortfolio = await databaseUpdatePortfolio(username, updates);
+
+    res.status(200).json({status : "ok"});
+    
+
+    // try {
+    //     const updatePortfolio = await databaseUpdatePortfolio(username, updates);
+    //     res.send(updatePortfolio);
+    // }  catch (error) {
+    //     res.status(404).json({ message: error.message });
+    // }
+}
+
+async function databaseUpdatePortfolio(username, updates) {
+    return await Portfolio.update({username : username}, updates);
 }
 
 export const buy = async (req, res) => {
@@ -69,7 +80,7 @@ export const buy = async (req, res) => {
 
     const transaction = req;
     const upperBoundPrice = transaction.requiredPrice * 1.05;
-    let netBittels = 0; // price difference after all transactions are completed
+
 
     const matches = Transaction.find({transactionType: 'SELL', username : req.username2, desiredPrice : {$lt:upperBoundPrice}});
 
@@ -78,61 +89,95 @@ export const buy = async (req, res) => {
 
     for (let i = 0; i < matches.length && transaction.shares > 0; i++) {
         const match = matches[i];
-        // loop start
-
 
         const remainder = transaction.shares - match.shares;
         const moreLeft = remainder > 0;
-        const exactZero = remainder == 0;
+        const zeroLeft = remainder == 0;
         let netSingleTransaction = 0;
-
-        if (exactZero) {
-            // delete this match and stop
+        
+        if (zeroLeft || moreLeft) {
+            // in these cases, remove SELL transaction
             netSingleTransaction -= match.shares * match.desiredPrice;
-            netBittels += netSingleTransaction
-
-            Transaction.find({ _id : match._id }).remove().exec();
-
-            return;
-            
-
-        } else if (moreLeft) {
-            // delete this match and continue
-            netSingleTransaction -= match.shares * match.desiredPrice;
-            netBittels += netSingleTransaction;
-
-            Transaction.find({ _id : match._id }).remove().exec();
-
+            await Transaction.find({ _id : match._id }).remove().exec();
+            transaction.shares -= match.shares;
 
         } else {
-            // update this match and stop 
-            // buyer wants no more shares; seller has more to sell
-            netSingleTransaction -= match.shares * transaction.shares;
-            netBittels += netSingleTransaction;
+            // in this case, update the SELL, end the user's buying
+            await Transaction.findOneAndUpdate({ _id : match._id }, 
+                {$inc : {shares: -transaction.shares}});
 
-            updateShares = {shares : match.shares - transaction.shares}
-            Transaction.findOneAndUpdate({_id : match._id}, updateShares);
-            
         }
 
+        // charge buyer
+        await resolveTransactionInUser(match.transactionOwner, -netSingleTransaction);
+
         // pay seller
-        updateSeller = {$inc : {bittels: -netSingleTransaction}}
-        User.findOneAndUpdate({ username : match.transactionOwner}, updateSeller);
+        await resolveTransactionInUser(transaction.username1, netSingleTransaction);
 
-        // charge buyer (we will go into negatives for now)
-        updateBuyer = {$inc : {bittels: netSingleTransaction}}
-        User.findOneAndUpdate({ username : transaction.username1}, updateBuyer);
-
-
+        if (zeroLeft) {
+            // stop iterating through matching transactions
+            res.status(200).json({status : "ok"});
+            return;
+        }
     }
 
+    // if remainder left, then post new transaction owned by buyer
+    // only do this if you want to buy more than there is supply
+    await createTransaction('BUY', transaction.username2, transaction,shares, transaction.desiredPrice, transaction.username1, transaction.username1);
 
-    // if remainder left, then post new transaction
+    res.status(200).json({status : "ok"});
+    return;
+    
+
+}
+
+async function resolveTransactionInPortfolio(stockOwner, stock, netChange) {
+    const portfolio = await Portfolio.findOne({username : stockOwner});
+
+    let numShares = portfolio.stocks[stock].num_shares;
+    numShares += netChange;
+
+    if (numShares == 0) {
+        delete portfolio.stocks[stock];
+    } if (numShares < 0) {
+        console.log("This should not happen!")
+    } else {
+        portfolio.stocks[stock].num_shares = numShares;
+    }
+
+    await Portfolio.findOneAndUpdate({username : stockOwner}, portfolio);
+}
+
+async function resolveTransactionInUser(username, netBittelChange) {
+    update = {$inc : {bittels: netSingleTransaction}}
+    User.findOneAndUpdate({username : username}, update);
+}
+
+async function createTransaction(type, ofUsername, shares, desiredPrice, transactionOwner, res) {
+    const newTransaction = new Transaction({
+        transactionType: Types,
+        username: ofUsername,
+        shares: shares,
+        desiredPrice: desiredPrice,
+        transactionOwner: transactionOwner
+    });
+
+    try {
+        console.log("about to save");
+        await newTransaction.save();
+        console.log("saved");
+        res.status(201).json({status : "ok"}); // status is undefined so an error is thrown, but this still creates the portfolio
+    } catch (error) {
+        console.log("error " + error);
+        res.status(409).json({ message: error.message });
+    }
+
 }
 
 export const sell = async (req, res) => {
 
-    // check if BUY transaction exists for same username, try to get close to the number of stocks
+    // check if SELL transaction exists for same username, try to get close to the number of stocks/price
+    
     /* 
     req should have:
     {
@@ -146,8 +191,19 @@ export const sell = async (req, res) => {
     */
 
     const transaction = req;
+
+    const sellersPortfolio = Portfolio.findOne({username : transaction.username1});
+    
+    if (!(transaction.username2 in sellersPortfolio.stocks) ||
+        !(sellersPortfolio.stocks[transaction.username2] >= transaction.shares)) {
+        console.log("Can not sell more than owned");
+        res.status(400).json({message : "Can not sell more than owned."})
+    }
+
+
+
     const lowerBoundPrice = transaction.requiredPrice * 0.95;
-    let netBittels = 0; // price difference after all transactions are completed
+
 
     const matches = Transaction.find({transactionType: 'BUY', username : req.username2, desiredPrice : {$gt:lowerBoundPrice}});
 
@@ -156,54 +212,45 @@ export const sell = async (req, res) => {
 
     for (let i = 0; i < matches.length && transaction.shares > 0; i++) {
         const match = matches[i];
-        // loop start
-
 
         const remainder = transaction.shares - match.shares;
         const moreLeft = remainder > 0;
-        const exactZero = remainder == 0;
+        const zeroLeft = remainder == 0;
         let netSingleTransaction = 0;
-
-        if (exactZero) {
-            // delete this match and stop
+        
+        if (zeroLeft || moreLeft) {
+            // in these cases, remove SELL transaction
             netSingleTransaction += match.shares * match.desiredPrice;
-            netBittels += netSingleTransaction
-
-            Transaction.find({ _id : match._id }).remove().exec();
-
-            
-
-        } else if (moreLeft) {
-            // delete this match and continue
-            netSingleTransaction += match.shares * match.desiredPrice;
-            netBittels += netSingleTransaction;
-
-            Transaction.find({ _id : match._id }).remove().exec();
-
+            await Transaction.find({ _id : match._id }).remove().exec();
+            transaction.shares -= match.shares;
 
         } else {
-            // update this match and stop 
-            // buyer wants no more shares; seller has more to sell
-            netSingleTransaction += match.shares * transaction.shares;
-            netBittels += netSingleTransaction;
+            // in this case, update the SELL, end the user's buying
+            await Transaction.findOneAndUpdate({ _id : match._id }, 
+                {$inc : {shares: -transaction.shares}});
 
-            updateShares = {shares : match.shares - transaction.shares}
-            Transaction.findOneAndUpdate({_id : match._id}, updateShares);
-            
         }
 
         // pay seller
-        updateSeller = {$inc : {bittels: -netSingleTransaction}}
-        User.findOneAndUpdate({ username : match.transactionOwner}, updateSeller);
+        await resolveTransactionInUser(match.transactionOwner, netSingleTransaction);
 
         // charge buyer (we will go into negatives for now)
-        updateBuyer = {$inc : {bittels: netSingleTransaction}}
-        User.findOneAndUpdate({ username : transaction.username1}, updateBuyer);
+        await resolveTransactionInUser(transaction.username1, -netSingleTransaction);
 
-        if (exactZero) {
+        if (zeroLeft) {
+            // stop iterating through matching transactions
+            res.status(200).json({status : "ok"});
             return;
         }
     }
+
+    // if remainder left, then post new transaction owned by buyer
+    // only do this if you want to buy more than there is supply
+    await createTransaction('BUY', transaction.username2, transaction,shares, transaction.desiredPrice, transaction.username1, transaction.username1);
+
+    res.status(200).json({status : "ok"});
+    return;
+    
 
 }
 

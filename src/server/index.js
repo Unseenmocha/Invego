@@ -4,6 +4,7 @@ dotenv.config({path: '../../process.env'});
 import mongoose from'mongoose'; 
 //import auth from './middleware/auth.js';
 // I don't know if we are allowed to use any more defined libraries
+import logger from 'morgan'
 
 import { userRoutes } from './routes/users.js';
 import { portfolioRoutes } from './routes/portfolios.js';
@@ -21,6 +22,7 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
+app.use(logger('dev'))
 
 
 app.use('/user', userRoutes);
