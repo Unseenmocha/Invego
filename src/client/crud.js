@@ -31,7 +31,7 @@ export async function login(username, password) {
     });
     if (response.status === 200) {
       let user = await response.json();
-      window.location.href = "../Discovery/discovery.html";
+      window.location.href = "http://localhost:5000/page/discovery";
       localStorage.setItem('currentUser', user.username);
     } else {
       console.log("crud.js:login()", response.message);
@@ -51,7 +51,7 @@ export async function signup(username, password) {
   try {
     await createUser(doc).then((response) => {
       localStorage.setItem('currentUser', user.username);
-    // route to discovery page here, if that is necessary
+      // route to discovery page here, if that is necessary
     });
   } catch (err) {
     console.log(err);
@@ -175,22 +175,23 @@ export async function readTopFive() {
     return data;
   } catch (err) {
     console.log(err);
-  }  
+  }
 }
 
-export async function updateUser(doc) {
+export async function updateUser(doc, changes) {
   try {
-    const response = await fetch(`${doc.id}`, {
+    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(doc)
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
-    });
+      body: JSON.stringify(changes)
+    })
+    const data = await response.json();
+    if (data.message === undefined && changes.username !== undefined) { //if the username changed store it again
+      localStorage.setItem("currentUser", changes.username);
+    }
+    return data;
   } catch (err) {
     console.log(err);
   }

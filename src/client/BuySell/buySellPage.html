@@ -8,7 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
-  <script type="module" src="./profile.js"></script>
+  <script type="module" src="../BuySell/profile.js"></script>
 </head>
 
 <body>
@@ -17,44 +17,43 @@
 
   <div class="header-bar">
     <text class="title-text" id="invego">Invego</text>
+    <!-- <button class="button">Logout</button> -->
+    <text class= "logout-button" id=logout> Logout</text>
     <h2 class="white-text" id="account_balance">Bittels: 284.28</h2>
-    <button class="button">Logout</button>
   </div>
 
   <div class="view" id="buy-sell-view">
 
     <div class="flex-horizontal buy-sell-profile-flex">
       <div class="flex-horizontal">
-        <img class="profile-pic"
-          src="../../../assets/istockphoto-1130884625-612x612.jpeg"
+        <img class="circle-pic pic-outline"
+          src="../../../assets/default-profile.jpg"
           alt="Profile picture">
           <h2 id="profileName"> </h2>
       </div>
-      <div class="flex-vertical">
+      <div class="flex-vertical view">
         <h5>Market Value</h5>
         <p id="profilePrice"></p>
       </div>
-      <div class="flex-vertical">
+      <div class="flex-vertical view">
         <h5>P&L (last sale)</h5>
         <p class="red-text" id="profileChange"></p>
       </div>
-      <div class="flex-vertical">
+      <div class="flex-vertical view">
         <h5>Market Cap</h5>
         <p id="marketCap"></p>
       </div>
-      <div class="flex-vertical">
+      <div class="flex-vertical view">
         <h5>Shares Outstanding</h5>
         <p id="sharesOutstanding"></p>
       </div>
     </div>
 
-
     <p id="aboutMe"></p>
-
 
     <div class="flex-horizontal buy-sell-profile-flex" id="buy-sell-form">
 
-      <div class="flex-vertical">
+      <div class="view flex-vertical">
         <h3>Buy</h3>
         <div class="flex-horizontal">     
           
@@ -72,7 +71,7 @@
         </div>
       </div>
 
-      <div class="flex-vertical">
+      <div class="view flex-vertical">
         <h3>Sell</h3>
         <div class="flex-horizontal">
 

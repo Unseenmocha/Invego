@@ -41,13 +41,13 @@ const sell = async () => {
 
 buyButton.addEventListener("click", async () => {
     // buys stock, adds it?
-    //
+    await buy();
 });
 
 sellButton.addEventListener("click", async () => {
     // do we need to do anything in order to handle users, this being only visible to the owning user?
     // okay this is all done by middleware in the server and app.use under express
-    //await sell();
+    await sell();
 });
 
 redirectButton.addEventListener("click", async () => {

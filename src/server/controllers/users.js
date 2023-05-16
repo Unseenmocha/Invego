@@ -1,5 +1,6 @@
 import { User } from '../models/users.js';
 import { createPortfolioByUsername } from './portfolios.js';
+import { Portfolio } from '../models/portfolios.js';
 
 // this file sends the json files to the frontend for each of the crud operations
 
@@ -70,13 +71,17 @@ export const deleteUser = async (req, res) => {
 }
 
 export const updateUser = async (req, res) => {
-    console.log(req);
-    const username = req.params.username;
+    const username = req.params.username; //current username
     const updates = req.body;
-    console.log(updates);
+    let existingUser = username !== updates.username && await User.exists({ username: updates.username });
     try {
-        const updateUser = await User.updateOne({username : username}, updates);
-        res.send(updateUser);
+        if (existingUser) {
+            res.status(409).send({message: `Username ${updates.username} is taken. Please try another.`})
+        } else {
+            const updateUser = await User.updateOne({username : username}, updates);
+            await Portfolio.updateOne({username: username}, {username: updates.username}); // have to update portfolio username in sync
+            res.send(updateUser);
+        }
     }  catch (error) {
         res.status(404).json({ message: error.message });
     }

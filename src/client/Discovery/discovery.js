@@ -4,7 +4,7 @@ const profile = document.getElementById('profile');
 const table = document.getElementById('table');
 
 profile.addEventListener('click', () => {
-    window.location.href = "../Profile/userProfile.html";
+    window.location.href = "http://localhost:5000/page/userProfile";
 });
 
 const populatePopularProfiles = async () => {
@@ -15,7 +15,7 @@ const populatePopularProfiles = async () => {
         table.innerHTML += 
         `<tr class="main-row" id="${username}">
             <td>
-                <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
+                <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
             </td>
             <td>
                 <p>${lst[i].username}</p>
@@ -31,7 +31,7 @@ const populatePopularProfiles = async () => {
         row.addEventListener('click', (e) => {
             console.log("here");
             localStorage.setItem("BuySellName", username);
-            window.location.href = "../BuySell/buySellPage.html";
+            window.location.href = "http://localhost:5000/page/buySell";
         });
     }
 }
