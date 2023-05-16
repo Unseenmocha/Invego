@@ -38,7 +38,19 @@ export const getTopFiveUsers = async (req, res) => {
 
 export const createUser = async (req, res) => {
     console.log("create user")
-    const user = req.body;
+    
+    const user = {
+        bio: "Write something about yourself!",
+        firstName: "",
+        lastName: "",
+        username: req.body.username,
+        password: req.body.password,
+        bittels: 500,
+        market_value: 50,
+        total_shares: 100,
+        percent_growth: 0,
+    };
+
     const newUser = new User(user);
     console.log("newUser");
     try {
@@ -112,8 +124,9 @@ export const signup = async (req, res) => {
     console.log("signup req res", req, res);
 
     // 1. make sure there are no duplicate usernames
-    const username = req.body.username;
-    const password = req.body.password;
+    const user = req.body;
+    const username = user.username;
+    const password = user.password;
     /* there might be other fields here stored in the body, like first_name, last_name
      * those are just put in through the body, but not required for this signup function
     */

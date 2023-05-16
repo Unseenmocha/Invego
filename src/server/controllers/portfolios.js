@@ -111,6 +111,7 @@ export const buy = async (req, res) => {
             const zeroLeft = remainder == 0;
             let netSingleTransaction = 0;
             
+            console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft)
             if (zeroLeft || moreLeft) {
                 console.log("more or zero left");
                 // in these cases, remove SELL transaction
@@ -125,6 +126,7 @@ export const buy = async (req, res) => {
                 await Transaction.findOneAndUpdate({ _id : match._id }, 
                     {$inc : {shares: -transaction.shares}});
                 netChange = transaction.shares;
+                transaction.shares = 0;
 
             }
 
@@ -138,7 +140,7 @@ export const buy = async (req, res) => {
             await resolveTransactionInUser(match.transactionOwner, netSingleTransaction);
             await resolveTransactionInPortfolio(match.transactionOwner, transaction.username2, -netChange, match.desiredPrice);
 
-            if (zeroLeft) {
+            if (zeroLeft || transaction.shares == 0) {
                 // stop iterating through matching transactions
                 console.log("zero left -> return");
                 res.status(200).json({status : "ok"});
@@ -206,11 +208,14 @@ export const sell = async (req, res) => {
     for (let i = 0; i < matches.length && transaction.shares > 0; i++) {
         const match = matches[i];
         let netChange = 0;
-
+        
         const remainder = transaction.shares - match.shares;
         const moreLeft = remainder > 0;
         const zeroLeft = remainder == 0;
         let netSingleTransaction = 0;
+
+        console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft);
+
         
         if (zeroLeft || moreLeft) {
             // in these cases, remove SELL transaction
@@ -224,6 +229,7 @@ export const sell = async (req, res) => {
             await Transaction.findOneAndUpdate({ _id : match._id }, 
                 {$inc : {shares: -transaction.shares}});
             netChange = transaction.shares;
+            transaction.shares = 0;
 
         }
 
@@ -237,7 +243,7 @@ export const sell = async (req, res) => {
         await resolveTransactionInUser(match.transactionOwner, -netSingleTransaction);
         await resolveTransactionInPortfolio(match.transactionOwner, transaction.username2, netChange, match.desiredPrice);
 
-        if (zeroLeft) {
+        if (zeroLeft || transaction.shares == 0) {
             // stop iterating through matching transactions
             console.log("zero left -> return");
             res.status(200).json({status : "ok"});
@@ -266,6 +272,9 @@ async function resolveTransactionInPortfolio(stockOwner, stock, netChange, purch
     // if they don't own the stock yet
     if (!(stock in portfolio.stocks)) {
         console.log("adding stock");
+        if (purchasePrice == null) {
+            console.log("purchasePrice null for ", stockOwner, stock, netChange, purchasePrice);
+        }
         portfolio.stocks[stock] = {num_shares : 0, purchase_price : purchasePrice};
     }
 
