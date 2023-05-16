@@ -8,7 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
-  <script type="module" src="./profile.js"></script>
+  <script type="module" src="../BuySell/profile.js"></script>
 </head>
 
 <body>
@@ -17,44 +17,85 @@
 
   <div class="header-bar">
     <text class="title-text" id="invego">Invego</text>
-    <h2 class="white-text">Bittels: 284.28</h2>
     <!-- <button class="button">Logout</button> -->
     <text class= "logout-button" id=logout> Logout</text>
+    <h2 class="white-text" id="account_balance">Bittels: 284.28</h2>
   </div>
 
   <div class="view" id="buy-sell-view">
 
-    <div class="flex-horizontal" id="buy-sell-profile-header">
+    <div class="flex-horizontal buy-sell-profile-flex">
       <div class="flex-horizontal">
-        <img class="profile-pic"
-          src="data:image/jpeg;base64,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"
+        <img class="circle-pic pic-outline"
+          src="../../../assets/default-profile.jpg"
           alt="Profile picture">
           <h2 id="profileName"> </h2>
       </div>
-      <div class="flex-horizontal">
-        <h3 id="Bittels"></h3>
-        <h3 class="red-text" id="percentBittel"></h3>
+      <div class="flex-vertical view">
+        <h5>Market Value</h5>
+        <p id="profilePrice"></p>
+      </div>
+      <div class="flex-vertical view">
+        <h5>P&L (last sale)</h5>
+        <p class="red-text" id="profileChange"></p>
+      </div>
+      <div class="flex-vertical view">
+        <h5>Market Cap</h5>
+        <p id="marketCap"></p>
+      </div>
+      <div class="flex-vertical view">
+        <h5>Shares Outstanding</h5>
+        <p id="sharesOutstanding"></p>
       </div>
     </div>
 
-
     <p id="aboutMe"></p>
 
+    <div class="flex-horizontal buy-sell-profile-flex" id="buy-sell-form">
 
-    <div class="flex-horizontal">
-      <h4>Shares</h4>
+      <div class="view flex-vertical">
+        <h3>Buy</h3>
+        <div class="flex-horizontal">     
+          
+          
+          <div class="flex-vertical">
+            <p class="tiny-text">number of shares to buy...</p>
+            <input type="number" class="text-entry buy-sell-entry" id="sharesBuy" name="sharesBuy" min="1" placeholder="shares">
+          </div>
+          <div class="flex-vertical">
+            <p class="tiny-text">limit price (buy this price or lower)</p>
+            <input type="number" class="text-entry buy-sell-entry" id="bid-price" name="bid-price" placeholder="price">
+          </div>
+          <button class="medium-blue-button" id="buyButton">Buy</button>
+  
+        </div>
+      </div>
 
-      <input type="number" class="text-entry buy-sell-entry" id="shares" name="shares" min="1">
+      <div class="view flex-vertical">
+        <h3>Sell</h3>
+        <div class="flex-horizontal">
 
-      <h4>Price</h4>
+          <div class="flex-vertical">
+            <p class="tiny-text">number of shares to sell...</p>
+            <input type="number" class="text-entry buy-sell-entry" id="sharesSell" name="sharesSell" min="1" placeholder="shares">
+          </div>
+  
+          <div class="flex-vertical">
+            <p class="tiny-text">limit sell (this price or higher)</p>
+            <input type="number" class="text-entry buy-sell-entry" id="sell-price" name="sell-price" placeholder="price">
+          </div>
+          <button class="medium-blue-button" id="sellButton">Sell</button>
+  
+        </div>
+      </div>
 
-      <input type="number" class="text-entry buy-sell-entry" id="bid-price" name="bid-price">
+
     </div>
 
     <div class="flex-horizontal">
-      <button class="medium-blue-button" id="buyButton">Buy</button>
 
-      <button class="medium-blue-button" id="sellButton">Sell</button>
+
+
     </div>
 
 

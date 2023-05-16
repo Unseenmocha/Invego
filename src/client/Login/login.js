@@ -1,7 +1,7 @@
 import * as crud from '../crud.js';
 
 const login = document.getElementById('login-button');
-const signup = document.getElementById('signup-button');
+const signup_elem = document.getElementById('signup-button');
 const new_username = document.getElementById('create-username');
 const pass_one = document.getElementById('create-password-1');
 const pass_two = document.getElementById('create-password-2');
@@ -13,16 +13,17 @@ login.addEventListener('click', async () => {
     await crud.login(username, password);
 });
 
-signup.addEventListener('click', async () => {
+signup_elem.addEventListener('click', async () => {
     if(pass_one.value !== pass_two.value){
         alert("Passwords do not match");
         return;
     } else if (pass_one.value === pass_two.value && pass_one.value !== "" && pass_two.value !== "") {
-        const user = crud.getSampleStockObject();
-        user.username = new_username.value;
-        user.password = pass_one.value;
-        crud.createUser(user);
-        window.location.href = "../Discovery/discovery.html";
+        //const user = crud.getSampleStockObject();
+        //user.username = new_username.value;
+        //user.password = pass_one.value;
+        await crud.signup(new_username.value, pass_one.value);
+        //window.location.href = "../Discovery/discovery.html";
+        window.location.href = "http://localhost:5000/page/discovery";
         return;
     }
 

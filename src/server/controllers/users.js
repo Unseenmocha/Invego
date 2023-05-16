@@ -1,5 +1,6 @@
 import { User } from '../models/users.js';
 import { createPortfolioByUsername } from './portfolios.js';
+import { Portfolio } from '../models/portfolios.js';
 
 // this file sends the json files to the frontend for each of the crud operations
 
@@ -19,23 +20,35 @@ export const getUserByUsername = async (req, res) => {
         const user = await User.findOne({username : username});  
         res.status(200).json(user);
     } catch (error) {
+        res.status(500).json({message: error});
         console.log(error);
     }
 };
+
+export const getTopFiveUsers = async (req, res) => {
+    try {
+        const users = await User.find().sort({market_value: -1}).limit(5);
+        res.status(201).json(users);
+    } catch (error) {
+        res.status(500).json({message: error});
+        console.log(error);
+    }
+}
 
 
 export const createUser = async (req, res) => {
     console.log("create user")
     const user = req.body;
     const newUser = new User(user);
-    console.log("newUser")
+    console.log("newUser");
     try {
-        await newUser.save();
+        await newUser.save();       
         console.log("newUser after save", newUser);
         await createPortfolioByUsername({username : newUser.username, stocks : {}})
         res.status(201).json(newUser);
         console.log("create user res.body", res.json());
     } catch (error) {
+        console.log(error);
         res.status(409).json({ message: error.message });
     }
 }
@@ -52,13 +65,17 @@ export const deleteUser = async (req, res) => {
 }
 
 export const updateUser = async (req, res) => {
-    console.log(req);
-    const username = req.params.username;
+    const username = req.params.username; //current username
     const updates = req.body;
-    console.log(updates);
+    let existingUser = username !== updates.username && await User.exists({ username: updates.username });
     try {
-        const updateUser = await User.updateOne({username : username}, updates);
-        res.send(updateUser);
+        if (existingUser) {
+            res.status(409).send({message: `Username ${updates.username} is taken. Please try another.`})
+        } else {
+            const updateUser = await User.updateOne({username : username}, updates);
+            await Portfolio.updateOne({username: username}, {username: updates.username}); // have to update portfolio username in sync
+            res.send(updateUser);
+        }
     }  catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -70,10 +87,10 @@ export const login = async (req, res) => {
     const password = req.body.password;
 
     try {
-        const foundUser = await User.findOne({ username: username });
+        const foundUser = await User.findOne({ username: username }).lean();
         console.log("found user", foundUser);
         if (foundUser.password == password) {
-            res.status(200).json({ result: foundUser });
+            res.status(200).json( foundUser );
         } else {
             console.log("incorrect password")
             res.status(401).json({message: "Incorrect username or password"});

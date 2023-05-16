@@ -4,34 +4,34 @@ const profile = document.getElementById('profile');
 const table = document.getElementById('table');
 
 profile.addEventListener('click', () => {
-    window.location.href = "../Profile/userProfile.html";
+    window.location.href = "http://localhost:5000/page/userProfile";
 });
 
 const populatePopularProfiles = async () => {
-    const lst = await crud.readAllUser();
+    const lst = await crud.readTopFive();
     //Loop through all users in the object
     for (let i = 0; i < 5; i++) {
-        let id = lst.rows[i].doc._id;
+        let username = lst[i].username;
         table.innerHTML += 
-        `<tr class="main-row" id="${id}">
+        `<tr class="main-row" id="${username}">
             <td>
-                <img class="profile-pic" src="../../../assets/istockphoto-1130884625-612x612.jpeg" />
+                <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
             </td>
             <td>
-                <p>${lst.rows[i].doc.username}</p>
+                <p>${lst[i].username}</p>
             </td>
             <td>
-                <p>${lst.rows[i].doc.bittels}</p>
+                <p>${lst[i].market_value}</p>
             </td>
         </tr>`
     }
     for (let i = 0; i < 5; i++) {
-        let id = lst.rows[i].doc._id;
-        let row = document.getElementById(id);
+        let username = lst[i].username;
+        let row = document.getElementById(username);
         row.addEventListener('click', (e) => {
             console.log("here");
-            localStorage.setItem("BuySellId", id);
-            window.location.href = "../BuySell/buySellPage.html";
+            localStorage.setItem("BuySellName", username);
+            window.location.href = "http://localhost:5000/page/buySell";
         });
     }
 }

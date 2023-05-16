@@ -19,18 +19,27 @@ export async function login(username, password) {
   doc.username = username;
   doc.password = password;
   try {
-    const user = await readUser(doc)
-    localStorage.setItem('currentUser', user.username);
-    // route to discovery page here, if that is necessary
-    if (user && user.username === username && user.password === password) {
-      window.location.href = "../Discovery/discovery.html";
+    const response = await fetch('http://localhost:5000/user/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      })
+    });
+    if (response.status === 200) {
+      let user = await response.json();
+      window.location.href = "http://localhost:5000/page/discovery";
+      localStorage.setItem('currentUser', user.username);
     } else {
+      console.log("crud.js:login()", response.message);
       alert("Login failed, Please double check your username and password");
     }
   } catch (err) {
     console.log(err);
   }
-
 }
 
 export async function signup(username, password) {
@@ -39,10 +48,9 @@ export async function signup(username, password) {
   const doc = getSampleStockObject();
   doc.username = username;
   doc.password = password;
-
   try {
     await createUser(doc).then((response) => {
-      saveId(response.id); // will this work?
+      localStorage.setItem('currentUser', user.username);
       // route to discovery page here, if that is necessary
     });
   } catch (err) {
@@ -68,7 +76,7 @@ export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
 
   const doc = {
-    _id: 0,
+    //_id: "",
     _bio: "",
     firstName: "",
     lastName: "",
@@ -85,9 +93,9 @@ export function getSampleStockObject() {
 
 export async function createUser(doc) {
   // creates user according to the doc object supplied (follows user schema)
-
+  console.log(doc)
   try {
-    const response = await fetch('/signup', {
+    const response = await fetch('http://localhost:5000/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -119,19 +127,36 @@ export async function readUser(doc) {
   }
 }
 
-export async function updateUser(doc) {
+export async function readTopFive() {
   try {
-    const response = await fetch(`${doc.id}`, {
+    const response = await fetch(`http://localhost:5000/user/topFive`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await response.json();
+
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function updateUser(doc, changes) {
+  try {
+    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(doc)
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
-    });
+      body: JSON.stringify(changes)
+    })
+    const data = await response.json();
+    if (data.message === undefined && changes.username !== undefined) { //if the username changed store it again
+      localStorage.setItem("currentUser", changes.username);
+    }
+    return data;
   } catch (err) {
     console.log(err);
   }
@@ -159,21 +184,20 @@ export async function deleteUser(doc) {
  *  R for portfolio
  */
 
-export async function readPortfolio() {
+export async function readPortfolio(username) {
   // returns portfolio object
   try {
-    const response = await fetch(`/portfolio/${getCurrentId()}`, {
+    const response = await fetch(`http://localhost:5000/portfolio/${username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
     });
+    const data = await response.json();
+    return data;
   } catch (err) {
     console.log(err);
   }
 }
 
+3

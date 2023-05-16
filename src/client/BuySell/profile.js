@@ -3,29 +3,33 @@
 const postId = window.location.pathname.split("/")[2];
 // Then, we grab all of our DOM elements
 const profileName = document.getElementById("profileName");
-const profileBio = document.getElementById("profileBio");
+const profileBio = document.getElementById("aboutMe");
 const profilePrice = document.getElementById("profilePrice");
 const profileChange = document.getElementById("profileChange");
-const profileShares = document.getElementById("profileShares");
+const profileMarketCap = document.getElementById("marketCap");
+const profileSharesOut = document.getElementById("sharesOutstanding");
 const buyButton = document.getElementById("buyButton");
 const sellButton = document.getElementById("sellButton");
 const redirectButton = document.getElementById('invego');
 
+import * as crud from '../crud.js';
+
+
 // Similar to populateFeed() on the home page, we send a fetch() request to our Express API to grab the post with the specific ID in the url.
 // We then display it's information on the page using our elements from the DOM
 const populateStockProfile = async () => {
-    // here profiles and stocks used interchangeably
-    const profileRes = await fetch(`/stocks/${stockId}`);
-    const profile = await profileRes.json();
+    const doc = {username: localStorage.getItem("BuySellName")};
+    const buySellUser = await crud.readUser(doc);
 
-    profileName.innerHTML = profile.name;
-    profileBio.innerHTML = profile.bio;
-    profilePrice.innerHTML = profile.price;
-    profileChange.innerHTML = profile.change;
-    profileShares.innerHTML = profile.shares;
+    profileName.innerHTML = `${buySellUser.first_name} ${buySellUser.last_name}`;
+    profileBio.innerHTML = buySellUser.bio;
+    profilePrice.innerHTML = `${buySellUser.market_value} Bittels`;
+    profileChange.innerHTML = "0%";
+    profileMarketCap.innerHTML = `${buySellUser.market_value*buySellUser.total_shares} Bittels`;
+    profileSharesOut.innerHTML = `${buySellUser.total_shares_owned}`;
 };
 
-//populatePostPage();
+populateStockProfile();
 
 const buy = async () => {
 
@@ -35,33 +39,17 @@ const sell = async () => {
     
 }
 
-// buyButton.addEventListener("click", async () => {
-//     // buys stock, adds it?
-//     await buy();
-// });
+buyButton.addEventListener("click", async () => {
+    // buys stock, adds it?
+    await buy();
+});
 
-// sellButton.addEventListener("click", async () => {
-//     // do we need to do anything in order to handle users, this being only visible to the owning user?
-//     // okay this is all done by middleware in the server and app.use under express
-//     await sell();
-// });
-
-
-
-import * as crud from "../crud.js";
-
-//Grab info from database
-// let bittels = crud.dosomething with bittles
-// let about = crud.dosomething with about
-// let profileName = crud.dosomething with profileName
-
-document.getElementById("Bittels").textContent = getInfo.getHowMuch() + " B";
-document.getElementById("percentBittel").textContent = getInfo.getPercentBittel();
-document.getElementById("aboutMe").textContent = getInfo.getAboutMe(); 
-document.getElementById("profileName").textContent = getInfo.getProfileName(); 
-
+sellButton.addEventListener("click", async () => {
+    // do we need to do anything in order to handle users, this being only visible to the owning user?
+    // okay this is all done by middleware in the server and app.use under express
+    await sell();
+});
 
 redirectButton.addEventListener("click", async () => {
     window.location.href = "../Discovery/discovery.html";
   });
-
