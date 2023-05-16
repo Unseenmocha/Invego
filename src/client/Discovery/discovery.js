@@ -4,7 +4,7 @@ const profile = document.getElementById('profile');
 const table = document.getElementById('table');
 
 profile.addEventListener('click', () => {
-    window.location.href = "../Profile/userProfile.html";
+    window.location.href = "http://localhost:5000/page/userProfile";
 });
 
 const populatePopularProfiles = async () => {
@@ -30,9 +30,8 @@ const populatePopularProfiles = async () => {
         let row = document.getElementById(username);
         row.addEventListener('click', (e) => {
             console.log("here");
-<<<<<<<<< Temporary merge branch 1
             localStorage.setItem("BuySellName", username);
-            window.location.href = "../BuySell/buySellPage.html";
+            window.location.href = "http://localhost:5000/page/buySell";
         });
     }
 }

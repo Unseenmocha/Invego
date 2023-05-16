@@ -31,7 +31,7 @@ export async function login(username, password) {
     });
     if (response.status === 200) {
       let user = await response.json();
-      window.location.href = "../Discovery/discovery.html";
+      window.location.href = "http://localhost:5000/page/discovery";
       localStorage.setItem('currentUser', user.username);
     } else {
       console.log("crud.js:login()", response.message);
