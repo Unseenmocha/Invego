@@ -79,7 +79,7 @@ export const buy = async (req, res) => {
     */
 
     // const transaction = req.body;
-    // console.log(req.body);
+    //console.log(req.body);
     // const test1 = await Transaction.find({transactionType : 'SELL'}).lean();
     // console.log("req username2", req.body.username2);
     // const test2 = await Transaction.find({username : req.body.username2}).lean();
@@ -97,7 +97,7 @@ export const buy = async (req, res) => {
     try {
         const matches = await Transaction.find({transactionType: 'SELL', username : transaction.username2, desiredPrice : {$lte : transaction.desiredPrice}}).lean();
 
-        // console.log("matches", matches)
+        //console.log("matches", matches)
 
         // find minimum difference in shares
         // go until no more matches, or all shares bought/sold
@@ -111,7 +111,7 @@ export const buy = async (req, res) => {
             const zeroLeft = remainder == 0;
             let netSingleTransaction = 0;
             
-            // console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft)
+            //console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft)
             if (zeroLeft || moreLeft) {
                 // console.log("more or zero left");
                 // in these cases, remove SELL transaction
@@ -144,7 +144,7 @@ export const buy = async (req, res) => {
             if (zeroLeft || transaction.shares == 0) {
                 // stop iterating through matching transactions
                 // console.log("zero left -> return");
-                res.status(200).json({status : "ok"});
+                res.status(200).json({status: "OK", message : "Buy order created."});
                 return;
             }
         }  
@@ -158,14 +158,13 @@ export const buy = async (req, res) => {
     // only do this if you want to buy more than there is supply
     await createTransaction('BUY', transaction.username2, transaction.shares, transaction.desiredPrice, transaction.username1, transaction.username1);
 
-    res.status(200).json({status : "ok"});
+    res.status(200).json({status : "OK", message : "Buy order created."});
     return;
     
 
 }
 
 export const sell = async (req, res) => {
-
     // check if SELL transaction exists for same username, try to get close to the number of stocks/price
     
     /* 
@@ -183,7 +182,7 @@ export const sell = async (req, res) => {
     const transaction = req.body;
 
     const sellersPortfolio = await Portfolio.findOne({username : transaction.username1}).lean();
-    // console.log("sellersPortfolio", sellersPortfolio);
+    console.log("sellersPortfolio", sellersPortfolio);
 
     const hasStockShare = (transaction.username2 in sellersPortfolio.stocks);
     // console.log(sellersPortfolio.stocks[transaction.username2]);
@@ -194,7 +193,7 @@ export const sell = async (req, res) => {
 
     if (!hasStockShare || !hasEnoughShares){
         // console.log("Can not sell more than owned");
-        res.status(400).json({message : "Can not sell more than owned."})
+        res.status(400).json({status: "FAILURE", message : "You can not sell more shares than you own."})
         return;
     }
 
@@ -248,7 +247,7 @@ export const sell = async (req, res) => {
         if (zeroLeft || transaction.shares == 0) {
             // stop iterating through matching transactions
             // console.log("zero left -> return");
-            res.status(200).json({status : "ok"});
+            res.status(200).json({status: "OK", message : "Sale order created."});
             return;
         }
     }
@@ -258,7 +257,7 @@ export const sell = async (req, res) => {
     // console.log("posting SELL");
     await createTransaction('SELL', transaction.username2, transaction.shares, transaction.desiredPrice, transaction.username1, transaction.username1);
 
-    res.status(200).json({status : "ok"});
+    res.status(200).json({status: "OK", message : "Sale order created."});
     return;
     
 

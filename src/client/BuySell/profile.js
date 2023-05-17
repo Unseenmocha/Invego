@@ -41,7 +41,11 @@ buyButton.addEventListener("click", async () => {
     const bidPrice = bidPriceElem.value;
     console.log(numSharesBuy, bidPrice);
     if (validateInput(bidPrice, numSharesBuy)) {
-        await crud.buy(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesBuy), Number(bidPrice));
+        const response = await crud.buy(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesBuy), Number(bidPrice));
+        alert(response.message);
+        if (response.status === "OK") {
+            window.location.href = "http://localhost:5000/page/buySell";
+        } 
     } else {
         alert("invalid buy input");
     }
@@ -53,7 +57,11 @@ sellButton.addEventListener("click", async () => {
     const sellPrice = sellPriceElem.value;
 
     if (validateInput(numSharesSell, sellPrice)) {
-        await crud.sell(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesSell), Number(sellPrice));
+        const response = await crud.sell(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesSell), Number(sellPrice));
+        alert(response.message);
+        if (response.status === "OK") {
+            window.location.href = "http://localhost:5000/page/buySell";
+        }
     } else {
         alert("invalid sell input");
     }

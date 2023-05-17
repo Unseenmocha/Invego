@@ -101,7 +101,17 @@ export async function buy(username1, username2, desiredPrice, shares) {
 }
 
 export async function sell(username1, username2, desiredPrice, shares) {
-  // uses createTransaction
+    /* 
+    req should have:
+    {
+        username1: the current user
+        // username2: the user to buy from // nevermind, the user doesn't determine who they buy from
+        username2: the user stock
+        desiredPrice: the desired price
+        shares: the number of shares bought/sold
+
+    }
+    */
   try {
     const response = await fetch('http://localhost:5000/portfolio/sell', {
       method: 'PUT',
@@ -115,6 +125,8 @@ export async function sell(username1, username2, desiredPrice, shares) {
         shares: shares
       })
     });
+    const data = await response.json();
+    return data;
   } catch (err) {
     console.log(err);
   }
