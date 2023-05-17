@@ -19,7 +19,7 @@ export async function login(username, password) {
   doc.username = username;
   doc.password = password;
   try {
-    const response = await fetch('http://localhost:5000/user/login', {
+    const response = await fetch('/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ export async function login(username, password) {
     });
     if (response.status === 200) {
       let user = await response.json();
-      window.location.href = "http://localhost:5000/page/discovery";
+      window.location.href = "/page/discovery";
       localStorage.setItem('currentUser', user.username);
     } else {
       console.log("crud.js:login()", response.message);
@@ -74,7 +74,7 @@ export async function buy(username1, username2, desiredPrice, shares) {
     */
   
   try {
-    const response = await fetch(`http://localhost:5000/portfolio/buy/${username}`, {
+    const response = await fetch(`/portfolio/buy/${username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -130,7 +130,7 @@ export async function createUser(doc) {
   // creates user according to the doc object supplied (follows user schema)
   console.log(doc)
   try {
-    const response = await fetch('http://localhost:5000/user/signup', {
+    const response = await fetch('/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ export async function createUser(doc) {
 export async function readUser(doc) {
   // reads user according to the id supplied
   try {
-    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
+    const response = await fetch(`/user/${doc.username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -164,7 +164,7 @@ export async function readUser(doc) {
 
 export async function readTopFive() {
   try {
-    const response = await fetch(`http://localhost:5000/user/topFive`, {
+    const response = await fetch(`/user/topFive`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -180,7 +180,7 @@ export async function readTopFive() {
 
 export async function updateUser(doc, changes) {
   try {
-    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
+    const response = await fetch(`/user/${doc.username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -222,7 +222,7 @@ export async function deleteUser(doc) {
 export async function readPortfolio(username) {
   // returns portfolio object
   try {
-    const response = await fetch(`http://localhost:5000/portfolio/${username}`, {
+    const response = await fetch(`/portfolio/${username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

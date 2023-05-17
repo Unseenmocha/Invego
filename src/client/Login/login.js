@@ -23,7 +23,7 @@ signup_elem.addEventListener('click', async () => {
         //user.password = pass_one.value;
         await crud.signup(new_username.value, pass_one.value);
         //window.location.href = "../Discovery/discovery.html";
-        window.location.href = "http://localhost:5000/page/discovery";
+        window.location.href = "/page/discovery";
         return;
     }
 
