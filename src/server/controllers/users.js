@@ -119,7 +119,7 @@ export const login = async (req, res) => {
 
     try {
         const foundUser = await User.findOne({ username: username }).lean();
-        if (foundUser.password === req.body.password) { //validPassword(password, foundUser.password, foundUser.salt)
+        if (validPassword(password, foundUser.password, foundUser.salt)) {
             res.status(200).json( foundUser );
         } else {
             console.log("incorrect password")
