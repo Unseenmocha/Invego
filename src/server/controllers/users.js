@@ -59,7 +59,7 @@ export const createUser = async (req, res) => {
     };
 
     const newUser = new User(user);
-    newUser.salt = crypto.randomBytes(16).toString('hex');
+    newUser.setPassword(user.password);
     try {
         await newUser.save();       
         console.log("newUser after save", newUser);
