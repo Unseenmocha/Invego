@@ -364,6 +364,15 @@ PICTURES
 
 }
 
+.square-pic {
+    height: 45px;
+    width: 45px;
+    margin: 0px 20px 0px 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
 /*************************************
 WIDGETS
 **************************************/
