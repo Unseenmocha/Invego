@@ -31,8 +31,8 @@ export async function login(username, password) {
     });
     if (response.status === 200) {
       let user = await response.json();
-      window.location.href = "/page/discovery";
       localStorage.setItem('currentUser', user.username);
+      window.location.href = "/page/discovery";
     } else {
       console.log("crud.js:login()", response.message);
       alert("Login failed, Please double check your username and password");
@@ -44,20 +44,41 @@ export async function login(username, password) {
 
 export async function signup(username, password, firstName, lastName) {
   // uses createUser
-
   const doc = getSampleStockObject();
   doc.username = username;
   doc.password = password;
   doc.firstName = firstName;
   doc.lastName = lastName;
   try {
-    await createUser(doc).then((response) => {
+    const response = await createUser(doc);
+    if (response.status === 'OK') {
       localStorage.setItem('currentUser', username);
-      // route to discovery page here, if that is necessary
-    });
+      window.location.href = "http://localhost:5000/page/discovery";
+    }
+    return response;
+    
   } catch (err) {
     console.log(err);
   }
+
+}
+
+export async function createUser(doc) {
+  // creates user according to the doc object supplied (follows user schema)
+  try {
+    const response = await fetch('/user/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(doc)
+    });
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+
 
 }
 
@@ -76,7 +97,7 @@ export async function buy(username1, username2, desiredPrice, shares) {
     */
   
   try {
-    const response = await fetch(`/portfolio/buy/${username}`, {
+    const response = await fetch(`/portfolio/buy/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -147,27 +168,6 @@ export function getSampleStockObject() {
   };
 
   return doc;
-}
-
-
-export async function createUser(doc) {
-  // creates user according to the doc object supplied (follows user schema)
-  console.log(doc)
-  try {
-    const response = await fetch('/user/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(doc)
-    });
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    console.log(err);
-  }
-
-
 }
 
 export async function readUser(doc) {

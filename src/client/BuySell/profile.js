@@ -41,7 +41,7 @@ buyButton.addEventListener("click", async () => {
     const bidPrice = bidPriceElem.value;
     console.log(numSharesBuy, bidPrice);
     if (validateInput(bidPrice, numSharesBuy)) {
-        const response = await crud.buy(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesBuy), Number(bidPrice));
+        const response = await crud.buy(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"),  Number(bidPrice), Number(numSharesBuy));
         alert(response.message);
         if (response.status === "OK") {
             window.location.href = "http://localhost:5000/page/buySell";
@@ -57,7 +57,7 @@ sellButton.addEventListener("click", async () => {
     const sellPrice = sellPriceElem.value;
 
     if (validateInput(numSharesSell, sellPrice)) {
-        const response = await crud.sell(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesSell), Number(sellPrice));
+        const response = await crud.sell(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(sellPrice), Number(numSharesSell));
         alert(response.message);
         if (response.status === "OK") {
             window.location.href = "http://localhost:5000/page/buySell";
@@ -69,5 +69,5 @@ sellButton.addEventListener("click", async () => {
 });
 
 const validateInput = (shares, price) => {
-    return  [shares, price].every(x=> x.match(/^[0-9]+$/) != null);
+    return  [shares, price].every(x=> x.match(/^[0-9]+$/) != null && Number(x) > 0);
 };

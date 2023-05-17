@@ -58,23 +58,28 @@ export const createUser = async (req, res) => {
         total_shares_owned: 0,
     };
 
+    const usernameAlreadyUsed = await User.exists({ username : req.body.username });
+    if (usernameAlreadyUsed) {
+        res.status(409).send({stauts: "FAILURE", message: `Username ${req.body.username} taken. Please try another.`})
+    }
+
     const newUser = new User(user);
   
     try {
         await newUser.save();       
         console.log("newUser after save", newUser);
         const stocks = {}
-        stocks[newUser.username] = {num_shares: 100, purchase_price: 10};
+        stocks[newUser.username] = {num_shares: 100, purchase_price: 50};
         const portfolio = {
             username : newUser.username, 
             stocks : stocks
         };
         await createPortfolioByUsername(portfolio, res);
-        res.status(201).json(newUser);
+        res.status(201).json({status: "OK", message:"Account creation success. Welcome to Invego!", newUser: newUser});
         console.log("create user res.body", res.json());
     } catch (error) {
         console.log(error);
-        res.status(409).json({ message: error.message });
+        res.status(409).json({ status: "FAILURE", message: error.message });
     }
 }
 
@@ -114,7 +119,7 @@ export const login = async (req, res) => {
 
     try {
         const foundUser = await User.findOne({ username: username }).lean();
-        if (validPassword(password, foundUser.password, foundUser.salt)) {
+        if (foundUser.password === req.body.password) { //validPassword(password, foundUser.password, foundUser.salt)
             res.status(200).json( foundUser );
         } else {
             console.log("incorrect password")
@@ -127,32 +132,32 @@ export const login = async (req, res) => {
     }
 }
 
-export const signup = async (req, res) => {
-    console.log("signup req res", req, res);
+// export const signup = async (req, res) => {
+//     console.log("signup req res", req, res);
 
-    // 1. make sure there are no duplicate usernames
-    const user = req.body;
-    const username = user.username;
-    const password = user.password;
-    /* there might be other fields here stored in the body, like first_name, last_name
-     * those are just put in through the body, but not required for this signup function
-    */
-    const usernameAlreadyUsed = await User.exists({ username : username });
+//     // 1. make sure there are no duplicate usernames
+//     const user = req.body;
+//     const username = user.username;
+//     const password = user.password;
+//     /* there might be other fields here stored in the body, like first_name, last_name
+//      * those are just put in through the body, but not required for this signup function
+//     */
+//     const usernameAlreadyUsed = await User.exists({ username : username });
 
-    if (usernameAlreadyUsed) {
-        res.status(409).json({message: "Username taken"});
-    } else {
+//     if (usernameAlreadyUsed) {
+//         res.status(409).json({message: "Username taken"});
+//     } else {
         
-        const response = await createUser(req, res);
-        // creating portfolio within createUser call
+//         const response = await createUser(req, res);
+//         // creating portfolio within createUser call
 
-        //console.log(response)
-        //const portfolioRequest = {_id: res._id, stocks: {}}
-        //await createPortfolioByID(portfolioRequest)
-        //res.body = response.body;
-    }
+//         //console.log(response)
+//         //const portfolioRequest = {_id: res._id, stocks: {}}
+//         //await createPortfolioByID(portfolioRequest)
+//         //res.body = response.body;
+//     }
 
     
 
-}
+// }
 

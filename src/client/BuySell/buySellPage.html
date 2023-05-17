@@ -21,7 +21,7 @@
 
 
     <div class="flex-horizontal">
-      <h3 class="white-text" id="account_balance">Bittels: 284.28</h3>
+      <h3 class="white-text" id="account_balance"></h3>
       <div class="profile flex-vertical" id="profile">
         <img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" />
         <p class="white-text">My Profile</p>
@@ -67,16 +67,17 @@
         <h3>Buy</h3>
         <div class="flex-horizontal">
 
+          <div class="flex-vertical">
+            <p class="tiny-text">limit price (buy this price or lower)</p>
+            <input type="number" class="text-entry buy-sell-entry" id="bid-price" name="bid-price" placeholder="price">
+          </div>
 
           <div class="flex-vertical">
             <p class="tiny-text">number of shares to buy...</p>
             <input type="number" class="text-entry buy-sell-entry" id="sharesBuy" name="sharesBuy" min="1"
               placeholder="shares">
           </div>
-          <div class="flex-vertical">
-            <p class="tiny-text">limit price (buy this price or lower)</p>
-            <input type="number" class="text-entry buy-sell-entry" id="bid-price" name="bid-price" placeholder="price">
-          </div>
+
           <button class="medium-blue-button" id="buyButton">Buy</button>
 
         </div>
@@ -87,16 +88,17 @@
         <div class="flex-horizontal">
 
           <div class="flex-vertical">
+            <p class="tiny-text">limit sell (this price or higher)</p>
+            <input type="number" class="text-entry buy-sell-entry" id="sell-price" name="sell-price"
+              placeholder="price">
+          </div>
+
+          <div class="flex-vertical">
             <p class="tiny-text">number of shares to sell...</p>
             <input type="number" class="text-entry buy-sell-entry" id="sharesSell" name="sharesSell" min="1"
               placeholder="shares">
           </div>
 
-          <div class="flex-vertical">
-            <p class="tiny-text">limit sell (this price or higher)</p>
-            <input type="number" class="text-entry buy-sell-entry" id="sell-price" name="sell-price"
-              placeholder="price">
-          </div>
           <button class="medium-blue-button" id="sellButton">Sell</button>
 
         </div>

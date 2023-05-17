@@ -109,13 +109,14 @@ export const buy = async (req, res) => {
             const remainder = transaction.shares - match.shares;
             const moreLeft = remainder > 0;
             const zeroLeft = remainder == 0;
+            const transactionPrice = (transaction.desiredPrice+match.desiredPrice)/2
             let netSingleTransaction = 0;
             
             //console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft)
             if (zeroLeft || moreLeft) {
                 // console.log("more or zero left");
                 // in these cases, remove SELL transaction
-                netSingleTransaction -= match.shares * match.desiredPrice;
+                netSingleTransaction += match.shares * transactionPrice;
                 await Transaction.deleteOne({ _id : match._id });
                 transaction.shares -= match.shares;
                 netChange = match.shares;
@@ -123,7 +124,7 @@ export const buy = async (req, res) => {
             } else {
                 // console.log("seller has more than buyer wants to buy");
                 // in this case, update the SELL, end the user's buying
-                netSingleTransaction -= transaction.shares * match.desiredPrice;
+                netSingleTransaction += transaction.shares * transactionPrice;
                 await Transaction.findOneAndUpdate({ _id : match._id }, 
                     {$inc : {shares: -transaction.shares}});
                 netChange = transaction.shares;
@@ -140,6 +141,9 @@ export const buy = async (req, res) => {
             // console.log("pay seller");
             await resolveTransactionInUser(match.transactionOwner, netSingleTransaction);
             await resolveTransactionInPortfolio(match.transactionOwner, transaction.username2, -netChange, match.desiredPrice);
+
+            //update stock(being bought) market value and total shares owned
+            await updateStock(netChange, transactionPrice, match.transactionOwner, transaction.username1, transaction.username2, true);
 
             if (zeroLeft || transaction.shares == 0) {
                 // stop iterating through matching transactions
@@ -212,6 +216,7 @@ export const sell = async (req, res) => {
         const remainder = transaction.shares - match.shares;
         const moreLeft = remainder > 0;
         const zeroLeft = remainder == 0;
+        const transactionPrice = (transaction.desiredPrice+match.desiredPrice)/2
         let netSingleTransaction = 0;
 
         // console.log("zeroLeft", zeroLeft, "moreLeft", moreLeft);
@@ -219,14 +224,14 @@ export const sell = async (req, res) => {
         
         if (zeroLeft || moreLeft) {
             // in these cases, remove SELL transaction
-            netSingleTransaction += match.shares * match.desiredPrice;
+            netSingleTransaction += match.shares * transactionPrice;
             await Transaction.deleteOne({ _id : match._id });
             transaction.shares -= match.shares;
             netChange = match.shares;
 
         } else {
             // in this case, update the SELL, end the user's buying
-            netSingleTransaction -= transaction.shares * match.desiredPrice;
+            netSingleTransaction += transaction.shares * transactionPrice;
             await Transaction.findOneAndUpdate({ _id : match._id }, 
                 {$inc : {shares: -transaction.shares}});
             netChange = transaction.shares;
@@ -243,6 +248,9 @@ export const sell = async (req, res) => {
         // console.log("charge buyer");
         await resolveTransactionInUser(match.transactionOwner, -netSingleTransaction);
         await resolveTransactionInPortfolio(match.transactionOwner, transaction.username2, netChange, match.desiredPrice);
+
+        //update stock(being bought) market value and total shares owned
+        await updateStock(netChange, transactionPrice, transaction.username1, match.transactionOwner, transaction.username2, false);
 
         if (zeroLeft || transaction.shares == 0) {
             // stop iterating through matching transactions
@@ -327,5 +335,20 @@ async function createTransaction(type, ofUsername, shares, desiredPrice, transac
 
 }
 
+async function updateStock(sharesTraded, newPrice, seller, buyer, stock) {
+    const stockUserDoc = await User.findOne({username: stock});
+    console.log(stockUserDoc);
+    const changes = {};
+    //buying your own stock (not from yourself), lowers total of your shares owned
+    if (buyer === stock && seller !== stock) {
+        changes.total_shares_owned = stockUserDoc.total_shares_owned - sharesTraded;
+    }
+     //selling your stock (not to yourself), increases total of your shares owned 
+    else if (seller === stock && buyer !== stock) {
+        changes.total_shares_owned = stockUserDoc.total_shares_owned + sharesTraded;
+    }  
+    changes.market_value = newPrice
+    await User.findOneAndUpdate({username : stock}, changes);
+}
 
 

@@ -20,17 +20,19 @@ signup_elem.addEventListener('click', async () => {
     if(pass_one.value !== pass_two.value){
         alert("Passwords do not match.");
         return;
-    } else if ([first, last, pass_one, new_username].every(elem=>{
-        let valid = elem.value !== '';
-        if (valid) {
-            return true;
-        } else {
-            alert(`Please enter ${elem.placeholder}.`)
-            return false;
-        }
-    })) {
-        await crud.signup(new_username.value, pass_one.value, first.value, last.value);
-        window.location.href = "http://localhost:5000/page/discovery";
+    } else if ([first, last, pass_one, new_username].every(checkValue)) {
+        let response = await crud.signup(new_username.value, pass_one.value, first.value, last.value);
+        alert(response.message);
     }
 
 });
+
+const checkValue = (elem) => {
+    let valid = elem.value !== '';
+    if (valid) {
+        return true;
+    } else {
+        alert(`Please enter ${elem.placeholder}.`)
+        return false;
+    }
+}

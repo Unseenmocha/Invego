@@ -7,7 +7,6 @@ const usernameCell = document.getElementById('username-cell');
 const bioCell = document.getElementById('bio-cell');
 const profileButton = document.getElementById('profile-button');
 const deleteButton = document.getElementById('delete-button');
-const bittel = document.getElementById('bittel');
 
 console.log("userProfile.js loaded");
 
@@ -153,12 +152,5 @@ deleteButton.addEventListener('click', async (e) => {
   }
 })
 
-const populateBittels = async () => {
-  const user = await crud.readUser({ username: localStorage.getItem("currentUser") });
-  const balance = user.bittels;
-  bittel.innerHTML = `<h3 class="white-text">Bittels: ${balance}</h3>`;
-}
-
-populateBittels();
 generatePortfolio();
 await showProfile();
