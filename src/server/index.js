@@ -50,6 +50,7 @@ mongoose.connect(process.env.DB.toString(), { useNewUrlParser: true }).then(() =
     //start server
     app.listen(port, () => {
     console.log(`Server running on port ${port}`);
+    console.log(`Start at http://localhost:${port}/page/login`)
     });
   })
   .catch((err) => console.log(err));
