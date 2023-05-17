@@ -10,9 +10,8 @@ const stockSchema = new mongoose.Schema({
   
 const portfolioSchema = new mongoose.Schema({
     username: String, 
-    stocks: { 
-        type: Map,
-        of: stockSchema
+    stocks: {
+        type: mongoose.Schema.Types.Mixed // these should all follow the stockSchema, but it is easier to say this is 'mixed'
     }
 });
 
