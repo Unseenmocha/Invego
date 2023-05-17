@@ -5,6 +5,7 @@ const table = document.getElementById('popular-table');
 const messageView = document.getElementById('messages-container-view');
 const friendsView = document.getElementById('friends-bar');
 const searchBar = document.getElementById('search-bar');
+const searchTable = document.getElementById('search-table');
 
 
 const populatePopularProfiles = async () => {
@@ -36,6 +37,61 @@ const populatePopularProfiles = async () => {
     }
 }
 
+const userList = {users:[], waiting: false};
+
+searchBar.addEventListener("focus", async () => {
+    searchTable.style.visibility = 'visible';
+    userList.waiting = true;
+    userList.users = await crud.readAllUsers();
+    userList.waiting = false;
+});
+
+searchBar.addEventListener("input", (e) => {
+    const term = e.target.value;
+    if (term === '') {
+        searchTable.innerHTML = "";
+        return;
+    }
+    searchTable.innerHTML = `
+    <tr>
+        <td></td>
+        <td>
+            <h5>Username</h5>
+        </td>
+        <td>
+            <h5>Market Value</h5>
+        </td>
+    </tr>`;
+
+    while (userList.waiting) {
+        continue;
+    }
+    const displayList = userList.users.filter((user) => user.username.startsWith(term));
+
+    displayList.forEach((user)=>{
+        searchTable.innerHTML += `
+        <tr id="${user.username}-search">
+            <td><img class="circle-pic pic-outline" src="../../../assets/default-profile.jpg" /></td>
+            <td>${user.username}</td>
+            <td>${user.market_value}</td>
+        </tr>
+        `
+    });
+    displayList.forEach((user)=> {
+        let row = document.getElementById(`${user.username}-search`);
+        row.addEventListener('click', (e) => {
+            localStorage.setItem("BuySellName", user.username);
+            window.location.href = "http://localhost:5000/page/buySell";
+        }) 
+    });
+});
+
+searchBar.addEventListener("blur", () => {
+    setTimeout(() => {
+        searchTable.style.visibility = 'hidden';
+    }, 150);
+});
+
 populatePopularProfiles();
 
 messageView.addEventListener('click', () => {
@@ -46,6 +102,6 @@ friendsView.addEventListener('click', () => {
     alert('Friends functionality has not been implemented for the scope of this project.');
 });
 
-searchBar.addEventListener('click', () => {
-    alert('Searching for users has not yet been implemented');
-});
+// searchBar.addEventListener('click', () => {
+//     alert('Searching for users has not yet been implemented');
+// });

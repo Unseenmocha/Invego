@@ -207,6 +207,21 @@ export async function readTopFive() {
   }
 }
 
+export async function readAllUsers() {
+  try {
+    const response = await fetch(`http://localhost:5000/user/`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 export async function updateUser(doc, changes) {
   try {
     const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
