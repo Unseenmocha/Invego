@@ -91,11 +91,6 @@ export async function buy(username1, username2, desiredPrice, shares) {
   } catch (err) {
     console.log(err);
   }
-
-
-
-
-
 }
 
 export async function sell() {
