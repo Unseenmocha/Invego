@@ -52,6 +52,16 @@ searchBar.addEventListener("input", (e) => {
         searchTable.innerHTML = "";
         return;
     }
+
+    while (userList.waiting) {
+        continue;
+    }
+    const displayList = userList.users.filter((user) => user.username.startsWith(term));
+    if (displayList.length === 0) {
+        searchTable.innerHTML = "";
+        return;
+    }
+    
     searchTable.innerHTML = `
     <tr>
         <td></td>
@@ -62,12 +72,6 @@ searchBar.addEventListener("input", (e) => {
             <h5>Market Value</h5>
         </td>
     </tr>`;
-
-    while (userList.waiting) {
-        continue;
-    }
-    const displayList = userList.users.filter((user) => user.username.startsWith(term));
-
     displayList.forEach((user)=>{
         searchTable.innerHTML += `
         <tr id="${user.username}-search">
