@@ -6,6 +6,7 @@ const lastnameCell = document.getElementById('last-name-cell');
 const usernameCell = document.getElementById('username-cell');
 const bioCell = document.getElementById('bio-cell');
 const profileButton = document.getElementById('profile-button');
+const deleteButton = document.getElementById('delete-button');
 
 console.log("userProfile.js loaded");
 
@@ -83,6 +84,7 @@ const showProfile = async () => {
   bioCell.replaceChild(bio, bioCell.firstChild);
 
   profileButton.textContent = "Edit";
+  deleteButton.style.visibility = "hidden";
 }
 
 const showProfileEdit = () => {
@@ -113,6 +115,7 @@ const showProfileEdit = () => {
   usernameCell.replaceChild(usernameInput, usernameCell.firstChild);
   bioCell.replaceChild(bioInput, bioCell.firstChild);
   profileButton.textContent = "Save";
+  deleteButton.style.visibility = "visible";
 }
 
 profileButton.addEventListener('click', async (e) => {
@@ -141,6 +144,13 @@ profileButton.addEventListener('click', async (e) => {
     showProfileEdit();
   }
 });
+
+deleteButton.addEventListener('click', async (e) => {
+  if (confirm("Are you sure you wish to delete your account?")) {
+    await crud.deleteUser({username: localStorage.getItem("currentUser")});
+    window.location.href = "http://localhost:5000/page/login";
+  }
+})
 
 
 generatePortfolio();

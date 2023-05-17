@@ -42,15 +42,17 @@ export async function login(username, password) {
   }
 }
 
-export async function signup(username, password) {
+export async function signup(username, password, firstName, lastName) {
   // uses createUser
 
   const doc = getSampleStockObject();
   doc.username = username;
   doc.password = password;
+  doc.firstName = firstName;
+  doc.lastName = lastName;
   try {
     await createUser(doc).then((response) => {
-      localStorage.setItem('currentUser', user.username);
+      localStorage.setItem('currentUser', username);
       // route to discovery page here, if that is necessary
     });
   } catch (err) {
@@ -74,7 +76,7 @@ export async function buy(username1, username2, desiredPrice, shares) {
     */
   
   try {
-    const response = await fetch(`http://localhost:5000/portfolio/buy/${username}`, {
+    const response = await fetch(`http://localhost:5000/portfolio/buy`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -98,15 +100,29 @@ export async function buy(username1, username2, desiredPrice, shares) {
 
 }
 
-export async function sell() {
+export async function sell(username1, username2, desiredPrice, shares) {
   // uses createTransaction
+  try {
+    const response = await fetch('http://localhost:5000/portfolio/sell', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username1: username1,
+        username2: username2,
+        desiredPrice: desiredPrice,
+        shares: shares
+      })
+    });
+  } catch (err) {
+    console.log(err);
+  }
 }
-
 
 /**
  *  CRUD for users
  */
-
 export function getSampleStockObject() {
   // if we ever change the data schema, we change it here
 
@@ -120,11 +136,12 @@ export function getSampleStockObject() {
     bittels: 0,
     market_value: 0,
     total_shares: 0,
-    percent_growth: 0,
+    total_shares_owned: 0
   };
 
   return doc;
 }
+
 
 export async function createUser(doc) {
   // creates user according to the doc object supplied (follows user schema)
@@ -199,17 +216,15 @@ export async function updateUser(doc, changes) {
 
 export async function deleteUser(doc) {
   try {
-    const response = await fetch(`${doc.id}`, {
+    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(async (response) => {
-      const data = await response.json();
-      console.log(data);
-      return data;
-    }
-    );
+    })
+    const data = await response.json();
+    console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
   }

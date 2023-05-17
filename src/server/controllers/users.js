@@ -38,21 +38,21 @@ export const getTopFiveUsers = async (req, res) => {
 
 export const createUser = async (req, res) => {
     console.log("create user")
-    
+    console.log(req.body);
     const user = {
         bio: "Write something about yourself!",
-        firstName: "",
-        lastName: "",
+        first_name: req.body.firstName,
+        last_name: req.body.lastName,
         username: req.body.username,
         password: req.body.password,
         bittels: 500,
         market_value: 50,
         total_shares: 100,
-        percent_growth: 0,
+        total_shares_owned: 0,
     };
 
     const newUser = new User(user);
-    console.log("newUser");
+
     try {
         await newUser.save();       
         console.log("newUser after save", newUser);
@@ -75,7 +75,8 @@ export const createUser = async (req, res) => {
 export const deleteUser = async (req, res) => {
     const username = req.params.username;
     try {
-        await User.remove({username : username}).exec();
+        await User.deleteOne({username : username}).exec();
+        await Portfolio.deleteOne({username : username}).exec();
         res.send('Successfully deleted!');
     } catch (error) {
         console.log(error);

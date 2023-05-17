@@ -11,8 +11,8 @@ export const portfolioRoutes = express.Router();
 portfolioRoutes.post('/:username', /*auth, */ createPortfolioByUsername);
 portfolioRoutes.get('/:username', /*auth, */ getPortfolioByUsername);
 portfolioRoutes.put('/:username', /*auth, */ updatePortfolio);
-portfolioRoutes.put('/buy/:username', /*auth, */ buy);
-portfolioRoutes.put('/sell/:username', /*auth, */ sell);
+portfolioRoutes.put('/buy', /*auth, */ buy);
+portfolioRoutes.put('/sell', /*auth, */ sell);
 portfolioRoutes.delete('/:username', /*auth, */ deletePortfolio);
 
 export default portfolioRoutes;

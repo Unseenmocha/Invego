@@ -59,7 +59,7 @@ export const updatePortfolio = async (req, res) => {
 }
 
 async function databaseUpdatePortfolio(username, updates) {
-    return await Portfolio.update({username : username}, updates);
+    return await Portfolio.updateOne({username : username}, updates);
 }
 
 export const buy = async (req, res) => {

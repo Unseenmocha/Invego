@@ -521,6 +521,11 @@ BUTTONS
     align-self: center;
 }
 
+#delete-button {
+    margin-left:50px;
+    visibility: hidden;
+}
+
 /*************************************
 ANIMATIONS
 **************************************/
