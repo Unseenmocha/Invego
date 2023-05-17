@@ -85,7 +85,7 @@ searchBar.addEventListener("input", (e) => {
         let row = document.getElementById(`${user.username}-search`);
         row.addEventListener('click', (e) => {
             localStorage.setItem("BuySellName", user.username);
-            window.location.href = "http://localhost:5000/page/buySell";
+            window.location.href = "/page/buySell";
         }) 
     });
 });
@@ -105,7 +105,3 @@ messageView.addEventListener('click', () => {
 friendsView.addEventListener('click', () => {
     alert('Friends functionality has not been implemented for the scope of this project.');
 });
-
-// searchBar.addEventListener('click', () => {
-//     alert('Searching for users has not yet been implemented');
-// });
