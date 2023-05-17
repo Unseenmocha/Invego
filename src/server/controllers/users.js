@@ -64,7 +64,7 @@ export const createUser = async (req, res) => {
     }
 
     const newUser = new User(user);
-  
+    newUser.setPassword(user.password);
     try {
         await newUser.save();       
         console.log("newUser after save", newUser);

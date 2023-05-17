@@ -142,11 +142,6 @@ async function createPortfolios(){
 }
 
 
-
-
-
-
-
 // const stockJSONfile = 'STOCK_MOCK_DATA.json';
 const portfolioJSONfile = 'PORTFOLIO_MOCK_DATA.json';
 const userJSONfile = 'USER_MOCK_DATA.json';
