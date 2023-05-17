@@ -1,9 +1,15 @@
 import { User } from '../models/users.js';
 import { createPortfolioByUsername } from './portfolios.js';
 import { Portfolio } from '../models/portfolios.js';
+import crypto from 'crypto';
 
 // this file sends the json files to the frontend for each of the crud operations
 
+
+function validPassword(password, stored_pass, salt) {
+    let hash = crypto.pbkdf2Sync(password, salt, 1000, 64, `sha512`).toString(`hex`);
+    return stored_pass === hash;
+};
 
 export const getUsers = async (req, res) => {
     try {
@@ -45,6 +51,7 @@ export const createUser = async (req, res) => {
         last_name: req.body.lastName,
         username: req.body.username,
         password: req.body.password,
+        salt:"",
         bittels: 500,
         market_value: 50,
         total_shares: 100,
@@ -52,7 +59,7 @@ export const createUser = async (req, res) => {
     };
 
     const newUser = new User(user);
-
+  
     try {
         await newUser.save();       
         console.log("newUser after save", newUser);
@@ -107,8 +114,7 @@ export const login = async (req, res) => {
 
     try {
         const foundUser = await User.findOne({ username: username }).lean();
-        console.log("found user", foundUser);
-        if (foundUser.password == password) {
+        if (validPassword(password, foundUser.password, foundUser.salt)) {
             res.status(200).json( foundUser );
         } else {
             console.log("incorrect password")

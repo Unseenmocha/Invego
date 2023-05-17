@@ -55,7 +55,7 @@ const generatePortfolio = async () => {
     let row = document.getElementById(key);
     row.addEventListener('click', async (e) => {
       localStorage.setItem("BuySellName", key);
-      window.location.href = "http://localhost:5000/page/buySell";
+      window.location.href = "/page/buySell";
     })
   }
 }
