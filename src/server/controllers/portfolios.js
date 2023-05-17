@@ -44,7 +44,7 @@ export const deletePortfolio = async (req, res) => {
 export const updatePortfolio = async (req, res) => {
     const username = req.params.username;
     const updates = req.body;
-    if (updates.username !== undefined) {
+    if (updates.username !== username) {
         const portfolios = await Portfolio.find();
         portfolios.forEach(p => {
             if (p.stocks[username] !== undefined) {
