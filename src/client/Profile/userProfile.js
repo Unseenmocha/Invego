@@ -7,6 +7,7 @@ const usernameCell = document.getElementById('username-cell');
 const bioCell = document.getElementById('bio-cell');
 const profileButton = document.getElementById('profile-button');
 const deleteButton = document.getElementById('delete-button');
+const bittel = document.getElementById('bittel');
 
 console.log("userProfile.js loaded");
 
@@ -148,10 +149,16 @@ profileButton.addEventListener('click', async (e) => {
 deleteButton.addEventListener('click', async (e) => {
   if (confirm("Are you sure you wish to delete your account?")) {
     await crud.deleteUser({username: localStorage.getItem("currentUser")});
-    window.location.href = "http://localhost:5000/page/login";
+    window.location.href = "/page/login";
   }
 })
 
+const populateBittels = async () => {
+  const user = await crud.readUser({ username: localStorage.getItem("currentUser") });
+  const balance = user.bittels;
+  bittel.innerHTML = `<h3 class="white-text">Bittels: ${balance}</h3>`;
+}
 
+populateBittels();
 generatePortfolio();
 await showProfile();
