@@ -104,7 +104,6 @@ export const updateUser = async (req, res) => {
             res.status(409).send({message: `Username ${updates.username} is taken. Please try another.`})
         } else {
             const updateUser = await User.updateOne({username : username}, updates);
-            await Portfolio.updateOne({username: username}, {username: updates.username}); // have to update portfolio username in sync
             res.send(updateUser);
         }
     }  catch (error) {

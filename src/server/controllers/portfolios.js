@@ -44,23 +44,24 @@ export const deletePortfolio = async (req, res) => {
 export const updatePortfolio = async (req, res) => {
     const username = req.params.username;
     const updates = req.body;
+    if (updates.username !== undefined) {
+        const portfolios = await Portfolio.find();
+        portfolios.forEach(p => {
+            if (p.stocks[username] !== undefined) {
+                p.stocks[updates.username] = p.stocks[username];
+                delete p.stocks[username];
+                p.markModified('stocks');
+                p.save();
+                console.log(p.stocks);
+            }
+        });
+    }
+    const updatePortfolio = await Portfolio.updateOne({username : username}, updates);
 
-    const updatePortfolio = await databaseUpdatePortfolio(username, updates);
-
-    res.status(200).json({status : "ok"});
+    res.status(200).json({status : "OK"});
     
-
-    // try {
-    //     const updatePortfolio = await databaseUpdatePortfolio(username, updates);
-    //     res.send(updatePortfolio);
-    // }  catch (error) {
-    //     res.status(404).json({ message: error.message });
-    // }
 }
 
-async function databaseUpdatePortfolio(username, updates) {
-    return await Portfolio.updateOne({username : username}, updates);
-}
 
 export const buy = async (req, res) => {
 

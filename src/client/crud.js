@@ -53,7 +53,7 @@ export async function signup(username, password, firstName, lastName) {
     const response = await createUser(doc);
     if (response.status === 'OK') {
       localStorage.setItem('currentUser', username);
-      window.location.href = "http://localhost:5000/page/discovery";
+      window.location.href = "/page/discovery";
     }
     return response;
     
@@ -129,7 +129,7 @@ export async function sell(username1, username2, desiredPrice, shares) {
     }
     */
   try {
-    const response = await fetch('http://localhost:5000/portfolio/sell', {
+    const response = await fetch('/portfolio/sell', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -204,7 +204,7 @@ export async function readTopFive() {
 
 export async function readAllUsers() {
   try {
-    const response = await fetch(`http://localhost:5000/user/`, {
+    const response = await fetch(`/user/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -227,8 +227,9 @@ export async function updateUser(doc, changes) {
       body: JSON.stringify(changes)
     })
     const data = await response.json();
-    if (data.message === undefined && changes.username !== undefined) { //if the username changed store it again
-      localStorage.setItem("currentUser", changes.username);
+    if (data.message === undefined && changes.username !== undefined) { 
+      await updatePortfolio(doc.username, {username: changes.username}); // have to update portfolio username in sync
+      localStorage.setItem("currentUser", changes.username); //if the username changed store it again
     }
     return data;
   } catch (err) {
@@ -238,7 +239,7 @@ export async function updateUser(doc, changes) {
 
 export async function deleteUser(doc) {
   try {
-    const response = await fetch(`http://localhost:5000/user/${doc.username}`, {
+    const response = await fetch(`/user/${doc.username}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -272,4 +273,16 @@ export async function readPortfolio(username) {
   }
 }
 
-3
+export async function updatePortfolio(username, updates) {
+  try {
+    const response = await fetch(`/portfolio/${username}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updates)
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
