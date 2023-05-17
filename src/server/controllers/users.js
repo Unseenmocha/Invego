@@ -57,7 +57,6 @@ export const createUser = async (req, res) => {
         total_shares: 100,
         total_shares_owned: 0,
     };
-
     const newUser = new User(user);
     newUser.setPassword(user.password);
     try {
