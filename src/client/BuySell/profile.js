@@ -8,8 +8,13 @@ const profilePrice = document.getElementById("profilePrice");
 const profileChange = document.getElementById("profileChange");
 const profileMarketCap = document.getElementById("marketCap");
 const profileSharesOut = document.getElementById("sharesOutstanding");
+
 const buyButton = document.getElementById("buyButton");
 const sellButton = document.getElementById("sellButton");
+const numSharesBuyElem = document.getElementById("sharesBuy");
+const bidPriceElem = document.getElementById("bid-price");
+const numSharesSellElem = document.getElementById("sharesSell");
+const sellPriceElem = document.getElementById("sell-price");
 
 
 import * as crud from '../crud.js';
@@ -31,23 +36,38 @@ const populateStockProfile = async () => {
 
 populateStockProfile();
 
-const buy = async () => {
-
-}
-
-const sell = async () => {
-    
-}
-
 buyButton.addEventListener("click", async () => {
-    // buys stock, adds it?
-    await buy();
+    const numSharesBuy = numSharesBuyElem.value;
+    const bidPrice = bidPriceElem.value;
+    console.log(numSharesBuy, bidPrice);
+    if (validateInput(bidPrice, numSharesBuy)) {
+        const response = await crud.buy(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesBuy), Number(bidPrice));
+        alert(response.message);
+        if (response.status === "OK") {
+            window.location.href = "http://localhost:5000/page/buySell";
+        } 
+    } else {
+        alert("invalid buy input");
+    }
+    
 });
 
 sellButton.addEventListener("click", async () => {
-    // do we need to do anything in order to handle users, this being only visible to the owning user?
-    // okay this is all done by middleware in the server and app.use under express
-    await sell();
+    const numSharesSell = numSharesSellElem.value;
+    const sellPrice = sellPriceElem.value;
+
+    if (validateInput(numSharesSell, sellPrice)) {
+        const response = await crud.sell(localStorage.getItem("currentUser"), localStorage.getItem("BuySellName"), Number(numSharesSell), Number(sellPrice));
+        alert(response.message);
+        if (response.status === "OK") {
+            window.location.href = "http://localhost:5000/page/buySell";
+        }
+    } else {
+        alert("invalid sell input");
+    }
+    
 });
 
-
+const validateInput = (shares, price) => {
+    return  [shares, price].every(x=> x.match(/^[0-9]+$/) != null);
+};
